@@ -65,7 +65,7 @@ qbittorrent webUI 接口定义：[链接](https://github.com/qbittorrent/qBittor
 
 如果不运行在同一设备上运行则这里的IP端口填写qb所运行在的设备上的IP和以及对应的端口  
 并勾选 “对IP子网白名单中的客户端跳过身份验证”  
-将运行lucky的设备IP段添加到这个白名单上  
+将运行lucky的设备IP段添加到这个白名单上以防止由于身份验证的问题导致调用失败    
 
 <p>
   
@@ -73,7 +73,6 @@ qbittorrent webUI 接口定义：[链接](https://github.com/qbittorrent/qBittor
 
 <p>
 
-以防止由于身份验证的问题导致调用失败  
 填写完成后可以点击旁边的手动触发测试各项参数设置是否正确  
 
 <p>
