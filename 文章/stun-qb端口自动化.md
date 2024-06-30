@@ -1,4 +1,4 @@
-# 「LUCKY STUN 穿透]使用webhook自动修改 qbittorrent 的监听端口
+# 「LUCKY STUN」穿透使用webhook自动修改 qbittorrent 的监听端口
 
 <p>
   
