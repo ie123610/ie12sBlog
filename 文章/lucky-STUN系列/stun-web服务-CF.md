@@ -1,4 +1,4 @@
-# 「LUCKY STUN穿透」使用Cloudflare的页面规则能固定和隐藏网页端口
+# 「LUCKY STUN穿透」使用Cloudflare的页面规则固定和隐藏网页端口
 
 ## 关于本教程
 
@@ -98,118 +98,34 @@
 
 我们将使用CF页面规则来重定向URL以实现端口的固定和“隐藏”
 
-需要两组域名 重定向前的域名 和 重定向后的域名
+此处需要两组域名 **重定向前的域名** 和 **重定向后的域名**
 
 * 重定向前的域名  
 
   此域名开启CF代理 即IP解析到CF以便进行重定向处理  
-  这也是我们需要在浏览器中输入的域名  
+  这也是我们需要在浏览器中输入的域名
+  （例如`web.ie12.com`）
 
 
 * 重定向后的域名   
 
  不开启CF代理 IP解析到真实的对外IP  
  这将是重定向后的访问的域名  
+ (例如`web.stun.ie12.com)
+
+当需要访问网页时 在浏览器中输入 `web.ie12.com`
+此域名已经解析到CF的地址 于是CF的服务器会收到这个访问请求
+
+
  
 
 工作流程图
 
 
-### 在Cloudflare中拥有一个域名
-
-若要使用CF的页面规则则被重定向前的的域名需要在CF的管理之下 
-但重定向的目标地址可不在CF的管理之下  
-
-这意味着我们需要在CF拥有与一个域名  
-不过注册CF、购买或迁入域名不在本教程讲解的范围内  
-这部分的设置方法 建议参考网络上的其他教程  
-
-本教程将从在CF中拥有一个域名开始 （本教程将以ie12.com作为示例）
-[img]https://pic.imgdb.cn/item/664eef99d9c307b7e9145ac9.jpg[/img]
-[img]https://pic.imgdb.cn/item/664eefddd9c307b7e914a92d.jpg[/img]
-
 ### 设置DNS记录
 
-点击已拥有的域名
 
-[img]https://pic.imgdb.cn/item/664ef318d9c307b7e918654f.jpg[/img]
-
-点开DNS选项 选择记录
-
-[img]https://pic.imgdb.cn/item/664ef318d9c307b7e9186512.jpg[/img]
-
-添加DNS记录
-（我这里已经设置一些记录不用在意）
-
-[img]https://pic.imgdb.cn/item/664ef318d9c307b7e9186530.jpg[/img]
-
-这里先设置一个子域名用于记录宽带IP地址
-我的主域名是ie12.com 再设置一个字域名比如home 
-这样就有了home.ie12.com
-
-类型选择A类 名称填写home IP地址填写宽带的对外IP
-我们之后还要在lucky中更新IP这个地址
-代理状态关闭
-
-[]
-[]
-
-接下来要设置被重定向的域名
-即在访问时要输入到浏览器中的地址
-
-这里以qbittorrent 的webUI为例
-子域名我就设置为qb
-像这样就得到了qb.ie12.com
-
-类型选择A类 名称填写qb 
-代理状态一定要打开 这样IP地址就会变成CF服务器的
-这样CF就可以处理http请求了
-
-至于后面的IP地址选项就可以随意填写了
-比如填个8.8.8.8 这不会影响
-
-[]
-[]
-
-设置完成了被重定向的域名
-我们还要设置重定向的目标域名
-
-这个域名是由于重定向自动跳转的
-不需要手动输入所以可以设置的复杂一些
-比如qbittorrent
-像这样就得到了qbittorrent.ie12.com
-
-类型选择CNAME类 名称填写qb 
-目标填写我们刚才设置的home.ie12.com 代理状态关闭 
-
-CNAME表示别名 我们将其指向刚才设置home.ie12.com
-简单的来讲 qbittorrent.ie12.com 的IP 就和 home.ie12.com 的IP实现了同步
-即home.ie12.com 的IP变化了 qbittorrent.ie12.com 的IP也会同步变化
-
-如果我们有多个不同的服务在同一IP上就可以使用这样的方法
-只需要更新一个域名对应的IP即可
-
-[]
-[]
-
-设置完成DNS记录后就可以开始设置重定向规则了
-
-
-### 设置页面规则
-
-点击左上角的箭头回到账户主页面
-
-[img]https://pic.imgdb.cn/item/664efc4ed9c307b7e9233274.jpg[/img]
-
-将左侧的滚动条拉到底可以看到 页面规则
-
-[img]https://pic.imgdb.cn/item/664efc4ed9c307b7e9233260.jpg[/img]
-
-点开页面规则 开始创建规则
-
-
-
-
+ 
 
 
 
