@@ -96,6 +96,8 @@
 
 ## 使用Cloudflare的页面规则重定向URL以固定STUN穿透的网页端口
 
+### 运行流程
+
 我们将使用CF页面规则来重定向URL以实现端口的固定和“隐藏”
 
 此处需要两组域名 **重定向前的域名** 和 **重定向后的域名**
@@ -111,22 +113,18 @@
 
  不开启CF代理 IP解析到真实的对外IP  
  这将是重定向后的访问的域名  
- (例如`web.stun.ie12.com)
+ (例如`web.stun.ie12.com`)
 
-当需要访问网页时 在浏览器中输入 `web.ie12.com`
-此域名已经解析到CF的地址 于是CF的服务器会收到这个访问请求
+**流程图**
 
-
- 
-
-工作流程图
+<img src="/图片/stun-web服务-CF/stun-web服务-CF_重定向网页流程图-压缩.jpg" width="60%" height="60%" />
 
 
 ### 设置DNS记录
 
 
  
-
+参考：https://blog.cloudflare.com/future-of-page-rules-zh-cn
 
 
 
