@@ -168,7 +168,9 @@ URL填写 **重定向前的泛域名** 比如`*.ie12.com`
 此处的$1用于传递上面*部分的字符  
 这样我们就可以用一条页面规则完成无数服务的重定向  
 
-<img src="/图片/stun-web服务-CF/stun-web服务-CF_创建页面规则.jpg" width="60%" height="60%" />
+<img src="/图片/stun-web服务-CF/stun-web服务-CF_创建页面规则.jpg" width="60%" height="60%" /> 
+
+**通配符效果演示**  
 <img src="/图片/stun-web服务-CF/stun-web服务-CF_通配符演示.jpg" width="60%" height="60%" />
 
 
@@ -178,15 +180,54 @@ URL填写 **重定向前的泛域名** 比如`*.ie12.com`
 即更新重定向后地址中的STUN穿透端口号  
 通过API可以完成更新 但我们需要先获取 **区域ID** 和 **规则ID**  
 
-* **获取区域ID**
-
-区域ID获取起来非常简单 点开页面规则中的API按钮
-将示例URL中的区域ID复制出来即可
 
 
-在侧边栏的概况里面也有显示
+ **获取区域ID**
 
-* **获取规则ID**
+区域ID获取起来非常简单 点开页面规则中的API按钮  
+将示例URL中的区域ID复制出来即可  
+<img src="/图片/stun-web服务-CF/stun-web服务-CF_获取区域ID-1.jpg" width="60%" height="60%" /> 
+
+在侧边栏的**概况**里面也有显示  
+<img src="/图片/stun-web服务-CF/stun-web服务-CF_获取区域ID-2.jpg" width="60%" height="60%" /> 
+
+
+ **获取规则ID**
+
+规则ID的获取相对麻烦一些 要使用API来获取  
+API定义：[链接](https://developers.cloudflare.com/api/operations/page-rules-list-page-rules)  
+要使用API我们需要先创建**访问令牌**  
+
+**创建访问令牌**
+
+转到个人资料页面以创建访问令牌  
+点击右上角的小人图标 > 选择我的个人资料  
+<img src="/图片/stun-web服务-CF/stun-web服务-CF_前往个人资料页面.jpg" width="60%" height="60%" /> 
+
+或者在已经登录CF的情况下直接访问该链接：[链接](https://dash.cloudflare.com/profile/api-tokens)  
+
+切换到 API令牌 点击右侧的**创建令牌**  
+<img src="/图片/stun-web服务-CF/stun-web服务-CF_创建API令牌页面.jpg" width="60%" height="60%" /> 
+
+选择页面底部的 **自定义令牌**  
+<img src="/图片/stun-web服务-CF/stun-web服务-CF_创建自定义令牌.jpg" width="60%" height="60%" /> 
+
+按照图中的提示设置令牌内容 其中的名称可自定义  
+<img src="/图片/stun-web服务-CF/stun-web服务-CF_令牌创建过程1.jpg" width="60%" height="60%" /> 
+<img src="/图片/stun-web服务-CF/stun-web服务-CF_令牌创建过程2.jpg" width="60%" height="60%" /> 
+
+此令牌只会显示一次 复制下来 妥善保存
+接下来我们就可以开始获取规则ID了
+<img src="/图片/stun-web服务-CF/stun-web服务-CF_令牌创建过程3.jpg" width="60%" height="60%" /> 
+
+
+此处使用lucky计划任务中的callweb功能  
+
+
+
+
+
+登录lucky > 点击侧边栏的 计划任务 > 添加计划任务
 
 
 
