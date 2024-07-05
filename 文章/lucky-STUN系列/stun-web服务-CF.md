@@ -164,7 +164,7 @@ URL填写 **重定向前的泛域名** 比如`*.ie12.com`
 选取设置：**转发URL**          状态代码：**302**  
 目标地址： **填写重定向后的地址 和STUN穿透端口**  
 
-可以带上https 以HTTP重定向的工作完成  
+可以带上https 以完成HTTP重定向工作  
 此处的$1用于传递上面*部分的字符  
 这样我们就可以用一条页面规则完成无数服务的重定向  
 
@@ -244,7 +244,7 @@ Content-Type: application/json
 开启 禁用CallWeb调用成功字符串检测  
 保存规则  
 
-示例
+示例  
 <img src="/图片/stun-web服务-CF/stun-web服务-CF_规则ID获取过程-1.jpg" width="60%" height="60%" /> 
 
 保存规则后 关闭任务开关 并按下手动触发按钮  
@@ -255,9 +255,46 @@ Content-Type: application/json
 
 <img src="/图片/stun-web服务-CF/stun-web服务-CF_规则ID获取过程-2.jpg" width="60%" height="60%" /> 
 
-再获取完 规则ID后就可以开始更新
+在获取完 规则ID后就可以开始更新  
 
- 
+**测试更新**
+
+我们先在计划任务测试完成后 再写到STUN穿透规则里  
+修改计划任务   
+
+接口地址 `https://api.cloudflare.com/client/v4/zones/区域ID/pagerules/规则ID`  
+请求方法 PATCH  
+
+由于是测试所以这里的STUN穿透端口号可以随意填 
+请求主体：  
+
+```
+{
+  "actions": [
+    {
+      "id": "forwarding_url",
+      "value": {
+        "url": "https://$1.你的重定向前域名:STUN穿透端口",
+        "status_code": 302
+      }
+    }
+  ]
+}
+```
+
+示例
+<img src="/图片/stun-web服务-CF/stun-web服务-CF_页面规则更新测试.jpg" width="60%" height="60%" />
+
+
+保存规则 按下手动触发按钮 观察日志  
+查看url 字段中重定向后域名附加的端口号是否变化  
+以及是否有返回"success":true"  
+
+示例
+<img src="/图片/stun-web服务-CF/stun-web服务-CF_页面规则更新测试-2.jpg" width="60%" height="60%" />
+
+
+
 参考：https://blog.cloudflare.com/future-of-page-rules-zh-cn
 
 
