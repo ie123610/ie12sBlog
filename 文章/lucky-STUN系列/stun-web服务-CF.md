@@ -93,6 +93,13 @@
   其实与CF的重定向方案差不多 但是目前没有找到比较好的供应商  
 
 
+## 网络优和创建STUN穿透规则
+
+### 网络环境优化
+
+### STUN穿透规则
+
+
 
 ## 使用Cloudflare的页面规则重定向URL以固定STUN穿透的网页端口
 
@@ -274,7 +281,7 @@ Content-Type: application/json
     {
       "id": "forwarding_url",
       "value": {
-        "url": "https://$1.你的重定向前域名:STUN穿透端口",
+        "url": "https://$1.你的重定向后域名:STUN穿透端口",
         "status_code": 302
       }
     }
@@ -292,6 +299,20 @@ Content-Type: application/json
 
 示例
 <img src="/图片/stun-web服务-CF/stun-web服务-CF_页面规则更新测试-2.jpg" width="60%" height="60%" />
+
+至此我们已经基本完成了 固定端口的设置
+接下来就是修改STUN穿透规则设置普通反向代理的工作了
+
+
+## 配置反向代理规则及其相关设置
+
+### 创建反向代理规则
+
+### 获取TLS/SSL证书
+
+## 最终验证环节
+
+
 
 
 
