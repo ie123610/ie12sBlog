@@ -192,13 +192,11 @@ URL填写 **重定向前的泛域名** 比如`*.ie12.com`
 <img src="/图片/stun-web服务-CF/stun-web服务-CF_获取区域ID-2.jpg" width="60%" height="60%" /> 
 
 
- **获取规则ID**
+**创建访问令牌**
 
 规则ID的获取相对麻烦一些 要使用API来获取  
-API定义：[链接](https://developers.cloudflare.com/api/operations/page-rules-list-page-rules)  
 要使用API我们需要先创建**访问令牌**  
-
-**创建访问令牌**
+API定义：[链接](https://developers.cloudflare.com/api/operations/page-rules-list-page-rules) 
 
 转到个人资料页面以创建访问令牌  
 点击右上角的小人图标 > 选择我的个人资料  
@@ -216,22 +214,48 @@ API定义：[链接](https://developers.cloudflare.com/api/operations/page-rules
 <img src="/图片/stun-web服务-CF/stun-web服务-CF_令牌创建过程1.jpg" width="60%" height="60%" /> 
 <img src="/图片/stun-web服务-CF/stun-web服务-CF_令牌创建过程2.jpg" width="60%" height="60%" /> 
 
-此令牌只会显示一次 复制下来 妥善保存
-接下来我们就可以开始获取规则ID了
+此令牌只会显示一次 复制下来 妥善保存  
+接下来我们就可以开始获取规则ID了  
 <img src="/图片/stun-web服务-CF/stun-web服务-CF_令牌创建过程3.jpg" width="60%" height="60%" /> 
 
 
-此处使用lucky计划任务中的callweb功能  
+ **获取规则ID**
+
+在创建了访问令牌后就可以开始获取规则ID了  
+此处使用lucky计划任务中的callweb功能来进行获取  
+登录lucky > 点击侧边栏的 计划任务 > 添加计划任务  
+
+任务备注 即任务名称任意填写  
+执行周期 仅执行一次  执行时间 ： 任意选择   
+我们将使用手动触发所以执行时间随意填写  
 
 
+**添加子任务**  
+备注即子任务名称 任意填写  
+类型 **callweb**  
 
+接口地址： `https://api.cloudflare.com/client/v4/zones/你的区域ID/pagerules`  
+请求头：  
+```
+Authorization: Bearer 之前获取的令牌
+Content-Type: application/json
+```
 
+开启 禁用CallWeb调用成功字符串检测  
+保存规则  
 
-登录lucky > 点击侧边栏的 计划任务 > 添加计划任务
+示例
+<img src="/图片/stun-web服务-CF/stun-web服务-CF_规则ID获取过程-1.jpg" width="60%" height="60%" /> 
 
+保存规则后 关闭任务开关 并按下手动触发按钮  
+检查日志输出 若配置都正确可以看到下列内容  
 
+其中的 **id** 就我们需要的 规则ID  
+而value 和 url 就是之前设置的重定向前/后域名  
 
+<img src="/图片/stun-web服务-CF/stun-web服务-CF_规则ID获取过程-2.jpg" width="60%" height="60%" /> 
 
+再获取完 规则ID后就可以开始更新
 
  
 参考：https://blog.cloudflare.com/future-of-page-rules-zh-cn
