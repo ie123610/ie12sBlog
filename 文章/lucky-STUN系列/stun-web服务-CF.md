@@ -388,7 +388,7 @@ Content-Type: application/json
 }
 ```
 
-示例
+示例  
 <img src="/图片/stun-web服务-CF/stun-web服务-CF_页面规则更新测试.jpg" width="60%" height="60%" />
 
 
@@ -396,21 +396,33 @@ Content-Type: application/json
 查看url 字段中重定向后域名附加的端口号是否变化  
 以及是否有返回"success":true"  
 
-示例
+示例 
 <img src="/图片/stun-web服务-CF/stun-web服务-CF_页面规则更新测试-2.jpg" width="60%" height="60%" />
 
 
 #### 在STUN穿透规则更新端口
 
-在计划任务中完成了测试
-填写到STUN穿透规则中
-设置方式与在计划任务中基本相同
+在计划任务中完成了更新测试现在将其填写到STUN穿透规则中
+设置方式与在计划任务中基本相同 使用变量表示穿透得到的端口号
 
-示例
+接口调用成功包含的字符串填写：
+```
+"success":true
+```
+
+示例  
+<img src="/图片/stun-web服务-CF/stun-web服务-STUN更新端口.jpg" width="60%" height="60%" />
+
+
+可以按下上面的测试按钮 测试参数是否填写正确  
+其会使用内置的演示参数 端口应该会变成6666  
+
+示例  
+<img src="/图片/stun-web服务-CF/stun-web服务-STUN更新端口结果.jpg" width="60%" height="60%" />
 
 
 至此我们已经基本完成了 固定端口的设置
-接下来就是修改STUN穿透规则设置普通反向代理的工作了
+接下来就是设置普通反向代理的工作了
 
 
 ## 配置反向代理规则及其相关设置
@@ -435,12 +447,12 @@ Content-Type: application/json
 
 ## 最终验证环节
 
-完成上述设置后我们既可进行最后的验证
-在浏览器中输入重定向前地址 例如`alist.ie12.com`
-应会跳转到`alist.stun.ie12.com`
+完成上述设置后我们既可进行最后的验证  
+在浏览器中输入重定向前地址 例如`alist.ie12.com`  
+应会跳转到`alist.stun.ie12.com`  
 
-可尝试重启 光猫/路由器 以使的穿透端口发生变化
-以测试其实际工作状况
+可尝试重启 光猫/路由器 以使的穿透端口发生变化   
+以测试其实际工作状况  
 
 ---
 
