@@ -125,8 +125,8 @@ Github 项目下载地址： [链接](https://github.com/HMBSbige/NatTypeTester/
 
 #### 普通UPnP DMZ 以及端口映射
 
-在之前BT下载穿透中主要使用的是手动的端口转发   
-以及相对特殊的 miniUPnP 客户端 设置映射
+在之前的BT下载穿透中主要使用手动的端口转发   
+以及相对特殊的 miniUPnP 客户端 来设置映射
 
 这其实是由于BT下载的特殊性所导致的  
 详见：[链接](https://www.bilibili.com/read/cv31006420/)  
@@ -155,12 +155,12 @@ DMZ设置参考 [链接1](https://www.bilibili.com/read/cv28835081/) [链接2](h
 
 ### 端口映射的妙用
 
-一些光猫在普通权限下可能无法使用DMZ
-但可以使用较为基础的端口映射 
+一些光猫在普通权限下可能无法使用DMZ  
+但可以使用较为基础的端口映射  
 
-可以将STUN规则监听映射出去起到类似DMZ的效果
-
-
+可以将STUN规则监听端口（穿透通道本地端口）映射出去
+可起到类似DMZ的效果 此场景下的STUN规则监听端口要固定不能为0
+即随机端口
 
 ### STUN穿透规则设置
 
@@ -182,15 +182,26 @@ DMZ设置参考 [链接1](https://www.bilibili.com/read/cv28835081/) [链接2](h
 **主要对鉴权方面有些影响** 比如有些服务可以设置对内网地址免登录  
 若使用内置转发则不要开启类似这样的功能  
 
-参考示例
+**参考示例**
+
+* 直接使用/与DMZ组合使用
+  
+  此场景下 穿透通道本地端口 可以使用随机端口 
 
 
-#### 使用lucky内置UPnP
 
+* 与端口映射组合使用
+
+
+
+#### 使用内置UPnP
 
 
 
 不太适合运行在docker中的lucky使用
+
+
+
 
 #### 直接操作防火墙规则
 
@@ -402,8 +413,8 @@ Content-Type: application/json
 
 #### 在STUN穿透规则更新端口
 
-在计划任务中完成了更新测试现在将其填写到STUN穿透规则中
-设置方式与在计划任务中基本相同 使用变量表示穿透得到的端口号
+在计划任务中完成更新测试后 现将其填写到STUN穿透规则内
+设置方式与在计划任务中基本相同 需使用变量表示穿透得到的端口号
 
 接口调用成功包含的字符串填写：
 ```
@@ -412,7 +423,6 @@ Content-Type: application/json
 
 示例  
 <img src="/图片/stun-web服务-CF/stun-web服务-STUN更新端口.jpg" width="60%" height="60%" />
-
 
 可以按下上面的测试按钮 测试参数是否填写正确  
 其会使用内置的演示参数 端口应该会变成6666  
@@ -443,13 +453,11 @@ Content-Type: application/json
 示例  
 <img src="/图片/stun-web服务-CF/stun-web服务-CF_证书示例.jpg" width="60%" height="60%" />
 
-
-
 ## 最终验证环节
 
 完成上述设置后我们既可进行最后的验证  
 在浏览器中输入重定向前地址 例如`alist.ie12.com`  
-应会跳转到`alist.stun.ie12.com`  
+应会跳转到`alist.stun.ie12.com:STUN穿透端口`  
 
 可尝试重启 光猫/路由器 以使的穿透端口发生变化   
 以测试其实际工作状况  
@@ -457,7 +465,10 @@ Content-Type: application/json
 ---
 
 
-参考：https://blog.cloudflare.com/future-of-page-rules-zh-cn
+参考：
+
+* https://blog.cloudflare.com/future-of-page-rules-zh-cn
+* https://developers.cloudflare.com/api/operations/page-rules-list-page-rules
 
 
 
