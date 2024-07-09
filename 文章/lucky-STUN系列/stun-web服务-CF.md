@@ -150,7 +150,7 @@ Github 项目下载地址： [链接](https://github.com/HMBSbige/NatTypeTester/
 若出现上述情况可尝试开启DMZ 其目标IP为lucky所在设备的IP
 当然前提是其能够启用DMZ且其确实能够生效  
 
-DMZ设置参考 [链接1](https://www.bilibili.com/read/cv28835081/) [链接2](https://help.onethingcloud.com/9dd6/e9ec#header-5)  
+DMZ设置参考: [链接1](https://www.bilibili.com/read/cv28835081/) [链接2](https://help.onethingcloud.com/9dd6/e9ec#header-5)  
 
 
 ### 端口映射的妙用
@@ -161,6 +161,12 @@ DMZ设置参考 [链接1](https://www.bilibili.com/read/cv28835081/) [链接2](h
 可以将STUN规则监听端口（穿透通道本地端口）映射出去
 可起到类似DMZ的效果 此场景下的STUN规则监听端口要固定不能为0
 即随机端口
+
+端口映射教程 [链接](https://www.bilibili.com/read/cv28835081/)
+
+映射时内外端口号均为 **穿透通道本地端口** 的端口号
+协议选择 both 即TCP和UDP 而内网IP则填写lucky所在设备的IP
+
 
 ### STUN穿透规则设置
 
@@ -182,22 +188,27 @@ DMZ设置参考 [链接1](https://www.bilibili.com/read/cv28835081/) [链接2](h
 **主要对鉴权方面有些影响** 比如有些服务可以设置对内网地址免登录  
 若使用内置转发则不要开启类似这样的功能  
 
-**参考示例**
-
-* 直接使用/与DMZ组合使用
+* **直接使用/与DMZ组合使用**
   
-  此场景下 穿透通道本地端口 可以使用随机端口 
+  此场景下 穿透通道本地端口 可以使用随机端口
+
+  示例  
+  <img src="/图片/stun-web服务-CF/stun-web服务-STUN规则示例-内置转发-随机端口.jpg" width="60%" height="60%" />
 
 
+* **与端口映射组合使用**
 
-* 与端口映射组合使用
+此场景下 穿透通道本地端口 需要使用固定端口
+并设置端口映射   
 
+示例  
+<img src="/图片/stun-web服务-CF/stun-web服务-STUN规则示例-内置转发-固定端口.jpg" width="60%" height="60%" />
 
 
 #### 使用内置UPnP
 
-
-
+相比起使用内置映射麻烦一些需要光猫/路由器支持UPnP  
+不过其好处也是显而易见的 即可以获取访问者的源IP  
 不太适合运行在docker中的lucky使用
 
 
@@ -205,10 +216,9 @@ DMZ设置参考 [链接1](https://www.bilibili.com/read/cv28835081/) [链接2](h
 
 #### 直接操作防火墙规则
 
-针对直接运行在路由器上的
-可以直接通过自定义脚本 修改防火墙规则
-不过这不是本教程介绍的范围
-自行设计防火墙命令
+针对直接运行在路由器上的lucky   
+可以直接通过自定义脚本直接修改防火墙规则 以达到效果  
+不过这不在本教程介绍的范围   
 
 
 ## 使用Cloudflare的页面规则重定向URL以固定STUN穿透的网页端口
