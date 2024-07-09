@@ -117,11 +117,13 @@
 
 **NAT测试工具**
 
-下载地址   
+Github 项目下载地址： [链接](https://github.com/HMBSbige/NatTypeTester/releases/)
+
+网盘下载地址: [链接]()  
 
 
 
-#### 普通UPnP 以及DMZ
+#### 普通UPnP DMZ 以及端口映射
 
 在之前BT下载穿透中主要使用的是手动的端口转发   
 以及相对特殊的 miniUPnP 客户端 设置映射
@@ -152,6 +154,13 @@ DMZ设置参考 [链接1](https://www.bilibili.com/read/cv28835081/) [链接2](h
 
 
 ### 端口映射的妙用
+
+一些光猫在普通权限下可能无法使用DMZ
+但可以使用较为基础的端口映射 
+
+可以将STUN规则监听映射出去起到类似DMZ的效果
+
+
 
 ### STUN穿透规则设置
 
@@ -390,6 +399,16 @@ Content-Type: application/json
 示例
 <img src="/图片/stun-web服务-CF/stun-web服务-CF_页面规则更新测试-2.jpg" width="60%" height="60%" />
 
+
+#### 在STUN穿透规则更新端口
+
+在计划任务中完成了测试
+填写到STUN穿透规则中
+设置方式与在计划任务中基本相同
+
+示例
+
+
 至此我们已经基本完成了 固定端口的设置
 接下来就是修改STUN穿透规则设置普通反向代理的工作了
 
@@ -398,12 +417,32 @@ Content-Type: application/json
 
 ### 创建反向代理规则
 
+设置反向代理规则的部分可以查看之前的教程  
+不过要注意一下前端地址修为重定向后的地址 [链接](https://www.bilibili.com/read/cv35702797/)  
+
+示例  
+<img src="/图片/stun-web服务-CF/stun-web服务-CF_反代规则前端域名.jpg" width="60%" height="60%" />
+
 ### 获取TLS/SSL证书
+
+设置反向代理规则的部分可以查看之前的教程  
+申请的证书为重定向后的泛域名 [链接](https://www.bilibili.com/read/cv35124571/)  
+ 
+示例  
+<img src="/图片/stun-web服务-CF/stun-web服务-CF_证书示例.jpg" width="60%" height="60%" />
+
+
 
 ## 最终验证环节
 
+完成上述设置后我们既可进行最后的验证
+在浏览器中输入重定向前地址 例如`alist.ie12.com`
+应会跳转到`alist.stun.ie12.com`
 
+可尝试重启 光猫/路由器 以使的穿透端口发生变化
+以测试其实际工作状况
 
+---
 
 
 参考：https://blog.cloudflare.com/future-of-page-rules-zh-cn
