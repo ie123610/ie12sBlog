@@ -9,7 +9,7 @@
 
 ## 在STUN穿透环境中使用WEB服务
 
-在之前的教程中我们已经通过lucky实现了较为安全的WEB访问[链接](https://www.bilibili.com/read/cv35702797/)  
+在之前的教程中我们已经通过lucky实现了较为安全的WEB访问 详见：[链接](https://www.bilibili.com/read/cv35702797/)  
 但这些是建立在拥有**公网IP**的情况下（IPv4/IPv6）  
 
 
@@ -19,8 +19,8 @@
 超过这个时间后端口号会再此次发生变化 变化的时间和变化后的端口号都是不确定的  
 这也意味着要在STUN穿透后使用web服务需要**不停更的换端口** 是一件比较麻烦的事情  
 
-在之前的教程中我们已经实现了 BT下载软件监听端口的自动更换 [链接](https://www.bilibili.com/read/cv31006420/)   
-以及 Minecraft Java的服务器联机端口的固定 [链接](https://www.bilibili.com/read/cv31482590/)  
+在之前的教程中我们已经实现了 BT下载软件监听端口的自动更换 详见：[链接](https://www.bilibili.com/read/cv31006420/)   
+以及 Minecraft Java的服务器联机端口的固定 详见：[链接](https://www.bilibili.com/read/cv31482590/)  
 
 不过BT下载器依靠追踪器（tracker）和DHT网络自动化的获取 其他节点的端口和地址  
 而 Minecraft Java 版依赖 **SRV记录** 来获取端口号  
@@ -60,7 +60,7 @@
 
 #### 使用邮件进行通知端口变化
 
-在稍早前的教程中我们实现了使用邮件来通知端口变化 [链接](https://www.bilibili.com/read/cv34705222/)  
+在稍早前的教程中我们实现了使用邮件来通知端口变化 详见：[链接](https://www.bilibili.com/read/cv34705222/)  
 有了邮件的通知我们只需要在访问的时候手动附加端口号即可
 
 这一方案可用于任何使用TCP/UDP协议的程序  
@@ -146,8 +146,8 @@ Github 项目下载地址： [链接](https://github.com/HMBSbige/NatTypeTester/
 依然无法穿透 主要表现为穿透日志一直再刷新类似于  
 "stun pubile addr check error" "穿透通道失效" 之类的报错信息  
 
-而DMZ使用是则破除这种“隐形防火墙”的一种简单而有效的方法 
-若出现上述情况可尝试开启DMZ 其目标IP为lucky所在设备的IP
+而DMZ使用是则破除这种“隐形防火墙”的一种简单而有效的方法   
+若出现上述情况可尝试开启DMZ 其目标IP为lucky所在设备的IP  
 当然前提是其能够启用DMZ且其确实能够生效  
 
 DMZ设置参考: [链接1](https://www.bilibili.com/read/cv28835081/) [链接2](https://help.onethingcloud.com/9dd6/e9ec#header-5)  
@@ -158,14 +158,14 @@ DMZ设置参考: [链接1](https://www.bilibili.com/read/cv28835081/) [链接2](
 一些光猫在普通权限下可能无法使用DMZ  
 但可以使用较为基础的端口映射  
 
-可以将STUN规则监听端口（穿透通道本地端口）映射出去
-可起到类似DMZ的效果 此场景下的STUN规则监听端口要固定不能为0
-即随机端口
+可以将STUN规则监听端口（穿透通道本地端口）映射出去  
+可起到类似DMZ的效果 此场景下的STUN规则监听端口要固定不能为0  
+即随机端口  
 
-端口映射教程 [链接](https://www.bilibili.com/read/cv28835081/)
+端口映射教程 详见：[链接](https://www.bilibili.com/read/cv28835081/)
 
-映射时内外端口号均为 **穿透通道本地端口** 的端口号
-协议选择 both 即TCP和UDP 而内网IP则填写lucky所在设备的IP
+映射时内外端口号均为 **穿透通道本地端口** 的端口号  
+协议选择 both 即 TCP和UDP 而内网IP则填写lucky所在设备的IP  
 
 
 ### STUN穿透规则设置
@@ -198,20 +198,21 @@ DMZ设置参考: [链接1](https://www.bilibili.com/read/cv28835081/) [链接2](
 
 * **与端口映射组合使用**
 
-此场景下 穿透通道本地端口 需要使用固定端口
-并设置端口映射   
+  此场景下 穿透通道本地端口 需要使用固定端口
+  并将此端口映射出去  
 
-示例  
-<img src="/图片/stun-web服务-CF/stun-web服务-STUN规则示例-内置转发-固定端口.jpg" width="60%" height="60%" />
+  示例  
+  <img src="/图片/stun-web服务-CF/stun-web服务-STUN规则示例-内置转发-固定端口.jpg" width="60%" height="60%" />
 
 
 #### 使用内置UPnP
 
-相比起使用内置映射麻烦一些需要光猫/路由器支持UPnP  
-不过其好处也是显而易见的 即可以获取访问者的源IP  
-不太适合运行在docker中的lucky使用
+相比起使用内置映射要麻烦一些 需要光猫/路由器支持UPnP  
+不过其好处也是显而易见的 即**可以获取访问者的源IP**  
+但不太适合运行在docker中的lucky使用  
 
-
+示例  
+<img src="/图片/stun-web服务-CF/stun-web服务-STUN规则示例-upnp.jpg" width="60%" height="60%" />
 
 
 #### 直接操作防火墙规则
@@ -417,7 +418,7 @@ Content-Type: application/json
 查看url 字段中重定向后域名附加的端口号是否变化  
 以及是否有返回"success":true"  
 
-示例 
+示例   
 <img src="/图片/stun-web服务-CF/stun-web服务-CF_页面规则更新测试-2.jpg" width="60%" height="60%" />
 
 
@@ -450,7 +451,8 @@ Content-Type: application/json
 ### 创建反向代理规则
 
 设置反向代理规则的部分可以查看之前的教程  
-不过要注意一下前端地址修为重定向后的地址 [链接](https://www.bilibili.com/read/cv35702797/)  
+不过要注意一下前端地址修为重定向后的地址 
+详见：[链接](https://www.bilibili.com/read/cv35702797/)  
 
 示例  
 <img src="/图片/stun-web服务-CF/stun-web服务-CF_反代规则前端域名.jpg" width="60%" height="60%" />
@@ -458,7 +460,8 @@ Content-Type: application/json
 ### 获取TLS/SSL证书
 
 设置反向代理规则的部分可以查看之前的教程  
-申请的证书为重定向后的泛域名 [链接](https://www.bilibili.com/read/cv35124571/)  
+申请的证书为重定向后的泛域名 
+详见：[链接](https://www.bilibili.com/read/cv35124571/)  
  
 示例  
 <img src="/图片/stun-web服务-CF/stun-web服务-CF_证书示例.jpg" width="60%" height="60%" />
