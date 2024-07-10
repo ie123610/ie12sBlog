@@ -121,6 +121,13 @@ Github 项目下载地址： [链接](https://github.com/HMBSbige/NatTypeTester/
 
 网盘下载地址: [链接]()  
 
+可能需要安装.NAT 8.0
+
+* Full Cone			        》全锥形
+* Restricted Cone 		  》地址受限锥形
+* Port-Restricted Cone 	》（地址和）端口受限锥形
+* Symmetric 		        》 对称形
+
 
 
 #### 普通UPnP DMZ 以及端口映射
