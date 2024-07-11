@@ -119,7 +119,7 @@
 共两层NAT 且NAT类型检查结果**不为对称型即可进行穿透**   
 
 
-**NAT测试工具**
+#### NAT测试工具
 
 Github 项目下载地址： [链接](https://github.com/HMBSbige/NatTypeTester/releases/)  
 
@@ -151,8 +151,9 @@ Github 项目下载地址： [链接](https://github.com/HMBSbige/NatTypeTester/
 示例  
 <img src="/图片/stun-web服务-CF/stun-web服务-NAT测试工具-新版测试.jpg" width="60%" height="60%" />
 
+---
 
-#### 普通UPnP DMZ 以及端口映射
+### 普通UPnP DMZ 以及端口映射
 
 在之前的BT下载穿透中主要使用手动的端口转发   
 以及相对特殊的 miniUPnP 客户端 来设置映射
@@ -182,7 +183,7 @@ Github 项目下载地址： [链接](https://github.com/HMBSbige/NatTypeTester/
 DMZ设置参考: [链接1](https://www.bilibili.com/read/cv28835081/) [链接2](https://help.onethingcloud.com/9dd6/e9ec#header-5)  
 
 
-### 端口映射的妙用
+#### 端口映射的妙用
 
 一些光猫在普通权限下可能无法使用DMZ  
 但可以使用较为基础的端口映射  
@@ -196,6 +197,7 @@ DMZ设置参考: [链接1](https://www.bilibili.com/read/cv28835081/) [链接2](
 映射时内外端口号均为 **穿透通道本地端口** 的端口号  
 协议选择 both 即 TCP和UDP 而内网IP则填写lucky所在设备的IP  
 
+---
 
 ### STUN穿透规则设置
 
