@@ -117,17 +117,35 @@
 
 **NAT测试工具**
 
-Github 项目下载地址： [链接](https://github.com/HMBSbige/NatTypeTester/releases/)
+Github 项目下载地址： [链接](https://github.com/HMBSbige/NatTypeTester/releases/)  
 
-网盘下载地址: [链接]()  
+网盘下载地址: [链接](https://wwm.lanzoul.com/ivTFr2458oxc)  
+密码:NAT  
 
-可能需要安装.NAT 8.0
+<img src="/图片/stun-web服务-CF/stun-web服务-NAT测试工具1.jpg" width="60%" height="60%" />
 
-* Full Cone			        》全锥形
-* Restricted Cone 		  》地址受限锥形
-* Port-Restricted Cone 	》（地址和）端口受限锥形
-* Symmetric 		        》 对称形
+**旧版测试**
 
+如果结果出现UDP block 可以尝试更换上方的服务器  
+测试结果不为对称型即可  
+
+
+* Full Cone             》全锥形  
+* Restricted Cone       》地址受限锥形  
+* Port-Restricted Cone  》（地址和）端口受限锥形  
+* Symmetric             》 对称形
+
+示例  
+<img src="/图片/stun-web服务-CF/stun-web服务-NAT测试工具-旧版测试.jpg" width="60%" height="60%" />
+
+**新版测试**
+
+如果绑定测试出现 failed 可以尝试更换上方的服务器  
+测试映射行为 为 EndpointIndependent 则表示可以穿透
+即以E开头 若出现A开头则不能穿透
+
+示例  
+<img src="/图片/stun-web服务-CF/stun-web服务-NAT测试工具-新版测试.jpg" width="60%" height="60%" />
 
 
 #### 普通UPnP DMZ 以及端口映射
