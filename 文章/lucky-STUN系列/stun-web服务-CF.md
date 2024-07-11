@@ -314,9 +314,9 @@ DDNS更新方法在之前的教程中已讲解过 详见：[链接](https://www
 
 ---
 
-### 配置页面规则
 
-#### 创建规则
+
+### 创建规则
 
 登录CF > 点击侧边栏中的网站 > 选择你的域名 > 点击侧边栏中的规则 >   
 页面规则 > 创建规则  
@@ -342,7 +342,7 @@ URL填写 **重定向前的泛域名** 比如`*.ie12.com`
 通过API可以完成更新 但我们需要先获取 **区域ID** 和 **规则ID**  
 
 
- **获取区域ID**
+ #### 获取区域ID 
 
 区域ID获取起来非常简单 点开页面规则中的API按钮  
 将示例URL中的区域ID复制出来即可  
@@ -352,7 +352,7 @@ URL填写 **重定向前的泛域名** 比如`*.ie12.com`
 <img src="/图片/stun-web服务-CF/stun-web服务-CF_获取区域ID-2.jpg" width="60%" height="60%" /> 
 
 
-**创建访问令牌**
+#### 创建访问令牌
 
 规则ID的获取相对麻烦一些 要使用API来获取  
 要使用API我们需要先创建**访问令牌**  
@@ -379,7 +379,7 @@ API定义：[链接](https://developers.cloudflare.com/api/operations/page-rules
 <img src="/图片/stun-web服务-CF/stun-web服务-CF_令牌创建过程3.jpg" width="60%" height="60%" /> 
 
 
- **获取规则ID**
+#### 获取规则ID
 
 在创建了访问令牌后就可以开始获取规则ID了  
 此处使用lucky计划任务中的callweb功能来进行获取  
@@ -417,7 +417,7 @@ Content-Type: application/json
 
 在获取完 规则ID后就可以开始更新  
 
-**测试更新**
+#### 测试更新
 
 我们先在计划任务测试完成后 再写到STUN穿透规则里  
 修改计划任务   
@@ -454,7 +454,7 @@ Content-Type: application/json
 <img src="/图片/stun-web服务-CF/stun-web服务-CF_页面规则更新测试-2.jpg" width="60%" height="60%" />
 
 
-#### 在STUN穿透规则更新端口
+### 在STUN穿透规则更新端口
 
 在计划任务中完成更新测试后 现将其填写到STUN穿透规则内
 设置方式与在计划任务中基本相同 需使用变量表示穿透得到的端口号
