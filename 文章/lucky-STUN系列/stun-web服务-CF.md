@@ -94,8 +94,7 @@
 
 ### 可用的解决方法
 
-所以在STUN穿透后使用WEB服务 
-亟待解决的就是端口**不固定**和**不确定**的问题
+所以在STUN穿透后使用WEB服务亟待解决的就是端口**不固定**和**不确定**的问题
 
 #### 使用邮件进行通知端口变化
 
@@ -136,9 +135,9 @@
 
 ## 网络环境优化和STUN穿透规则设置
 
-当然最重要的还是STUN穿透能够成功
-若无法穿透则后面的这些内容都无从谈起
-相比起BT下时的穿透 给web服务的穿透会更加简单一些
+当然最重要的还是STUN穿透能够成功   
+若无法穿透则后面的这些内容都无从谈起   
+相比起BT下时的穿透 给web服务的穿透会更加简单一些  
 
 
 ### 网络环境优化
@@ -159,7 +158,6 @@
 #### NAT测试工具
 
 Github 项目下载地址： [链接](https://github.com/HMBSbige/NatTypeTester/releases/)  
-
 网盘下载地址: [链接](https://wwm.lanzoul.com/ivTFr2458oxc)  
 密码:NAT  
 
@@ -182,8 +180,8 @@ Github 项目下载地址： [链接](https://github.com/HMBSbige/NatTypeTester/
 **新版测试**
 
 如果绑定测试出现 failed 可以尝试更换上方的服务器  
-测试映射行为 为 EndpointIndependent 则表示可以穿透
-即以E开头 若出现A开头则不能穿透
+测试映射行为 为 EndpointIndependent 则表示可以穿透  
+即以E开头 若出现A开头则不能穿透  
 
 示例  
 <img src="/图片/stun-web服务-CF/stun-web服务-NAT测试工具-新版测试.jpg" width="60%" height="60%" />
@@ -277,7 +275,9 @@ DMZ设置参考: [链接1](https://www.bilibili.com/read/cv28835081/) [链接2](
 
 相比起使用内置映射要麻烦一些 需要光猫/路由器支持UPnP  
 不过其好处也是显而易见的 即**可以获取访问者的源IP**  
-但不太适合运行在docker中的lucky使用  
+
+其可以在docker部署的情况下使用但需要额外填写UPnP网关地址等参数  
+故不太适合运行在docker中的lucky使用  
 
 示例  
 <img src="/图片/stun-web服务-CF/stun-web服务-STUN规则示例-upnp.jpg" width="60%" height="60%" />
@@ -365,6 +365,9 @@ URL填写 **重定向前的泛域名** 比如`*.ie12.com`
 可以带上https 以完成HTTP重定向工作  
 此处的$1用于传递上面*部分的字符  
 这样我们就可以用一条页面规则完成无数服务的重定向  
+
+可以继续添加通配符以以匹配 资源路径和查询字符串等
+不过在本教程中并不需要使用这些
 
 <img src="/图片/stun-web服务-CF/stun-web服务-CF_创建页面规则.jpg" width="60%" height="60%" /> 
 
@@ -493,8 +496,8 @@ Content-Type: application/json
 
 ### 在STUN穿透规则中更新端口
 
-在计划任务中完成更新测试后 现将其填写到STUN穿透规则内
-设置方式与在计划任务中基本相同 需使用变量表示穿透得到的端口号
+在计划任务中完成更新测试后 现将其填写到STUN穿透规则内  
+设置方式与在计划任务中基本相同 需使用变量表示穿透得到的端口号   
 
 接口调用成功包含的字符串填写：
 ```
@@ -536,6 +539,8 @@ Content-Type: application/json
 示例  
 <img src="/图片/stun-web服务-CF/stun-web服务-CF_证书示例.jpg" width="60%" height="60%" />
 
+---
+
 ## 最终验证环节
 
 完成上述设置后我们既可进行最后的验证  
@@ -550,8 +555,9 @@ Content-Type: application/json
 
 参考：
 
-* https://blog.cloudflare.com/future-of-page-rules-zh-cn
-* https://developers.cloudflare.com/api/operations/page-rules-list-page-rules
+* [页面规则的未来](https://blog.cloudflare.com/future-of-page-rules-zh-cn)
+* [Cloudflare API](ttps://developers.cloudflare.com/api/operations/page-rules-list-page-rules)
+
 
 
 
