@@ -366,8 +366,8 @@ URL填写 **重定向前的泛域名** 比如`*.ie12.com`
 此处的$1用于传递上面*部分的字符  
 这样我们就可以用一条页面规则完成无数服务的重定向  
 
-可以继续添加通配符以以匹配 资源路径和查询字符串等
-不过在本教程中并不需要使用这些
+可以继续添加通配符以以匹配 资源路径和查询字符串等  
+不过在本教程中并不需要使用这些  
 
 <img src="/图片/stun-web服务-CF/stun-web服务-CF_创建页面规则.jpg" width="60%" height="60%" /> 
 
@@ -556,7 +556,7 @@ Content-Type: application/json
 参考：
 
 * [页面规则的未来](https://blog.cloudflare.com/future-of-page-rules-zh-cn)
-* [Cloudflare API](ttps://developers.cloudflare.com/api/operations/page-rules-list-page-rules)
+* [Cloudflare API](https://developers.cloudflare.com/api/operations/page-rules-list-page-rules)
 
 
 
