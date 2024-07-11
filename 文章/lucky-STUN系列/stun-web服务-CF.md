@@ -304,7 +304,7 @@ DMZ设置参考: [链接1](https://www.bilibili.com/read/cv28835081/) [链接2](
 
 ---
 
-### 解析DNS记录
+### 设置DNS记录解析
 
 完成上述配置后我们只需要更新泛域名就可以了  
 DDNS更新方法在之前的教程中已讲解过 详见：[链接](https://www.bilibili.com/read/cv35021955)   
