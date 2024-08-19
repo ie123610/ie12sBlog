@@ -334,8 +334,8 @@ XIU2的 [CloudflareSpeedTest](https://github.com/XIU2/CloudflareSpeedTest)
 详情可以查看下面的使用提示 
 
 **示例**  
+<img src="../../图片/CF双栈代理/CF双栈代理-win_IP_优选结果.JPG" width="60%" height="60%" />
 
-图片
 
 <details>
 <summary>使用说明中的提示</summary>
@@ -392,10 +392,11 @@ XIU2的 [CloudflareSpeedTest](https://github.com/XIU2/CloudflareSpeedTest)
 Linux终端模拟软件的方法相对来说比较麻烦  
 其需要在命令行模式操作测试脚本 [链接](https://github.com/XIU2/CloudflareSpeedTest/discussions/61)  
 
-相比之下APP使用起来会更加简单 不过默认测试的节点数量比较少 实际效果可能不是很好  
-可以手动调高节点数量 但多了后似乎会出现闪退的现象 当然也可能是测试设备的问题 [链接](https://github.com/xianshenglu/cloudflare-ip-tester-app)  
+相比之下APP使用起来会更加简单 不过默认测试的节点数量比较少  
+实际效果可能不是很好 可以手动调高节点数量  
+但多了后似乎会出现闪退的现象 当然也可能是测试设备的问题 [链接](https://github.com/xianshenglu/cloudflare-ip-tester-app)  
 
-<img src="../../图片/CF双栈代理/CF双栈代理-CF_IP优选_安卓.jpg" width="60%" height="60%" />
+<img src="../../图片/CF双栈代理/CF双栈代理-CF_IP优选_安卓.JPG" width="60%" height="60%" />
 
 而在“劫持”域名方面也有一定的困难  
 安卓下虽然也有host文件 可用于抢答域名解析  
@@ -409,8 +410,8 @@ Linux终端模拟软件的方法相对来说比较麻烦
 
 [Github项目地址](https://github.com/x-falcon/Virtual-Hosts) [F-Droid应用商店下载](https://f-droid.org/packages/com.github.xfalcon.vhosts/)  
 
-<img src="../../图片/CF双栈代理/CF双栈代理-vhost_预览_1.jpg" width="60%" height="60%" />
-<img src="../../图片/CF双栈代理/CF双栈代理-vhost_预览_0.jpg" width="60%" height="60%" />
+<img src="../../图片/CF双栈代理/CF双栈代理-vhost_预览_1.JPG" width="60%" height="60%" />
+<img src="../../图片/CF双栈代理/CF双栈代理-vhost_预览_0.JPG" width="60%" height="60%" />
 
 可以选择本机中任意的文件 读取其中的规则 也可以从网页上读取  
 
@@ -425,20 +426,20 @@ Linux终端模拟软件的方法相对来说比较麻烦
 
 **示例**
 
-<img src="../../图片/CF双栈代理/CF双栈代理-vhost_置hosts文件.jpg" width="60%" height="60%" />
+<img src="../../图片/CF双栈代理/CF双栈代理-vhost_置hosts文件.JPG" width="60%" height="60%" />
 
 设置完成后打开 开关 建立一个VPN连接 DNS“劫持”即可生效  
 
 
 **示例**
 
-<img src="../../图片/CF双栈代理/CF双栈代理-vhost_运行_0.jpg" width="60%" height="60%" />
-<img src="../../图片/CF双栈代理/CF双栈代理-vhost_运行_1.jpg" width="60%" height="60%" />
+<img src="../../图片/CF双栈代理/CF双栈代理-vhost_运行_0.JPG" width="60%" height="60%" />
+<img src="../../图片/CF双栈代理/CF双栈代理-vhost_运行_1.JPG" width="60%" height="60%" />
 
 
 **检视效果**
 
-<img src="../../图片/CF双栈代理/CF双栈代理-vhost_检视效果.jpg" width="60%" height="60%" />
+<img src="../../图片/CF双栈代理/CF双栈代理-vhost_检视效果.JPG" width="60%" height="60%" />
 
 
 
