@@ -284,7 +284,7 @@ CF 的回源规则其实是可以重写 Host 请求头的
 在lucky作为源服务器（反向代理）的情况下 当http请求发送到了https端口时  
 会发生连接重置 而在CF则会显示520错误  
 
-**示例**
+**示例**  
 <img src="../../图片/CF双栈代理/CF双栈代理-cf_520错误.JPG" width="60%" height="60%" />
 
 ### SSL握手错误
@@ -295,7 +295,7 @@ CF 的回源规则其实是可以重写 Host 请求头的
 例如在源服务器上未设置TLS加密 但在CF上设置了 完全或者完全（严格）  
 **这样一来https请求就发送到了http端口上 握手自然无法完成**  
 
-**示例**
+**示例**  
 <img src="../../图片/CF双栈代理/CF双栈代理-cf_SSL握手错误.JPG" width="60%" height="60%" />
 
 ---
@@ -315,7 +315,7 @@ Cloudflare CDN 节点 采用一种名为 Anycast 的路由方法 其一般翻译
 但是如何找出这个（这些）节点就成为一个问题  
 好在现在已经有一些成熟的IP优选方案  
 
-XIU2的 [CloudflareSpeedTest](https://github.com/XIU2/CloudflareSpeedTest)
+XIU2的 [CloudflareSpeedTest](https://github.com/XIU2/CloudflareSpeedTest)  
 值得注意的是CF的节点数量非常多 即使是优选脚本也只会 抽取一部分IP进行测试  
 而不是对所有节点都进行测试  
 
@@ -332,6 +332,10 @@ XIU2的 [CloudflareSpeedTest](https://github.com/XIU2/CloudflareSpeedTest)
 
 通过修改host文件在本地“劫持”自己的域名到优选后的IP即可实现优选  
 详情可以查看下面的使用提示 
+
+**示例**  
+
+图片
 
 <details>
 <summary>使用说明中的提示</summary>
@@ -391,7 +395,7 @@ Linux终端模拟软件的方法相对来说比较麻烦
 相比之下APP使用起来会更加简单 不过默认测试的节点数量比较少 实际效果可能不是很好  
 可以手动调高节点数量 但多了后似乎会出现闪退的现象 当然也可能是测试设备的问题 [链接](https://github.com/xianshenglu/cloudflare-ip-tester-app)  
 
-<img src="../../图片/CF双栈代理/CF双栈代理-CF_IP优选_安卓.JPG" width="60%" height="60%" />
+<img src="../../图片/CF双栈代理/CF双栈代理-CF_IP优选_安卓.jpg" width="60%" height="60%" />
 
 而在“劫持”域名方面也有一定的困难  
 安卓下虽然也有host文件 可用于抢答域名解析  
@@ -405,8 +409,8 @@ Linux终端模拟软件的方法相对来说比较麻烦
 
 [Github项目地址](https://github.com/x-falcon/Virtual-Hosts) [F-Droid应用商店下载](https://f-droid.org/packages/com.github.xfalcon.vhosts/)  
 
-<img src="../../图片/CF双栈代理/CF双栈代理-vhost_预览_0.jpg" width="60%" height="60%" />
 <img src="../../图片/CF双栈代理/CF双栈代理-vhost_预览_1.jpg" width="60%" height="60%" />
+<img src="../../图片/CF双栈代理/CF双栈代理-vhost_预览_0.jpg" width="60%" height="60%" />
 
 可以选择本机中任意的文件 读取其中的规则 也可以从网页上读取  
 
@@ -475,5 +479,5 @@ Linux终端模拟软件的方法相对来说比较麻烦
 
 ## 评论区
 
-前往评论区 》 链接
+前往评论区 》 [链接](https://github.com/ie123610/ie12sBlog/issues/13)
 
