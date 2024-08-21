@@ -150,7 +150,7 @@
 
 参考
 
-[Cloudflare API Documentation|Update DNS Record](https://developers.cloudflare.com/api/operations/dns-records-for-a-zone-patch-dns-record
+* [Cloudflare API Documentation|Update DNS Record](https://developers.cloudflare.com/api/operations/dns-records-for-a-zone-patch-dns-record
 )
 
 ---
