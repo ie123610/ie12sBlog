@@ -258,6 +258,8 @@ Content-Type: application/json
 **示例**  
 `"expression": "wildcard_replace(http.request.full_uri, \"*://*.ie12.com/*\", \"https://${2}.stun.ie12.com:#{port}/${3}\")"}`
 
+**关闭** 禁用成功字符检测  
+填写 `"success":true`  用于判断请求是否成功  
 
 
 ## 最终效果验证环节 
