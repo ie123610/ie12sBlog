@@ -79,15 +79,16 @@ STUN穿透后的网页端口 [链接](../../文章/lucky-STUN系列/stun-web服�
 字段依然选择主机名 运算符改为 **不包含**  
 值则填写不需要重定向的子域名 比如 `blog.ie12.com`
 
-这样一来 输入请求的主机名以 `.ie12.com`结尾且不包括
+这样一来 输入请求的主机名以 `.ie12.com`结尾且不包括  
 `blog.ie12.com` 的请求会匹配上这一条重定向规则  
 
 **URL重定向：**  
 
 * 类型：动态  
 * 表达式：  
-`wildcard_replace(http.request.full_uri, "*://*.ie12.com/*", "https://${2}.stun.ie12.com:6666/${3}")`  
-
+```
+wildcard_replace(http.request.full_uri, "*://*.ie12.com/*", "https://${2}.stun.ie12.com:6666/${3}")
+```
 * 状态代码选择302  
 * 勾选保留查询字符串  
 * 保存规则  
@@ -228,8 +229,10 @@ Content-Type: application/json
 ```
 
 上面的 `expression` 为匹配传入链接的表达式  
+
 而下面的 `action_parameters` 里的 `expression`则是  
-用于构建重定向后的链接的表达式 可以直接从上一步获取重定向规则ID时返回的内容中复制出来  
+用于构建重定向后的链接的表达式  
+其可以直接从上一步获取重定向规则ID时返回的内容中复制出来  
 
 尽管其请求方法为PATCH 文档中也没有明确必填参数 应该只需要提交要修改的部分就行  
 但是实际测试下来 发现还是要填写完整的信息  
@@ -240,7 +243,8 @@ Content-Type: application/json
 <img src="../../图片/stun-cf重定向/CF-重定向_测试更新_0.jpg" width="60%" height="60%" />
 
 按下手动触发并查看日志中的返回结果  
-若设置正确即可看到返回的重定向规则信息中目标URL的 地址 端口号已经发生变化  
+若设置正确即可看到返回的重定向规则信息中目标URL的  
+地址和端口号已经发生变化  
 
 **示例**  
 <img src="../../图片/stun-cf重定向/CF-重定向_测试更新_0.jpg" width="60%" height="60%" />
@@ -261,6 +265,7 @@ Content-Type: application/json
 **关闭** 禁用成功字符检测  
 填写 `"success":true`  用于判断请求是否成功  
 
+---
 
 ## 最终效果验证环节 
 
