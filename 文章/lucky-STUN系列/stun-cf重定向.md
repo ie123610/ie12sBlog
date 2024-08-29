@@ -204,7 +204,7 @@ Content-Type: application/json
 在获取完上述的信息之后就可以开始更新重定向规则了  
 
 * 请求接口：  
-`https://api.cloudflare.com/client/v4/zones/区域规则ID/rulesets/重定向规则集ID/rules/重定向规则ID`  
+`https://api.cloudflare.com/client/v4/zones/你的区域ID/rulesets/重定向规则集ID/rules/重定向规则ID`  
 
 * 请求方式：PATCH
 * 请求头：不变
@@ -240,7 +240,7 @@ Content-Type: application/json
 <img src="../../图片/stun-cf重定向/CF-重定向_测试更新_0.jpg" width="60%" height="60%" />
 
 按下手动触发并查看日志中的返回结果  
-若设置正确即可看到返回中的重定向规则信息中目标URL中的 地址 端口号已经发生变化  
+若设置正确即可看到返回的重定向规则信息中目标URL的 地址 端口号已经发生变化  
 
 **示例**  
 <img src="../../图片/stun-cf重定向/CF-重定向_测试更新_0.jpg" width="60%" height="60%" />
@@ -249,11 +249,11 @@ Content-Type: application/json
 
 ## 在STUN穿透中更新规则
 
-与在计划任务中的基本相同  
+与在计划任务中时基本相同  
 当然最重要的就将测试时使用的固定端口改为STUN规则里的变量  
 
 可以使用webhook手动触发测试进行验证  
-其会使用6666作为测试时使用的端口号  
+其会使用6666作为测试时的端口号  
 
 **示例**  
 `"expression": "wildcard_replace(http.request.full_uri, \"*://*.ie12.com/*\", \"https://${2}.stun.ie12.com:#{port}/${3}\")"}`
