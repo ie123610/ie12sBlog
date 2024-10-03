@@ -8,8 +8,7 @@
 
 本教程将介绍 如何通过wehhook更新  
 设置在Dynv6和Cloudflare上更新TXT记录  
-
-Cloudflare 下文简称 CF 
+Cloudflare 下文简称 CF  
 
 ---
 
@@ -19,7 +18,7 @@ Cloudflare 下文简称 CF
 先创建一个TXT记录 获取更新令牌 区域ID和DNS记录ID  
 最后进行更新  
 
-在Dynv6上更新SRV记录的教程：[链接](https://www.bilibili.com/read/cv31482590/)
+在Dynv6上更新SRV记录的教程：[链接](https://www.bilibili.com/read/cv31482590/)  
 请先阅读完之前的教程后再继续阅读之后的内容  
 
 ### 创建 TXT 记录
@@ -86,7 +85,7 @@ name为记录名称 data为记录的内容
 先创建一个TXT记录 获取更新令牌 区域ID和DNS记录ID  
 最后进行更新  
 
-在Cloudflare上更新SRV记录的教程：[链接](https://www.bilibili.com/read/cv37416186/)
+在Cloudflare上更新SRV记录的教程：[链接](https://www.bilibili.com/read/cv37416186/)  
 请先阅读完之前的教程后再继续阅读之后的内容  
 
 
