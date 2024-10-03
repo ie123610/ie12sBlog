@@ -1,4 +1,4 @@
-# 「前置」 在Dynv6和Cloudflare上更新TXT记录
+# 「前置」在Dynv6和Cloudflare上更新TXT记录
 
 
 ## 关于本教程
