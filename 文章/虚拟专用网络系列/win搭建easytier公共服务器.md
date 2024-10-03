@@ -13,8 +13,7 @@ EasyTier 在Windows上其实是有图形化界面程序的 可以用于搭建公
 不过目前图形界面可操作的参数较少 使用命令行版本可操作选项会更多  
 而且其需要保持长期运行 所以使用命令行版本会更加合适  
 
-EasyTier在下文中简称为ET
-
+EasyTier在下文中简称为ET  
 本教程使用第三方软件将ET注册为win服务  
 可以轻松实现开机自启动 无需登录账户 并且避免显示命令行窗口  
 
@@ -32,8 +31,8 @@ Github项目链接：[链接](https://github.com/EasyTier/EasyTier/releases)
 <img src="../../图片/win搭建easytier公共服务器/win-easytier公共服务_下载et.jpg" width="60%" height="60%" />
 
 下载并解压文件  
-其中的 easytier-core.exe 为程序核心  
-而easytier-cli.exe为命令行管理工具  
+其中的 easytier-core.exe 为**程序核心**  
+而easytier-cli.exe为**命令行管理工具**  
 
 建议重命名一下文件夹 减少嵌套的文件夹层数  
 让文件路径变的短一些 这会方便之后的设置  
@@ -67,12 +66,12 @@ Github项目地址：[链接](https://github.com/winsw/winsw/releases)
 虽然官网上给出了配置文件的示例 但有部分参数的写法并没有给出  
 而且手写配置文件并不方便  
 
-配置文件示例：[链接](http://https://www.easytier.top/guide/network/config-file.html)
+**配置文件示例：**[链接](http://https://www.easytier.top/guide/network/config-file.html)
 更好的方法是先使用参数启动 EasyTier 其会在控制台窗口中  
 打印出对应的配置文件 将其复制下来保存即可  
 
 搭建公共服务器部分的内容主要参照  
-官网中的教程：[链接](https://www.easytier.top/guide/network/host-public-server.html)  
+**官网中的教程：**[链接](https://www.easytier.top/guide/network/host-public-server.html)  
 
 
 **我们此处搭建的是不转发流量只进行辅助穿透的公共服务器**  
@@ -110,7 +109,7 @@ Github项目地址：[链接](https://github.com/winsw/winsw/releases)
 **示例**  
 <img src="../../图片/win搭建easytier公共服务器/win-easytier公共服务_配置文件打印效果.jpg" width="60%" height="60%" />
 
-将其中的配置信息复制下来保存到EasyTier的目录下 文件名为 `config.yaml` 
+将其中的配置信息复制下来保存到EasyTier的目录下 文件名为 `config.yaml`  
 （### TOML ### 和--- 之间的部分）  
 
 **示例**  
@@ -139,10 +138,8 @@ WinSW配置可设置的内容很多 但我们只需要使用部分的参数字�
 
 
 在WinSW目录下创建与WinSW程序同名的xml文件  
-例如使用的是WinSW-x64.exe 
-那要创建的配置文件名即为WinSW-x64.xml  
-
-填入下列内容 并按照实际情况修改  
+例如使用的是WinSW-x64.exe 那要创建的配置文件名即为WinSW-x64.xml  
+填入下列内容 **并按照实际情况修改**  
 
 **示例**  
 
@@ -221,8 +218,8 @@ win搜索栏搜索 **服务** 进入服务管理工具
 
 ### 使用命令行管理工具
 
-ET核心程序和管理工具是相分离的 在以服务运行的情况下 没有命令行窗口 但我们依然可以使用  
-管理工具通过RPC查看服务核心状态  
+ET核心程序和管理工具是相分离的 在以服务运行的情况下  
+没有命令行窗口 但我们依然可以使用 管理工具通过RPC查看服务核心状态  
 
 由于是在本地运行且使用的是默认RPC端口故无需额外指定地址和端口号  
 可使用`help`参数以查看管理工具的可用命令  
@@ -245,7 +242,7 @@ ET核心程序和管理工具是相分离的 在以服务运行的情况下 没�
 
 除了刚才提到的**WinSW-x64.out.log**  
 还有 **WinSW-x64.err.log** 和 **WinSW-x64.wrapper.log**  
-通过查看日志文件 即可确定发生错误原因
+通过查看日志文件 即可确定发生错误原因  
 
 
 如果需要重新注册服务则需要先使用 `uninstall`命令卸载服务  
