@@ -150,6 +150,7 @@ WinSW配置可设置的内容很多 但我们只需要使用部分的参数字�
   <description>EasyTier公共节点服务</description>
   <executable>C:\easytier\easytier-core.exe</executable>
   <arguments>-c C:\easytier\config.yaml</arguments>
+  <onfailure action="restart" delay="2 mins"/>
 <log mode="roll-by-size">
   <sizeThreshold>4096</sizeThreshold>
   <keepFiles>2</keepFiles>
@@ -164,6 +165,9 @@ WinSW配置可设置的内容很多 但我们只需要使用部分的参数字�
 * **description:** 为任务描述  
 
 * **executable:** 可执行程序路径 即 ET核心的路径  
+
+* **onfailure action:** 程序非正常退出后的操作 这里选择的是 延迟2分钟后重启服务  
+  这对后台运行的服务来说是非常重要的 可以有效防止因为程序崩溃导致服务长时间下线  
 
 * **log mode:** 为WinSW日志的记录模式 这里使用的是 roll-by-size  
   即根据日志文件大小自动覆盖旧的日志文件  
