@@ -41,6 +41,6 @@
 
 **问：** 比特彗星所推荐的影音之星播放器可以用吗？  
 
-**答：** 不是很建议使用 其已经比较陈旧了 可以使用 VLC 或 PotPlayer 这样更加流行的播放器  
+**答：** 不是很建议使用 其已经比较陈旧了 可以使用 [VLC](https://www.videolan.org/) 或 [PotPlayer](https://potplayer.org/en/) 这样更加流行的播放器  
 
 
