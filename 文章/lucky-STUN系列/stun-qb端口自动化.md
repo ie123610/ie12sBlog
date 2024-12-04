@@ -1,4 +1,4 @@
-# 「LUCKY STUN」穿透使用webhook自动修改 qbittorrent 的监听端口
+# 「LUCKY STUN穿透」使用webhook自动修改 qbittorrent 的监听端口
 
 在 lucky stun 穿透获得的外部端口发生变化后除了要修改路由设备上的映射规则  
 还需要修改BT下载软件的监听端口  

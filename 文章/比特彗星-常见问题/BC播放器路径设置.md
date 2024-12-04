@@ -44,3 +44,9 @@
 **答：** 不是很建议使用 其已经比较陈旧了 可以使用 [VLC](https://www.videolan.org/) 或 [PotPlayer](https://potplayer.org/en/) 这样更加流行的播放器  
 
 
+---
+
+参考：
+
+* [cometbbs-2.01测试版](https://www.cometbbs.com/t/201%E6%B5%8B%E8%AF%95%E7%89%88/86510)
+
