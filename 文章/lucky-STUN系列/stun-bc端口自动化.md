@@ -41,7 +41,7 @@
 <img src="../../图片/stun-bc端口自动化/stun-bc端口自动化-设置远程访问1.jpg" width="60%" height="60%" />
 <img src="../../图片/stun-bc端口自动化/stun-bc端口自动化-设置远程访问2.jpg" width="60%" height="60%" />
 
-先登录到旧版  再通过下方的连接跳转到新版WebUI  
+先登录到旧版  再通过下方的链接跳转到新版WebUI  
 
 <img src="../../图片/stun-bc端口自动化/stun-bc端口自动化-登录远程访问1.jpg" width="60%" height="60%" />
 <img src="../../图片/stun-bc端口自动化/stun-bc端口自动化-登录远程访问2.jpg" width="60%" height="60%" />
@@ -97,7 +97,7 @@ curl -Lks "%WEBUI%/api/config/connection/set" -H "Authorization: Bearer %TOKEN%"
 
 若lucky和比特彗星在同一设备上则使用`127.0.0.1`即可  
 若不在同一设备上填写则BC所在设备的局域网地址  
-若lucky运行在docker容器中时 也建议使用局域网地址  
+若lucky运行在docker容器中 也建议使用局域网地址  
 
 因为是手动测试 我们需要暂时将 预备给lucky传递端口的变量  
 `${port}`替换成直接的端口号  
