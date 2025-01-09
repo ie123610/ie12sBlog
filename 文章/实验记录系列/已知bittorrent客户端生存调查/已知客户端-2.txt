@@ -1,0 +1,287 @@
+
+
+Ares
+（已经停更）
+替换链接 https://sourceforge.net/projects/aresgalaxy/
+
+---
+
+BitPump
+（个人客户端 已经停更）
+替换链接 http://www.analogx.com/contents/archives/2005/news0705.htm
+
+---
+
+CTorrent
+（已经停更）
+
+---
+
+FlashGet  （快车\网际快车）
+（存在已知滥用行为）
+（已经停更）
+
+---
+
+FoxTorrent/RedSwoosh
+
+（已经停更）
+---
+
+GetRight
+（已经停更）
+
+---
+
+Halite
+（已经停更）
+
+---
+
+KGet
+
+活跃
+
+---
+
+KTorrent
+
+活跃
+
+---
+
+LeechCraft
+（已经停更）
+替换链接 
+https://leechcraft.org/plugins-bittorrent 
+或
+https://github.com/0xd34df00d/leechcraft
+
+---
+
+LimeWire 石灰线？ 翻译有误
+
+替换链接https://web.archive.org/web/20040929080853/http://www.limewire.com/english/content/home.shtml
+
+重要辅助链接 
+https://zh.wikipedia.org/wiki/LimeWire
+https://www.emulefans.com/limewire-shutdown/
+
+---
+
+MonoTorrent
+活跃
+
+---
+
+
+Net Transport 网络传送带
+
+不是网际快车  应该是和快车 混淆了
+FlashGet 中文名称为快车 前称 JetCar（网际快车）
+
+已经停更
+
+---
+
+Popcorn Time 译名 爆米花时光
+
+活跃
+
+---
+
+Pando
+
+重复出现 已合并
+
+---
+
+PeerProject
+（已经停更）
+
+替换链接 https://github.com/peerproject/peerproject
+或
+https://web.archive.org/web/20140112071821/http://peerproject.org/
+
+---
+
+补漏
+
+qqdownload （QQ 旋风）
+（已经停更）
+
+https://web.archive.org/web/20170603004712/http://xf.qq.com/
+
+https://kf.qq.com/faq/170803FzAnIn170803Ynqe6J.html
+http://fenxiang.qq.com/
+
+---
+
+
+[Shareaza alpha/beta] 和 [Shareaza] 应合并记录
+
+（已经停更）
+
+---
+-SD-
+
+迅雷极速版
+有上传 （已经停更）
+
+替换链接 https://web.archive.org/web/20160912084951/http://vip.xunlei.com/fast_xl/
+
+---
+
+TuoTu 重复出现
+
+---
+
+ut家族可合并记录并标星
+
+| -UE     | µTorrent Embedded | | 下载器 |
+| -UT     | [µTorrent](https://www.utorrent.com/) | | 下载器 |
+| -UM     | [µTorrent Mac](https://www.utorrent.com/) | | 下载器 |
+| -UW     | [µTorrent Web](https://www.utorrent.com/) | | 下载器 |
+
+
+---
+
+WebTorrent
+https://webtorrent.io/
+
+WebTorrent Desktop
+https://webtorrent.io/desktop/
+
+（可合并记录） 活跃
+
+https://github.com/webtorrent
+
+---
+
+
+Bitlet
+（已经停更）
+
+替换链接 https://github.com/bitletorg/bitlet
+或 https://web.archive.org/web/20151230080524/http://www.bitlet.org/
+
+---
+
+-XL-  Xunlei （迅雷）
+
+（存在已知滥用行为）活跃
+
+---
+
+aTorrent
+
+（已经停更）
+
+
+替换链接
+https://web.archive.org/web/20230314173222/https://play.google.com/store/apps/details?id=com.mobilityflow.torrent&hl=en
+或 https://github.com/mobilityflow-attorent/atorrent
+
+---
+
+aria2 
+（存在伪装行为）
+重复出现应合并
+活跃
+
+---
+
+BitSpirit （比特精灵）
+（已经停更）
+
+替换链接 https://web.archive.org/web/20200702055151/http://www.bitspirit.cc/
+
+---
+
+Free Download Manager （FDM）
+（视频下载器）
+
+活跃
+
+---
+
+Tixati 重复出现应合并
+
+也许可以加个星
+（活跃）
+
+---
+
+FlashGet  （快车\网际快车）
+（存在已知滥用行为）
+（已经停更）
+重复出现应合并
+
+---
+
+MLdonkey
+
+（跨协议客户端）
+
+活跃？
+
+替换链接 https://github.com/ygrek/mldonkey
+
+---
+
+修正
+
+AllPeers  
+在浏览器中运行的插件客户端
+
+（已经停更）
+
+替换链接 https://web.archive.org/web/20071031112959/http://www.allpeers.com/
+
+应使用网页时光机链接 网站已经易主
+https://en.wikipedia.org/wiki/AllPeers
+
+
+---
+
+
+folx
+
+活跃
+
+替换链接
+https://www.mac-downloader.com/
+
+---
+
+
+aria2 重复出现应合并
+
+---
+
+LimeWire 石灰线？ 翻译有误 
+
+重复出现应合并
+
+---
+
+-MG -MG1-   -MG21- 均为 [MediaGet]
+（视频下载器）
+应合并记录
+
+活跃
+
+--- 
+
+
+补漏
+tTorrent
+活跃
+https://github.com/mpetazzoni/ttorrent
+
+---
+
+
+
+
+
