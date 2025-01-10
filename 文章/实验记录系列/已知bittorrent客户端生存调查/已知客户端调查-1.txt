@@ -1,0 +1,589 @@
+来自： https://github.com/PBH-BTN/quick-references/blob/main/peer_ids.md
+
+应参考：
+http://www.bittorrent.org/beps/bep_0020.html
+https://wiki.theory.org/BitTorrentSpecification
+https://github.com/anacrolix/torrent/discussions/891
+
+---
+
+Avicora
+（已经停更）
+https://sourceforge.net/projects/avicora/
+
+---
+
+应为 ADM Pro+ 添加链接
+https://play.google.com/store/apps/details?id=com.dv.adm&hl=en_US
+
+（它竟然支持BT下载我以为它和IDM一样只能下HTTP）
+
+---
+
+应为 AzTorrent 添加链接
+https://apps.microsoft.com/detail/9nt8rc22lv82?amp%3Bgl=US&hl=en-us&gl=US
+（没想到Xbox上也有	BT客户端）
+
+--
+
+BitBuddy 
+（一个已经停更的古老客户端）
+http://web.archive.org/web/20060614084305/http://www.btvampire.com/
+https://modarchive.org/index.php?article-torrent-clients
+https://www.softpedia.com/get/Internet/File-Sharing/BitBuddy.shtml
+
+---
+
+应为BiglyBT添加链接
+https://www.biglybt.com/
+
+---
+
+应为bitlord添加链接
+https://www.bitlord.com/
+
+---
+
+BitMagnet 
+（已经停更 似乎是某种实验性客户端）
+https://sourceforge.net/projects/bitmagnet/
+
+
+（Rufus的前身）// BitMagnet - predecessor to Rufus
+ https://sourceforge.net/u/d0c54v4g3/profile/
+
+其不是 :https://bitmagnet.io/
+
+---
+
+bittorrent 原版客户端也许可以加个星？
+
+---
+BitWombat
+
+(一个已经停更的基于libtorrent 的古老客户端)
+
+https://web.archive.org/web/20140517021037/http://bitwombat.com/
+https://www.reddit.com/r/PiratedGames/comments/tzv9iq/i_view_my_torrent_clients_statistics_from_time_to/
+
+---
+
+Shareaza Plus
+（古老的跨协议客户端 已经停更）
+https://shareazaplus.sourceforge.net/
+
+---
+
+Enhanced CTorrent
+（已经停更的古老客户端）
+http://www.rahul.net/dholmes/ctorrent/
+
+---
+
+建议修改CTorrent的链接
+https://github.com/asamy/ctorrent 
+
+---
+
+Deluge 也比较有名建议添加星标
+
+---
+
+-DP-
+
+应为 "Propagate Data Client" 而不是"Propogate Data Client"
+（已经停更）
+https://web.archive.org/web/20110128203704/http://propagatedata.com/
+
+---
+
+-DL-  弹弹PLAY
+（磁力播放器）
+https://www.dandanplay.com/
+
+---
+
+EBit
+（易语言演示客户端？）
+https://dywt.com.cn/
+
+---
+
+electric sheep
+
+其似乎是某种专用客户端 但在BEP20的记录中
+
+https://electricsheep.org/#/about
+
+---
+
+-FC- 
+
+应为 FileCroc 当前记录为qBittorrent
+
+似乎是一个非常古老的客户端
+https://web.archive.org/web/20070410162725/http://www.filecroc.com/
+https://filecroc.en.softonic.com/?ex=RAMP-2046.2
+
+有一家名称相似的下载站
+https://www.filecroco.com/
+
+当前收集到的客户端名称却为qBittorrent
+不确定其是否有修改客户端名称的功能 也可能是有由其他客户端伪装成的
+
+---
+
+建议为 FrostWire 添加链接
+（跨协议客户端）
+https://www.frostwire.com/
+
+---
+Freebox BitTorrent
+
+其似乎隶属于一家法国公司
+https://www.free.fr/freebox/
+
+可能是一种下载器？
+
+https://dev.freebox.fr/bugs/task/22429
+https://dev.freebox.fr/bugs/task/35529
+https://github.com/Sonarr/Sonarr/issues/5140
+
+---
+
+-GS- GSTorrent 
+（古老的多平台客户端/服务器）
+https://gstorrent.sourceforge.net/
+https://sourceforge.net/projects/gstorrent/
+
+https://community.unix.com/t/gstorrent-0014-default-branch/182728
+https://community.unix.com/t/gstorrent-0009-client-branch/195237
+
+---
+
+Gopeed 
+https://gopeed.com/zh-CN
+
+---
+
+JSTorrent 
+https://jstorrent.com/
+https://github.com/kzahel/jstorrent
+
+
+--
+
+LH-ABC 
+（已经停更的古老客户端）
+https://code.google.com/archive/p/lh-abc/
+
+---
+
+linkage
+（已经停更的古老个人客户端）
+https://bbs.archlinux.org/viewtopic.php?id=30266
+
+---
+
+Lphant
+（已经停更的古老跨协议客户端）
+https://github.com/knocte/lphant
+
+---
+
+torrentvilla
+（似乎是某种视频下载器？）
+https://torrentvilla.com/
+
+
+---
+
+-MC- 未知客户端
+
+"MC 0.0.0.8","-MC0008-"
+"MC 3.4.0.8","-MC3408-"
+
+疑似恶意自动化程序
+https://forum.tixati.com/support/7146
+
+---
+
+MediaGet2
+
+https://mediaget.com/en
+
+---
+
+-MR- Miro 当前记录为 libtorrent
+
+（某种视频下载器 官网有些年久失修 应该已经停止更新）
+https://www.getmiro.com/
+
+---
+
+BT Next Evolution
+（似乎是一家PT站？）
+旧网址：https://web.archive.org/web/20120831053114/http://www.btnext.com/
+新网址：https://tracker.btnext.com/?p=home&pid=1
+
+
+---
+
+OneSwarm
+（似乎已经停止更新）
+https://www.oneswarm.org/
+
+---
+
+OmegaTorrent
+
+https://omegat.org/zh_CN/download
+
+---
+
+-PC- CacheLogic
+
+（似乎是一家公司或者组织？）未知客户端
+https://web.archive.org/web/20060822012741/http://www.cachelogic.com/home/pages/news/pr070806.php
+https://torrentfreak.com/cachelogic-and-bittorrent-introduce-cache-discovery-protocol/
+
+被 alcatel-lucent 收购 改名velocix
+https://web.archive.org/web/20150811110209/http://www.velocix.com/
+https://web.archive.org/web/20160304211835/https://www.alcatel-lucent.com/solutions/ip-video
+
+alcatel-lucent 被诺基亚收购
+https://web.archive.org/web/20170211213201/https://networks.nokia.com/solutions/ip-video
+
+后由Lumine Group从诺基亚中分离名称恢复velocix
+https://www.velocix.com/about-us
+
+---
+
+pHoeniX
+（似乎是某种视频下载器）
+https://play.google.com/store/apps/details?id=com.transsion.phoenix&hl=en_US
+
+---
+
+Rain
+
+https://github.com/cenkalti/rain
+
+---
+
+-rQ- 未知客户端
+
+"rQ 0.0.0.1","-rQ0001-"
+
+疑似恶意自动化程序
+
+---
+
+RUM Torrent
+（似乎是某种私人客户端）
+https://github.com/rumsystem/rum-torrent
+
+---
+
+Retriever
+（已经停更的古老客户端）
+https://web.archive.org/web/20120414025530/http://www.halogenware.com/software/retriever.html
+
+---
+
+ RezTorrent
+（已经停更的古老客户端）
+https://launchpad.net/reztorrent
+
+---
+
+SwiftBit
+
+在BEP20记录中
+未找到确定的发布链接
+首次被记录到：https://web.archive.org/web/20050725080603/http://wiki.theory.org/BitTorrentSpecification
+
+#SpookyET - 2005-03-27
+#Added the "SB" client code for Swiftbit
+
+---
+
+-SD-
+应为迅雷极速版
+
+---
+
+-SG- GS Torrent
+
+不是 GSTorrent ？
+（未完成查找）
+
+---
+
+ShareNET
+（似乎是某种个人客户端？）存疑
+https://github.com/benjaminrathelot/sharenet-php
+
+---
+
+StellarPlayer（恒星播放器）
+（似乎有吸血嫌疑？）
+https://www.stellarplayer.com/en
+
+---
+
+Torrent GO
+
+(https://github.com/anacrolix/torrent)? 存疑
+
+---
+
+Torrent.NET
+（某种DHT网络搜索引擎？似乎已经停更）
+https://github.com/lmatteis/torrent-net
+
+---
+
+TorrentStorm 
+（已经停更的古老客户端）
+https://www.neowin.net/news/torrentstorm-12/
+http://www.grauw.nl/articles/bittorrent.php#TorrentStorm
+https://web.archive.org/web/20050801003805/http://www.torrentstorm.com/
+
+---
+
+-TT TuoTu （脱兔）   
+跨协议客户端 在ed2k方面有吸血嫌疑  已经停更
+http://www.tuotu.com/c11d7a75-54e0-4f27-8181-2a0d3f2d82a4.htm
+
+---
+
+-tT- 应为tTottent
+
+https://github.com/mpetazzoni/ttorrent
+
+---
+
+Torrex Pro
+（运行在xbox平台上的客户端）
+
+https://apps.microsoft.com/detail/9wzdncrdsgkg?amp%3Bgl=US&hl=en-us&gl=US
+
+---
+
+u-leecher (uLeecher!)
+（已经停更）
+https://code.google.com/archive/p/u-leecher/
+
+---
+
+µTorrent Embedded
+（µTorrent的嵌入式特殊版本）
+https://forum.utorrent.com/topic/69835-what-is-utorrent-embedded/
+
+
+---
+
+FireTorrent
+（运行在火狐浏览器上的BT客户端 已经停更）
+https://web.archive.org/web/20120412175836/http://www.fireaddons.com/
+
+---
+
+Vagaa (哇嘎)
+（已知滥用行为 已经停更）
+https://web.archive.org/web/20221206013713/http://www.vagaa.name/
+
+---
+
+Xfplay（影音先锋）
+（磁力播放器）
+http://www.xfplay.com/
+
+---
+
+-XT- -DansClient-
+
+XanTorrent
+
+（已经停更的古老客户端）
+https://web.archive.org/web/20040620041052/http://www.xantorrent.pwp.blueyonder.co.uk/
+https://www.softpedia.com/get/Internet/File-Sharing/XanTorrent.shtml
+
+---
+
+-XC- -XX-
+
+XTorrent 
+（运行在mac OS 上的客户端 似乎已经停止更新）
+http://www.xtorrent.com/
+
+---
+
+ZipTorrent
+（已经停更的古老客户端）
+https://web.archive.org/web/20070417144230/http://www.ziptorrent.com/
+
+---
+
+Zona
+（某种视频下载器）
+https://g1.zona.ru/en/
+
+---
+
+-M6-     
+-M7-    
+-M8-
+-BT-
+
+"Mainline" 即 BitTorrent 原版客户端
+
+https://www.bittorrent.com
+
+---
+
+MediaGet2 出现了两次
+
+---
+
+-net-  netdisk
+未知客户端 （难道是网盘离线？）
+
+---
+
+-TIX-  Tixati 
+
+重复出现了两次
+
+---
+
+-4j- DTorrent
+（标识符待验证）
+https://t2sde.org/packages/dtorrent
+
+---
+ 
+-53- LIII
+（标识符待验证）
+https://github.com/aliakseis/LIII
+
+---
+
+BitsOnWheels 
+（运行在mac OS 上的客户端）
+https://www.bitsonwheels.com/
+
+---
+
+AllPeers
+（似乎是某种专用客户端）
+https://allpeers.com/
+
+---
+
+BTuga Revolution
+
+（似乎是 BT Next Evolution的前身）
+https://pplware.sapo.pt/informacao/btuga-renasce/
+
+http://web.archive.org/web/20110518101614/http://www.bt-revolution.net/
+http://web.archive.org/web/20080611234823/http://www.forum.wintech.com.pt/index.php?topic=2657
+
+---
+
+Rufus
+（已经停更的古老客户端）
+https://sourceforge.net/projects/rufus/
+
+
+---
+
+BitMagnet 出现了两次
+
+---
+
+QVOD （快播）
+（磁力播放器 已经停止更新）
+
+http://web.archive.org/web/20130117054317/http://www.kuaibo.com/
+
+---
+
+Top-BT  // Top-BT is based on BitTornado, but doesn't quite stick to Shadow's naming conventions
+
+（已经停更的古老客户端）
+http://web.archive.org/web/20130528140354/http://topbt.cse.ohio-state.edu/
+https://es.wikipedia.org/wiki/TopBT
+---
+
+BitTorrent Plus！
+
+（是个国产客户端？已经停更）
+https://web.archive.org/web/20060530224536/http://www.bitwonder.com/chs/index.htm
+
+https://www.neowin.net/news/bittorrent-plus-2-v13-rc1/
+
+---
+-BTDWV-
+
+Deadman Walking
+
+TLF论坛(The Last Fantasy)里Deadman的作品 已经停更
+
+https://bbs.eastgame.org/
+https://www.xitongzhijia.net/soft/15209.html
+
+---
+
+External Webseed
+（未完成查找）
+
+---
+
+HTTP Seed
+（未完成查找）
+
+
+---
+
+Pando 
+出现了两次 可合并
+（已经停更的古老客户端）
+https://web.archive.org/web/20110628020623/http://pandonetworks.com/pando-media-booster-support-faq
+https://en.wikipedia.org/wiki/Pando_(application)
+
+---
+
+PEERAPP
+（已经停更）
+https://web.archive.org/web/20160723055809/http://www.peerapp.com/#aboutPage
+---
+
+SimpleBT  重名较多
+
+从https://wiki.theory.org/BitTorrentSpecification 上的内容来看应该指的是比特彗星的前身
+
+比特彗星曾用名SimpleBT 在  v0.11 到 v0.37
+https://web.archive.org/web/20030829012248/http://btfans.3322.org/simplebt/
+http://www.bitcomet.com/en/archive
+
+其他重名客户端
+https://sourceforge.net/projects/simplebt/
+https://www.softpedia.com/get/Internet/File-Sharing/SimpleBT.shtml
+
+https://github.com/Velorth/SimpleBT
+
+---
+
+
+TorrentTopia
+（已经停更的古老客户端）
+https://web.archive.org/web/20070503012256/http://www.torrentopia.org/
+
+https://web.archive.org/web/20071018162545/https://torrentopia.en.softonic.com/
+
+---
+
+
+
