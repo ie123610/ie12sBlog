@@ -12,6 +12,8 @@ ie12的实验性博客
 ## 其他链接
 
 * [B站专栏](https://space.bilibili.com/390936347/article)  
+* [彗星论坛](https://www.cometbbs.com/t/%E6%AF%94%E7%89%B9%E5%BD%97%E6%98%9F-%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98%E7%9A%84%E6%94%B6%E9%9B%86%E4%B8%8E%E8%A7%A3%E5%86%B3/86304)
+* [博客园](https://www.cnblogs.com/ie123610/p)
 
 ## 许可证
 
