@@ -35,21 +35,21 @@
 
 ## Tracker汇报流量不准确问题
 
-这个说法似乎出现的非常早 早在BC的维基百科中文页面被创建的时候就有（2005 年 6 月 30 日）  
-但没有给出引用来源  [页面链接](https://zh.wikipedia.org/w/index.php?title=%E6%AF%94%E7%89%B9%E5%BD%97%E6%98%9F&oldid=589505)  
+这个说法似乎出现的非常早 早在BC的维基百科中文页面被创建的时候就有  
+（2005 年 6 月 30 日） 但没有给出引用来源  [页面链接](https://zh.wikipedia.org/w/index.php?title=%E6%AF%94%E7%89%B9%E5%BD%97%E6%98%9F&oldid=589505)  
 
 中文版面基本是翻译自对应的英文版面的  
-英文版面的添加的时间要稍早一些 [页面链接](http://https://en.wikipedia.org/w/index.php?title=BitComet&direction=next&oldid=13219877)（2005 年 5 月 4日）  
+英文版面的添加的时间要稍早一些 [页面链接](https://en.wikipedia.org/w/index.php?title=BitComet&direction=next&oldid=13219877)（2005 年 5 月 4日）  
 
 我没有找到这个说法的直接来源  
 但是BC的更新日志和一些彗星论坛内的反馈帖子  
 间接的证明的了tracker流量汇报存在一些问题  
 
-其应属于bug而非刻意的设计  
+**其应属于bug而非刻意的设计**  
 不过这个问题的传播度远没有DHT问题那样的广泛  
 其可能是在PT用户和内部论坛之间流传的  
 
-彗星论坛中关于tracker流量汇报问题的反馈：[链接1](http://https://www.cometbbs.com/t/pt%E7%A7%8D%E5%AD%90%EF%BC%8Cuploaded%E5%92%8Cdownloaded%E6%B5%81%E9%87%8F%E6%B1%87%E6%8A%A5%E5%BC%82%E5%B8%B8/29584?u=ie12) [链接2](https://www.cometbbs.com/t/bitcomet%E6%98%AF%E5%90%B8%E8%A1%80%E8%BD%AF%E4%BB%B6%E5%90%97%EF%BC%9F/45917/2)  
+**彗星论坛中关于tracker流量汇报问题的反馈：**[链接1](https://www.cometbbs.com/t/pt%E7%A7%8D%E5%AD%90%EF%BC%8Cuploaded%E5%92%8Cdownloaded%E6%B5%81%E9%87%8F%E6%B1%87%E6%8A%A5%E5%BC%82%E5%B8%B8/29584?u=ie12) [链接2](https://www.cometbbs.com/t/bitcomet%E6%98%AF%E5%90%B8%E8%A1%80%E8%BD%AF%E4%BB%B6%E5%90%97%EF%BC%9F/45917/2)  
 
 
 简单收集一些可能涉及tracker流量汇报问题的修复记录：  
@@ -176,9 +176,9 @@ _____padding_file_?_如果您看到此文件，请升级到BitComet(比特彗星
 ## 长效种子
 
 这可能是所有问题中吵的最凶的一个了其实主要是两方面的争论  
-**长效种子是否会对私有种子启用** 以及 **长效种子是否是一种吸血行为:** [链接](http://https://github.com/c0re100/qBittorrent-Enhanced-Edition/issues/39)  
+**长效种子是否会对私有种子启用** 以及 **长效种子是否是一种吸血行为:** [链接](https://github.com/c0re100/qBittorrent-Enhanced-Edition/issues/39)  
 
-其实关于长效种子官方wiki有非常详细的解释：[链接](http://https://wiki.bitcomet.com/long-term_seeding)（英文版比中文版更详细）  
+其实关于长效种子官方wiki有非常详细的解释：[链接](https://wiki.bitcomet.com/long-term_seeding)（英文版比中文版更详细）  
 
 ### 长效种子和私有种子
 
@@ -197,10 +197,10 @@ _____padding_file_?_如果您看到此文件，请升级到BitComet(比特彗星
 需要连接到专用的服务器以来搜索持有相同文件的用户
 
 其以单文件进行传输 没有BT中任务的概念  
-由于不存在任务概念 其不受BT任务停止和运行的影响  
-与eMule中的共享列表相似 若文件存在则始终可以进行上传  
+**由于不存在任务概念 其不受BT任务停止和运行的影响**  
+**与eMule中的共享列表相似 若文件存在则始终可以进行上传**  
 
-同时由于以单文件进行传输 可以跨越BT的任务/种子  
+同时由于以单文件进行传输 **可以跨越BT的任务/种子**  
 即在BT中若两个任务之间包含有一个或多个相同的文件 它们并不能互相传输  
 因为分属于不同的任务/种子中  
 
@@ -277,7 +277,7 @@ _____padding_file_?_如果您看到此文件，请升级到BitComet(比特彗星
 >  
 
 通过之前的考古研究其实可以非常清楚的回答这些问题  
-事实上在早期BC是使用公司签名的 改为个人签名是后来的事情  
+**事实上在早期BC是使用公司签名的 改为个人签名是后来的事情**  
 至少从0.99版本开始比特彗星使用 “Comet Network Technology Co Ltd.” 作为签名
 
 直到1.35和1.36版本变成了“Shuang Wu”  
