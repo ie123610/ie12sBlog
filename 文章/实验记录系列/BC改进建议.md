@@ -9,12 +9,13 @@
 
 ## 非核心修复
 
-[details="已完成"]
+<details>
+<summary>已完成</summary>
 
 - [x] 特殊字符转译问题  [链接](https://www.cometbbs.com/t/200%E6%B5%8B%E8%AF%95%E7%89%88/85737/130?u=ie12)
-- [x] 远程访问中的组件灰化逻辑 [链接](https://www.cometbbs.com/t/212%E6%B5%8B%E8%AF%95%E7%89%88/95033/113?u=ie12) 
+- [x] 远程访问中的组件灰化逻辑 [链接](https://www.cometbbs.com/t/212%E6%B5%8B%E8%AF%95%E7%89%88/95033/113?u=ie12)
 
-[/details]
+</details>
 
 ---
 
@@ -22,9 +23,10 @@
 
 ### 主界面 
 
-- [x] 在WebUI中显示通知内容 
+- [ ] 在WebUI中显示通知内容 
 
-[details="已完成"]
+<details>
+<summary>已完成</summary>
 
 - [x] 摘要  
 - [x] 文件  
@@ -38,7 +40,7 @@
 - [x] DHT网络和监听端口显示 [链接](https://www.cometbbs.com/t/212%E6%B5%8B%E8%AF%95%E7%89%88/95033/99?u=ie12)
 - [x] Web UI 菜单改为点击后弹出 [链接](https://www.cometbbs.com/t/212%E6%B5%8B%E8%AF%95%E7%89%88/95033/114?u=ie12)
 
-[/details]
+</details>
 
 ### 设置界面
 
