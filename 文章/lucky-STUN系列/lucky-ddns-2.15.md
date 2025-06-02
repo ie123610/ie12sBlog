@@ -133,7 +133,7 @@ IPv4记录设置也是相同的方式
 
 ```
 
-**示例**
+**示例**  
 <img src="../../图片/lucky-ddns-2.15/lucky-ddns-2.15-stun规则.jpg" width="60%" height="60%" />
 
 <img src="../../图片/lucky-ddns-2.15/lucky-ddns-2.15-记录-txt-stun.jpg" width="60%" height="60%" />
@@ -149,7 +149,7 @@ IPv4记录设置也是相同的方式
 此处使用dynv6进行演示 值得注意的是使用lucky在dynv6上更新 SRV记录有一个"小特性"  
 这可能是dynv6自身的问题 也可能是lucky没有处理这种特殊情况  
 
-用lucky更新dynv6上的SRV记录时 主机名这项参数会缺失最后的一个点  
+使用lucky更新dynv6上的SRV记录时 主机名这项参数会缺失最后的一个点  
 例如填写的是 `baidu.com.` 但实际更新后变成了 `baidu.com`
 这个点的作用是告诉dynv6不要在后面附加当前的主域名  
 
@@ -157,11 +157,9 @@ IPv4记录设置也是相同的方式
 <img src="../../图片/lucky-ddns-2.15/lucky-ddns-2.15-srv问题示例1.jpg" width="60%" height="60%" />
 <img src="../../图片/lucky-ddns-2.15/lucky-ddns-2.15-srv问题示例2.jpg" width="60%" height="60%" />
 
-
 **主机名不加点**  
 <img src="../../图片/lucky-ddns-2.15/lucky-ddns-2.15-srv问题示例3.jpg" width="60%" height="60%" />
 <img src="../../图片/lucky-ddns-2.15/lucky-ddns-2.15-srv问题示例4.jpg" width="60%" height="60%" />
-
 
 由于有这个"小特性"的存在 在dynv6上更新SRV记录时  
 主机名这一项只能使用该主域名下的子域名 也就是要以 `ie12test.dynv6.net`结尾  
