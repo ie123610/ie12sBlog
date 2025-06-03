@@ -14,6 +14,8 @@ TCP穿透成功后可开放一个TCP端口 除了端口号不固定其访问效�
 以实现完全自动化
 
 lucky STUN 穿透教程：
+
+
 https://github.com/EasyTier/EasyTier/issues/83
 
 
@@ -27,22 +29,34 @@ https://github.com/EasyTier/EasyTier/issues/83
 * Http(s)响应 `http://example.com` `https://example.com`
 
 
-
 ## TXT 记录使用方法
 
-TXT记录是最简单最灵活的方法
-直接在TXT记录中写入一个 正常的 协议 地址 端口即可
+TXT记录是最简单最灵活的方法 就像在客户端中连接时那样  
+在TXT记录中写入一 协议 地址 端口即可 `协议://地址:端口`  
 
 得益于lucky的DDNS模块更新TXT记录的更新 大幅简化
-无需再向过去那样进行繁琐的配置 旧教程：
+无需再向过去那样进行繁琐的配置  
+
+旧教程：
 
 ## SRV 记录
 
 
 ## HTTP 响应
 
+HTTP方法中又分为两种 分别是200 响应和 30x 重定向
+
 
 ### HTTP 200 响应
 
+
+lucky 制作一个简单
+
 ### HTTP 30X 重定向
+
+HTTP重定向中又分为两种
+一种是从url中直接获取
+
+查询字符串
+
 

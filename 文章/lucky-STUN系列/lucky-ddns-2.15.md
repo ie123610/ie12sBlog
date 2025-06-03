@@ -163,17 +163,26 @@ IPv4记录设置也是相同的方式
 
 由于有这个"小特性"的存在 在dynv6上更新SRV记录时  
 主机名这一项只能使用该主域名下的子域名 也就是要以 `ie12test.dynv6.net`结尾  
-**不过在cloudflare上没有这个问题 可以填写完整的域名**  
+
+不过在cloudflare上没有这个问题 可以填写完整的域名  
+**此问题已在 v2.17.8beta 版本中解决 现在已经可以填写完整域名**  
 
 
-**示例**  
+**示例-子域名**  
 <img src="../../图片/lucky-ddns-2.15/lucky-ddns-2.15-dynv6-srv-1.jpg" width="60%" height="60%" />
-
 
 **更新效果**  
 <img src="../../图片/lucky-ddns-2.15/lucky-ddns-2.15-dynv6-srv-2.jpg" width="60%" height="60%" />
 
-
 **解析效果**  
 <img src="../../图片/lucky-ddns-2.15/lucky-ddns-2.15-dynv6-srv-3.jpg" width="60%" height="60%" />
 
+
+**示例-完整域名**  
+<img src="../../图片/lucky-ddns-2.15/lucky-ddns-2.15-dynv6-srv-1-改.jpg" width="60%" height="60%" />
+
+**更新效果**  
+<img src="../../图片/lucky-ddns-2.15/lucky-ddns-2.15-dynv6-srv-2-改.jpg" width="60%" height="60%" />
+
+**解析效果**  
+<img src="../../图片/lucky-ddns-2.15/lucky-ddns-2.15-dynv6-srv-3-改.jpg" width="60%" height="60%" />
