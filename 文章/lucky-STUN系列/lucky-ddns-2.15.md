@@ -148,6 +148,7 @@ IPv4记录设置也是相同的方式
 
 此处使用dynv6进行演示 值得注意的是使用lucky在dynv6上更新 SRV记录有一个"小特性"  
 这可能是dynv6自身的问题 也可能是lucky没有处理这种特殊情况  
+**此问题已在 v2.17.8beta 版本中解决 现在已经可以填写完整域名**  
 
 使用lucky更新dynv6上的SRV记录时 主机名这项参数会缺失最后的一个点  
 例如填写的是 `baidu.com.` 但实际更新后变成了 `baidu.com`
@@ -177,6 +178,7 @@ IPv4记录设置也是相同的方式
 **解析效果**  
 <img src="../../图片/lucky-ddns-2.15/lucky-ddns-2.15-dynv6-srv-3.jpg" width="60%" height="60%" />
 
+---
 
 **示例-完整域名**  
 <img src="../../图片/lucky-ddns-2.15/lucky-ddns-2.15-dynv6-srv-1-改.jpg" width="60%" height="60%" />
