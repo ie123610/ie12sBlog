@@ -2,8 +2,8 @@
 
 ## 新变化
 
-在2.15后lucky 对DDNS 模块进行了较大的调整  
-现在的DDNS模块的配置逻辑与WEB服务更接近 同时支持了更多的记录类型  
+在2.15后 lucky 对DDNS 模块进行了较大的调整  
+现在DDNS模块的配置逻辑与WEB服务更接近 同时支持了更多的记录类型  
 
 更新后单主条主规则可以同时更新IPv4和IPv6地址  
 一条规则就可以为同一提供商下的域名完成IPv4和IPv6地址的解析  
@@ -44,8 +44,8 @@ DNS记录设置发生了较大变化 其在过去是一个大的文本框 每行
 **选择提供商**  
 
 选择所使用的动态域名提供商并填写对应身份验证信息  
-获取 token 令牌等身份验证信息的方法可查看之前的教程：[链接](http://https://www.bilibili.com/read/cv35021955/?jump_opus=1)  
-在之前的教程中演示了 dynv6 NIOP 和 cloudflare 的配置方法  
+获取 token 令牌等身份验证信息的方法可查看之前的教程：[链接](https://www.bilibili.com/read/cv35021955/?jump_opus=1)  
+在之前的教程中演示了 dynv6 NOIP 和 cloudflare 的配置方法  
 
 **此处使用dynv6进行演示**  
 <img src="../../图片/lucky-ddns-2.15/lucky-ddns-2.15-设置提供商.jpg" width="60%" height="60%" />
@@ -54,7 +54,7 @@ DNS记录设置发生了较大变化 其在过去是一个大的文本框 每行
 **启用IP获取功能**  
 
 打开 `{ipv6Addr}` 和 `{ipv4Addr}` 两个变量的开关  
-这样lucky即可获取对外的IPv4和IPv6地址并存入这个两个变量中以供后续使用  
+这样lucky便可获取对外的IPv4和IPv6地址并存入这个两个变量中以供后续使用  
 
 <img src="../../图片/lucky-ddns-2.15/lucky-ddns-2.15-启用ip获取.jpg" width="60%" height="60%" />
 
@@ -77,7 +77,7 @@ IPv4记录设置也是相同的方式
 <img src="../../图片/lucky-ddns-2.15/lucky-ddns-2.15-记录-v4.jpg" width="60%" height="60%" />
 
 **检视效果**  
-`{ipv6Addr}` 和 `{ipv4Addr}`正确获取到地址  
+`{ipv6Addr}` 和 `{ipv4Addr}` 已经正确获取到了地址  
 同步状态为绿色则表示设置均正确且更新成功  
 
 <img src="../../图片/lucky-ddns-2.15/lucky-ddns-2.15-检视效果.jpg" width="60%" height="60%" />
@@ -104,7 +104,7 @@ IPv4记录设置也是相同的方式
 
 * 记录名称：要更新的域名  
 * 选择记录类型：TXT  
-* 记录内容：填写要添加到TXT记录中的内容 这样填写 "test" 作为演示  
+* 记录内容：填写要添加到TXT记录中的内容 此处填写 "test" 作为演示  
 
 <img src="../../图片/lucky-ddns-2.15/lucky-ddns-2.15-记录-txt.jpg" width="60%" height="60%" />
 
@@ -114,7 +114,7 @@ IPv4记录设置也是相同的方式
 在之前的教程中TXT主要用于记录STUN穿透后的端口  
 这里也给出与STUN穿透联合使用的方法  
 
-由于不在STUN规则内部我们需要全局变量来获取STUN穿透后的端口或者IP  
+由于不在STUN规则内部我们需要通过全局变量来获取STUN穿透后的端口或者IP  
 **可用全局变量：**[链接](https://lucky666.cn/docs/modules/globaldata)  
 
 全局变量有很多 此处我们只需要下面的这几种  
@@ -143,7 +143,7 @@ IPv4记录设置也是相同的方式
 
 ### 更新SRV记录
 
-相比起TXT记录srv记录要稍微麻烦一点 主要是在格式方面  
+相比起TXT记录SRV记录要稍微麻烦一点 主要是在格式方面  
 需要按照 优先级、空格、权重、空格、端口、空格、主机名 的格式进行填写  
 
 此处使用dynv6进行演示 值得注意的是使用lucky在dynv6上更新 SRV记录有一个"小特性"  
@@ -163,7 +163,7 @@ IPv4记录设置也是相同的方式
 <img src="../../图片/lucky-ddns-2.15/lucky-ddns-2.15-srv问题示例4.jpg" width="60%" height="60%" />
 
 由于有这个"小特性"的存在 在dynv6上更新SRV记录时  
-主机名这一项只能使用该主域名下的子域名 也就是要以 `ie12test.dynv6.net`结尾  
+主机名这一项只能使用该主域名下的子域名 比如要以 `ie12test.dynv6.net`结尾  
 
 不过在cloudflare上没有这个问题 可以填写完整的域名  
 **此问题已在 v2.17.8beta 版本中解决 现在已经可以填写完整域名**  
