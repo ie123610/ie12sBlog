@@ -64,7 +64,7 @@ SRV 记录的配置方法与TXT相似不过会稍微复杂一些
 无需再向过去那样进行繁琐的配置  
 使用lucky更新 SRV记录的具体方法:[教程](https://www.bilibili.com/read/cv41904858/?jump_opus=1)  
 
-ET目前支持的连接协议有：
+ET目前支持的连接协议有：  
 * TCP
 * UDP
 * WS (Websocket)
@@ -91,9 +91,8 @@ _easytier._wg.et2.ie12test.dynv6.net
 值得注意的是SRV记录中**主机名字段只能使用域名**  
 **不能使用IP地址** 而且这个域名需要直接指向IP地址  
 
-也就是说这个域名应该是一个 A记录（IPv4）或一个 AAAA记录（IPv6）
-其
-不能是 CNAME 详见：[链接](https://www.cloudflare.com/zh-cn/learning/dns/dns-records/dns-srv-record/)  
+也就是说这个域名应该是一个 A记录（IPv4）或一个 AAAA记录（IPv6）  
+其不能是 CNAME 详见：[链接](https://www.cloudflare.com/zh-cn/learning/dns/dns-records/dns-srv-record/)  
 
 **STUN规则**  
 <img src="../../图片/et从记录获取端口/et从记录获取端口-stun规则.jpg" width="60%" height="60%" />
@@ -144,8 +143,8 @@ _easytier._wg.et2.ie12test.dynv6.net
 HTTP重定向方法根据格式有可以分为两种  
 **请注意这些是重定向响应即重定向后的地址**  
 
-`http(s)://tcp://IP:port`
-`http(s)://example.com/?url=tcp://IP:port`
+`http(s)://tcp://IP:port`  
+`http(s)://example.com/?url=tcp://IP:port`  
 
 在第一种格式中 实际连接用配置占据了标准url中域名的位置  
 而第二中格式其本身是标准的url 由合法的域名和询字符串组成  
@@ -166,18 +165,18 @@ HTTP重定向方法根据格式有可以分为两种
 但在实际重新的返回结果中 后面协议头部分的冒号会被删去  
 即`http(s)://tcp://IP:port`变成了`http(s)://tcp//IP:port`导致ET无法正确读取配置  
 
-在cloudflare上配置页面规则和重定向规则的方法详见之前的教程：
+在cloudflare上配置页面规则和重定向规则的方法详见之前的教程：  
 
 * [「LUCKY STUN穿透」使用Cloudflare的页面规则固定和隐藏网页端口](../../文章/lucky-STUN系列/stun-web服务-CF.md)
 * [「扩展篇」使用Cloudflare的重定向规则传递资源路径和查询字符串](../../文章/lucky-STUN系列/stun-cf重定向.md)
 
-**第一种重定向格式效果演示**
+**第一种重定向格式效果演示**  
 <img src="../../图片/et从记录获取端口/et从记录获取端口-重定向url-1.jpg" width="60%" height="60%" />
 <img src="../../图片/et从记录获取端口/et从记录获取端口-重定向url-2.jpg" width="60%" height="60%" />
 <img src="../../图片/et从记录获取端口/et从记录获取端口-重定向url-3.jpg" width="60%" height="60%" />
 
 
-**第二种重定向格式效果显示**
+**第二种重定向格式效果显示**  
 <img src="../../图片/et从记录获取端口/et从记录获取端口-重定向-查询-1.jpg" width="60%" height="60%" />
 <img src="../../图片/et从记录获取端口/et从记录获取端口-重定向-查询-2.jpg" width="60%" height="60%" />
 <img src="../../图片/et从记录获取端口/et从记录获取端口-重定向-查询-3.jpg" width="60%" height="60%" />
