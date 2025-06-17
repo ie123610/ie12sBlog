@@ -3,7 +3,6 @@
 ## 关于此功能
 
 在版本 [v2.2.3](https://github.com/EasyTier/EasyTier/releases/tag/v2.2.3) 中EasyTier添加了对SRV TXT 记录和HTTP重定向的支持  
-
 这使得ET在连接其他节点时可以不直接指定端口号而是从DNS记录或者HTTP响应中获得  
 此功能设计的初衷是与 NAT1 的 TCP 穿透配合使用（lucky）  
 
@@ -62,7 +61,7 @@ SRV 记录的配置方法与TXT相似不过会稍微复杂一些
 
 得益于lucky的DDNS模块更新SRV记录的更新也大幅简化  
 无需再向过去那样进行繁琐的配置  
-使用lucky更新 SRV记录的具体方法:[教程](https://www.bilibili.com/read/cv41904858/?jump_opus=1)  
+使用lucky更新 SRV记录的具体方法：[教程](https://www.bilibili.com/read/cv41904858/?jump_opus=1)  
 
 ET目前支持的连接协议有：  
 * TCP
@@ -120,8 +119,7 @@ _easytier._wg.et2.ie12test.dynv6.net
 
 ### HTTP 200 响应
 
-创建一个简单的纯文本网页  
-其内容依然是 协议加地址和端口   
+创建一个简单的纯文本网页 其内容依然是 协议加地址和端口  
 这里使用lucky 制作一个本地网页  
 
 **示例**  
@@ -143,8 +141,8 @@ _easytier._wg.et2.ie12test.dynv6.net
 HTTP重定向方法根据格式有可以分为两种  
 **请注意这些是重定向响应即重定向后的地址**  
 
-`http(s)://tcp://IP:port`  
-`http(s)://example.com/?url=tcp://IP:port`  
+* `http(s)://tcp://IP:port`  
+* `http(s)://example.com/?url=tcp://IP:port`  
 
 在第一种格式中 实际连接用配置占据了标准url中域名的位置  
 而第二中格式其本身是标准的url 由合法的域名和询字符串组成  
@@ -158,7 +156,7 @@ HTTP重定向方法根据格式有可以分为两种
 其不起实际作用 但必须要有  
 不然ET无法正确读取后部的查询字符串  
 
-在cloudflare进行重定向只能使用第二种格式 
+在cloudflare进行重定向只能使用第二种格式  
 尝试在页面规则中填写第一种格式时会报错 提示输入了无效的url  
 
 而在重定向规则中第一种格式可以被填入并保存  
