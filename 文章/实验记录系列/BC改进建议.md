@@ -4,6 +4,7 @@
 
 - [ ] utp改进-减少CPU占用率 [链接](https://www.cometbbs.com/t/212%E6%B5%8B%E8%AF%95%E7%89%88/95033/84?u=ie12)
 - [ ] DHT精简-控制DHT节点数  [链接](https://www.cometbbs.com/t/212%E6%B5%8B%E8%AF%95%E7%89%88/95033/84?u=ie12)
+- [ ] HTTP下载功能实用化
 
 ---
 
@@ -48,19 +49,27 @@
 - [ ] BT下载选项卡  
 - [ ] tracker选项卡  
 - [x] 下载目录  
+- [x] 任务  
+- [x] 下载目录  
 - [x] IP过滤器  
-
+- [x] 客户端过滤器  
 
 ---
 
 
 ## 建议添加新功能/特性
 
-* 新 peerID 客户端过滤 和 通配符支持  [链接](https://www.cometbbs.com/t/212%E6%B5%8B%E8%AF%95%E7%89%88/95033/18?u=ie12)
 * 文件选项卡中的文件搜索  [链接](https://www.cometbbs.com/t/212%E6%B5%8B%E8%AF%95%E7%89%88/95033/26?u=ie12)
 * 通过扩展名/文件名快速筛选要下载的文件  [链接1](https://www.cometbbs.com/t/205%E6%B5%8B%E8%AF%95%E7%89%88/89373/78?u=ie12) [链接2](https://www.cometbbs.com/t/205%E6%B5%8B%E8%AF%95%E7%89%88/89373/82?u=ie12)
 * Win长路径支持  [链接](https://www.cometbbs.com/t/200%E6%B5%8B%E8%AF%95%E7%89%88/85737/130?u=ie12)
 * 添加内置STUN  [链接](https://www.cometbbs.com/t/212%E6%B5%8B%E8%AF%95%E7%89%88/95033/116?u=ie12)
+
+### 已完成
+
+- [x]  peerID 客户端过滤 和 通配符支持  [链接](https://www.cometbbs.com/t/212%E6%B5%8B%E8%AF%95%E7%89%88/95033/18?u=ie12)
+
+
+
 
 
 
