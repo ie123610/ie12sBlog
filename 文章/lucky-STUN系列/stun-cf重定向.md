@@ -299,8 +299,4 @@ Content-Type: application/json
 * [Functions reference](https://developers.cloudflare.com/ruleset-engine/rules-language/functions/#wildcard_replace)
 * [cloudflare 301重定向规则设置-Wood Chen](https://woodchen.ink/archives/cloudflare-301-redirectional-settings-2eod9f)
 
----
 
-## 评论区
-
-前往评论区 》 [链接](https://github.com/ie123610/ie12sBlog/issues/19)  

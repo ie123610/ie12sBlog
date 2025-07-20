@@ -64,21 +64,9 @@ qbittorrent webUI 接口定义：[链接](https://github.com/qbittorrent/qBittor
 <img src="../../图片/stun-qb端口自动化/8_webhook测试结果-调用出错.PNG" width="60%" height="60%" />
 
 若是 请求主体 写错就可能会报 HTTP 400  
-
 <img src="../../图片/stun-qb端口自动化/9_webhook测试结果-400.PNG" width="60%" height="60%" />
-
-
 
 至此我们就完成了使用webhook自动修改 qbittorrent 的监听端口的设置  
 再配合上之前的教程使用UPNP工具添加内网端口不同的映射规则即可实现完全自动化  
-
----
-
-## 评论区
-
-前往评论区 》 [链接](https://github.com/ie123610/ie12sBlog/issues/4)
-
-
-
 
 
