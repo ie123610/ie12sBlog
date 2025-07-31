@@ -153,7 +153,7 @@ image.fileshot.net
 输入 nslookup 并加上想要查询的域名 例如：  
 `nslookup passport-client.bitcomet.com`  
 
-输入后回车 查看查询结果
+输入后回车 查看查询结果  
 <img src="../../图片/BC截图和评论/解析结果.webp" width="60%" height="60%" />
 
 这就是本地查询得到的结果，下面使用在线工具进行查询  
