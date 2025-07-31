@@ -23,20 +23,17 @@
 在某些旧版本中该选项似乎存在一些问题 设置为 是 时反而会发生错误  
 若遇到该错误后 请切换 `bittorrent.separate_sources_for_failed_piece` 的值  
 
-若原来为 是 则改为 否  
-若原来为 否 则改为 是  
+**若原来为 是 则改为 否**  
+**若原来为 否 则改为 是**  
 
 
 ---
 
-参考和转载：
+参考和转载：  
+* https://www.cometbbs.com/t/87262
+* https://www.cometbbs.com/t/70498
+* https://www.cometbbs.com/t/32488
+* https://www.cometbbs.com/t/85239
+* https://www.cometbbs.com/t/73168/9
 
-https://www.cometbbs.com/t/87262
 
-https://www.cometbbs.com/t/70498
-
-https://www.cometbbs.com/t/32488
-
-https://www.cometbbs.com/t/85239
-
-https://www.cometbbs.com/t/73168/9 
