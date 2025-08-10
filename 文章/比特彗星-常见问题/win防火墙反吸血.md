@@ -77,10 +77,14 @@ New-NetFirewallRule -DisplayName “BT_BC_BAN_OUT” -Direction Outbound -Action
 <img src="../../图片/win防火墙反吸血/ip列表.webp" width="60%" height="60%" />
 
 **将IP列表写入动态关键字**  
-`New-NetFirewallDynamicKeywordAddress -Id "{GUDI}" -Keyword "名字" -Addresses (Get-Content IP列表文件路径 -Raw ).Replace("`r`n",",")`  
+```
+New-NetFirewallDynamicKeywordAddress -Id "{GUDI}" -Keyword "名字" -Addresses (Get-Content IP列表文件路径 -Raw ).Replace("`r`n",",")  
+```
 
 **示例**  
-`New-NetFirewallDynamicKeywordAddress -Id "{3817fa89-3f21-49ca-a4a4-80541ddf7465}" -Keyword "BANIP" -Addresses (Get-Content C:\ip.txt -Raw ).Replace("`r`n",",")`  
+```
+New-NetFirewallDynamicKeywordAddress -Id "{3817fa89-3f21-49ca-a4a4-80541ddf7465}" -Keyword "BANIP" -Addresses (Get-Content C:\ip.txt -Raw ).Replace("`r`n",",")  
+```
 
 运行成功后会显示出规则内容  
 <img src="../../图片/win防火墙反吸血/运行成功.webp" width="60%" height="60%" />
@@ -101,11 +105,14 @@ New-NetFirewallRule -DisplayName “BT_BC_BAN_OUT” -Direction Outbound -Action
 再生成新的关键字 命令和之前创建时一样  
 **其GUID要和之前绑定在防火墙规则中的相同**  
 
-`New-NetFirewallDynamicKeywordAddress -Id "{GUDI}" -Keyword "便于识别的名称" -Addresses (Get-Content IP列表文件路径 -Raw ).Replace("`r`n",",")`  
-
+```
+New-NetFirewallDynamicKeywordAddress -Id "{GUDI}" -Keyword "便于识别的名称" -Addresses (Get-Content IP列表文件路径 -Raw ).Replace("`r`n",",")  
+```
 
 **示例**  
-`New-NetFirewallDynamicKeywordAddress -Id "{3817fa89-3f21-49ca-a4a4-80541ddf7465}" -Keyword "BANIP" -Addresses (Get-Content C:\ip.txt -Raw ).Replace("`r`n",",")`  
+```
+New-NetFirewallDynamicKeywordAddress -Id "{3817fa89-3f21-49ca-a4a4-80541ddf7465}" -Keyword "BANIP" -Addresses (Get-Content C:\ip.txt -Raw ).Replace("`r`n",",")  
+```
 
 查看已经创建的关键字 `Get-NetFirewallDynamicKeywordAddress`  
 

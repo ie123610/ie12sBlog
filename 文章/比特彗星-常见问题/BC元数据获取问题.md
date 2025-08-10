@@ -57,7 +57,7 @@ BTSOW：https://btsow.bond/convert/magnet
 <img src="../../图片/BC常见问题-元数据获取/元数据获取_btcash-3.webp" width="60%" height="60%" />
 
 若获取成功会和之前一样跳转到下载界面  
-也可以去 https://itorrents.org/  看看  
+也可以去 https://itorrents.org/ 看看  
 其不需要填写验证码 但下载起来稍微复杂一些  
 
 **问：** 这些网站都在国外访问起来比较麻烦 有没有使用软件获取的方法？  
@@ -72,7 +72,7 @@ BTSOW：https://btsow.bond/convert/magnet
 
 ---
 
-此部分 来自 像素帝的教程 ：https://www.cometbbs.com/t/83650  
+此部分 来自 像素帝的教程 ： ~~https://www.cometbbs.com/t/83650~~  
 如果看不清楚可以 右键图片选择在新标签页打开图片  
 
 <img src="../../图片/BC常见问题-元数据获取/元数据获取_迅雷获取.webp" width="60%" height="60%" />
