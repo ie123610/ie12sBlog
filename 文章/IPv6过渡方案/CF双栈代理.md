@@ -521,9 +521,4 @@ Linux终端模拟软件的方法相对来说比较麻烦
 * [什么是 Anycast？| Anycast 如何工作？](https://www.cloudflare-cn.com/learning/cdn/glossary/anycast-network/)
 * [CloudFlare 优选ip 和 优选域名方法](https://www.kjfx.cc/307.html)
 
----
-
-## 评论区
-
-前往评论区 》 [链接](https://github.com/ie123610/ie12sBlog/issues/13)
 

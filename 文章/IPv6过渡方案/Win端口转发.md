@@ -201,11 +201,4 @@ Windows端口转发 以实现v6/v4之间的转换
 在之后的教程中我们会介绍使用[lucky](https://lucky666.cn/)进行转发  
 其支持UDP 甚至可以实现TCP和UDP之间的转换  
 
----
-
-## 评论区
-
-前往评论区 》 [链接](https://github.com/ie123610/ie12sBlog/issues/7)
-
-
 
