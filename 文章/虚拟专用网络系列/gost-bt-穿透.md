@@ -125,7 +125,7 @@ gost的隧道部分则是基于 wireguard-go 实现的 其运行在用户空间�
 
 感谢[泥浆](https://space.bilibili.com/14913)提供的技术支持  
 
-**示意图**
+**示意图**  
 <img src="../../图片/gost-bt-穿透/gost-bt-穿透_gost穿透流程图.jpg" width="60%" height="60%" />
 
 
