@@ -4,7 +4,7 @@
 
 在本教程将使用gost替代frp来为bt客户端提供穿透  
 在之前的教程中我们已经实现了通过stun穿透运营商NAT  
-为BT客户端开放端口 [链接](https://www.bilibili.com/read/cv31006420/)   
+为BT客户端开放端口 [链接](../lucky-STUN系列/stun穿透-bt.md)   
 
 但是此方案只使用于全锥形的运营商NAT  
 且没有配置防火墙的情况的情况  
@@ -62,7 +62,7 @@ frp穿透方案已广泛使用于各类场景
 这和BT客户端向 tracker 的汇报有关系  
 
 若不通过代理连接tracker服务器 则在tracker服务器上  
-记录的仍然是**客户端所在的本地对外IP** 而非穿透服务器的IP  
+**记录的仍然是客户端所在的本地对外IP而非穿透服务器的IP**  
 这样一来其他客户端在连接的时候依然会其他客户端依然会尝试连接这个本地对外IP  
 而非可以连接的穿透服务器IP  
 
@@ -77,7 +77,7 @@ frp本身并不支持代理功能 需要安装其他的代理服务端程序
 Gost方案可以有效避免这些问题  
 
 Gost使用go语言编写 集成了非常多的网络功能  
-官方文档：链接
+官方文档：[链接](https://gost.run/)
 
 ### 可保留源IP
 
@@ -177,7 +177,7 @@ iptables -I FORWARD -s 192.168.123.2 -j ACCEPT
 其中前两条规则用于将 发到VPS的6666TCP和UDP端口的流量  
 NAT转换到 `192.168.123.2` 的6666TCP和UDP  
 
-这里的 `192.168.123.2` 是之后 BT客户端将使用的IP
+这里的 `192.168.123.2` 是之后 BT客户端将使用的IP  
 而6666则是BT需要监听的端口 这个IP和端口可自定义  
 
 而后两条则分别是 放行源地址为任意 目标IP为`192.168.123.2`的流量  
@@ -231,7 +231,7 @@ wget -O /usr/local/bin/gost.tar.gz https://github.com/go-gost/gost/releases/down
 切换目录 `cd /usr/local/bin/`
 列出目录下载的文件 `ls -l`  
 
-<img src="../../图片/gost-bt-穿透/下载gost.jpg" width="60%" height="60%" />
+<img src="../../图片/gost-bt-穿透/下载文件位置.jpg" width="60%" height="60%" />
 
 
 **创建gost文件夹**  
@@ -275,8 +275,7 @@ gost -L=tun://:8421?net=192.168.123.1/24 -L relay+wss://:8443?bind=true -L socks
 
 ### 开放本机端口
 
-为隧道和socks5服务端开放端口  
-端口号和协议根据实际情况填写  
+为隧道和socks5服务端开放端口 端口号和协议根据实际情况填写  
 
 **示例**
 ```
@@ -289,11 +288,9 @@ iptables -A INPUT -p tcp --dport 7080 -j ACCEPT
 测试参数运行效果并检查服务端各端口是否开放  
 
 切换到 gost所在目录 此处为 `/usr/local/bin/gost`  
-`cd /usr/local/bin/gost`  
+即`cd /usr/local/bin/gost`  
 
-运行gost并附加之前准备的参数 `./gost 参数`  
-
-此处为  
+运行gost并附加之前准备的参数 `./gost 参数` 此处为  
 ```
 ./gost -L=tun://:8421?net=192.168.123.1/24 -L relay+wss://:8443?bind=true -L socks5+wss://:7080?udp=true&notls=true
 ```
@@ -310,8 +307,7 @@ iptables -A INPUT -p tcp --dport 7080 -j ACCEPT
 ### 注册Linux系统服务
 
 在终端中直接运行程序 会占用终端无法进行其他操作  
-且关闭终端后程序会退出  
-而注册成服务即可实现开机自启动和后台运行  
+且关闭终端后程序会退出 而注册成服务即可实现开机自启动和后台运行  
 
 
 **创建服务配置**
@@ -342,13 +338,13 @@ WantedBy=multi-user.target
 
 <img src="../../图片/gost-bt-穿透/Linux-注册服务信息.jpg" width="60%" height="60%" />
 
-重新加载服务配置文件  
+**重新加载服务配置文件**  
 `systemctl daemon-reload`
 
-启动服务  
+**启动服务**  
 `systemctl start gost`
 
-查看服务状态  
+**查看服务状态**  
 `systemctl status gost`
 
 
@@ -371,8 +367,8 @@ Windows一般选 Windows_amd64 不要选 amdv3
 <img src="../../图片/gost-bt-穿透/gost-win_x64.jpg" width="60%" height="60%" />
 
 在Windows下使用TUN网卡还需要下载wintun 下载地址：[链接](https://www.wintun.net/)  
-打开压缩包的bin文件夹 根据系统架构选择对应的版本 一般选择amd64  
-将其中的wintun.dll文件复制下来与gost.exe放置在同一目录下  
+打开压缩包的bin文件夹 根据系统架构选择对应的版本 **一般选择amd64**  
+**将其中的wintun.dll文件复制下来与gost.exe放置在同一目录下**  
 
 
 ### 测试效果
@@ -404,12 +400,12 @@ gost.exe -L="tun://:0/:8421?net=192.168.123.2/24&name=gost_tun" -F relay+wss://�
 本地端口号可自定义 远程端口号要与服务端设置的相应的  
 
 创建TUN网卡 设置IP为`192.168.123.2` 隧道本地端口8421（UDP）  
-此处name用于指定TUN网卡的名称（可选）
+此处name用于指定TUN网卡的名称（可选）  
 使用转发器通过WSS协议转发到服务端的8443端口  
 
 socks5本地服务端监听5522端口 启用UDP  
 使用wss协议转发到远程服务端的7080端口  
-由wss复杂负责加密 故关闭socks5自身加密功能（与服务端对应）
+由wss复杂负责加密 故关闭socks5自身加密功能（与服务端对应）  
 
 **注意tun网卡和socks5转发部分的命令 使用了双引号进行包裹**  
 **这个因为在批处理中单个 "&" 符号用于在单个命令行中串联多个命令**  
@@ -474,10 +470,9 @@ ping 服务端虚拟网卡使用的IP 应有回应
 
 **测试连通性**
 
-在确定隧道和代理畅通 以及添加路由表后  
-就可以打开 比特彗星进行测试了  
-
+在确定隧道和代理畅通 以及添加路由表后 就可以打开 比特彗星进行测试了  
 修改 比特彗星 监听端口 为6666 对应iptables 上的NAT转发端口  
+
 <img src="../../图片/gost-bt-穿透/监听端口.jpg" width="60%" height="60%" />
 
 **设置代理服务器**  
@@ -510,8 +505,7 @@ ping 服务端虚拟网卡使用的IP 应有回应
 
 
 **创建用于添加 路由条目的 批处理**  
-文件名 route_add.cmd  
-与gost.exe放置在 同一目录下
+文件名 route_add.cmd 与gost.exe放置在 同一目录下  
 
 ```
 @echo off
@@ -639,8 +633,7 @@ log 记录模式选择了无 因为socks5和隧道在处理网络流量
 
 **注册服务**
 
-使用install命令注册服务  
-将两个配置文件分别注册成服务  
+使用install命令注册服务 将两个配置文件分别注册成服务  
 
 ```
 实际路径\WinSW-x64.exe install xml配置文件路径
