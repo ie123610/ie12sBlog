@@ -1,16 +1,3 @@
----
-title: 「补充篇」在Cloudflare上设置并更新SRV记录
-featuredImageUrl: https://img2024.cnblogs.com/blog/3559509/202507/3559509-20250720084330685-229669224.jpg
-abstract: ''
-keywords: ''
-categories: ''
-weblogName: CNblog
-postId: 18993638
-postDate: 2025-07-20T08:43:13.4827500+08:00
-postStatus: draft
-dontInferFeaturedImage: false
-stripH1Header: true
----
 # 「补充篇」在Cloudflare上设置并更新SRV记录
 
 ```
