@@ -85,7 +85,7 @@ IPv6教程开放端口教程：[链接](https://www.bilibili.com/read/cv32811550
 * **使用STUN 穿透获得IPv4访问性**  
 
   通过STUN 穿透运营商NAT获得可被外界访问的端口  
-  **此方案在之前的教程中已经有所讲解:** [链接](https://github.com/ie123610/ie12sBlog/blob/main/%E6%96%87%E7%AB%A0/lucky-STUN%E7%B3%BB%E5%88%97/stun-web%E6%9C%8D%E5%8A%A1-CF.md)  
+  **此方案在之前的教程中已经有所讲解:** [链接](../lucky-STUN系列/stun-web服务-CF.md)  
   
   优点：若能成功穿透则延迟则速度与相当于IPv4公网  
   缺点：设置相对较为复杂且对NAT类型有要求 穿透后的端口是随机的需要额外设置  
