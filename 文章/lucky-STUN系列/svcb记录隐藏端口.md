@@ -17,7 +17,7 @@
 
 在地址栏中输入并访问的地址 是辅助服务器的地址  
 访问后辅助服务器发送重定向响应 指向实际访问的服务及其端口  
-**事实上重定向还有显性和隐性之分**
+**事实上重定向还有显性和隐性之分**  
 
 ### 显性重定向
 
@@ -68,10 +68,10 @@ SVCB记录所提能供的服务远比SRV要多 其不仅仅用于指示服务端
 
 **一般工作流程**  
 
-1. 客户端同时发起 A/AAAA 和 HTTPS 记录（增加 50% 的查询量）
-2. 如果 HTTPS 记录是别名模式，则需要查询指向域名的 A/AAAA 和 HTTPS 记录
-3. 客户端需要查询服务模式下目标域名的 A/AAAA 记录
-4. DNS 递归解析服务器可以通过附加字段提供这些记录
+1. 客户端同时发起 A/AAAA 和 HTTPS 记录（增加 50% 的查询量）  
+2. 如果 HTTPS 记录是别名模式，则需要查询指向域名的 A/AAAA 和 HTTPS 记录  
+3. 客户端需要查询服务模式下目标域名的 A/AAAA 记录  
+4. DNS 递归解析服务器可以通过附加字段提供这些记录  
 
 ECH 记录的特殊要求：  
 客户端需要在收到 HTTPS 查询结果之后再发起 TLS 连接，以防服务端开启 ECH  
@@ -147,8 +147,8 @@ HTTPS记录也是支持泛域名解析的 例如 `XXX.svcb.ie12.com`
 而不需要先通过http2探测服务端是否支持 不过此处我们不需要该功能  
 
 **IP提示选项**  
-即示例中的 IPv4hint 和IPv6hint   
 
+即示例中的 IPv4hint 和IPv6hint   
 从理论上来讲其可以用于加速 dns 解析过程  
 即当 HTTPS 记录含有 IP 提示信息时 可以不用再查询目标域名的IP地址  
 
@@ -292,7 +292,7 @@ socks5 协议支持UDP 当然上游服务器也需要支持UDP
 
 ## 故障排除
 
-目前让Firefox使用 HTTPS记录 的条件：
+目前让Firefox使用 HTTPS记录 的条件：  
 
 * 更新火狐浏览器到最新版本  
 * 启用火狐内置的DoH查询 并保证其可以工作  
@@ -323,7 +323,7 @@ socks5 协议支持UDP 当然上游服务器也需要支持UDP
 
 ---
 
-参考：
+参考：  
 * https://blog.xavierskip.com/2023-07-06-dns-svcb-https/
 * https://66666.host/dns-https-hide-port/
 * https://blog.kaciras.com/article/42/speedup-your-site-with-http3-using-nginx-and-dns-svcb
