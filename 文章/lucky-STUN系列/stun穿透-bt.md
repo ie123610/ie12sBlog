@@ -112,7 +112,8 @@ lucky触发自定义脚本的行为可能会被一些杀毒软件误判（主要
 
 双击运行 lucky.exe任务栏会出现一个图标  
 
-<img src="../../图片/stun穿透-bc/程序-lucky.webp" width="60%" height="60%" />
+<img src="../../图片/stun穿透-bc/程序-lucky.webp" width="60%" height="60%" /> <br>
+
 <img src="../../图片/stun穿透-bc/win-托盘图标.webp" />
 
 右键这个图标 弹出菜单 选择打开 lucky 后台  
@@ -188,7 +189,7 @@ C:\UPnP_Wizard\UPnPWizardC.exe -add "BC-TCP" -ip default -intport ${port} -extpo
 
 ## 使用 MiniUPnP Client 的配置方法
 
-###检查 UPnP是否启
+### 检查 UPnP是否启
 
 解压文件 运行其中的 UPnP查询.bat 查看输出内容  
 或者使用 `upnpc-static.exe -i -l` 也是一样的  
