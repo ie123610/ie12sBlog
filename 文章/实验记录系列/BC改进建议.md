@@ -63,6 +63,8 @@
 * 通过扩展名/文件名快速筛选要下载的文件  [链接1](https://www.cometbbs.com/t/205%E6%B5%8B%E8%AF%95%E7%89%88/89373/78?u=ie12) [链接2](https://www.cometbbs.com/t/205%E6%B5%8B%E8%AF%95%E7%89%88/89373/82?u=ie12)
 * Win长路径支持  [链接](https://www.cometbbs.com/t/200%E6%B5%8B%E8%AF%95%E7%89%88/85737/130?u=ie12)
 * 添加内置STUN  [链接](https://www.cometbbs.com/t/212%E6%B5%8B%E8%AF%95%E7%89%88/95033/116?u=ie12)
+* 单文件健康度（可用度）
+* 为单个任务禁用反吸血设置
 
 ### 已完成
 

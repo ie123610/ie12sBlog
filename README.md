@@ -24,5 +24,5 @@ ie12的实验性博客
 
 本博客中所有的文章若无特殊说明则均使用  
 [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/deed.zh-hans) 共享协议  
-![](./图片/CC-ico/CC_BY-SA_icon.png)
+<img src="./图片/CC-ico/by-sa.png" width=88 height=31 />
 
