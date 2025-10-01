@@ -1,5 +1,9 @@
 # 「补充篇」在Cloudflare上设置并更新SRV记录
 
+<details>
+
+<summary>文章结构</summary>
+
 ```
 索引
 │ 
@@ -11,6 +15,9 @@
 ├─更新SRV记录
 └─结尾
 ```
+
+</details>
+
 
 ## 关于本教程
 
