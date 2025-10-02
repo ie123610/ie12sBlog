@@ -1,5 +1,9 @@
 # 使用Cloudflare代理为纯IPv6站点添加IPv4访问
 
+<details>
+
+<summary>文章结构</summary>
+
 ```
 索引
 │
@@ -35,6 +39,8 @@
 │
 └─结尾
 ```
+
+</details>
 
 ---
 

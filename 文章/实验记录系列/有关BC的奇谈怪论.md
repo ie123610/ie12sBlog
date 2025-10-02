@@ -95,7 +95,8 @@ Copyright (C) Ran Ningyu, All Rights Reserved.
 
 不过还是找到了一些线索 但有关BitComet,Inc.的具体信息我们也许永远也不会知道了  
 因为其已经被其注册机构除名了 [注册机构公报](https://eservices.gov.vg/gazette/sites/eservices.gov.vg.gazette/files/governmentandstatutorynotices/%23105%2018th%20November%2C%202022%20EXTRA.pdf)  
-PDF文件存档：[链接](../../图片/有关BC的奇谈怪论/英属于维吉尔群岛注册机构公报.pdf)  
+PDF文件存档：<a href="../../%E5%9B%BE%E7%89%87/%E6%9C%89%E5%85%B3BC%E7%9A%84%E5%A5%87%E8%B0%88%E6%80%AA%E8%AE%BA/%E8%8B%B1%E5%B1%9E%E4%BA%8E%E7%BB%B4%E5%90%89%E5%B0%94%E7%BE%A4%E5%B2%9B%E6%B3%A8%E5%86%8C%E6%9C%BA%E6%9E%84%E5%85%AC%E6%8A%A5.pdf">链接</a>
+  
 
 > 被除名名单
 > 21513 根据《2017 年有限合伙法》（该法）第 95(6) 条，以下是已根据该法第
