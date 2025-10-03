@@ -21,7 +21,7 @@
 其相当于调试状态 在此状态下所有的文章总是显示相同时间  
 且与文件时间的修改时间不相符 其只起到占位符的作用  
 
-<img src="../../../图片/showLastUpdateTime/调试状态下的时间.jpg" width="60%" height="60%" />
+<img src="../../图片/showLastUpdateTime/调试状态下的时间.jpg" width="60%" height="60%" />
 
 
 ## Cloudflare Pages
@@ -38,7 +38,7 @@
 `git fetch --unshallow && npm run build`  
 在构建前先进行深度克隆 修改后文章末尾的时间应能正常显示  
 
-<img src="../../../图片/showLastUpdateTime/新构建命令.jpg" width="60%" height="60%" />
+<img src="../../图片/showLastUpdateTime/新构建命令.jpg" width="60%" height="60%" />
 
 ---
 

@@ -326,7 +326,8 @@ socks5 协议支持UDP 当然上游服务器也需要支持UDP
 
 ---
 
-参考：  
+## 参考：
+
 * https://blog.xavierskip.com/2023-07-06-dns-svcb-https/
 * https://66666.host/dns-https-hide-port/
 * https://blog.kaciras.com/article/42/speedup-your-site-with-http3-using-nginx-and-dns-svcb
