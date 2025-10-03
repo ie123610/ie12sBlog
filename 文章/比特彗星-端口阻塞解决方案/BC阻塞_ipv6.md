@@ -1,5 +1,7 @@
 # 1.3 什么是IPV6
 
+2023.07.30  
+
 **问：** 所以IPv6是什么？  
 
 **答：** IPv6 即 “Internet Protocol Version 6”（**互联网协议第6版**）  

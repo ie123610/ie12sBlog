@@ -1,5 +1,7 @@
 # 1.2 什么是 NAT
 
+2023.07.30  
+
 **问：** NAT是什么？  
 
 **答：** **NAT技术即 NAT（Network Address Translation 网络地址转换）技术**  
