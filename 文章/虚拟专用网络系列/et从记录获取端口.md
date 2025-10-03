@@ -1,5 +1,7 @@
 # 「EasyTier」使用SRV TXT HTTP重定向获取对端IP端口
 
+2025.06.19  
+
 ## 关于此功能
 
 在版本 [v2.2.3](https://github.com/EasyTier/EasyTier/releases/tag/v2.2.3) 中EasyTier添加了对SRV TXT 记录和HTTP重定向的支持  
