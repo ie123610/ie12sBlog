@@ -1,5 +1,7 @@
 # LUCKY STUN穿透在Windows上使用UPnP工具为BT客户端自动添加内外端口号不同的映射规则
 
+2024.02.07  
+
 ## 关于本教程
 
 本教程基于：[基于stun穿透工具LUCKY，使BT客户端绿灯、开放TCP端口的办法（进化版）](https://www.bilibili.com/read/cv21198136/)  

@@ -1,5 +1,6 @@
 # 「LUCKY STUN穿透」使用UptimeRobot使UPnP映射的TCP规则保持活跃
 
+2024.05.04  
 
 在之前的教程中我们通过UPnP映射 webhook等功能配合STUN穿透  
 **实现了在无IPv4公网环境下全自动的为BT客户端开放端口**  
