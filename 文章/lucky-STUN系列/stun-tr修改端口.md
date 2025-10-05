@@ -1,5 +1,7 @@
 # 「LUCKY STUN穿透」使用 cURL 自动修改 Transmission 的监听端口
 
+2024.04.27  
+
 ## 关于本教程
 
 在之前的教程中我们已经实现了使用lucky自带的webhook功能自动修改qbittorrent的端口  

@@ -1,5 +1,7 @@
 # 「LUCKY STUN穿透」使用脚本自动修改比特彗星的监听端口
 
+2024.12.05  
+
 在之前的教程中我们已经实现了 为qbittorrent 和 Transmission 自动更换监听端口  
 
 * qb自动更换端口教程：[链接](./stun-qb端口自动化.md)  

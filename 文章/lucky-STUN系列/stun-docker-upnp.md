@@ -1,5 +1,7 @@
 # 「LUCKY STUN穿透」在Docker中使用MiniUPnP为BT客户端自动添加内外端口不同的映射规则
 
+2024.04.23  
+
 ## 关于本教程
 
 在之前的教程中我们已经实现在Windows上使用UPnP工具为BT客户端添加端口  

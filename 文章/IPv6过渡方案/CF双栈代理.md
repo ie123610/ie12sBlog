@@ -1,5 +1,7 @@
 # 使用Cloudflare代理为纯IPv6站点添加IPv4访问
 
+2024.08.24  
+
 <details>
 
 <summary>文章结构</summary>

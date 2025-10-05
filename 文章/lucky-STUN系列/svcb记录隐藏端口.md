@@ -1,5 +1,7 @@
 # 使用SVCB/HTTPS记录隐藏和固定Web服务端口
 
+2025.09.04  
+
 ## 背景
 
 在之前的教程中我们实现了使用 重定向 来 “固定” stun穿透后web服务的端口  
@@ -326,7 +328,8 @@ socks5 协议支持UDP 当然上游服务器也需要支持UDP
 
 ---
 
-参考：  
+## 参考：
+
 * https://blog.xavierskip.com/2023-07-06-dns-svcb-https/
 * https://66666.host/dns-https-hide-port/
 * https://blog.kaciras.com/article/42/speedup-your-site-with-http3-using-nginx-and-dns-svcb
