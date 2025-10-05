@@ -150,7 +150,6 @@ file.ie12.net  ┘
 <img src="../../图片/lucky-web/dynv6-cname-2.webp" width="60%" height="60%" />
 
 **检视效果**  
-
 <img src="../../图片/lucky-web/dynv6-cname-3.webp" width="60%" height="60%" />
 
 当然我们也可以将其指向其他域名 不过要在指向的域名后加上英文点号 `.`  
@@ -181,7 +180,6 @@ file.ie12.net  ┘
 <img src="../../图片/lucky-web/cf-cname.webp" width="60%" height="60%" />
 
 **检视效果**  
-
 <img src="../../图片/lucky-web/cf-cname-2.webp" width="60%" height="60%" />
 
 **若需要多个子级域名则重复上述设置即可**  
@@ -218,11 +216,9 @@ DDNS更新方法在之前的教程中已讲解过 详见：[链接](./lucky-ddn
 6. 保存规则
 
 **示例**  
-
 <img src="../../图片/lucky-web/web-主规则.webp" width="60%" height="60%" />
 
 为服务添加子规则 点击添加子规则  
-
 <img src="../../图片/lucky-web/web-添加子规则.webp" width="60%" height="60%" />
 
 
@@ -240,7 +236,7 @@ DDNS更新方法在之前的教程中已讲解过 详见：[链接](./lucky-ddn
 **示例**  
 <img src="../../图片/lucky-web/web-子规则配置.webp" width="60%" height="60%" />
 
-检视效果  
+**检视效果**  
 <img src="../../图片/lucky-web/web-子规则效果.webp" width="60%" height="60%" />
 
 
@@ -252,7 +248,6 @@ DDNS更新方法在之前的教程中已讲解过 详见：[链接](./lucky-ddn
 <img src="../../图片/lucky-web/访问测试-alist.webp" width="60%" height="60%" />
 
 多规则效果演示  
-
 <img src="../../图片/lucky-web/访问测试-多规则.webp" width="60%" height="60%" />
 
 <img src="../../图片/lucky-web/访问测试-qb.webp" width="60%" height="60%" />
@@ -291,9 +286,8 @@ DDNS更新方法在之前的教程中已讲解过 详见：[链接](./lucky-ddn
 
 <img src="../../图片/lucky-web/访问测试-qb-tls.webp" width="60%" height="60%" />
 
-查看证书  
-
-<img src="../../图片/lucky-web/查看证书-1.webp" width="60%" height="60%" />
+**查看证书**  
+<img src="../../图片/lucky-web/查看证书-1.webp" />
 <img src="../../图片/lucky-web/查看证书-2.webp" width="60%" height="60%" />
 
 
@@ -313,11 +307,10 @@ DDNS更新方法在之前的教程中已讲解过 详见：[链接](./lucky-ddn
 4. 监听端口 **与之前设置的反向代理规则使用相同的端口**
 5. 保存规则
 
-示例  
-
+**示例**  
 <img src="../../图片/lucky-web/web-重定向规则.webp" width="60%" height="60%" />
 
-**接着添加子规则**
+**接着添加子规则**  
 
 1. 规则名称可自定义这里使用 一般重定向
 2. 服务类型选择 **重定向**
@@ -330,12 +323,10 @@ DDNS更新方法在之前的教程中已讲解过 详见：[链接](./lucky-ddn
 而变量 `{hostAndPort}` 则表示 **请求的主机名/域名以及端口**  
 其他可用变量：[链接]( https://lucky666.cn/docs/modules/web#%E5%8F%AF%E7%94%A8%E5%8F%98%E9%87%8F)  
 
-示例  
-
+**示例**  
 <img src="../../图片/lucky-web/web-重定向规则-2.webp" width="60%" height="60%" />
 
-检视效果  
-
+**检视效果**  
 <img src="../../图片/lucky-web/web-重定向规则-3.webp" width="60%" height="60%" />
 
 **测试重定向效果**  
@@ -382,17 +373,16 @@ DDNS更新方法在之前的教程中已讲解过 详见：[链接](./lucky-ddn
 
 编辑反向代理主规则 **切换到 定制模式**  
 
-<img src="../../图片/lucky-web/web-安全重定向-1.webp" width="60%" height="60%" />
+<img src="../../图片/lucky-web/web-安全重定向-1.webp"  />
 
 滚动页面 》 点开默认规则 》 修改服务类型为 重定向 》  
 填写默认目标地址 `https://www.baidu.com` 》 **保存规则**  
 
-<img src="../../图片/lucky-web/web-安全重定向-2.webp" width="60%" height="60%" />
+<img src="../../图片/lucky-web/web-安全重定向-2.webp"  />
 
 <img src="../../图片/lucky-web/web-安全重定向-3.webp" width="60%" height="60%" />
 
-检视效果  
-
+**检视效果**  
 <img src="../../图片/lucky-web/web-安全重定向-4.webp" width="60%" height="60%" />
 
 ----
@@ -403,20 +393,15 @@ DDNS更新方法在之前的教程中已讲解过 详见：[链接](./lucky-ddn
 比重定向到百度的效果更好  
 
 **设置方法**  
-
 在默认规则中将服务类型设置为 **关闭连接**即可 默认目标地址不用填写  
-
 <img src="../../图片/lucky-web/web-关闭连接.webp" width="60%" height="60%" />
 
-检视效果  
-
+**检视效果**  
 <img src="../../图片/lucky-web/web-关闭连接-2.webp" width="60%" height="60%" />
 
-访问测试  
-
+**访问测试**  
 直接使用IP+端口进行访问  **连接直接关闭**没有发出任何响应  
-
-<img src="../../图片/lucky-web/web-关闭连接-3.webp" width="60%" height="60%" />
+<img src="../../图片/lucky-web/web-关闭连接-3.webp" />
 
 ---
 
@@ -442,8 +427,8 @@ DDNS更新方法在之前的教程中已讲解过 详见：[链接](./lucky-ddn
 编辑子规则 **开启Basic认证开关** 设置用户名和密码  
 <img src="../../图片/lucky-web/web-认证-2.webp" width="60%" height="60%" />
 
-检视效果  
-<img src="../../图片/lucky-web/web-认证-3.webp" width="60%" height="60%" />
+**检视效果**  
+<img src="../../图片/lucky-web/web-认证-3.webp" />
 
 ---
 
