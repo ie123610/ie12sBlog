@@ -137,4 +137,6 @@ alist.v6.ie12.com
 
 即为新的泛域名设置证书  
 TLS证书的设置方法详见之前的教程：
-[在Windows下使用lucky实现TLS/SSL证书自动化](https://www.bilibili.com/read/cv35124571/?jump_opus=1)  
+[在Windows下使用lucky实现TLS/SSL证书自动化](./lucky-tls-自动化.md)  
+
+

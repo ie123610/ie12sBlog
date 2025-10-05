@@ -54,7 +54,7 @@
 
 ## 在STUN穿透环境中使用WEB服务
 
-在之前的教程中我们已经通过lucky实现了较为安全的WEB访问 详见：[链接](https://www.bilibili.com/read/cv35702797/)  
+在之前的教程中我们已经通过lucky实现了较为安全的WEB访问 详见：[链接](./lucky-web.md)  
 但这些是建立在拥有**公网IP**的情况下（IPv4/IPv6）  
 
 
@@ -64,8 +64,8 @@
 超过这个时间后端口号会再此次发生变化 变化的时间和变化后的端口号都是不确定的  
 这也意味着要在STUN穿透后使用web服务需要**不停更的换端口** 是一件比较麻烦的事情  
 
-在之前我们已经实现了BT下载软件监听端口的自动更换 详见：[链接](https://www.bilibili.com/read/cv31006420/)   
-以及 Minecraft Java的服务器联机端口的固定 详见：[链接](https://www.bilibili.com/read/cv31482590/)  
+在之前我们已经实现了BT下载软件监听端口的自动更换 详见：[链接](./stun穿透-bt.md)  
+以及 Minecraft Java的服务器联机端口的固定 详见：[链接](./stun-mc-srv.md)  
 
 不过BT下载器依靠追踪器（tracker）和DHT网络自动化的获取 其他节点的端口和地址  
 而 Minecraft Java 版依赖 **SRV记录** 来获取端口号  
@@ -104,7 +104,7 @@
 
 #### 使用邮件进行通知端口变化
 
-在稍早前的教程中我们实现了使用邮件来通知端口变化 详见：[链接](https://www.bilibili.com/read/cv34705222/)  
+在稍早前的教程中我们实现了使用邮件来通知端口变化 详见：[链接](./邮件通知端口.md)  
 有了邮件的通知我们只需要在访问的时候手动附加端口号即可
 
 这一方案可用于任何使用TCP/UDP协议的程序  
@@ -155,7 +155,7 @@
 其很可能显示为"端口受限（锥）型NAT" 这其实是由于 路由器/光猫上的NAT造成的  
 
 不过这并不会影响我们使用stun穿透 可以按照这篇教程进行网络优化
-教程：[链接](https://www.bilibili.com/read/cv30370049)  
+教程：[链接](../比特彗星-端口阻塞解决方案/BC阻塞_网络结构.md)  
 
 优化到只剩一层运营商NAT和 和一层光猫/路由器 NAT  
 共两层NAT 且NAT类型检查结果**不为对称型即可进行穿透**   
@@ -208,7 +208,7 @@ miniUPnP 客户端 来设置映射
 
 这其实是由于BT下载的特殊性所导致的  
 由于BT下载的特殊性导致其不适合使用DMZ lucky内置转发以及普通的UPnP  
-详见：[链接](https://www.bilibili.com/read/cv31006420/)  
+详见：[链接](./stun穿透-bt.md)  
 
 不过在包括web服务内的等大多数其他服务中不会有这样的问题  
 这使得穿透过程更加简单也更容易成功  
@@ -287,7 +287,7 @@ IP地址为内网服务实际所在的地址 注意固定内网设备IP
   若出现上述情况可尝试开启DMZ 其目标IP为lucky所在设备的IP  
   **当然前提是其能够启用DMZ且其确实可以生效**  
 
-  DMZ设置参考: [链接1](https://www.bilibili.com/read/cv28835081/) [链接2](https://help.onethingcloud.com/9dd6/e9ec#header-5)  
+  DMZ设置参考: [链接1](../比特彗星-端口阻塞解决方案/BC阻塞_网络结构.md) [链接2](https://help.onethingcloud.com/9dd6/e9ec#header-5)  
   相比直接使用内置转发多了开启DMZ的步骤  
   STUN穿透规则设置方法不变  
 
@@ -300,7 +300,7 @@ IP地址为内网服务实际所在的地址 注意固定内网设备IP
 
   可以将STUN规则监听端口（穿透通道本地端口）映射出去  
   能起到类似DMZ的效果 此场景下的STUN规则监听端口要固定 不能为随机端口  
-  端口映射教程 详见：[链接](https://www.bilibili.com/read/cv28835081/)
+  端口映射教程 详见：[链接](../比特彗星-端口阻塞解决方案/BC阻塞_路由器.md)
 
   **示例**  
   <img src="../../图片/stun-web服务-CF/stun-web服务-STUN规则示例-内置转发-固定端口.jpg" width="60%" height="60%" />
@@ -384,7 +384,7 @@ IP地址为内网服务实际所在的地址 注意固定内网设备IP
 ### 设置DNS记录解析
 
 完成上述配置后我们只需要更新泛域名就可以了  
-DDNS更新方法在之前的教程中已讲解过 详见：[链接](https://www.bilibili.com/read/cv35021955)   
+DDNS更新方法在之前的教程中已讲解过 详见：[链接](./lucky-ddns.md)  
 更新时直接填写带星号的泛域名即可    
 
 <img src="../../图片/stun-web服务-CF/stun-web服务-CF_DNS解析示例.jpg" width="60%" height="60%" />
@@ -566,7 +566,7 @@ Content-Type: application/json
 
 设置反向代理规则的部分可以查看之前的教程  
 不过要注意一下前端地址修为重定向后的地址 
-详见：[链接](https://www.bilibili.com/read/cv35702797/)  
+详见：[链接](./lucky-web.md)  
 
 示例  
 <img src="../../图片/stun-web服务-CF/stun-web服务-CF_反代规则前端域名.jpg" width="60%" height="60%" />
@@ -575,7 +575,7 @@ Content-Type: application/json
 
 获取TLS/SSL证书的部分可以查看之前的教程  
 申请的证书为重定向后的泛域名 
-详见：[链接](https://www.bilibili.com/read/cv35124571/)  
+详见：[链接](./lucky-tls-自动化.md)  
  
 示例  
 <img src="../../图片/stun-web服务-CF/stun-web服务-CF_证书示例.jpg" width="60%" height="60%" />

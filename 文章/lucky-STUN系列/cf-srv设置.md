@@ -24,7 +24,7 @@
 ## 关于本教程
 
 在之前的教程中我们已经介绍了使用lucky的STUN穿透功能  
-配合dynv6创建并更新SRV记录以供Minecraft Java版 联机使用  [链接](https://www.bilibili.com/read/cv31482590/)  
+配合dynv6创建并更新SRV记录以供Minecraft Java版 联机使用  [链接](./stun-mc-srv.md)  
 
 而在本教程中我们将介绍如何在Cloudflare上设置并更新SRV记录  
 **建议先阅读之前的教程后再阅读本教程**  
@@ -55,7 +55,7 @@
 
 **DNS更新令牌**用于在更新DNS记录时进行身份验证  
 获取令牌的方法在之前的DNS解析教程中已经有所讲解 此处不再赘述  
-[链接](https://www.bilibili.com/read/cv35021955/)  
+[链接](./lucky-ddns.md)  
 
 ---
 
@@ -157,6 +157,6 @@
 
 ---
 
-参考
+参考：  
 
 * [Cloudflare API Documentation|Update DNS Record](https://developers.cloudflare.com/api/operations/dns-records-for-a-zone-patch-dns-record)
