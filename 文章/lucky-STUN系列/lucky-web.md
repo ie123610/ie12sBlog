@@ -288,6 +288,7 @@ DDNS更新方法在之前的教程中已讲解过 详见：[链接](./lucky-ddn
 
 **查看证书**  
 <img src="../../图片/lucky-web/查看证书-1.webp" />
+
 <img src="../../图片/lucky-web/查看证书-2.webp" width="60%" height="60%" />
 
 
