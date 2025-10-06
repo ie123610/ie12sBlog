@@ -9,23 +9,18 @@
 当然也包括监听端口 这样我们就可以非常轻松的使用lucky stun穿透中的webhook功能  
 在穿透端口发生变化时自动修改监听端口  
 
-qbittorrent webUI 接口定义：[链接](https://github.com/qbittorrent/qBittorrent/wiki/WebUI-API-(qBittorrent-4.1)#set-application-preferences) 
+qbittorrent webUI 接口定义：[链接](https://github.com/qbittorrent/qBittorrent/wiki/WebUI-API-(qBittorrent-4.1)#set-application-preferences)  
 
 ## 配置方法
 
-**打开webhook开关**
+* **打开webhook开关**
+* 接口地址：`http://[IP和webUI端口]/api/v2/app/setPreferences`
+* 请求方法：POST
+* 请求头： `Content-type:application/x-www-form-urlencoded`
+* 请求主体：`json={"listen_port":#{port}}`
+* 打开 **禁用Webhook接口调用成功字符串检测**
 
-接口地址：`http://[IP和webUI端口]/api/v2/app/setPreferences`
-
-请求方法：POST
-
-请求头： `Content-type:application/x-www-form-urlencoded`
-
-请求主体：`json={"listen_port":#{port}}`
-
-打开 **禁用Webhook接口调用成功字符串检测**
-
-示例  
+**示例**  
 <img src="../../图片/stun-qb端口自动化/1_qbstun穿透联动_webhook主要配置.png" width="60%" height="60%" />
 
 接口地址的IP和端口按照实际情况修改     

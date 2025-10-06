@@ -58,13 +58,13 @@ STUN穿透无法固定端口的问题
     
    不过其只对http服务起效果 且要求客户端支持重定向  
    这对浏览器来说不是问题 其他的专用客户端对此却鲜有支持  
-   [教程链接](https://www.bilibili.com/read/cv36096987/)  
+   [教程链接](./stun-web服务-CF.md)  
 
 2. **使用SRV记录连接Minecraft JAVA 服务器**  
     
    这要求客户端程序支持srv记录 虽然记录本身是标准化的  
    但日常使用中的绝大部分程序都不支持srv记录  
-   像Minecraft Java 版这样支持srv记录的程序是极少的 [教程链接](https://www.bilibili.com/read/cv31482590/)  
+   像Minecraft Java 版这样支持srv记录的程序是极少的 [教程链接](./stun-mc-srv.md)  
 
 3. **使用邮件通知端口变化**  
   
@@ -73,7 +73,7 @@ STUN穿透无法固定端口的问题
   
    这虽然可以适应于所有的程序 但其完全依靠人工修改端口  
    非常不便 而且若端口变化较为频繁或穿透规则较多  
-   会产生大量的通知邮件 [教程链接](https://www.bilibili.com/read/cv34705222/)  
+   会产生大量的通知邮件 [教程链接](./邮件通知端口.md)  
 
 4. **使用端口转发**  
   
@@ -96,7 +96,7 @@ STUN穿透无法固定端口的问题
   
    虽然普通的Windows本身可以进行转发端口 但这仅限于TCP  
    若要转发UDP端口则需要使用winsever 相比之下使用lucky反而可能会更加简单  
-   [旧方案链接](https://github.com/ie123610/ie12sBlog/blob/main/%E6%96%87%E7%AB%A0/%E5%AE%9E%E9%AA%8C%E8%AE%B0%E5%BD%95%E7%B3%BB%E5%88%97/%E5%BA%9F%E5%BC%83%E6%96%B9%E6%A1%88-%E4%BD%BF%E7%94%A8lucky%E7%AB%AF%E5%8F%A3%E8%BD%AC%E5%8F%91%E5%9B%BA%E5%AE%9ASTUN%E7%A9%BF%E9%80%8F%E7%AB%AF%E5%8F%A3.md)  
+   [旧方案链接](../实验记录系列/废弃方案-使用lucky端口转发固定STUN穿透端口.md)  
 
 
 ---
@@ -169,7 +169,7 @@ Github 项目地址：[链接](https://github.com/vnt-dev/vnts/releases)
 
 直接使用命令行运行服务端并不方便  
 更好的方法是将其注册为系统服务  
-**具体注册方法详见之前的教程** [链接](https://www.bilibili.com/read/cv39245062/)  
+**具体注册方法详见之前的教程** [链接](../虚拟专用网络系列/win搭建easytier公共服务器.md)  
 
 VNTS并不支持从配置文件启动  
 不过其可调的参数并不多 并不会非常麻烦  
@@ -321,7 +321,7 @@ VTN本身集成了自启动选项
 
 STUN规则的设置方法可以参考之前的教程  
 在转发时应尽可能的使用 路由设备上的端口转发功能  
-详见：[链接](https://www.bilibili.com/read/cv36096987/)
+详见：[链接](./stun-web服务-CF.md)
 
 ### 更新TXT记录
 
@@ -331,7 +331,7 @@ STUN规则的设置方法可以参考之前的教程
 
 为保证客户端可以及时更新端口  
 此TXT记录的TTL时间应该尽可能的短  
-更新TXT记录的方法详见之前的教程 [链接](https://www.bilibili.com/read/cv39270455/)  
+更新TXT记录的方法详见之前的教程 [链接](./在dynv6和CF上更新TXT.md)  
 
 记录内容格式`IP:port` 示例：`1.2.3.4:8342`  
 详见：[链接](https://rustvnt.com/guide/server.html#%E8%BF%9E%E6%8E%A5%E8%87%AA%E5%BB%BA%E6%9C%8D%E5%8A%A1%E5%99%A8)

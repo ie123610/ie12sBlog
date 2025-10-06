@@ -46,7 +46,7 @@ DNS记录设置发生了较大变化 其在过去是一个大的文本框 每行
 **选择提供商**  
 
 选择所使用的动态域名提供商并填写对应身份验证信息  
-获取 token 令牌等身份验证信息的方法可查看之前的教程：[链接](https://www.bilibili.com/read/cv35021955/?jump_opus=1)  
+获取 token 令牌等身份验证信息的方法可查看之前的教程：[链接](./lucky-ddns.md)  
 在之前的教程中演示了 dynv6 NOIP 和 cloudflare 的配置方法  
 
 **此处使用dynv6进行演示**  
@@ -94,9 +94,9 @@ IPv4记录设置也是相同的方式
 现在lucky已经为我们完成了这些工作  
 
 **旧教程:**  
-* [在dynv6上更新SRV记录](https://www.bilibili.com/read/cv31482590/?jump_opus=1)
-* [在Dynv6和Cloudflare上更新TXT记录](https://www.bilibili.com/read/cv39270455/?jump_opus=1)
-* [在Cloudflare上设置并更新SRV记录](https://www.bilibili.com/read/cv37416186/?jump_opus=1)
+* [在dynv6上更新SRV记录](./stun-mc-srv.md)
+* [在Dynv6和Cloudflare上更新TXT记录](./在dynv6和CF上更新TXT.md)
+* [在Cloudflare上设置并更新SRV记录](./cf-srv设置.md)
 
 
 ### 更新TXT记录
