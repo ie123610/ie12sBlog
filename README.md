@@ -6,7 +6,7 @@ ie12的实验性博客
 请前往索引以查看  
 
 * [已整理教程](索引.md)
-* [研究记录系列](文章/实验记录系列/实验记录索引.md)
+* [研究记录系列](articles/实验记录系列/实验记录索引.md)
 
 
 ## 其他链接
@@ -25,5 +25,5 @@ ie12的实验性博客
 
 本博客中所有的文章若无特殊说明则均使用  
 [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/deed.zh-hans) 共享协议  
-<img src="./图片/CC-ico/by-sa.svg" width=100 height=35 />
+<img src="./images/CC-ico/by-sa.svg" width=100 height=35 />
 
