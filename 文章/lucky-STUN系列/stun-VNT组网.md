@@ -140,7 +140,7 @@ STUN穿透无法固定端口的问题
 **需要在服务端侧同时部署服务端和客户端**  
 
 **示意图**  
-<img src="../../图片/stun-VNT组网/stun-VNT组网_流程示意图.jpg" width="60%" height="60%" />
+<img src="../../图片/stun-VNT组网/stun-VNT组网_流程示意图.webp" width="60%" height="60%" />
 
 
 ### 配置服务端
@@ -157,13 +157,13 @@ Github 项目地址：[链接](https://github.com/vnt-dev/vnts/releases)
 64位系统选择x86-64 32位系统选i686  
 
 **示例**  
-<img src="../../图片/stun-VNT组网/stun-VNT组网_下载vtns.jpg" width="60%" height="60%" />
+<img src="../../图片/stun-VNT组网/stun-VNT组网_下载vtns.webp" width="60%" height="60%" />
 
 解压后得到下列文件  
 建议重命名一下文件夹 减少嵌套的文件夹层数  
 让文件路径变的短一些 这会方便之后的设置  
 
-<img src="../../图片/stun-VNT组网/stun-VNT组网_vtns-文件.jpg" width="60%" height="60%" />
+<img src="../../图片/stun-VNT组网/stun-VNT组网_vtns-文件.webp" width="60%" height="60%" />
 
 #### 注册为服务
 
@@ -178,7 +178,7 @@ VNTS 文档：[链接](https://github.com/vnt-dev/vnts#vnts)
 也可通过 `-h` 查看可用命令  
 
 **示例**  
-<img src="../../图片/stun-VNT组网/stun-VNT组网_vtns-可用命令.jpg" width="60%" height="60%" />
+<img src="../../图片/stun-VNT组网/stun-VNT组网_vtns-可用命令.webp" width="60%" height="60%" />
 
 最重要的两个参数是 **监听端口** 和 **网关地址**  
 
@@ -219,8 +219,8 @@ VNTS 文档：[链接](https://github.com/vnt-dev/vnts#vnts)
 
 #### 检视效果
 
-<img src="../../图片/stun-VNT组网/stun-VNT组网_vtns-服务-1.jpg" width="60%" height="60%" />
-<img src="../../图片/stun-VNT组网/stun-VNT组网_vtns-服务-2.jpg" width="60%" height="60%" />
+<img src="../../图片/stun-VNT组网/stun-VNT组网_vtns-服务-1.webp" width="60%" height="60%" />
+<img src="../../图片/stun-VNT组网/stun-VNT组网_vtns-服务-2.webp" width="60%" height="60%" />
 
 
 ### 配置本地客户端
@@ -234,13 +234,13 @@ VNTS 文档：[链接](https://github.com/vnt-dev/vnts#vnts)
 
 VNT Github 项目地址：[链接](https://github.com/vnt-dev/vnt/releases)  
 
-<img src="../../图片/stun-VNT组网/stun-VNT组网_vnt-文件.jpg" width="60%" height="60%" />
+<img src="../../图片/stun-VNT组网/stun-VNT组网_vnt-文件.webp" width="60%" height="60%" />
 
 
 #### 设置基础组网信息
 
 运行 vnt_app.exe 点击右上角的加号 添加组网配置  
-<img src="../../图片/stun-VNT组网/stun-VNT组网_vnt-添加配置文件.jpg" width="60%" height="60%" />
+<img src="../../图片/stun-VNT组网/stun-VNT组网_vnt-添加配置文件.webp" width="60%" height="60%" />
 
 * **配置名称：** 此组网配置文件的名称 可任意填写  
 
@@ -259,7 +259,7 @@ VNT Github 项目地址：[链接](https://github.com/vnt-dev/vnt/releases)
   由于是在本地传输 协议保持默认的UDP即可  
 
 **示例**  
-<img src="../../图片/stun-VNT组网/stun-VNT组网_vnt-配置文件-1.jpg" width="60%" height="60%" />
+<img src="../../图片/stun-VNT组网/stun-VNT组网_vnt-配置文件-1.webp" width="60%" height="60%" />
 
 #### 设置子网代理
 
@@ -275,7 +275,7 @@ VNT Github 项目地址：[链接](https://github.com/vnt-dev/vnt/releases)
 这里选择`0.0.0.0`表示允许转出任意目标的流量  
 
 **示例**  
-<img src="../../图片/stun-VNT组网/stun-VNT组网_vnt-配置文件-2.jpg" width="60%" height="60%" />
+<img src="../../图片/stun-VNT组网/stun-VNT组网_vnt-配置文件-2.webp" width="60%" height="60%" />
 
 但是若想要让物理局域网中未加入虚拟网络的设备  
 主动的访问虚拟局域网中的设备 就需要配置更多的内容了  
@@ -298,7 +298,7 @@ VNT自带穿透功能 在NAT类型合适的情况下
 记得设置完成后 点击右上角的保存按钮保存规则  
 
 **示例**  
-<img src="../../图片/stun-VNT组网/stun-VNT组网_vnt-配置文件-3.jpg" width="60%" height="60%" />
+<img src="../../图片/stun-VNT组网/stun-VNT组网_vnt-配置文件-3.webp" width="60%" height="60%" />
 
 
 **开机自动**  
@@ -310,7 +310,7 @@ VTN本身集成了自启动选项
 才会运行程序 当然也可以手动修改  
 
 **示例**  
-<img src="../../图片/stun-VNT组网/stun-VNT组网_vnt-配置文件-4.jpg" width="60%" height="60%" />
+<img src="../../图片/stun-VNT组网/stun-VNT组网_vnt-配置文件-4.webp" width="60%" height="60%" />
 
 
 ### 设置STUN穿透规则
@@ -337,8 +337,8 @@ STUN规则的设置方法可以参考之前的教程
 详见：[链接](https://rustvnt.com/guide/server.html#%E8%BF%9E%E6%8E%A5%E8%87%AA%E5%BB%BA%E6%9C%8D%E5%8A%A1%E5%99%A8)
 
 **示例**  
-<img src="../../图片/stun-VNT组网/stun-VNT组网_vnt-更新TXT记录-1.jpg" width="60%" height="60%" />
-<img src="../../图片/stun-VNT组网/stun-VNT组网_vnt-更新TXT记录-2.jpg" width="60%" height="60%" />
+<img src="../../图片/stun-VNT组网/stun-VNT组网_vnt-更新TXT记录-1.webp" width="60%" height="60%" />
+<img src="../../图片/stun-VNT组网/stun-VNT组网_vnt-更新TXT记录-2.webp" width="60%" height="60%" />
 
 
 ### 配置客户端
@@ -369,7 +369,7 @@ STUN规则的设置方法可以参考之前的教程
   的客户端的虚拟IP 其为流量的出口  
 
 **示例**  
-<img src="../../图片/stun-VNT组网/stun-VNT组网_vnt安卓客户端示例.jpg" width="60%" height="60%" />
+<img src="../../图片/stun-VNT组网/stun-VNT组网_vnt安卓客户端示例.webp" width="60%" height="60%" />
 
 
 ### 检视最终效果
@@ -379,16 +379,16 @@ STUN规则的设置方法可以参考之前的教程
 
 #### 检视连接效果
 
-<img src="../../图片/stun-VNT组网/stun-VNT组网-客户端连接效果-1.jpg" width="60%" height="60%" />
-<img src="../../图片/stun-VNT组网/stun-VNT组网-客户端连接效果-1.jpg" width="60%" height="60%" />
+<img src="../../图片/stun-VNT组网/stun-VNT组网-客户端连接效果-1.webp" width="60%" height="60%" />
+<img src="../../图片/stun-VNT组网/stun-VNT组网-客户端连接效果-1.webp" width="60%" height="60%" />
 
 #### 访问虚拟局域网
 
-<img src="../../图片/stun-VNT组网/stun-VNT组网-访问虚拟局域网.jpg" width="60%" height="60%" />
+<img src="../../图片/stun-VNT组网/stun-VNT组网-访问虚拟局域网.webp" width="60%" height="60%" />
 
 #### 访问物理局域网
 
-<img src="../../图片/stun-VNT组网/stun-VNT组网-访问物理局域网.jpg" width="60%" height="60%" />
+<img src="../../图片/stun-VNT组网/stun-VNT组网-访问物理局域网.webp" width="60%" height="60%" />
 
 ---
 
