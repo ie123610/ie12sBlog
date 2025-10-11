@@ -96,7 +96,7 @@ STUN穿透无法固定端口的问题
   
    虽然普通的Windows本身可以进行转发端口 但这仅限于TCP  
    若要转发UDP端口则需要使用winsever 相比之下使用lucky反而可能会更加简单  
-   [旧方案链接](../实验记录系列/废弃方案-使用lucky端口转发固定STUN穿透端口.md)  
+   [旧方案链接](../research-logs/废弃方案-使用lucky端口转发固定STUN穿透端口.md)  
 
 
 ---
@@ -169,7 +169,7 @@ Github 项目地址：[链接](https://github.com/vnt-dev/vnts/releases)
 
 直接使用命令行运行服务端并不方便  
 更好的方法是将其注册为系统服务  
-**具体注册方法详见之前的教程** [链接](../虚拟专用网络系列/win搭建easytier公共服务器.md)  
+**具体注册方法详见之前的教程** [链接](../virtual-private-network/win搭建easytier公共服务器.md)  
 
 VNTS并不支持从配置文件启动  
 不过其可调的参数并不多 并不会非常麻烦  

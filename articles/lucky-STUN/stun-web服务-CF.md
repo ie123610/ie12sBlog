@@ -155,7 +155,7 @@
 其很可能显示为"端口受限（锥）型NAT" 这其实是由于 路由器/光猫上的NAT造成的  
 
 不过这并不会影响我们使用stun穿透 可以按照这篇教程进行网络优化
-教程：[链接](../比特彗星-端口阻塞解决方案/BC阻塞_网络结构.md)  
+教程：[链接](../bitcomet-port-forwarding/BC阻塞_网络结构.md)  
 
 优化到只剩一层运营商NAT和 和一层光猫/路由器 NAT  
 共两层NAT 且NAT类型检查结果**不为对称型即可进行穿透**   
@@ -287,7 +287,7 @@ IP地址为内网服务实际所在的地址 注意固定内网设备IP
   若出现上述情况可尝试开启DMZ 其目标IP为lucky所在设备的IP  
   **当然前提是其能够启用DMZ且其确实可以生效**  
 
-  DMZ设置参考: [链接1](../比特彗星-端口阻塞解决方案/BC阻塞_网络结构.md) [链接2](https://help.onethingcloud.com/9dd6/e9ec#header-5)  
+  DMZ设置参考: [链接1](../bitcomet-port-forwarding/BC阻塞_网络结构.md) [链接2](https://help.onethingcloud.com/9dd6/e9ec#header-5)  
   相比直接使用内置转发多了开启DMZ的步骤  
   STUN穿透规则设置方法不变  
 
@@ -300,7 +300,7 @@ IP地址为内网服务实际所在的地址 注意固定内网设备IP
 
   可以将STUN规则监听端口（穿透通道本地端口）映射出去  
   能起到类似DMZ的效果 此场景下的STUN规则监听端口要固定 不能为随机端口  
-  端口映射教程 详见：[链接](../比特彗星-端口阻塞解决方案/BC阻塞_路由器.md)
+  端口映射教程 详见：[链接](../bitcomet-port-forwarding/BC阻塞_路由器.md)
 
   **示例**  
   <img src="../../images/stun-web服务-CF/stun-web服务-STUN规则示例-内置转发-固定端口.jpg" width="60%" height="60%" />

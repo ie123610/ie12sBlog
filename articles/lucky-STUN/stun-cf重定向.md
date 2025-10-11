@@ -37,7 +37,7 @@
 ## 关于本教程
 
 在之前的教程中我们已经实现了使用Cloudflare的页面规则固定和隐藏  
-STUN穿透后的网页端口 [链接](../../articles/lucky-STUN系列/stun-web服务-CF.md)  
+STUN穿透后的网页端口 [链接](../../articles/lucky-STUN/stun-web服务-CF.md)  
 
 不过之前教程中的方法只能处理域名而无法处理资源路径和查询字符串  
 即重定向前链接中的资源路径和查询字符串不能继承到重定向后的链接中  
@@ -60,7 +60,7 @@ STUN穿透后的网页端口 [链接](../../articles/lucky-STUN系列/stun-web�
 
 在设置DNS记录和解析方面和之前教程中的差不多  
 依然需要设置两组域名（子） 即重定向前的域名和重定向后的域名  
-[链接](../../articles/lucky-STUN系列/stun-web服务-CF.md)  
+[链接](../../articles/lucky-STUN/stun-web服务-CF.md)  
 
 
 ---
@@ -148,7 +148,7 @@ CF对重定向的命名方式发生了改变
 
 与更新页面规则时不同 要获取并更新重定向规则需要两组权限  
 创建令牌的前序过程和之前教程中的基本相同  
-请参考之前教程中的设置 [链接](../../articles/lucky-STUN系列/stun-web服务-CF.md)  
+请参考之前教程中的设置 [链接](../../articles/lucky-STUN/stun-web服务-CF.md)  
 
 需要的权限如下：  
 

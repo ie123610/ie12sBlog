@@ -6,7 +6,7 @@ ie12的实验性博客
 请前往索引以查看  
 
 * [已整理教程](the-index.md)
-* [研究记录系列](articles/实验记录系列/实验记录the-index.md)
+* [研究记录系列](articles/research-logs/research-index.md)
 
 
 ## 其他链接
