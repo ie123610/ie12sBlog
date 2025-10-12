@@ -496,7 +496,7 @@ ping 服务端虚拟网卡使用的IP 应有回应
 <img src="../../images/gost-bt-NAT-Penetration/绿灯.jpg" width="60%" height="60%" />
 <img src="../../images/gost-bt-NAT-Penetration/绿灯-2.jpg" width="60%" height="60%" />
 
-下载任意热门种子 例如 [乌班图镜像](../bitcomet-FAQ/BC下载测速.md)  
+下载任意热门种子 例如 [乌班图镜像](../bitcomet-FAQ/BC-download-speed-test.md)  
 查看 **用户选项卡** 中的发起列 若看不到发起列 则需要右键表头弹出菜单勾选发起  
 **若有远程发起 且传入用户的IP显示正常 则穿透功能已经实现**  
 

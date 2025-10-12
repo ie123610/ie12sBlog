@@ -2,7 +2,7 @@
 
 2025.02.13  
 
-本文是 [有关比特彗星若干历史遗留问题的整理](./BC历史遗留问题.md) 的续  
+本文是 [有关比特彗星若干历史遗留问题的整理](./BC-historical-issues.md) 的续  
 原文链接：[链接](https://www.cometbbs.com/t/95248/9)  
 
 
@@ -77,7 +77,7 @@ Copyright (C) Ran Ningyu, All Rights Reserved.
 看起来在此之前BC的国内公司似乎都是由BitComet,Inc.这个外国公司所控制的  
 
 **但其实这个BitComet,Inc.其实只是注册在外国**  
-**其登记地址依然在国内** 这在之前 [有关比特彗星若干历史遗留问题的整理](./BC历史遗留问题.md) 中  
+**其登记地址依然在国内** 这在之前 [有关比特彗星若干历史遗留问题的整理](./BC-historical-issues.md) 中  
 所找到的商标注册信息已经给出了线索  
 
 <img src="../../images/有关BC的奇谈怪论/有关BC的奇谈怪论-公司信息.jpg" width="60%" height="60%" />
@@ -97,7 +97,7 @@ Copyright (C) Ran Ningyu, All Rights Reserved.
 
 不过还是找到了一些线索 但有关BitComet,Inc.的具体信息我们也许永远也不会知道了  
 因为其已经被其注册机构除名了 [注册机构公报](https://eservices.gov.vg/gazette/sites/eservices.gov.vg.gazette/files/governmentandstatutorynotices/%23105%2018th%20November%2C%202022%20EXTRA.pdf)  
-PDF文件存档：<a href="../../%E5%9B%BE%E7%89%87/%E6%9C%89%E5%85%B3BC%E7%9A%84%E5%A5%87%E8%B0%88%E6%80%AA%E8%AE%BA/%E8%8B%B1%E5%B1%9E%E4%BA%8E%E7%BB%B4%E5%90%89%E5%B0%94%E7%BE%A4%E5%B2%9B%E6%B3%A8%E5%86%8C%E6%9C%BA%E6%9E%84%E5%85%AC%E6%8A%A5.pdf">链接</a>
+PDF文件存档：<a href="../../图片/有关BC的奇谈怪论/英属于维吉尔群岛注册机构公报.pdf">链接</a>
   
 
 > 被除名名单

@@ -294,7 +294,7 @@ _____padding_file_?_如果您看到此文件，请升级到BitComet(比特彗星
 <img src="../../images/BC历史遗留问题/BC历史遗留问题-签名-3.jpg" width="60%" height="60%" />
 
 
-关于BC发展过程的考察内容较多 之后会单独进行讲解(已完成：[有关比特彗星的奇谈怪论](./有关BC的奇谈怪论.md))  
+关于BC发展过程的考察内容较多 之后会单独进行讲解(已完成：[有关比特彗星的奇谈怪论](./BC-rumor.md))  
 **此处先给出结论：比特彗星最早为个人客户端后尝试做曾作为商业软件开发 可能商业化不顺利再次转为个人开发**  
 其可以解释签名的变化以及没有宣传的原因  
 
@@ -320,6 +320,6 @@ _____padding_file_?_如果您看到此文件，请升级到BitComet(比特彗星
 再进一步的挖掘后 又有了新的发现
 我想来自美国专利和商标局的这份商标注册记录  
 可以彻底的终结这个问题 [链接](https://tsdr.uspto.gov/#caseNumber=78932292&caseSearchType=US_APPLICATION&caseType=DEFAULT&searchType=statusSearch)  
-PDF版本：<a href="../../%E5%9B%BE%E7%89%87/BC%E5%8E%86%E5%8F%B2%E9%81%97%E7%95%99%E9%97%AE%E9%A2%98/BC-%E6%B3%A8%E5%86%8C%E5%95%86%E6%A0%87.pdf">链接</a>
+PDF版本：<a href="../../图片/BC历史遗留问题/BC-注册商标.pdf">链接</a>
 
 

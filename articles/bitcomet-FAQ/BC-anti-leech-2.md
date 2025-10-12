@@ -12,8 +12,8 @@
 
 早期的外置防火墙屏蔽方案：  
 
-* [「反吸血」使用命令操作Windows防火墙以实现全自动/半自动的批量IP屏蔽](./win防火墙反吸血.md)
-* [「反吸血」在Windows下使用Fort Firewall全自动批量屏蔽IP](./堡垒防火墙反吸血.md)
+* [「反吸血」使用命令操作Windows防火墙以实现全自动/半自动的批量IP屏蔽](./win-firewall-anti-leech.md)
+* [「反吸血」在Windows下使用Fort Firewall全自动批量屏蔽IP](./fort-firewall-anti-leech.md)
 
 
 而v2.15版本后 **重置了客户端过滤器** 设置方法与之前大不相同  
