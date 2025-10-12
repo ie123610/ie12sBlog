@@ -167,7 +167,7 @@ Github 项目下载地址： [链接](https://github.com/HMBSbige/NatTypeTester/
 网盘下载地址: [链接](https://wwm.lanzoul.com/ivTFr2458oxc)  
 密码:NAT  
 
-<img src="../../images/stun-web服务-CF/stun-web服务-NAT测试工具1.jpg" width="60%" height="60%" />
+<img src="../../images/stun-web-serve-CF/stun-web服务-NAT测试工具1.jpg" width="60%" height="60%" />
 
 **旧版测试**
 
@@ -181,7 +181,7 @@ Github 项目下载地址： [链接](https://github.com/HMBSbige/NatTypeTester/
 * Symmetric             》 对称形
 
 示例  
-<img src="../../images/stun-web服务-CF/stun-web服务-NAT测试工具-旧版测试.jpg" width="60%" height="60%" />
+<img src="../../images/stun-web-serve-CF/stun-web服务-NAT测试工具-旧版测试.jpg" width="60%" height="60%" />
 
 **新版测试**
 
@@ -190,7 +190,7 @@ Github 项目下载地址： [链接](https://github.com/HMBSbige/NatTypeTester/
 即以E开头 若出现A开头则不能穿透  
 
 示例  
-<img src="../../images/stun-web服务-CF/stun-web服务-NAT测试工具-新版测试.jpg" width="60%" height="60%" />
+<img src="../../images/stun-web-serve-CF/stun-web服务-NAT测试工具-新版测试.jpg" width="60%" height="60%" />
 
 ---
 
@@ -221,8 +221,8 @@ miniUPnP 客户端 来设置映射
 同时开启 **不使用lucky内置端口转发**  
 
 **示例**  
-<img src="../../images/stun-web服务-CF/stun-web服务-STUN规则示例-路由设备转发-1.jpg" width="60%" height="60%" />
-<img src="../../images/stun-web服务-CF/stun-web服务-STUN规则示例-路由设备转发-2.jpg" width="60%" height="60%" />
+<img src="../../images/stun-web-serve-CF/stun-web服务-STUN规则示例-路由设备转发-1.jpg" width="60%" height="60%" />
+<img src="../../images/stun-web-serve-CF/stun-web服务-STUN规则示例-路由设备转发-2.jpg" width="60%" height="60%" />
 
 设置完STUN穿透规则后 设置路由设备中的 **端口转发规则**  
 其中的协议 与穿透隧道的协议保持一致  
@@ -234,7 +234,7 @@ IP地址为内网服务实际所在的地址 注意固定内网设备IP
 **外部端口**为**STUN穿透隧道监听端口** 而**内部端口**为需要穿透的程序  
 实际使用的端口 可自定义 这里使用的是 16666  
 
-<img src="../../images/stun-web服务-CF/stun-web服务-STUN规则示例-路由设备转发-3.jpg" width="60%" height="60%" />
+<img src="../../images/stun-web-serve-CF/stun-web服务-STUN规则示例-路由设备转发-3.jpg" width="60%" height="60%" />
 
 设置完成后建议使用 在线端口扫描工具 检查一下  
 欲扫描的端口填写stun穿透规则获取到的对外端口  
@@ -271,7 +271,7 @@ IP地址为内网服务实际所在的地址 注意固定内网设备IP
   目标地址为 需要穿透的程序实际使用的端口  
 
   **示例**  
-  <img src="../../images/stun-web服务-CF/stun-web服务-STUN规则示例-内置转发-随机端口.jpg" width="60%" height="60%" />
+  <img src="../../images/stun-web-serve-CF/stun-web服务-STUN规则示例-内置转发-随机端口.jpg" width="60%" height="60%" />
 
 * **内置转发与DMZ组合使用**
 
@@ -303,8 +303,8 @@ IP地址为内网服务实际所在的地址 注意固定内网设备IP
   端口映射教程 详见：[链接](../bitcomet-port-forwarding/BC阻塞_路由器.md)
 
   **示例**  
-  <img src="../../images/stun-web服务-CF/stun-web服务-STUN规则示例-内置转发-固定端口.jpg" width="60%" height="60%" />
-  <img src="../../images/stun-web服务-CF/stun-web服务-STUN规则示例-内置转发-固定端口-2.jpg" width="60%" height="60%" />
+  <img src="../../images/stun-web-serve-CF/stun-web服务-STUN规则示例-内置转发-固定端口.jpg" width="60%" height="60%" />
+  <img src="../../images/stun-web-serve-CF/stun-web服务-STUN规则示例-内置转发-固定端口-2.jpg" width="60%" height="60%" />
 
 
 #### 使用内置UPnP
@@ -320,7 +320,7 @@ IP地址为内网服务实际所在的地址 注意固定内网设备IP
 应尽可能的使用端口映时  
 
 **示例**  
-<img src="../../images/stun-web服务-CF/stun-web服务-STUN规则示例-upnp.jpg" width="60%" height="60%" />
+<img src="../../images/stun-web-serve-CF/stun-web服务-STUN规则示例-upnp.jpg" width="60%" height="60%" />
 
 
 #### 直接操作防火墙规则
@@ -354,7 +354,7 @@ IP地址为内网服务实际所在的地址 注意固定内网设备IP
 
 **流程图**
 
-<img src="../../images/stun-web服务-CF/stun-web服务-CF_重定向网页流程图-压缩.jpg" width="60%" height="60%" />
+<img src="../../images/stun-web-serve-CF/stun-web服务-CF_重定向网页流程图-压缩.jpg" width="60%" height="60%" />
 
 ---
 
@@ -368,7 +368,7 @@ IP地址为内网服务实际所在的地址 注意固定内网设备IP
   点击添加记录 > 类型选择A > 名称填写 * > IP地址任意填写这这里使用`8.8.8.8`  
   开启代理  此处的*为泛域名解析 例如`*.ie12.com`  
 
-  <img src="../../images/stun-web服务-CF/stun-web服务-CF_添加重定向前域名.jpg" width="60%" height="60%" />
+  <img src="../../images/stun-web-serve-CF/stun-web服务-CF_添加重定向前域名.jpg" width="60%" height="60%" />
 
 
 * **设置重定向后的域名**
@@ -377,7 +377,7 @@ IP地址为内网服务实际所在的地址 注意固定内网设备IP
   点击添加记录 > 类型选择A > 名称填写 `*.stun` > IP地址任意填写 >不开启代理  
   此处的*为泛域名解析 例如`*.stun.ie12.com`  这里的STUN可自定义  
 
-  <img src="../../images/stun-web服务-CF/stun-web服务-CF_添加重定向后域名.jpg" width="60%" height="60%" />
+  <img src="../../images/stun-web-serve-CF/stun-web服务-CF_添加重定向后域名.jpg" width="60%" height="60%" />
 
 ---
 
@@ -387,7 +387,7 @@ IP地址为内网服务实际所在的地址 注意固定内网设备IP
 DDNS更新方法在之前的教程中已讲解过 详见：[链接](./lucky-ddns.md)  
 更新时直接填写带星号的泛域名即可    
 
-<img src="../../images/stun-web服务-CF/stun-web服务-CF_DNS解析示例.jpg" width="60%" height="60%" />
+<img src="../../images/stun-web-serve-CF/stun-web服务-CF_DNS解析示例.jpg" width="60%" height="60%" />
 
 ---
 
@@ -410,10 +410,10 @@ URL填写 **重定向前的泛域名** 比如`*.ie12.com`
 可以继续添加通配符以匹配 资源路径和查询字符串等  
 不过在本教程中并不需要使用这些  
 
-<img src="../../images/stun-web服务-CF/stun-web服务-CF_创建页面规则.jpg" width="60%" height="60%" /> 
+<img src="../../images/stun-web-serve-CF/stun-web服务-CF_创建页面规则.jpg" width="60%" height="60%" /> 
 
 **通配符效果演示**  
-<img src="../../images/stun-web服务-CF/stun-web服务-CF_通配符演示.jpg" width="60%" height="60%" />
+<img src="../../images/stun-web-serve-CF/stun-web服务-CF_通配符演示.jpg" width="60%" height="60%" />
 
 
 ### 更新页面规则
@@ -427,10 +427,10 @@ URL填写 **重定向前的泛域名** 比如`*.ie12.com`
 
 区域ID获取起来非常简单 点开页面规则中的API按钮  
 将示例URL中的区域ID复制出来即可  
-<img src="../../images/stun-web服务-CF/stun-web服务-CF_获取区域ID-1.jpg" width="60%" height="60%" /> 
+<img src="../../images/stun-web-serve-CF/stun-web服务-CF_获取区域ID-1.jpg" width="60%" height="60%" /> 
 
 在侧边栏的**概况**里面也有显示  
-<img src="../../images/stun-web服务-CF/stun-web服务-CF_获取区域ID-2.jpg" width="60%" height="60%" /> 
+<img src="../../images/stun-web-serve-CF/stun-web服务-CF_获取区域ID-2.jpg" width="60%" height="60%" /> 
 
 
 #### 创建访问令牌
@@ -441,23 +441,23 @@ API定义：[链接](https://developers.cloudflare.com/api/operations/page-rules
 
 转到个人资料页面以创建访问令牌  
 点击右上角的小人图标 > 选择我的个人资料  
-<img src="../../images/stun-web服务-CF/stun-web服务-CF_前往个人资料页面.jpg" width="60%" height="60%" /> 
+<img src="../../images/stun-web-serve-CF/stun-web服务-CF_前往个人资料页面.jpg" width="60%" height="60%" /> 
 
 或者在已经登录CF的情况下直接访问该链接：[链接](https://dash.cloudflare.com/profile/api-tokens)  
 
 切换到 API令牌 点击右侧的**创建令牌**  
-<img src="../../images/stun-web服务-CF/stun-web服务-CF_创建API令牌页面.jpg" width="60%" height="60%" /> 
+<img src="../../images/stun-web-serve-CF/stun-web服务-CF_创建API令牌页面.jpg" width="60%" height="60%" /> 
 
 选择页面底部的 **自定义令牌**  
-<img src="../../images/stun-web服务-CF/stun-web服务-CF_创建自定义令牌.jpg" width="60%" height="60%" /> 
+<img src="../../images/stun-web-serve-CF/stun-web服务-CF_创建自定义令牌.jpg" width="60%" height="60%" /> 
 
 按照图中的提示设置令牌内容 其中的名称可自定义  
-<img src="../../images/stun-web服务-CF/stun-web服务-CF_令牌创建过程1.jpg" width="60%" height="60%" /> 
-<img src="../../images/stun-web服务-CF/stun-web服务-CF_令牌创建过程2.jpg" width="60%" height="60%" /> 
+<img src="../../images/stun-web-serve-CF/stun-web服务-CF_令牌创建过程1.jpg" width="60%" height="60%" /> 
+<img src="../../images/stun-web-serve-CF/stun-web服务-CF_令牌创建过程2.jpg" width="60%" height="60%" /> 
 
 此令牌只会显示一次 复制下来 妥善保存  
 接下来我们就可以开始获取规则ID了  
-<img src="../../images/stun-web服务-CF/stun-web服务-CF_令牌创建过程3.jpg" width="60%" height="60%" /> 
+<img src="../../images/stun-web-serve-CF/stun-web服务-CF_令牌创建过程3.jpg" width="60%" height="60%" /> 
 
 
 #### 获取规则ID
@@ -486,7 +486,7 @@ Content-Type: application/json
 保存规则  
 
 示例  
-<img src="../../images/stun-web服务-CF/stun-web服务-CF_规则ID获取过程-1.jpg" width="60%" height="60%" /> 
+<img src="../../images/stun-web-serve-CF/stun-web服务-CF_规则ID获取过程-1.jpg" width="60%" height="60%" /> 
 
 保存规则后 关闭任务开关 并按下手动触发按钮  
 检查日志输出 若配置都正确可以看到下列内容  
@@ -494,7 +494,7 @@ Content-Type: application/json
 其中的 **id** 就我们需要的 规则ID  
 而value 和 url 就是之前设置的重定向前/后域名  
 
-<img src="../../images/stun-web服务-CF/stun-web服务-CF_规则ID获取过程-2.jpg" width="60%" height="60%" /> 
+<img src="../../images/stun-web-serve-CF/stun-web服务-CF_规则ID获取过程-2.jpg" width="60%" height="60%" /> 
 
 在获取完 规则ID后就可以开始更新  
 
@@ -524,7 +524,7 @@ Content-Type: application/json
 ```
 
 示例  
-<img src="../../images/stun-web服务-CF/stun-web服务-CF_页面规则更新测试.jpg" width="60%" height="60%" />
+<img src="../../images/stun-web-serve-CF/stun-web服务-CF_页面规则更新测试.jpg" width="60%" height="60%" />
 
 
 保存规则 按下手动触发按钮 观察日志  
@@ -532,7 +532,7 @@ Content-Type: application/json
 以及是否有返回"success":true"  
 
 示例   
-<img src="../../images/stun-web服务-CF/stun-web服务-CF_页面规则更新测试-2.jpg" width="60%" height="60%" />
+<img src="../../images/stun-web-serve-CF/stun-web服务-CF_页面规则更新测试-2.jpg" width="60%" height="60%" />
 
 
 ### 在STUN穿透规则中更新端口
@@ -546,13 +546,13 @@ Content-Type: application/json
 ```
 
 示例  
-<img src="../../images/stun-web服务-CF/stun-web服务-STUN更新端口.jpg" width="60%" height="60%" />
+<img src="../../images/stun-web-serve-CF/stun-web服务-STUN更新端口.jpg" width="60%" height="60%" />
 
 可以按下 上面的webhook手动测试按钮 测试参数是否填写正确  
 其会使用内置的演示参数 端口应该会变成6666  
 
 示例  
-<img src="../../images/stun-web服务-CF/stun-web服务-STUN更新端口结果.jpg" width="60%" height="60%" />
+<img src="../../images/stun-web-serve-CF/stun-web服务-STUN更新端口结果.jpg" width="60%" height="60%" />
 
 
 至此我们已经基本完成了 固定/隐藏端口的设置  
@@ -569,7 +569,7 @@ Content-Type: application/json
 详见：[链接](./lucky-web.md)  
 
 示例  
-<img src="../../images/stun-web服务-CF/stun-web服务-CF_反代规则前端域名.jpg" width="60%" height="60%" />
+<img src="../../images/stun-web-serve-CF/stun-web服务-CF_反代规则前端域名.jpg" width="60%" height="60%" />
 
 ### 获取TLS/SSL证书
 
@@ -578,7 +578,7 @@ Content-Type: application/json
 详见：[链接](./lucky-tls-automation.md)  
  
 示例  
-<img src="../../images/stun-web服务-CF/stun-web服务-CF_证书示例.jpg" width="60%" height="60%" />
+<img src="../../images/stun-web-serve-CF/stun-web服务-CF_证书示例.jpg" width="60%" height="60%" />
 
 ---
 

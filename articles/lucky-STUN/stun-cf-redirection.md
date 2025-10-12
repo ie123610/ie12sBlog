@@ -37,7 +37,7 @@
 ## 关于本教程
 
 在之前的教程中我们已经实现了使用Cloudflare的页面规则固定和隐藏  
-STUN穿透后的网页端口 [链接](./stun-web-serve-CF.md.md)  
+STUN穿透后的网页端口 [链接](./stun-web-serve-CF.md)  
 
 不过之前教程中的方法只能处理域名而无法处理资源路径和查询字符串  
 即重定向前链接中的资源路径和查询字符串不能继承到重定向后的链接中  
@@ -60,7 +60,7 @@ STUN穿透后的网页端口 [链接](./stun-web-serve-CF.md.md)
 
 在设置DNS记录和解析方面和之前教程中的差不多  
 依然需要设置两组域名（子） 即重定向前的域名和重定向后的域名  
-[链接](./stun-web-serve-CF.md.md)  
+[链接](./stun-web-serve-CF.md)  
 
 
 ---
@@ -104,8 +104,8 @@ wildcard_replace(http.request.full_uri, "*://*.ie12.com/*", "https://${2}.stun.i
 
 **示例**  
 
-<img src="../../images/stun-cf重定向/CF-重定向_置重定向规则_0.jpg" width="60%" height="60%" />
-<img src="../../images/stun-cf重定向/CF-重定向_置重定向规则_1.jpg" width="60%" height="60%" />
+<img src="../../images/stun-cf-redirection/CF-重定向_置重定向规则_0.jpg" width="60%" height="60%" />
+<img src="../../images/stun-cf-redirection/CF-重定向_置重定向规则_1.jpg" width="60%" height="60%" />
 
 
 **表达式含义**  
@@ -123,7 +123,7 @@ wildcard_replace(http.request.full_uri, "*://*.ie12.com/*", "https://${2}.stun.i
 表示合成输出的内容 变量`${2}` `${3}` 为刚才存储截取部分的变量  
 
 **图示**  
-<img src="../../images/stun-cf重定向/CF-重定向_表达式含义.jpg" width="60%" height="60%" />
+<img src="../../images/stun-cf-redirection/CF-重定向_表达式含义.jpg" width="60%" height="60%" />
 
 ---
 
@@ -139,16 +139,16 @@ wildcard_replace(http.request.full_uri, "*://*.ie12.com/*", "https://${2}.stun.i
 CF对重定向的命名方式发生了改变  
 原先的**动态重定向**已经改为**单一重定向**  
 
-<img src="../../images/stun-cf重定向/CF-重定向_240921命名方法变更_1.jpg" width="60%" height="60%" />
+<img src="../../images/stun-cf-redirection/CF-重定向_240921命名方法变更_1.jpg" width="60%" height="60%" />
 
 与此同时设置界面的描述也发生了变化 不过在设置方法上并没有变化  
-<img src="../../images/stun-cf重定向/CF-重定向_240921命名方法变更_2.jpg" width="60%" height="60%" />
+<img src="../../images/stun-cf-redirection/CF-重定向_240921命名方法变更_2.jpg" width="60%" height="60%" />
 
 ---
 
 与更新页面规则时不同 要获取并更新重定向规则需要两组权限  
 创建令牌的前序过程和之前教程中的基本相同  
-请参考之前教程中的设置 [链接](./stun-web-serve-CF.md.md)  
+请参考之前教程中的设置 [链接](./stun-web-serve-CF.md)  
 
 需要的权限如下：  
 
@@ -156,8 +156,8 @@ CF对重定向的命名方式发生了改变
 * 区域 》动态重定向 》编辑
 
 **示例**  
-<img src="../../images/stun-cf重定向/CF-重定向_访问令牌-0.jpg" width="60%" height="60%" />
-<img src="../../images/stun-cf重定向/CF-重定向_访问令牌-1.jpg" width="60%" height="60%" />
+<img src="../../images/stun-cf-redirection/CF-重定向_访问令牌-0.jpg" width="60%" height="60%" />
+<img src="../../images/stun-cf-redirection/CF-重定向_访问令牌-1.jpg" width="60%" height="60%" />
 
 
 ### 获取区域ID
@@ -166,7 +166,7 @@ CF对重定向的命名方式发生了改变
 有了令牌和区域ID之后就可以开始获取规则集ID了  
 
 **示例**  
-<img src="../../images/stun-cf重定向/CF-重定向_获取区域ID.jpg" width="60%" height="60%" />
+<img src="../../images/stun-cf-redirection/CF-重定向_获取区域ID.jpg" width="60%" height="60%" />
 
 
 ### 获取规则集ID
@@ -190,7 +190,7 @@ Content-Type: application/json
 
 
 **示例**  
-<img src="../../images/stun-cf重定向/CF-重定向_获取规则集ID_0.jpg" width="60%" height="60%" />
+<img src="../../images/stun-cf-redirection/CF-重定向_获取规则集ID_0.jpg" width="60%" height="60%" />
 
 
 按下手动触发并查看日志中的返回结果  
@@ -199,7 +199,7 @@ Content-Type: application/json
 
 
 **示例**  
-<img src="../../images/stun-cf重定向/CF-重定向_获取规则集ID_1.jpg" width="60%" height="60%" />
+<img src="../../images/stun-cf-redirection/CF-重定向_获取规则集ID_1.jpg" width="60%" height="60%" />
 
 
 ### 获取重定向规则ID
@@ -214,13 +214,13 @@ Content-Type: application/json
 * 请求头：不变
 
 **示例**  
-<img src="../../images/stun-cf重定向/CF-重定向_获取重定向规则ID_0.jpg" width="60%" height="60%" />
+<img src="../../images/stun-cf-redirection/CF-重定向_获取重定向规则ID_0.jpg" width="60%" height="60%" />
 
 按下手动触发并查看日志中的返回结果  
 图中划线的ID即为重定向规则ID  
 
 **示例**  
-<img src="../../images/stun-cf重定向/CF-重定向_获取重定向规则ID_1.jpg" width="60%" height="60%" />
+<img src="../../images/stun-cf-redirection/CF-重定向_获取重定向规则ID_1.jpg" width="60%" height="60%" />
 
 ### 测试更新
 
@@ -262,14 +262,14 @@ Content-Type: application/json
 
 
 **图示**  
-<img src="../../images/stun-cf重定向/CF-重定向_测试更新_0.jpg" width="60%" height="60%" />
+<img src="../../images/stun-cf-redirection/CF-重定向_测试更新_0.jpg" width="60%" height="60%" />
 
 按下手动触发并查看日志中的返回结果  
 若设置正确即可看到返回的重定向规则信息中目标URL的  
 地址和端口号已经发生变化  
 
 **示例**  
-<img src="../../images/stun-cf重定向/CF-重定向_测试更新_0.jpg" width="60%" height="60%" />
+<img src="../../images/stun-cf-redirection/CF-重定向_测试更新_0.jpg" width="60%" height="60%" />
 
 ---
 
@@ -297,8 +297,8 @@ Content-Type: application/json
 
 
 **示例**  
-<img src="../../images/stun-cf重定向/CF-重定向_效果检验_1.jpg" width="60%" height="60%" />
-<img src="../../images/stun-cf重定向/CF-重定向_效果检验_0.jpg" width="60%" height="60%" />
+<img src="../../images/stun-cf-redirection/CF-重定向_效果检验_1.jpg" width="60%" height="60%" />
+<img src="../../images/stun-cf-redirection/CF-重定向_效果检验_0.jpg" width="60%" height="60%" />
 
 ---
 

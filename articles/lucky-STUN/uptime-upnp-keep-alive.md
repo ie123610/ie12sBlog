@@ -36,19 +36,19 @@
 访问：`https://uptimerobot.com/`
 
 **注册账户**  
-<img src="../../images/uptime-upnp保活/注册.webp" width="60%" height="60%" />
+<img src="../../images/uptime-upnp-keep-alive/注册.webp" width="60%" height="60%" />
 
 
 **填写信息**  
 只需填写前三项 分别为 昵称 邮箱 和 密码  
 
-<img src="../../images/uptime-upnp保活/填写注册信息.webp" width="60%" height="60%" />
-<img src="../../images/uptime-upnp保活/邮件激活-1.webp" width="60%" height="60%" />
+<img src="../../images/uptime-upnp-keep-alive/填写注册信息.webp" width="60%" height="60%" />
+<img src="../../images/uptime-upnp-keep-alive/邮件激活-1.webp" width="60%" height="60%" />
 
 **通过邮件激活账户**  
 
 点击激活邮件中的链接以激活账户  
-<img src="../../images/uptime-upnp保活/邮件激活-2.webp" width="60%" height="60%" />
+<img src="../../images/uptime-upnp-keep-alive/邮件激活-2.webp" width="60%" height="60%" />
 
 ---
 
@@ -67,8 +67,8 @@
 如果还没有设置过可以看看之前的教程或者其他（动态）域名教程 [链接](./lucky-ddns-2.15)   
 端口号填写 **BT客户端正在监听的端口填写** 完成后点击创建  
 
-<img src="../../images/uptime-upnp保活/添加监视器-1.webp" width="60%" height="60%" />
-<img src="../../images/uptime-upnp保活/添加监视器-2.webp" width="60%" height="60%" />
+<img src="../../images/uptime-upnp-keep-alive/添加监视器-1.webp" width="60%" height="60%" />
+<img src="../../images/uptime-upnp-keep-alive/添加监视器-2.webp" width="60%" height="60%" />
 
 
 **测试通知**  
@@ -76,7 +76,7 @@
 其作用是监视的网站或端口离线后发出警告  
 这里我们用不到这个功能 **直接跳过**  
 
-<img src="../../images/uptime-upnp保活/跳过通知测试.webp" width="60%" height="60%" />
+<img src="../../images/uptime-upnp-keep-alive/跳过通知测试.webp" width="60%" height="60%" />
 
 
 **设置状态页面**  
@@ -84,19 +84,19 @@
 其为一个公开的网页可以用来显示多个监视器的状态  
 这里我们用不到这个功能 **直接跳过**  
 
-<img src="../../images/uptime-upnp保活/设置状态页面-1.webp" width="60%" height="60%" />
-<img src="../../images/uptime-upnp保活/返回控制板.webp" width="60%" height="60%" />
-<img src="../../images/uptime-upnp保活/设置状态页面-2.webp" title="检视效果" width="60%" height="60%" />
+<img src="../../images/uptime-upnp-keep-alive/设置状态页面-1.webp" width="60%" height="60%" />
+<img src="../../images/uptime-upnp-keep-alive/返回控制板.webp" width="60%" height="60%" />
+<img src="../../images/uptime-upnp-keep-alive/设置状态页面-2.webp" title="检视效果" width="60%" height="60%" />
 
 
 **不使用向导设置监视器**  
 与使用向导设置的方法基本相同  
-<img src="../../images/uptime-upnp保活/新建监视器.webp" width="60%" height="60%" />
+<img src="../../images/uptime-upnp-keep-alive/新建监视器.webp" width="60%" height="60%" />
 
 选择监控类型 填写IP和端口 **建议取消勾选下面的邮件提醒**  
 免费版扫描间隔最小为5分钟  
 
-<img src="../../images/uptime-upnp保活/修改扫描间隔.webp" width="60%" height="60%" />
+<img src="../../images/uptime-upnp-keep-alive/修改扫描间隔.webp" width="60%" height="60%" />
 
 ---
 
@@ -121,20 +121,20 @@ API文档：`https://uptimerobot.com/api/`
 像更新API设置这样的高级功能似乎还没有迁移过来  
 我们需要回到它的 **旧版页面** 点击上方横幅中的 **old app**  
 
-<img src="../../images/uptime-upnp保活/旧版页面.webp" width="60%" height="60%" />
+<img src="../../images/uptime-upnp-keep-alive/旧版页面.webp" width="60%" height="60%" />
 
 回到旧版界面后  
 点击右上角的用户名 弹出 菜单 选择 **My Settings**  
 
-<img src="../../images/uptime-upnp保活/账户设置.webp" width="60%" height="60%" />
-<img src="../../images/uptime-upnp保活/账户设置-2.webp" width="60%" height="60%" />
+<img src="../../images/uptime-upnp-keep-alive/账户设置.webp" width="60%" height="60%" />
+<img src="../../images/uptime-upnp-keep-alive/账户设置-2.webp" width="60%" height="60%" />
 
 滚动页面到底部可以看到 **API Settings**  
 点击 创建主更新key  
 
-<img src="../../images/uptime-upnp保活/api设置-1.webp" width="60%" height="60%" />
-<img src="../../images/uptime-upnp保活/api设置-2.webp" width="60%" height="60%" />
-<img src="../../images/uptime-upnp保活/api设置-3.webp" width="60%" height="60%" />
+<img src="../../images/uptime-upnp-keep-alive/api设置-1.webp" width="60%" height="60%" />
+<img src="../../images/uptime-upnp-keep-alive/api设置-2.webp" width="60%" height="60%" />
+<img src="../../images/uptime-upnp-keep-alive/api设置-3.webp" width="60%" height="60%" />
 
 
 ### 获取监视器ID
@@ -145,7 +145,7 @@ API文档：`https://uptimerobot.com/api/`
 
 ### 创建计划任务
 
-<img src="../../images/uptime-upnp保活/计划任务.webp" width="60%" height="60%" />
+<img src="../../images/uptime-upnp-keep-alive/计划任务.webp" width="60%" height="60%" />
 
 任务备注 、执行周期、执行时间等任意填写
 子规则选择 **callweb** 并填写下列内容
@@ -171,16 +171,16 @@ api_key=你的API_Key&format=json&logs=1
 
 **示例**  
 
-<img src="../../images/uptime-upnp保活/api请求方法.webp" width="60%" height="60%" />
+<img src="../../images/uptime-upnp-keep-alive/api请求方法.webp" width="60%" height="60%" />
 
 关闭规则开关 我们只使用 **手动触发**  
 
-<img src="../../images/uptime-upnp保活/手动触发.webp" width="60%" height="60%" />
+<img src="../../images/uptime-upnp-keep-alive/手动触发.webp" width="60%" height="60%" />
 
 按下手动触发按钮并查看日志 应该可以看到 `stat:ok`  
 在monitors 和 friendly_name 之间的ID就是我们需要的 **监视器ID**  
 
-<img src="../../images/uptime-upnp保活/返回值.webp" width="60%" height="60%" />
+<img src="../../images/uptime-upnp-keep-alive/返回值.webp" width="60%" height="60%" />
 
 ### 更新端口号
 
@@ -204,7 +204,7 @@ curl -X POST -H "Cache-Control: no-cache" -H "Content-Type: application/x-www-fo
 
 **示例**  
 
-<img src="../../images/uptime-upnp保活/curl请求.webp" width="60%" height="60%" />
+<img src="../../images/uptime-upnp-keep-alive/curl请求.webp" width="60%" height="60%" />
 
 **Windows平台**  
 
@@ -216,13 +216,13 @@ Windows下要额外添加 `--ssl-no-revoke` 参数不然会出现无法检查证
 curl --ssl-no-revoke -X POST -H "Cache-Control: no-cache" -H "Content-Type: application/x-www-form-urlencoded" -d "api_key=你的APIKey&format=json&id=监视器ID&port=新端口号" "https://api.uptimerobot.com/v2/editMonitor"
 ```
 
-<img src="../../images/uptime-upnp保活/curl请求-win.webp" width="60%" height="60%" />
+<img src="../../images/uptime-upnp-keep-alive/curl请求-win.webp" width="60%" height="60%" />
 
 
 按下手动触发按钮 检查输出日志  
 成功会返回`ok`和 **监视器ID**  
 
-<img src="../../images/uptime-upnp保活/请求成功.webp" width="60%" height="60%" />
+<img src="../../images/uptime-upnp-keep-alive/请求成功.webp" width="60%" height="60%" />
 
 ### Webhook配置方法
 
@@ -240,12 +240,12 @@ api_key=你的APIKey&format=json&id=监视器ID&port=新端口号
 
 
 **示例**  
-<img src="../../images/uptime-upnp保活/webhook请求方法.webp" width="60%" height="60%" />
+<img src="../../images/uptime-upnp-keep-alive/webhook请求方法.webp" width="60%" height="60%" />
 
 按下手动触发按钮 检查输出日志  
 成功会返回`ok`和 **监视器ID**  
 
-<img src="../../images/uptime-upnp保活/请求成功.webp" width="60%" height="60%" />
+<img src="../../images/uptime-upnp-keep-alive/请求成功.webp" width="60%" height="60%" />
 
 ---
 
@@ -265,8 +265,8 @@ Linux下可以使用 **sleep命令** 实现而在Windows下需要使用 **vbs脚
 
 **示例**
 
-<img src="../../images/uptime-upnp保活/请求方法-curl-linux.webp" width="60%" height="60%" />
-<img src="../../images/uptime-upnp保活/请求方法-curl-win.webp" width="60%" height="60%" />
+<img src="../../images/uptime-upnp-keep-alive/请求方法-curl-linux.webp" width="60%" height="60%" />
+<img src="../../images/uptime-upnp-keep-alive/请求方法-curl-win.webp" width="60%" height="60%" />
 
 
 ### 使用Webhook
@@ -281,8 +281,8 @@ Linux下可以使用 **sleep命令** 实现而在Windows下需要使用 **vbs脚
 
 **示例**  
 
-<img src="../../images/uptime-upnp保活/stun规则中的请求.webp" width="60%" height="60%" />
-<img src="../../images/uptime-upnp保活/stun规则中的测试.webp" width="60%" height="60%" />
+<img src="../../images/uptime-upnp-keep-alive/stun规则中的请求.webp" width="60%" height="60%" />
+<img src="../../images/uptime-upnp-keep-alive/stun规则中的测试.webp" width="60%" height="60%" />
 
 填写完成后可以按下右上角的 **手动触发测试**  
 手动测试会使用固定的参数比如端口号固定为 `6666`  

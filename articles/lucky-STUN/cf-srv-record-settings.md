@@ -53,8 +53,8 @@
 
 **示例**  
 
-<img src="../../images/CF-SVR记录/cf-srv_DNS记录设置.JPG" width="60%" height="60%" />
-<img src="../../images/CF-SVR记录/cf-srv_DNS记录设置_2.JPG" width="60%" height="60%" />
+<img src="../../images/cf-srv-record-settings/cf-srv_DNS记录设置.JPG" width="60%" height="60%" />
+<img src="../../images/cf-srv-record-settings/cf-srv_DNS记录设置_2.JPG" width="60%" height="60%" />
 
 ---
 
@@ -73,7 +73,7 @@
 
 点击侧边栏中的 **概述** 页面向下滚动 在右侧即可查看区域ID
 
-<img src="../../images/CF-SVR记录/cf-srv_获取区域ID.JPG" width="60%" height="60%" />
+<img src="../../images/cf-srv-record-settings/cf-srv_获取区域ID.JPG" width="60%" height="60%" />
 
 ---
 
@@ -104,8 +104,8 @@
 
 **示例**  
 
-<img src="../../images/CF-SVR记录/cf-srv_取DNS记录ID-0.JPG" width="60%" height="60%" />
-<img src="../../images/CF-SVR记录/cf-srv_取DNS记录ID-1.JPG" width="60%" height="60%" />
+<img src="../../images/cf-srv-record-settings/cf-srv_取DNS记录ID-0.JPG" width="60%" height="60%" />
+<img src="../../images/cf-srv-record-settings/cf-srv_取DNS记录ID-1.JPG" width="60%" height="60%" />
 
 关闭任务开关并点击 手动触发 查看日志中输出的内容  
 应可以查看到当前域名下所有的DNS记录以及其对应的ID  
@@ -113,7 +113,7 @@
 
 **示例**  
 
-<img src="../../images/CF-SVR记录/cf-srv_取DNS记录ID-3.JPG" width="60%" height="60%" />
+<img src="../../images/cf-srv-record-settings/cf-srv_取DNS记录ID-3.JPG" width="60%" height="60%" />
 
 ---
 
@@ -147,14 +147,14 @@
 
 **示例**  
 
-<img src="../../images/CF-SVR记录/cf-srv_更新srv记录-0.JPG" width="60%" height="60%" />
+<img src="../../images/cf-srv-record-settings/cf-srv_更新srv记录-0.JPG" width="60%" height="60%" />
 
 保存任务后 关闭任务开关并点击 手动触发 查看日志中的输出内容  
 若设置正确则可以看到返回的规则中端口号已经改变  
 
 **示例**  
 
-<img src="../../images/CF-SVR记录/cf-srv_更新srv记录-1.JPG" width="60%" height="60%" />
+<img src="../../images/cf-srv-record-settings/cf-srv_更新srv记录-1.JPG" width="60%" height="60%" />
 
 
 ## 结尾

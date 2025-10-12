@@ -35,17 +35,17 @@ VxKex可能的工作原理：
 ### 安装
 
 运行安装程序  
-<img src="../../images/lucky-vxkex兼容/vxkex-图标.webp" />
+<img src="../../images/lucky-vxkex-compatible/vxkex-图标.webp" />
 
 其体积很小只有十几兆直接安装在C盘即可  
-<img src="../../images/lucky-vxkex兼容/vxkex-安装过程-1.webp" width="60%" height="60%" />
+<img src="../../images/lucky-vxkex-compatible/vxkex-安装过程-1.webp" width="60%" height="60%" />
 
 安装过程中杀毒软件可能会进行拦截允许即可   
 若强制拦截则需要在安装时退出杀毒软件  
-<img src="../../images/lucky-vxkex兼容/vxkex-安装过程-2.webp" width="60%" height="60%" />
+<img src="../../images/lucky-vxkex-compatible/vxkex-安装过程-2.webp" width="60%" height="60%" />
 
 安装完成  
-<img src="../../images/lucky-vxkex兼容/vxkex-安装过程-3.webp" width="60%" height="60%" />
+<img src="../../images/lucky-vxkex-compatible/vxkex-安装过程-3.webp" width="60%" height="60%" />
 
 
 ### 配置VxKex
@@ -55,33 +55,33 @@ lucky下载地址：https://release.66666.host/
 
 找到lucky.exe 右键弹出菜单 选择属性  
 会发现多了一个VxKex的选项卡  
-<img src="../../images/lucky-vxkex兼容/属性-vxkex-1.webp" width="60%" height="60%" />
+<img src="../../images/lucky-vxkex-compatible/属性-vxkex-1.webp" width="60%" height="60%" />
 
 勾选 **Enable VxKex for this program**  
 然后点击确定即可  
-<img src="../../images/lucky-vxkex兼容/属性-vxkex-1.webp" width="60%" height="60%" />
+<img src="../../images/lucky-vxkex-compatible/属性-vxkex-1.webp" width="60%" height="60%" />
 
 再次运行lucky.exe  
 不出意外的话右下角系统托盘处已经可以看到图标了  
-<img src="../../images/lucky-vxkex兼容/任务栏-lucky.webp" />
+<img src="../../images/lucky-vxkex-compatible/任务栏-lucky.webp" />
 
 右键弹出菜单 选择打开后台即可进入web管理界面  
-<img src="../../images/lucky-vxkex兼容/菜单-打开lucky.webp" />
+<img src="../../images/lucky-vxkex-compatible/菜单-打开lucky.webp" />
 
 这里再测试一下安装为Windows服务  
-<img src="../../images/lucky-vxkex兼容/菜单-lucky安装服务.webp" />
+<img src="../../images/lucky-vxkex-compatible/菜单-lucky安装服务.webp" />
 
 确认安装为系统服务  
-<img src="../../images/lucky-vxkex兼容/确认安装服务.webp" />
+<img src="../../images/lucky-vxkex-compatible/确认安装服务.webp" />
 
 安装成功  
-<img src="../../images/lucky-vxkex兼容/服务安装成功.webp" />
+<img src="../../images/lucky-vxkex-compatible/服务安装成功.webp" />
 
 查看服务运行状态  
-<img src="../../images/lucky-vxkex兼容/服务状态.webp" width="60%" height="60%" />
+<img src="../../images/lucky-vxkex-compatible/服务状态.webp" width="60%" height="60%" />
 
 登录到web界面查看日志 各模块都已经正常启动  
-<img src="../../images/lucky-vxkex兼容/lucky启动日志.webp" width="60%" height="60%" />
+<img src="../../images/lucky-vxkex-compatible/lucky启动日志.webp" width="60%" height="60%" />
 
 
 ### 更新lucky
@@ -90,7 +90,7 @@ lucky下载地址：https://release.66666.host/
 上传新版本的压缩包后会进行自动替换 完成后会lucky自动重启  
 无需再次到属性中启用VxKex  
 
-<img src="../../images/lucky-vxkex兼容/lucky-上传新版本.webp" width="60%" height="60%" />
+<img src="../../images/lucky-vxkex-compatible/lucky-上传新版本.webp" width="60%" height="60%" />
 
 ---
 

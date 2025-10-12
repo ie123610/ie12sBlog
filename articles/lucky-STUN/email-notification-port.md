@@ -41,7 +41,7 @@
 按照链接或图中内容的操作即可获得 **授权码**  
 选择 IMAP/SMTP服务即可  
 
-<img src="../../images/邮件通知/网易开启smtp.webp" width="60%" height="60%" />
+<img src="../../images/email-notification-port/网易开启smtp.webp" width="60%" height="60%" />
 
 ## 安装Curl
 
@@ -67,12 +67,12 @@
 子规则选择 **自定义脚本** 其他选项任意设置  
 不填写脚本内容先保存计划任务  
 
-<img src="../../images/邮件通知/计划任务-1.webp" width="60%" height="60%" />
-<img src="../../images/邮件通知/计划任务-2.webp" width="60%" height="60%" />
+<img src="../../images/email-notification-port/计划任务-1.webp" width="60%" height="60%" />
+<img src="../../images/email-notification-port/计划任务-2.webp" width="60%" height="60%" />
 
 关闭规则开关 我们只使用手动触发  
 
-<img src="../../images/邮件通知/计划任务-3.webp" width="60%" height="60%" />
+<img src="../../images/email-notification-port/计划任务-3.webp" width="60%" height="60%" />
 
 **Windows平台**  
 
@@ -152,15 +152,15 @@ echo Mail has been sent
 pause
 ```
 
-<img src="../../images/邮件通知/批处理示意.webp" width="60%" height="60%" />
+<img src="../../images/email-notification-port/批处理示意.webp" width="60%" height="60%" />
 
 
 创建完成后我们先在命令提示符中进行测试  
 **传参顺序》端口号-规则名称-授权码**  
 
-<img src="../../images/邮件通知/测试脚本-1.webp" width="60%" height="60%" />
-<img src="../../images/邮件通知/测试脚本-2.webp" width="60%" height="60%" />
-<img src="../../images/邮件通知/测试邮件-1.webp" width="60%" height="60%" />
+<img src="../../images/email-notification-port/测试脚本-1.webp" width="60%" height="60%" />
+<img src="../../images/email-notification-port/测试脚本-2.webp" width="60%" height="60%" />
+<img src="../../images/email-notification-port/测试邮件-1.webp" width="60%" height="60%" />
 
 若设置都正确即可收到邮件并看到 curl 的发送记录  
 如果存在错误 则可在此阶段进行排查  
@@ -169,8 +169,8 @@ pause
 命令提示符测试通过之后再放到 **计划任务** 中进行测试  
 应能收到邮件并有相同的日志输出  
 
-<img src="../../images/邮件通知/在lucky测试脚本-1.webp" width="60%" height="60%" />
-<img src="../../images/邮件通知/在lucky测试脚本-2.webp" width="60%" height="60%" />
+<img src="../../images/email-notification-port/在lucky测试脚本-1.webp" width="60%" height="60%" />
+<img src="../../images/email-notification-port/在lucky测试脚本-2.webp" width="60%" height="60%" />
 
 
 **Linux(docker)平台**  
@@ -203,7 +203,7 @@ curl --url 'smtps://smtp.126.com:465' --user 'ie12:ABCDEFG' --mail-from 'ie12@12
 rm /tmp/${ruleName}mail.txt
 ```
 
-<img src="../../images/邮件通知/Linux脚本-1.webp" width="60%" height="60%" />
+<img src="../../images/email-notification-port/Linux脚本-1.webp" width="60%" height="60%" />
 
 
 有些shell还支持 **“过程替换”** (process substitution)  
@@ -220,7 +220,7 @@ curl --url 'smtps://SMTP服务器地址（使用TLS）'  --user '发件人邮箱
 curl --url 'smtps://smtp.126.com:465'  --user 'ie12:ABCDEFG'  --mail-from 'ie12@126.com'  --mail-rcpt 'ie12@126.com' -T <(echo -e 'From: ie12@126.com\nTo: ie12@126.com\nSubject: STUN穿透规则${ruleName}端口变化\n\n 穿透规则${ruleName}端口已变化，新端口号：${port}') 2>&1
 ```
 
-<img src="../../images/邮件通知/Linux脚本-2.webp" width="60%" height="60%" />
+<img src="../../images/email-notification-port/Linux脚本-2.webp" width="60%" height="60%" />
 
 完成后按下测试按钮查看日志输出  
 应该可以看到curl的发送记录并接收到邮件  
@@ -228,8 +228,8 @@ curl --url 'smtps://smtp.126.com:465'  --user 'ie12:ABCDEFG'  --mail-from 'ie12@
 如果存在错误 则可在此阶段进行排查  
 出现"Login denied" **请检查授权码是否正确**  
 
-<img src="../../images/邮件通知/测试邮件-2.webp" width="60%" height="60%" />
-<img src="../../images/邮件通知/在lucky测试脚本-3.webp" width="60%" height="60%" />
+<img src="../../images/email-notification-port/测试邮件-2.webp" width="60%" height="60%" />
+<img src="../../images/email-notification-port/在lucky测试脚本-3.webp" width="60%" height="60%" />
 
 
 ---
@@ -244,8 +244,8 @@ curl --url 'smtps://smtp.126.com:465'  --user 'ie12:ABCDEFG'  --mail-from 'ie12@
 若在自定义脚本区域已经有命令则应按照流程顺序进行排列  
 并使用vbs脚本设置间隔 详情见 [第一期的教程](./stun-bt.md)  
 
-<img src="../../images/邮件通知/在lucky测试脚本-4.webp" width="60%" height="60%" />
-<img src="../../images/邮件通知/测试邮件-3.webp" title="邮件效果" width="60%" height="60%" />
+<img src="../../images/email-notification-port/在lucky测试脚本-4.webp" width="60%" height="60%" />
+<img src="../../images/email-notification-port/测试邮件-3.webp" title="邮件效果" width="60%" height="60%" />
 
 
 ### Linux(docker)
@@ -254,10 +254,10 @@ curl --url 'smtps://smtp.126.com:465'  --user 'ie12:ABCDEFG'  --mail-from 'ie12@
 若在自定义脚本区域已经有命令则应按照流程顺序进行排列  
 **并使用sleep设置间隔**  
 
-<img src="../../images/邮件通知/方案1.webp" title="方法1" width="60%" height="60%" />
-<img src="../../images/邮件通知/方案2.webp" title="方法2" width="60%" height="60%" />
+<img src="../../images/email-notification-port/方案1.webp" title="方法1" width="60%" height="60%" />
+<img src="../../images/email-notification-port/方案2.webp" title="方法2" width="60%" height="60%" />
 
-<img src="../../images/邮件通知/测试邮件-3.webp" title="邮件效果" width="60%" height="60%" />
+<img src="../../images/email-notification-port/测试邮件-3.webp" title="邮件效果" width="60%" height="60%" />
 
 ---
 

@@ -8,7 +8,7 @@
 
 ## 遇到的问题
 
-在之前教程中我们已经完成了为WEB服务固定STUN穿透端口  详见：[链接](../lucky-STUN/stun-web-serve-CF.md.md)  
+在之前教程中我们已经完成了为WEB服务固定STUN穿透端口  详见：[链接](../lucky-STUN/stun-web-serve-CF.md)  
 但是这些都是利用的HTTP重定向特性  
 对非HTTP服务 和不支持重定向的程序此方法不起作用  
 
