@@ -5,7 +5,7 @@
 ## 关于本教程
 
 在之前的教程中我们已经实现了使用lucky自带的webhook功能自动修改qbittorrent的端口  
-[「LUCKY STUN穿透」使用 Webhook 自动修改 qbittorrent 的监听端口](./stun-qb端口自动化.md)  
+[「LUCKY STUN穿透」使用 Webhook 自动修改 qbittorrent 的监听端口](./stun-qb-port-automation.md)  
 在本教程中将讲解如何自动化的更换 transmission 的监听端口  
 
 与之前 qBittorrent 的配置方法相比 transmission 的端口自动化要复杂一些  
@@ -161,7 +161,7 @@ curl -X POST http://"%username%":"%password%"@"%ip%":"%webport%"/transmission/rp
 
 将之前测试完成的脚本 复制到STUN的自定义脚本区域  
 若在自定义脚本区域已经有命令则应按照流程顺序进行排列  
-并使用vbs脚本设置间隔 [详情见之前的教程](./stun-bc端口自动化.md)  
+并使用vbs脚本设置间隔 [详情见之前的教程](./stun-bc-port-automation.md)  
 
 将port选项的值替换为穿透端口变量  
 ```

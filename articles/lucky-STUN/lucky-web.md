@@ -99,7 +99,7 @@
 
 ### TLS加密
 
-关于TLS在之前的教程中已有所讲解 详见：[链接](./lucky-tls-自动化.md)   
+关于TLS在之前的教程中已有所讲解 详见：[链接](./lucky-tls-automation.md)   
 
 <img src="../../images/lucky-web/tls加密.webp" width="60%" height="60%" />
 
@@ -266,7 +266,7 @@ DDNS更新方法在之前的教程中已讲解过 详见：[链接](./lucky-ddn
 
 在互联网中使用HTTP明文访问并不安全 我们需加密的HTTPS  
 关于TLS和HTTPS的讲解请看之前的教程 完成链接中的内容后再继续接下来的步骤  
-详见：[链接](./lucky-tls-自动化.md)  
+详见：[链接](./lucky-tls-automation.md)  
 
 编辑反代规则 **开启TLS开关**  
 

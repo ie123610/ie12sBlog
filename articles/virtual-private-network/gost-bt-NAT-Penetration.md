@@ -6,7 +6,7 @@
 
 在本教程将使用gost替代frp来为bt客户端提供穿透  
 在之前的教程中我们已经实现了通过stun穿透运营商NAT  
-为BT客户端开放端口 [链接](../lucky-STUN/stun穿透-bt.md)   
+为BT客户端开放端口 [链接](../lucky-STUN/stun-bt.md)   
 
 但是此方案只使用于全锥形的运营商NAT  
 且没有配置防火墙的情况的情况  

@@ -93,7 +93,7 @@ name为记录名称 data为记录的内容
 先创建一个TXT记录 获取更新令牌 区域ID和DNS记录ID  
 最后进行更新  
 
-在Cloudflare上更新SRV记录的教程：[链接](./cf-srv设置.md)  
+在Cloudflare上更新SRV记录的教程：[链接](./cf-srv-record-settings.md)  
 请先阅读完之前的教程后再继续阅读之后的内容  
 
 
@@ -113,13 +113,13 @@ name为记录名称 data为记录的内容
 
 要通过API更新DNS记录我们需要先获取  
 用于身份验证的Token  
-详情请查看之前的教程：[链接](./cf-srv设置.md)  
+详情请查看之前的教程：[链接](./cf-srv-record-settings.md)  
 
 
 ### 获取 区域ID
 
 在获取完令牌后就可以开始获取区域ID了  
-详情请查看之前的教程：[链接](./cf-srv设置.md)  
+详情请查看之前的教程：[链接](./cf-srv-record-settings.md)  
 
 
 
@@ -127,14 +127,14 @@ name为记录名称 data为记录的内容
 
 在获取了区域ID后就可以获取DNS记录ID  
 也就是我们之前创建的TXT记录的ID  
-详情请查看之前的教程：[链接](./cf-srv设置.md)  
+详情请查看之前的教程：[链接](./cf-srv-record-settings.md)  
 
 <img src="../../images/在dynv6和CF上更新TXT/在dynv6和CF上更新TXT_cf-DNS记录ID.jpg" width="60%" height="60%" />
 
 ### 更新 TXT 记录
 
 获取完区域ID和DNS记录ID后就可以更新TXT记录了  
-部分参考之前的SRV记录更新方法：[链接](./cf-srv设置.md)  
+部分参考之前的SRV记录更新方法：[链接](./cf-srv-record-settings.md)  
 **主要的区别是请求主体的写法**  
 
 tpye为记录类型 填写TXT content为记录的内容  

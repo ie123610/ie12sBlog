@@ -5,7 +5,7 @@
 ## 关于本教程
 
 在之前的教程中我们已经实现在Windows上使用UPnP工具为BT客户端添加端口  
-[LUCKY STUN穿透在Windows上使用UPnP工具为BT客户端自动添加内外端口号不同的映射规则](./stun-bc端口自动化.md)  
+[LUCKY STUN穿透在Windows上使用UPnP工具为BT客户端自动添加内外端口号不同的映射规则](./stun-bc-port-automation.md)  
 
 考虑到很多lucky运行在Docker容器中（Linux）  
 本教程中将介绍当lucky运行在docker容器中时通过MiniUPnP来添加映射规则的方法  

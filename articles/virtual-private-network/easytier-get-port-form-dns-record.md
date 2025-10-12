@@ -167,8 +167,8 @@ HTTP重定向方法根据格式有可以分为两种
 
 在cloudflare上配置页面规则和重定向规则的方法详见之前的教程：  
 
-* [「LUCKY STUN穿透」使用Cloudflare的页面规则固定和隐藏网页端口](../../articles/lucky-STUN/stun-web服务-CF.md)
-* [「扩展篇」使用Cloudflare的重定向规则传递资源路径和查询字符串](../../articles/lucky-STUN/stun-cf重定向.md)
+* [「LUCKY STUN穿透」使用Cloudflare的页面规则固定和隐藏网页端口](../lucky-STUN/stun-web-serve-CF.md.md)
+* [「扩展篇」使用Cloudflare的重定向规则传递资源路径和查询字符串](../lucky-STUN/stun-cf-redirection.md)
 
 **第一种重定向格式效果演示**  
 <img src="../../images/easytier-get-port-form-dns-record/et从记录获取端口-重定向url-1.jpg" width="60%" height="60%" />

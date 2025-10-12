@@ -95,8 +95,8 @@ IPv4记录设置也是相同的方式
 
 **旧教程:**  
 * [在dynv6上更新SRV记录](./stun-mc-srv.md)
-* [在Dynv6和Cloudflare上更新TXT记录](./在dynv6和CF上更新TXT.md)
-* [在Cloudflare上设置并更新SRV记录](./cf-srv设置.md)
+* [在Dynv6和Cloudflare上更新TXT记录](./update-TXT-record-on-cf-and-dynv6.md)
+* [在Cloudflare上设置并更新SRV记录](./cf-srv-record-settings.md)
 
 
 ### 更新TXT记录

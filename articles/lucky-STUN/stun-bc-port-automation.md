@@ -4,8 +4,8 @@
 
 在之前的教程中我们已经实现了 为qbittorrent 和 Transmission 自动更换监听端口  
 
-* qb自动更换端口教程：[链接](./stun-qb端口自动化.md)  
-* tr自动更换端口教程：[链接](./stun-tr修改端口.md)  
+* qb自动更换端口教程：[链接](./stun-qb-port-automation.md)  
+* tr自动更换端口教程：[链接](./stun-tr-modify-port.md)  
 
 而在本教程中将讲解如何自动化的更换 **比特彗星** 的监听端口  
 在2.10版本中比特彗星更新 WebUI 其提供了更换监听端口的接口  

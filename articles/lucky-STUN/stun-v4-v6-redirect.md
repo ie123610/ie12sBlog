@@ -7,8 +7,8 @@
 在之前的教程中我们已经实现了通过cloudflare的页面规则  
 以及重定向规则实现实现stun穿透端口的“固定”  
 
-使用页面规则：[「LUCKY STUN穿透」使用Cloudflare的页面规则固定和隐藏网页端口](./stun-web服务-CF.md)  
-使用重定向：[「扩展篇」使用Cloudflare的重定向规则传递资源路径和查询字符串](./stun-cf重定向.md)  
+使用页面规则：[「LUCKY STUN穿透」使用Cloudflare的页面规则固定和隐藏网页端口](./stun-web-serve-CF.md.md)  
+使用重定向：[「扩展篇」使用Cloudflare的重定向规则传递资源路径和查询字符串](./stun-cf-redirection.md)  
 
 ### 新的需求
 
@@ -38,7 +38,7 @@
 且可用规则数量较少 现在建议改用重定向规则来实现  
 
 在继续阅读前 建议先阅读之前的重定向规则教程  
-[「扩展篇」使用Cloudflare的重定向规则传递资源路径和查询字符串](./stun-cf重定向.md)  
+[「扩展篇」使用Cloudflare的重定向规则传递资源路径和查询字符串](./stun-cf-redirection.md)  
 
 ### Cloudflare 配置
 
@@ -137,6 +137,6 @@ alist.v6.ie12.com
 
 即为新的泛域名设置证书  
 TLS证书的设置方法详见之前的教程：
-[在Windows下使用lucky实现TLS/SSL证书自动化](./lucky-tls-自动化.md)  
+[在Windows下使用lucky实现TLS/SSL证书自动化](./lucky-tls-automation.md)  
 
 

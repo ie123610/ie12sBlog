@@ -5,10 +5,10 @@
 在之前的教程中我们通过UPnP映射 webhook等功能配合STUN穿透  
 **实现了在无IPv4公网环境下全自动的为BT客户端开放端口**  
 
-* [LUCKY STUN穿透在Windows上使用UPnP工具为BT客户端自动添加内外端口号不同的映射规则](./stun穿透-bt.md)
+* [LUCKY STUN穿透在Windows上使用UPnP工具为BT客户端自动添加内外端口号不同的映射规则](./stun-bt.md)
 * [「LUCKY STUN穿透」在Docker中使用MiniUPnP为BT客户端自动添加内外端口不同的映射规则](./stun-docker-upnp.md)
-* [「LUCKY STUN穿透」使用 Webhook 自动修改 qbittorrent 的监听端口](./stun-qb端口自动化.md)
-* [「LUCKY STUN穿透」使用 cURL 自动修改 Transmission 的监听端口](./stun-tr修改端口.md)
+* [「LUCKY STUN穿透」使用 Webhook 自动修改 qbittorrent 的监听端口](./stun-qb-port-automation.md)
+* [「LUCKY STUN穿透」使用 cURL 自动修改 Transmission 的监听端口](./stun-tr-modify-port.md)
 
 ---
 
@@ -191,7 +191,7 @@ api_key=你的API_Key&format=json&logs=1
 
 考虑到经过之前教程中的一系列设置STUN穿透规则中的webhook可能已经被占用
 所以这里给出 使用 webhook 和 curl配置的两种方法 **测试阶段端口号可任意填写**  
-curl在不同平台上的安装方法可以看之前的教程：[链接](./stun-tr修改端口.md)   
+curl在不同平台上的安装方法可以看之前的教程：[链接](./stun-tr-modify-port.md)   
 
 
 ### Curl配置方法
@@ -257,7 +257,7 @@ api_key=你的APIKey&format=json&id=监视器ID&port=新端口号
 若在自定义脚本区域 **已经有命令** 则应按照流程顺序进行排列并**设置间隔**  
 
 Linux下可以使用 **sleep命令** 实现而在Windows下需要使用 **vbs脚本** 实现类似效果  
-可以查看之前的教程：[链接](./stun穿透-bt.md)   
+可以查看之前的教程：[链接](./stun-bt.md)   
 
 还需将 port 的值替换为 STUN穿透 端口变量  
 `api_key=你的APIKey&format=json&id=监视器ID&port=${port}`

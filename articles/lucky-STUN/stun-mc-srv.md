@@ -81,7 +81,7 @@
 ## 下载和安装lucky
 
 在之前的教程中已经讲解过  
-[LUCKY STUN穿透在Windows上使用UPnP工具为BT客户端自动添加内外端口号不同的映射规则](./stun穿透-bt.md)  
+[LUCKY STUN穿透在Windows上使用UPnP工具为BT客户端自动添加内外端口号不同的映射规则](./stun-bt.md)  
 
 ---
 

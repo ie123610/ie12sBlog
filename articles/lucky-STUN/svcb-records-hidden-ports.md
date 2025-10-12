@@ -9,8 +9,8 @@
 这个方法不仅适用于stun穿透 **也适合运行在IPv6非常规端口上的web服务**  
 
 有关什么是 “隐藏端口” 的问题详见之前的教程 此处不再进行解释：  
-[「LUCKY STUN穿透」使用Cloudflare的页面规则固定和隐藏网页端口](./stun-web服务-CF.md)  
-[「扩展篇」使用Cloudflare的重定向规则传递资源路径和查询字符串](./stun-cf重定向.md)  
+[「LUCKY STUN穿透」使用Cloudflare的页面规则固定和隐藏网页端口](./stun-web-serve-CF.md.md)  
+[「扩展篇」使用Cloudflare的重定向规则传递资源路径和查询字符串](./stun-cf-redirection.md)  
 
 ---
 

@@ -52,7 +52,7 @@
 无论是在Windows上还是Linux中（docker）  
 
 安装方法可以查看之前的教程：  
-[「LUCKY STUN穿透」使用 cURL 自动修改 Transmission 的监听端口](./stun-tr修改端口.md)  
+[「LUCKY STUN穿透」使用 cURL 自动修改 Transmission 的监听端口](./stun-tr-modify-port.md)  
 
 
 ### 测试脚本
@@ -242,7 +242,7 @@ curl --url 'smtps://smtp.126.com:465'  --user 'ie12:ABCDEFG'  --mail-from 'ie12@
 端口号 规则名称 **使用变量替代 其中规则名称不要包含中文**  
 
 若在自定义脚本区域已经有命令则应按照流程顺序进行排列  
-并使用vbs脚本设置间隔 详情见 [第一期的教程](./stun穿透-bt.md)  
+并使用vbs脚本设置间隔 详情见 [第一期的教程](./stun-bt.md)  
 
 <img src="../../images/邮件通知/在lucky测试脚本-4.webp" width="60%" height="60%" />
 <img src="../../images/邮件通知/测试邮件-3.webp" title="邮件效果" width="60%" height="60%" />
