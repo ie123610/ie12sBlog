@@ -89,7 +89,7 @@
 ## 虚拟专用网络系列
 
 * [解决Softether开源版本中“不支持此功能。它尚未在开源版本上实施”的问题](articles/virtual-private-network/softether-enterprise-functions-unlock.md)
-* [在Windows上搭建 EasyTier 公共服务器](articles/virtual-private-network/win搭建easytier公共服务器.md)
+* [在Windows上搭建 EasyTier 公共服务器](articles/virtual-private-network/setup-easytier-server-on-win.md)
 * [「EasyTier」使用SRV TXT HTTP重定向获取对端IP端口](articles/virtual-private-network/et从记录获取端口.md)
 * [使用Gost替换Frp实现内网穿透为BT下载开放端口](articles/virtual-private-network/gost-bt-穿透.md)
 

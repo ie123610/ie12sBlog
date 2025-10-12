@@ -577,7 +577,7 @@ pause
 ### 注册Windows服务
 
 使用winSW将gost注册服务 方便自启动和启停控制  
-下载winSW的方法参考之前的教程：[链接](./win搭建easytier公共服务器.md)  
+下载winSW的方法参考之前的教程：[链接](./setup-easytier-server-on-win.md)  
 
 
 **创建winSW服务注册文件**

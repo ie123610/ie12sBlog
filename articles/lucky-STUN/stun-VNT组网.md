@@ -169,7 +169,7 @@ Github 项目地址：[链接](https://github.com/vnt-dev/vnts/releases)
 
 直接使用命令行运行服务端并不方便  
 更好的方法是将其注册为系统服务  
-**具体注册方法详见之前的教程** [链接](../virtual-private-network/win搭建easytier公共服务器.md)  
+**具体注册方法详见之前的教程** [链接](../virtual-private-network/setup-easytier-server-on-win.md)  
 
 VNTS并不支持从配置文件启动  
 不过其可调的参数并不多 并不会非常麻烦  
