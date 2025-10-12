@@ -166,7 +166,7 @@ CF 服务器（节点）同时拥有IPv4和IPv6地址 其起到桥梁作用以�
 客户端发起IPv4请求到达CF节点  CF节点收到请求后将其转换成IPv6请求发往源服务端  
 源服务端使用IPv6接受并应答请求来自CF节点的请求 CF节点再将这个应答转换成IPv4发回给客户端  
 
-<img src="../../images/CF双栈代理/CF双栈代理-流程图.JPG" width="60%" height="60%" />
+<img src="../../images/cf-IPv6-dual-stack-proxy/CF双栈代理-流程图.JPG" width="60%" height="60%" />
 
 
 ### 设置DNS解析
@@ -183,7 +183,7 @@ CF 服务器（节点）同时拥有IPv4和IPv6地址 其起到桥梁作用以�
 这里可以选择AAAA记录（IPv6）也可以选择CNAME  
 使用CNAME可以兼容已有的其他（子）域名  
 
-<img src="../../images/CF双栈代理/CF双栈代理-DNS解析演示.JPG" width="60%" height="60%" />
+<img src="../../images/cf-IPv6-dual-stack-proxy/CF双栈代理-DNS解析演示.JPG" width="60%" height="60%" />
 
 **检查解析效果** 
 
@@ -191,7 +191,7 @@ CF 服务器（节点）同时拥有IPv4和IPv6地址 其起到桥梁作用以�
 也可以使用在线DNS解析检查网站 比如 [nslookup-io](https://www.nslookup.io/)  
 若设置正确则可以看到CF的地址以及前面的图标  
 
-<img src="../../images/CF双栈代理/CF双栈代理-解析到CF效果检视.JPG" width="60%" height="60%" />
+<img src="../../images/cf-IPv6-dual-stack-proxy/CF双栈代理-解析到CF效果检视.JPG" width="60%" height="60%" />
 
 ---
 
@@ -251,7 +251,7 @@ CF的代理功能在默认情况下使用下列的这些端口去连接源服务
 
 登录CF 》侧边栏-网站 》选择你的域名 》 侧边栏-规则 》Origin Rules 》创建规则  
 
-<img src="../../images/CF双栈代理/CF双栈代理-回源规则-0.JPG" width="60%" height="60%" />
+<img src="../../images/cf-IPv6-dual-stack-proxy/CF双栈代理-回源规则-0.JPG" width="60%" height="60%" />
 
 
 规则名称 任意填写  
@@ -260,13 +260,13 @@ CF的代理功能在默认情况下使用下列的这些端口去连接源服务
 这里选择匹配二级域名 `test.ie12.com`  
 表示当传入的请求为`test.ie12.com`的时候触发此规则  
 
-<img src="../../images/CF双栈代理/CF双栈代理-回源规则-1.JPG" width="60%" height="60%" />
+<img src="../../images/cf-IPv6-dual-stack-proxy/CF双栈代理-回源规则-1.JPG" width="60%" height="60%" />
 
 
 接下来设置 **回源端口** 也就是CF节点连接你的的源服务器使用的目标端口  
 填写源服务器实际监听的IPv6端口 这里使用36100作为演示  
 
-<img src="../../images/CF双栈代理/CF双栈代理-回源规则-2.JPG" width="60%" height="60%" />
+<img src="../../images/cf-IPv6-dual-stack-proxy/CF双栈代理-回源规则-2.JPG" width="60%" height="60%" />
 
 
 ---
@@ -285,7 +285,7 @@ CF的代理功能在默认情况下使用下列的这些端口去连接源服务
 例如之前的教程中所设置的lucky反向代理 [链接](https://www.bilibili.com/read/cv35702797/)  
 此时CF节点和源服务器之间将使用TLS加密  
 
-<img src="../../images/CF双栈代理/CF双栈代理-TLS加密模式选择.JPG" width="60%" height="60%" />
+<img src="../../images/cf-IPv6-dual-stack-proxy/CF双栈代理-TLS加密模式选择.JPG" width="60%" height="60%" />
 
 
 ### 检验设置
@@ -311,8 +311,8 @@ CF 的回源规则其实是可以重写 Host 请求头的
 在浏览器中输入解析到CF的域名 若设置正确即可正常看到网页  
 以及CF赠送的对应域名的TLS证书  
 
-<img src="../../images/CF双栈代理/CF双栈代理-效果检视-0.JPG" width="60%" height="60%" />
-<img src="../../images/CF双栈代理/CF双栈代理-效果检视-1.JPG" width="60%" height="60%" />
+<img src="../../images/cf-IPv6-dual-stack-proxy/CF双栈代理-效果检视-0.JPG" width="60%" height="60%" />
+<img src="../../images/cf-IPv6-dual-stack-proxy/CF双栈代理-效果检视-1.JPG" width="60%" height="60%" />
 
 #### 520错误
 
@@ -327,7 +327,7 @@ CF 的回源规则其实是可以重写 Host 请求头的
 会发生连接重置 而在CF则会显示520错误  
 
 **示例**  
-<img src="../../images/CF双栈代理/CF双栈代理-cf_520错误.JPG" width="60%" height="60%" />
+<img src="../../images/cf-IPv6-dual-stack-proxy/CF双栈代理-cf_520错误.JPG" width="60%" height="60%" />
 
 #### SSL握手错误
 
@@ -338,7 +338,7 @@ CF 的回源规则其实是可以重写 Host 请求头的
 **这样一来https请求就发送到了http端口上 握手自然无法完成**  
 
 **示例**  
-<img src="../../images/CF双栈代理/CF双栈代理-cf_SSL握手错误.JPG" width="60%" height="60%" />
+<img src="../../images/cf-IPv6-dual-stack-proxy/CF双栈代理-cf_SSL握手错误.JPG" width="60%" height="60%" />
 
 ---
 
@@ -366,7 +366,7 @@ XIU2的 [CloudflareSpeedTest](https://github.com/XIU2/CloudflareSpeedTest)
 在Windows上优选起来还是较为简单的 直接使用项目中的脚本即可 [项目下载地址](https://github.com/XIU2/CloudflareSpeedTest/releases)   
 64位选择windows_amd64 32位选386 别选成arm了
 
-<img src="../../images/CF双栈代理/CF双栈代理-CF_IP优选-0.JPG" width="60%" height="60%" />
+<img src="../../images/cf-IPv6-dual-stack-proxy/CF双栈代理-CF_IP优选-0.JPG" width="60%" height="60%" />
 
 解压 压缩包 运行测试程序 
 测试完成后会按照速度和延迟等对节点进行排序  
@@ -376,7 +376,7 @@ XIU2的 [CloudflareSpeedTest](https://github.com/XIU2/CloudflareSpeedTest)
 详情可以查看下面的使用提示 
 
 **示例**  
-<img src="../../images/CF双栈代理/CF双栈代理-win_IP_优选结果.JPG" width="60%" height="60%" />
+<img src="../../images/cf-IPv6-dual-stack-proxy/CF双栈代理-win_IP_优选结果.JPG" width="60%" height="60%" />
 
 
 <details>
@@ -438,7 +438,7 @@ Linux终端模拟软件的方法相对来说比较麻烦
 实际效果可能不是很好 可以手动调高节点数量  
 但多了后似乎会出现闪退的现象 当然也可能是测试设备的问题 [链接](https://github.com/xianshenglu/cloudflare-ip-tester-app)  
 
-<img src="../../images/CF双栈代理/CF双栈代理-CF_IP优选_安卓.JPG" width="60%" height="60%" />
+<img src="../../images/cf-IPv6-dual-stack-proxy/CF双栈代理-CF_IP优选_安卓.JPG" width="60%" height="60%" />
 
   
 
@@ -455,8 +455,8 @@ Linux终端模拟软件的方法相对来说比较麻烦
 [Github项目地址](https://github.com/x-falcon/Virtual-Hosts) [F-Droid应用商店下载](https://f-droid.org/packages/com.github.xfalcon.vhosts/)  
 
 **软件界面**   
-<img src="../../images/CF双栈代理/CF双栈代理-vhost_预览_1.JPG" width="60%" height="60%" />
-<img src="../../images/CF双栈代理/CF双栈代理-vhost_预览_0.JPG" width="60%" height="60%" />
+<img src="../../images/cf-IPv6-dual-stack-proxy/CF双栈代理-vhost_预览_1.JPG" width="60%" height="60%" />
+<img src="../../images/cf-IPv6-dual-stack-proxy/CF双栈代理-vhost_预览_0.JPG" width="60%" height="60%" />
 
 可以选择本机中任意的文件 读取其中的规则 也可以从网页上读取  
 
@@ -471,20 +471,20 @@ Linux终端模拟软件的方法相对来说比较麻烦
 
 **示例**
 
-<img src="../../images/CF双栈代理/CF双栈代理-vhost_置hosts文件.JPG" width="60%" height="60%" />
+<img src="../../images/cf-IPv6-dual-stack-proxy/CF双栈代理-vhost_置hosts文件.JPG" width="60%" height="60%" />
 
 设置完成后打开 开关 建立一个VPN连接 DNS“劫持”即可生效  
 
 
 **示例**
 
-<img src="../../images/CF双栈代理/CF双栈代理-vhost_运行_0.JPG" width="60%" height="60%" />
-<img src="../../images/CF双栈代理/CF双栈代理-vhost_运行_1.JPG" width="60%" height="60%" />
+<img src="../../images/cf-IPv6-dual-stack-proxy/CF双栈代理-vhost_运行_0.JPG" width="60%" height="60%" />
+<img src="../../images/cf-IPv6-dual-stack-proxy/CF双栈代理-vhost_运行_1.JPG" width="60%" height="60%" />
 
 
 **检视效果**
 
-<img src="../../images/CF双栈代理/CF双栈代理-vhost_检视效果.JPG" width="60%" height="60%" />
+<img src="../../images/cf-IPv6-dual-stack-proxy/CF双栈代理-vhost_检视效果.JPG" width="60%" height="60%" />
 
 
 ### 在线网站优选

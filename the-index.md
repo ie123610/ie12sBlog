@@ -80,9 +80,9 @@
 
 ## IPv6过渡方案
 
-* [「权宜之计」使用Windows防火墙拦截浏览器IPv6请求迫使其使用IPv4](articles/ipv6-transition/win防火墙拦截IPv6.md)
-* [使用Windows自带的端口转发功能让不支持IPv6的程序间接的用上IPv6](articles/ipv6-transition/Win端口转发.md)
-* [使用Cloudflare代理为纯IPv6站点添加IPv4访问](articles/ipv6-transition/CF双栈代理.md)
+* [「权宜之计」使用Windows防火墙拦截浏览器IPv6请求迫使其使用IPv4](articles/ipv6-transition/win-firewall-block-IPv6.md)
+* [使用Windows自带的端口转发功能让不支持IPv6的程序间接的用上IPv6](articles/ipv6-transition/win-port-forwarding.md)
+* [使用Cloudflare代理为纯IPv6站点添加IPv4访问](articles/ipv6-transition/cf-IPv6-dual-stack-proxy.md)
 
 ---
 

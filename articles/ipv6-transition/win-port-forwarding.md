@@ -22,7 +22,7 @@
 （**注意！系统自带的转发只支持TCP**）
 
 **工作流程图**  
-<img src="../../images/Win端口转发/win端口转发_转发流程.JPG" width="60%" height="60%" />
+<img src="../../images/win-port-forwarding/win端口转发_转发流程.JPG" width="60%" height="60%" />
 
 
 ---
@@ -70,7 +70,7 @@ Github 项目地址: [链接](https://github.com/zmjack/PortProxyGUI)
 若缺少.NET则按照提示进行安装即可  
 
 **主界面**  
-<img src="../../images/Win端口转发/win端口转发-ppgui主界面.JPG" width="60%" height="60%" />
+<img src="../../images/win-port-forwarding/win端口转发-ppgui主界面.JPG" width="60%" height="60%" />
 
 ---
 
@@ -99,8 +99,8 @@ eMule本身是不支持IPv6的
 
 **示例**  
 
-<img src="../../images/Win端口转发/win端口转发_ppgui-eMule-webUI-1.JPG" width="60%" height="60%" />
-<img src="../../images/Win端口转发/win端口转发_ppgui-eMule-webUI-2.JPG" width="60%" height="60%" />
+<img src="../../images/win-port-forwarding/win端口转发_ppgui-eMule-webUI-1.JPG" width="60%" height="60%" />
+<img src="../../images/win-port-forwarding/win端口转发_ppgui-eMule-webUI-2.JPG" width="60%" height="60%" />
 
 
 #### 检视效果
@@ -110,8 +110,8 @@ eMule本身是不支持IPv6的
 实际访问时可以替换成解析到IPv6的域名  
 
 **效果**  
-<img src="../../images/Win端口转发/win端口转发_ppgui-eMule-webUI-检视效果.JPG" width="60%" height="60%" />
-<img src="../../images/Win端口转发/win端口转发_ppgui-eMule-webUI-检视效果-2.JPG" width="60%" height="60%" />
+<img src="../../images/win-port-forwarding/win端口转发_ppgui-eMule-webUI-检视效果.JPG" width="60%" height="60%" />
+<img src="../../images/win-port-forwarding/win端口转发_ppgui-eMule-webUI-检视效果-2.JPG" width="60%" height="60%" />
 
 ---
 
@@ -146,8 +146,8 @@ eMule本身是不支持IPv6的
 即表示监听了所有的IPv4/IPv6地址   
     
 
-<img src="../../images/Win端口转发/win端口转发_MC-创建房间.JPG" width="60%" height="60%" />
-<img src="../../images/Win端口转发/win端口转发_MC-局域网连接端口监听情况.JPG" width="60%" height="60%" />
+<img src="../../images/win-port-forwarding/win端口转发_MC-创建房间.JPG" width="60%" height="60%" />
+<img src="../../images/win-port-forwarding/win端口转发_MC-局域网连接端口监听情况.JPG" width="60%" height="60%" />
 
  
 #### 设置转发规则
@@ -164,8 +164,8 @@ eMule本身是不支持IPv6的
 **记得手动添加Windows防火墙规则**  
 以放行流量其不会自动添加  
  
-<img src="../../images/Win端口转发/win端口转发_MC-服务端转发规则-1.JPG" width="60%" height="60%" />
-<img src="../../images/Win端口转发/win端口转发_MC-服务端转发规则-2.JPG" width="60%" height="60%" />
+<img src="../../images/win-port-forwarding/win端口转发_MC-服务端转发规则-1.JPG" width="60%" height="60%" />
+<img src="../../images/win-port-forwarding/win端口转发_MC-服务端转发规则-2.JPG" width="60%" height="60%" />
 
 
 ### 客户端侧设置
@@ -181,16 +181,16 @@ eMule本身是不支持IPv6的
 端口为对端规则所监听的端口  
 按下设置 以保存规则  
   
-<img src="../../images/Win端口转发/win端口转发_MC-客户端转发规则-1.JPG" width="60%" height="60%" />
-<img src="../../images/Win端口转发/win端口转发_MC-客户端转发规则-2.JPG" width="60%" height="60%" />
+<img src="../../images/win-port-forwarding/win端口转发_MC-客户端转发规则-1.JPG" width="60%" height="60%" />
+<img src="../../images/win-port-forwarding/win端口转发_MC-客户端转发规则-2.JPG" width="60%" height="60%" />
 
 #### 加入游戏
 
 多人游戏》直接连接》输入本地地址和监听端口》加入服务器  
 若配置正确即可加入房间  
 
-<img src="../../images/Win端口转发/win端口转发_MC-直接连接.JPG" width="60%" height="60%" />
-<img src="../../images/Win端口转发/win端口转发_MC-成功加入游戏.JPG" width="60%" height="60%" />
+<img src="../../images/win-port-forwarding/win端口转发_MC-直接连接.JPG" width="60%" height="60%" />
+<img src="../../images/win-port-forwarding/win端口转发_MC-成功加入游戏.JPG" width="60%" height="60%" />
 
 ---
 
