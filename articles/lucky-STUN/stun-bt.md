@@ -57,7 +57,7 @@ GitHub 项目地址：[链接](https://github.com/gdy666/lucky)
 其很可能显示为"端口受限（锥）型NAT" **这其实是由于 路由器/光猫上的NAT造成的**  
 
 不过这并不会影响我们使用stun穿透 可以按照这篇教程进行网络优化  
-教程：[网络环境检测和优化](../bitcomet-port-forwarding/BC阻塞_网络结构.md)  
+教程：[网络环境检测和优化](../bitcomet-port-forwarding/13-network-structure.md)  
 
 **优化到只剩一层运营商NAT和 和一层光猫/路由器 NAT**  
 **共两层NAT 且NAT类型检查结果不为对称型即可进行穿透**  

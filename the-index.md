@@ -60,21 +60,21 @@
 
 ## 比特彗星-端口阻塞解决方案
 
-* [**前言**](articles/bitcomet-port-forwarding/BC阻塞_前言.md)  
+* [**前言**](articles/bitcomet-port-forwarding/01-preface.md)  
 * **Part 1 基础知识**  
-    * [1.1 IP和端口](articles/bitcomet-port-forwarding/BC阻塞_ip和端口.md)  
-    * [1.2 什么是 NAT](articles/bitcomet-port-forwarding/BC阻塞_nat.md)  
-    * [1.3 什么是IPV6](articles/bitcomet-port-forwarding/BC阻塞_ipv6.md)  
-    * [1.4 路由器 交换机 和 光猫 的作用](articles/bitcomet-port-forwarding/BC阻塞_交换机和路由器.md)  
-    * [1.5 防火墙和NAT的异同](articles/bitcomet-port-forwarding/BC阻塞_防火墙和nat.md)  
-    * [1.6 端口转发 DMZ 以及 UPnP 的作用和原理 ](articles/bitcomet-port-forwarding/BC阻塞_端口转发DMZ和UPnP.md)  
-    * [1.7 P2P模式和C/S模式](articles/bitcomet-port-forwarding/BC阻塞_cs和p2p.md)  
+    * [1.1 IP和端口](articles/bitcomet-port-forwarding/02-ip-and-port.md)  
+    * [1.2 什么是 NAT](articles/bitcomet-port-forwarding/03-what-is-nat.md)  
+    * [1.3 什么是IPV6](articles/bitcomet-port-forwarding/04-what-is-ipv6.md)  
+    * [1.4 路由器 交换机 和 光猫 的作用](articles/bitcomet-port-forwarding/05-switches-and-routers.md)  
+    * [1.5 防火墙和NAT的异同](articles/bitcomet-port-forwarding/06-firewall-and-nat.md)  
+    * [1.6 端口转发 DMZ 以及 UPnP 的作用和原理 ](articles/bitcomet-port-forwarding/07-port-forwarding-DMZ-and-UPnP.md)  
+    * [1.7 P2P模式和C/S模式](articles/bitcomet-port-forwarding/08-cs-and-p2p.md)  
 * **Part2 操作与经验**
-    * [2.1目标与困难](articles/bitcomet-port-forwarding/BC阻塞_目标与困难.md)
-    * [2.2 可用的解决方法 （光猫部分）](articles/bitcomet-port-forwarding/BC阻塞_光猫.md)
-    * [2.2 可用的解决方法（路由器部分）](articles/bitcomet-port-forwarding/BC阻塞_路由器.md)
-    * [2.2 可用的解决方法 （Windows部分）](articles/bitcomet-port-forwarding/BC阻塞-win.md)
-    * [2.3网络环境检测和优化](articles/bitcomet-port-forwarding/BC阻塞_网络结构.md)
+    * [2.1目标与困难](articles/bitcomet-port-forwarding/09-goals-and-difficulties.md)
+    * [2.2 可用的解决方法 （光猫部分）](articles/bitcomet-port-forwarding/10-modem-settings.md)
+    * [2.2 可用的解决方法（路由器部分）](articles/bitcomet-port-forwarding/11-router-settings.md)
+    * [2.2 可用的解决方法 （Windows部分）](articles/bitcomet-port-forwarding/12-win-settings.md)
+    * [2.3网络环境检测和优化](articles/bitcomet-port-forwarding/13-network-structure.md)
 
 ---
 

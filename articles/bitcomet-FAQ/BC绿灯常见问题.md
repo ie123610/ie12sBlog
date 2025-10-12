@@ -16,7 +16,7 @@
 **从而直接提高上传速度** 间接提高下载速度  
 
 关于BT下载的特性和和开放端口的重要性  
-在之前的教程中已经有所讲解：[链接](../bitcomet-port-forwarding/BC阻塞_cs和p2p.md)  
+在之前的教程中已经有所讲解：[链接](../bitcomet-port-forwarding/08-cs-and-p2p.md)  
 
 这种端口开放显示机制不局限于比特彗星 其也适用于大部分的P2P文件下载/共享软件  
 比如qbittorrent中右下角的绿色地球/插头 以及 电骡/驴（eMule）  
@@ -108,7 +108,7 @@
 以及下载缓慢和无法下载的一些解决方法  
 
 * **下载缓慢和无法下载问题[重置]：** [链接](./BC下载缓慢问题-重置.md)  
-* **P2P模式 和C/S模式的差异：** [链接](../bitcomet-port-forwarding/BC阻塞_cs和p2p.md)  
+* **P2P模式 和C/S模式的差异：** [链接](../bitcomet-port-forwarding/08-cs-and-p2p.md)  
 
 
 简而言之 BT下载 需要有用户上传才行  
