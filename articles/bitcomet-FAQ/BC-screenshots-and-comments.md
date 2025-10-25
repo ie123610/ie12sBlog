@@ -188,6 +188,8 @@ image.fileshot.net
 **注意 如果C:\Windows\System32\drivers\etc 中没有hosts文件**  
 **请手动创建 右键空白处>新建>文本文档>重命名为hosts 并删除 .txt 扩展名**  
 
+<img src="../../images/BC截图和评论/打开host文件.webp" width="60%" height="60%" />
+
 在 host 文件添加以下文本：  
 
 ```
