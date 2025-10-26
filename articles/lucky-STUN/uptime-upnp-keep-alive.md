@@ -64,7 +64,7 @@
 点击右侧的箭头弹出菜单 选择 **Port monitoring**  
 **IP or host** 这里填写一个已经解析到BT客户端所在设备IP的（动态）域名  
 
-如果还没有设置过可以看看之前的教程或者其他（动态）域名教程 [链接](./lucky-ddns-2.15)   
+如果还没有设置过可以看看之前的教程或者其他（动态）域名教程 [链接](./lucky-ddns-2.15.md)   
 端口号填写 **BT客户端正在监听的端口填写** 完成后点击创建  
 
 <img src="../../images/uptime-upnp-keep-alive/add-monitor-1.webp" width="60%" height="60%" />
