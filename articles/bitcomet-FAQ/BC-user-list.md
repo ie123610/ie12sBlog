@@ -4,14 +4,14 @@
 
 **问：** 用户列表不刷新了/一片空白  
 
-<img src="../../images/BC用户列表显示问题/BC用户列表显示问题-1.jpg" width="60%" height="60%" />
-<img src="../../images/BC用户列表显示问题/BC用户列表显示问题-2.jpg" width="60%" height="60%" />
+<img src="../../images/BC-user-list-display-problem/BC-user-list-display-problem-1.jpg" width="60%" height="60%" />
+<img src="../../images/BC-user-list-display-problem/BC-user-list-display-problem-2.jpg" width="60%" height="60%" />
 
 
 **答：** 应该是按到了键盘上的 **Scrll Lock 键** 即滚动锁定键  
 再按一次即可恢复刷新 其一般用于 暂停列表更新以方便查看用户信息  
 
-<img src="../../images/BC用户列表显示问题/BC用户列表显示问题-3.jpg" width="60%" height="60%" />
+<img src="../../images/BC-user-list-display-problem/BC-user-list-display-problem-3.jpg" width="60%" height="60%" />
 
 
 ---

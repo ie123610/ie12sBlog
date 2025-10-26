@@ -82,11 +82,11 @@
 ```
 （不同型号的电信光猫经典页面的样式也不同 图片仅供参考）  
 
-<img src="../../images/BC阻塞_光猫/电信-经典登录界面-1.webp" width="60%" height="60%" title="经典界面样式1 图片来自网络" />
+<img src="../../images/bitcomet-port-forwarding-modem-settings/china-telecom-classic-login-interface-1.webp" width="60%" height="60%" title="经典界面样式1 图片来自网络" />
 
-<img src="../../images/BC阻塞_光猫/电信-经典登录界面-2.webp" width="60%" height="60%" title="经典界面样式2 图片来自网络" />
+<img src="../../images/bitcomet-port-forwarding-modem-settings/china-telecom-classic-login-interface-2.webp" width="60%" height="60%" title="经典界面样式2 图片来自网络" />
 
-<img src="../../images/BC阻塞_光猫/电信-天翼网关登录界面.webp" width="60%" height="60%" title="天翼网关页面中的 快速装维入口 图片来自网络" />
+<img src="../../images/bitcomet-port-forwarding-modem-settings/china-telecom-tianyi-gateway-login-interface.webp" width="60%" height="60%" title="天翼网关页面中的 快速装维入口 图片来自网络" />
 
 而一些联通光猫 **无法直接切换到管理员账户** 需要访问特定的地址  
 
@@ -96,8 +96,8 @@
 还有一些还需要 sessionKey 详情：https://zhuanlan.zhihu.com/p/655557411
 ```
 
-<img src="../../images/BC阻塞_光猫/联通-普通登录界面.webp" width="60%" height="60%" />
-<img src="../../images/BC阻塞_光猫/联通-管理员登录界面.webp" width="60%" height="60%" />
+<img src="../../images/bitcomet-port-forwarding-modem-settings/china-unicom-standard-login-interface.webp" width="60%" height="60%" />
+<img src="../../images/bitcomet-port-forwarding-modem-settings/china-unicom-admin-login-interface.webp" width="60%" height="60%" />
 
 * **非默认的静态密码**  
 可以根据运营商加上光猫型号 在网上进行搜索  看看是否已经有人获取到了  
@@ -119,7 +119,7 @@
 目前三大运营商都 **已经支持IPv6不** 过在光猫的设置中**可能没有启用**  
 需要手动启用IPv6 操作需要 **超级管理员权限**  
 
-<img src="../../images/BC阻塞_光猫/电信-启用IPv6.webp" width="60%" height="60%" />
+<img src="../../images/bitcomet-port-forwarding-modem-settings/china-telecom-enable-ipv6.webp" width="60%" height="60%" />
 
 以 **电信** 的为例   
 使用超级管理员登录后 点击上方的 网络 选项卡  
@@ -131,8 +131,8 @@ IP模式 改为 IPv6&IPv6 也有的显示为 IPv4/IP6
 
 **其他常见的样式**  
 
-<img src="../../images/BC阻塞_光猫/联通-启用IPv6.webp" title="联通" width="60%" height="60%" />
-<img src="../../images/BC阻塞_光猫/移动-启用IPv6.webp" title="移动" width="60%" height="60%" />
+<img src="../../images/bitcomet-port-forwarding-modem-settings/china-unicom-enable-ipv6.webp" title="联通" width="60%" height="60%" />
+<img src="../../images/bitcomet-port-forwarding-modem-settings/china-mobile-enable-ipv6.webp" title="移动" width="60%" height="60%" />
 
 ---
 
@@ -148,13 +148,13 @@ IP模式 改为 IPv6&IPv6 也有的显示为 IPv4/IP6
 按下F12 打开 开发人员选项 选择最左上角的那个小鼠标的按钮  
 然后对着想要解锁的选项点一下  
 
-<img src="../../images/BC阻塞_光猫/选择元素.webp" width="60%" height="60%" />
+<img src="../../images/bitcomet-port-forwarding-modem-settings/select-element.webp" width="60%" height="60%" />
 
 控制台的中代码，会定位到选中组件的位置 如图红色方框的 "disabled"  
 这里双击一下 进入编辑状态 **将其改成"enabled"** 输入完以后回车一下即可  
 各种被禁用的 按钮、单/复选框、组合框 **一般都可以通过这种方式解锁**  
 
-<img src="../../images/BC阻塞_光猫/解锁元素.webp" width="60%" height="60%" />
+<img src="../../images/bitcomet-port-forwarding-modem-settings/unlock-element.webp" width="60%" height="60%" />
 
 ---
 
@@ -164,10 +164,10 @@ IP模式 改为 IPv6&IPv6 也有的显示为 IPv4/IP6
 **不同运营商 不同型号和固件的IPv6防火墙位置和表示方法都不同**  
 图中展示的是较为常见的形式  
 
-<img src="../../images/BC阻塞_光猫/电信-IPv6防火墙-1.webp" width="60%" height="60%" />
-<img src="../../images/BC阻塞_光猫/联通-IPv6防火墙.webp" width="60%" height="60%" />
-<img src="../../images/BC阻塞_光猫/移动-IPv6防火墙.webp" width="60%" height="60%" />
-<img src="../../images/BC阻塞_光猫/电信-IPv6防火墙-2.webp" width="60%" height="60%" />
+<img src="../../images/bitcomet-port-forwarding-modem-settings/china-telecom-ipv6-firewall-1.webp" width="60%" height="60%" />
+<img src="../../images/bitcomet-port-forwarding-modem-settings/china-unicom-ipv6-firewall.webp" width="60%" height="60%" />
+<img src="../../images/bitcomet-port-forwarding-modem-settings/china-mobile-ipv6-firewall.webp" width="60%" height="60%" />
+<img src="../../images/bitcomet-port-forwarding-modem-settings/china-telecom-ipv6-firewall-2.webp" width="60%" height="60%" />
 
 **较为常见的的表达：**  
 
@@ -264,9 +264,9 @@ IP模式 改为 IPv6&IPv6 也有的显示为 IPv4/IP6
 一般来说 其他选项无需调整直接保存即可  
 **不过还是建议在修改之前截图保存一下之前的配置会比较好**  
 
-<img src="../../images/BC阻塞_光猫/桥接-电信.webp" width="60%" height="60%" title="电信常见样式" />
-<img src="../../images/BC阻塞_光猫/桥接-联通.webp" width="60%" height="60%" title="联通常见样式" />
-<img src="../../images/BC阻塞_光猫/桥接-移动.webp" width="60%" height="60%" title="移动常见样式" />
+<img src="../../images/bitcomet-port-forwarding-modem-settings/bridge-mode-china-telecom.webp" width="60%" height="60%" title="电信常见样式" />
+<img src="../../images/bitcomet-port-forwarding-modem-settings/bridge-mode-china-unicom.webp" width="60%" height="60%" title="联通常见样式" />
+<img src="../../images/bitcomet-port-forwarding-modem-settings/bridge-mode-china-mobile.webp" width="60%" height="60%" title="移动常见样式" />
 
 **问：** 如果要重新创建连接该如何操作呢？  
 
@@ -282,7 +282,7 @@ IP模式 改为 IPv6&IPv6 也有的显示为 IPv4/IP6
 
 （以移动界面为例）
 
-<img src="../../images/BC阻塞_光猫/示例-桥接-1.webp" width="60%" height="60%" title="移动常见样式" />
+<img src="../../images/bitcomet-port-forwarding-modem-settings/example-bridge-mode-1.webp" width="60%" height="60%" title="移动常见样式" />
 
 再次点开连接名称 选项 新建wan连接
 
@@ -297,7 +297,7 @@ IP模式 改为 IPv6&IPv6 也有的显示为 IPv4/IP6
 完成后 点击 **创建** （保存/应用）  
 **！注意若未删除旧的连接 就创建新的连接 可能会出现 LAN口无法绑定的现象！**
 
-<img src="../../images/BC阻塞_光猫/示例-桥接-2.webp" width="60%" height="60%" />
+<img src="../../images/bitcomet-port-forwarding-modem-settings/example-bridge-mode-2.webp" width="60%" height="60%" />
 
 接下来需要 **在路由器上设置 拨号 **（下一章中讲解）  
 **不同品牌的路由器 设置方法不同要根据实际品牌为准**  

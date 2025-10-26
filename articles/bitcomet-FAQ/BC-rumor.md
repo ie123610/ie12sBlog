@@ -46,7 +46,7 @@ Copyright (C) Ran Ningyu, All Rights Reserved.
 这个 Ran Ningyu 就是冉宁煜 而RnySmile 前面的Rny 其实就是  
 取的 冉宁煜 的首字母  
 
-<img src="../../images/有关BC的奇谈怪论/有关BC的奇谈怪论-RanNigyu.jpg" width="60%" height="60%" />
+<img src="../../images/BC-rumor/rannigyu.jpg" width="60%" height="60%" />
 
 至于比特彗星早期的故事其实看这篇报道即可：[独家专访BitComet：无间道行走 快乐并BT着](https://web.archive.org/web/20060424005426/http://www.pconline.com.cn/news/yj/0604/784835.html)  
 
@@ -69,8 +69,8 @@ Copyright (C) Ran Ningyu, All Rights Reserved.
 
 不过来自爱企查的企业变更信息 却似乎显示了一些不同的内容：[链接](https://aiqicha.baidu.com/company_detail_32340882805849)  
 
-<img src="../../images/有关BC的奇谈怪论/有关BC的奇谈怪论-变更记录1.jpg" width="60%" height="60%" />
-<img src="../../images/有关BC的奇谈怪论/有关BC的奇谈怪论-变更记录2.jpg" width="60%" height="60%" />
+<img src="../../images/BC-rumor/change-log-1.jpg" width="60%" height="60%" />
+<img src="../../images/BC-rumor/change-log-2.jpg" width="60%" height="60%" />
 
 2022-01-17公司类型从 外国法人独资变为自然人投资或控股  
 与此同时 BitComet，Inc. 退出  
@@ -80,7 +80,7 @@ Copyright (C) Ran Ningyu, All Rights Reserved.
 **其登记地址依然在国内** 这在之前 [有关比特彗星若干历史遗留问题的整理](./BC-historical-issues.md) 中  
 所找到的商标注册信息已经给出了线索  
 
-<img src="../../images/有关BC的奇谈怪论/有关BC的奇谈怪论-公司信息.jpg" width="60%" height="60%" />
+<img src="../../images/BC-rumor/company-information.jpg" width="60%" height="60%" />
 
 公司注册在英属维尔京群岛  
 但登记地址是在上海 长宁区 东诸安浜路103号 其似乎是一个小区  
@@ -104,8 +104,8 @@ PDF文件存档：<a href="../../图片/有关BC的奇谈怪论/英属于维吉�
 > 21513 根据《2017 年有限合伙法》（该法）第 95(6) 条，以下是已根据该法第
 > 95(1)(c) 条于 2022 年 11 月 1 日从有限合伙登记册中除名的公司名单
 
-<img src="../../images/有关BC的奇谈怪论/有关BC的奇谈怪论-被除名名单1.jpg" width="60%" height="60%" />
-<img src="../../images/有关BC的奇谈怪论/有关BC的奇谈怪论-被除名名单2.jpg" width="60%" height="60%" />
+<img src="../../images/BC-rumor/delisted-list-1.jpg" width="60%" height="60%" />
+<img src="../../images/BC-rumor/delisted-list-2.jpg" width="60%" height="60%" />
 
 ---
 

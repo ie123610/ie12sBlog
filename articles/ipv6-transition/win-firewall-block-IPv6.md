@@ -98,85 +98,85 @@ IPv6拥有海量地址解决了在IPv4时期地址不足和NAT大量使用的问
 运行IPv6测试以确定当前浏览器可以使用IPv6
 访问 http://testipv6.cn/
 
-<img src="../../images/win-firewall-block-IPv6/win防火墙拦截IPv6-v6测试-正常.jpg" width="60%" height="60%" />
+<img src="../../images/win-firewall-block-IPv6/ipv6-test-normal.jpg" width="60%" height="60%" />
 
 搜索栏搜索 防火墙  
 选择检查防火墙状态 打开  
 
-<img src="../../images/win-firewall-block-IPv6/win防火墙拦截IPv6-检查防火墙状态.jpg" width="60%" height="60%" />
+<img src="../../images/win-firewall-block-IPv6/check-firewall-status.jpg" width="60%" height="60%" />
 
 检查防火墙是否启用  
 
-<img src="../../images/win-firewall-block-IPv6/win防火墙拦截IPv6-防火墙已启用.jpg" width="60%" height="60%" />
+<img src="../../images/win-firewall-block-IPv6/firewall-enabled.jpg" width="60%" height="60%" />
 
 点击左侧的 **高级设置** 以打开高级widows防火墙  
 
-<img src="../../images/win-firewall-block-IPv6/win防火墙拦截IPv6-防火墙高级设置.jpg" width="60%" height="60%" />
+<img src="../../images/win-firewall-block-IPv6/firewall-advanced-settings.jpg" width="60%" height="60%" />
 
 添加规则 选择**出站规则** 右键>新建规则  
 
-<img src="../../images/win-firewall-block-IPv6/win防火墙拦截IPv6-防火墙出站规则.jpg" width="60%" height="60%" />
+<img src="../../images/win-firewall-block-IPv6/firewall-outbound-rules.jpg" width="60%" height="60%" />
 
 选择 自定义规则  
 
-<img src="../../images/win-firewall-block-IPv6/win防火墙拦截IPv6-防火墙-自定义规则.jpg" width="60%" height="60%" />
+<img src="../../images/win-firewall-block-IPv6/firewall-custom-rule.jpg" width="60%" height="60%" />
 
 程序路径选择浏览器主程序的路径  
 
-<img src="../../images/win-firewall-block-IPv6/win防火墙拦截IPv6-防火墙-程序路径.jpg" width="60%" height="60%" />
+<img src="../../images/win-firewall-block-IPv6/firewall-program-path.jpg" width="60%" height="60%" />
 
-<img src="../../images/win-firewall-block-IPv6/win防火墙拦截IPv6-防火墙-选择程序.jpg" width="60%" height="60%" />
+<img src="../../images/win-firewall-block-IPv6/firewall-select-program.jpg" width="60%" height="60%" />
 
-<img src="../../images/win-firewall-block-IPv6/win防火墙拦截IPv6-防火墙-路径中的变量.jpg" width="60%" height="60%" />
+<img src="../../images/win-firewall-block-IPv6/firewall-path-variables.jpg" width="60%" height="60%" />
 
 直接通过 浏览 获得的路径中可能会像这样包含有 **变量**  
-如 %USERPROFILE% 为保证效果应将其改为**绝对路径**  
+如 `%USERPROFILE%` 为保证效果应将其改为**绝对路径**  
 
-<img src="../../images/win-firewall-block-IPv6/win防火墙拦截IPv6-防火墙-路径-绝对路径.jpg" width="60%" height="60%" />
+<img src="../../images/win-firewall-block-IPv6/firewall-path-absolute-path.jpg" width="60%" height="60%" />
 
 Windows防火墙帮助手册中已说明了这种情况  
 
-<img src="../../images/win-firewall-block-IPv6/win防火墙拦截IPv6-防火墙-帮助.jpg" width="60%" height="60%" />
+<img src="../../images/win-firewall-block-IPv6/firewall-help.jpg" width="60%" height="60%" />
 
 不过该手册在win10中已经不复存在 但有在线版本可以查看  
 详见：[链接](https://forsenergy.com/zh-cn/authfw/html/ee8441ab-55b4-4ce3-b658-d4e28320a010.htm)  
 
 协议类型 保持默认 即任何  
 
-<img src="../../images/win-firewall-block-IPv6/win防火墙拦截IPv6-防火墙-选择协议.jpg" width="60%" height="60%" />
+<img src="../../images/win-firewall-block-IPv6/firewall-select-protocol.jpg" width="60%" height="60%" />
 
 作用域
 在远程IP中选择下列IP地址 并点击添加  
 
-<img src="../../images/win-firewall-block-IPv6/win防火墙拦截IPv6-防火墙-作用域-添加ip.jpg" width="60%" height="60%" />
+<img src="../../images/win-firewall-block-IPv6/firewall-scope-add-ip.jpg" width="60%" height="60%" />
 
-<img src="../../images/win-firewall-block-IPv6/win防火墙拦截IPv6-防火墙-作用域-添加ip-v6全球单播.jpg" width="60%" height="60%" />
+<img src="../../images/win-firewall-block-IPv6/firewall-scope-add-ipv6-global-unicast.jpg" width="60%" height="60%" />
 
 填写 `2000::/3` 此为 IPv6全球单播地址的前缀 可以理解为匹配所有公网IPv6地址  
 曾经尝试使用 `::` 进行匹配 但并不成功 其表示所有IPv6地址  
 IPv6前缀划分：[链接](http://https://www.iana.org/assignments/ipv6-address-space/ipv6-address-space.xhtml)  
 
-<img src="../../images/win-firewall-block-IPv6/win防火墙拦截IPv6-防火墙-作用域-添加ip-完成.jpg" width="60%" height="60%" />
+<img src="../../images/win-firewall-block-IPv6/firewall-scope-add-ip-complete.jpg" width="60%" height="60%" />
 
 操作 保持默认 即**阻止连接**  
 
-<img src="../../images/win-firewall-block-IPv6/win防火墙拦截IPv6-防火墙-阻止连接.jpg" width="60%" height="60%" />
+<img src="../../images/win-firewall-block-IPv6/firewall-block-connection.jpg" width="60%" height="60%" />
 
 配置文件 保持默认 即**全部勾选**  
 
-<img src="../../images/win-firewall-block-IPv6/win防火墙拦截IPv6-防火墙-配置文件.jpg" width="60%" height="60%" />
+<img src="../../images/win-firewall-block-IPv6/firewall-profile.jpg" width="60%" height="60%" />
 
 名称任意填写  
 这里使用 **谷歌浏览器-阻止IPv6-出站**  
 
-<img src="../../images/win-firewall-block-IPv6/win防火墙拦截IPv6-防火墙-名称.jpg" width="60%" height="60%" />
+<img src="../../images/win-firewall-block-IPv6/firewall-name.jpg" width="60%" height="60%" />
 
-<img src="../../images/win-firewall-block-IPv6/win防火墙拦截IPv6-防火墙-检视规则.jpg" width="60%" height="60%" />
+<img src="../../images/win-firewall-block-IPv6/firewall-review-rules.jpg" width="60%" height="60%" />
 
 再次运行IPv6测试 **其几乎立刻失败**  
 **这说明防火墙规则已经生效**  
 
-<img src="../../images/win-firewall-block-IPv6/win防火墙拦截IPv6-v6测试-立刻失败.jpg" width="60%" height="60%" />
+<img src="../../images/win-firewall-block-IPv6/ipv6-test-immediate-failure.jpg" width="60%" height="60%" />
 
 **可通过命令快速设置 需要管理员权限**  
 

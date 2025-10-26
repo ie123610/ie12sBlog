@@ -69,7 +69,7 @@
 即用不同的端口号对应不同的服务  
 比如 路由器管理界面 NAS管理界面 BT软件webUI界面  
 
-<img src="../../images/lucky-web/直接访问.webp" width="60%" height="60%" />
+<img src="../../images/lucky-web/direct-access.webp" width="60%" height="60%" />
 
 不过服务一多起来就需要记忆很多端口而且端口是纯数字并 **不方便记忆**  
 使用反向代理可以实现"端口复用"让 **多个服务使用同一个端口**  
@@ -95,13 +95,13 @@
 * `ie12.net/op/`
 * `ie12.net/alist/`
 
-<img src="../../images/lucky-web/复用端口.webp" width="60%" height="60%" />
+<img src="../../images/lucky-web/port-reuse.webp" width="60%" height="60%" />
 
 ### TLS加密
 
 关于TLS在之前的教程中已有所讲解 详见：[链接](./lucky-tls-automation.md)   
 
-<img src="../../images/lucky-web/tls加密.webp" width="60%" height="60%" />
+<img src="../../images/lucky-web/tls-encryption.webp" width="60%" height="60%" />
 
 ### 访问控制
 
@@ -203,9 +203,9 @@ DDNS更新方法在之前的教程中已讲解过 详见：[链接](./lucky-ddn
 
 登录lucky 》 点击侧边栏的WEB服务 》 添加WEB服务规则  
 
-<img src="../../images/lucky-web/web服务.webp" />
+<img src="../../images/lucky-web/web-service.webp" />
 
-<img src="../../images/lucky-web/web服务-添加规则.webp" width="60%" height="60%" />
+<img src="../../images/lucky-web/web-service-add-rule.webp" width="60%" height="60%" />
 
 
 1. 名称可自定义 这里使用"反向代理"
@@ -216,10 +216,10 @@ DDNS更新方法在之前的教程中已讲解过 详见：[链接](./lucky-ddn
 6. 保存规则
 
 **示例**  
-<img src="../../images/lucky-web/web-主规则.webp" width="60%" height="60%" />
+<img src="../../images/lucky-web/web-main-rule.webp" width="60%" height="60%" />
 
 为服务添加子规则 点击添加子规则  
-<img src="../../images/lucky-web/web-添加子规则.webp" width="60%" height="60%" />
+<img src="../../images/lucky-web/web-add-sub-rule.webp" width="60%" height="60%" />
 
 
 ### 编辑规则内容
@@ -234,10 +234,10 @@ DDNS更新方法在之前的教程中已讲解过 详见：[链接](./lucky-ddn
 6. 保存规则
 
 **示例**  
-<img src="../../images/lucky-web/web-子规则配置.webp" width="60%" height="60%" />
+<img src="../../images/lucky-web/web-sub-rule-configuration.webp" width="60%" height="60%" />
 
 **检视效果**  
-<img src="../../images/lucky-web/web-子规则效果.webp" width="60%" height="60%" />
+<img src="../../images/lucky-web/web-sub-rule-result.webp" width="60%" height="60%" />
 
 
 ### 访问测试
@@ -245,14 +245,14 @@ DDNS更新方法在之前的教程中已讲解过 详见：[链接](./lucky-ddn
 在浏览器中输入 前端域名和端口 **查看访问效果**  
 示例：`http://alist.ie12test.dynv6.net:16666/`  
 
-<img src="../../images/lucky-web/访问测试-alist.webp" width="60%" height="60%" />
+<img src="../../images/lucky-web/access-test-alist.webp" width="60%" height="60%" />
 
 多规则效果演示  
-<img src="../../images/lucky-web/访问测试-多规则.webp" width="60%" height="60%" />
+<img src="../../images/lucky-web/access-test-multiple-rules.webp" width="60%" height="60%" />
 
-<img src="../../images/lucky-web/访问测试-qb.webp" width="60%" height="60%" />
+<img src="../../images/lucky-web/access-test-qb.webp" width="60%" height="60%" />
 
-<img src="../../images/lucky-web/访问测试-op.webp" width="60%" height="60%" />
+<img src="../../images/lucky-web/access-test-op.webp" width="60%" height="60%" />
 
 
 **！注意！** qb需要关闭host header验证或打开定制模式中的 使用目标地址host请求头  
@@ -270,26 +270,26 @@ DDNS更新方法在之前的教程中已讲解过 详见：[链接](./lucky-ddn
 
 编辑反代规则 **开启TLS开关**  
 
-<img src="../../images/lucky-web/web-编辑子规则.webp" width="60%" height="60%" />
+<img src="../../images/lucky-web/web-edit-sub-rule.webp" width="60%" height="60%" />
 
-<img src="../../images/lucky-web/web-启用tls.webp" width="60%" height="60%" />
+<img src="../../images/lucky-web/web-enable-tls.webp" width="60%" height="60%" />
 
 检视效果 前端地址**已经变成HTTPPS开头**  
 
-<img src="../../images/lucky-web/web-检视tls.webp" width="60%" height="60%" />
+<img src="../../images/lucky-web/web-inspect-tls.webp" width="60%" height="60%" />
 
 **访问测试**
 
-<img src="../../images/lucky-web/访问测试-op-tls.webp" width="60%" height="60%" />
+<img src="../../images/lucky-web/access-test-op-tls.webp" width="60%" height="60%" />
 
-<img src="../../images/lucky-web/访问测试-alist-tls.webp" width="60%" height="60%" />
+<img src="../../images/lucky-web/access-test-alist-tls.webp" width="60%" height="60%" />
 
-<img src="../../images/lucky-web/访问测试-qb-tls.webp" width="60%" height="60%" />
+<img src="../../images/lucky-web/access-test-qb-tls.webp" width="60%" height="60%" />
 
 **查看证书**  
-<img src="../../images/lucky-web/查看证书-1.webp" />
+<img src="../../images/lucky-web/view-certificate-1.webp" />
 
-<img src="../../images/lucky-web/查看证书-2.webp" width="60%" height="60%" />
+<img src="../../images/lucky-web/view-certificate-2.webp" width="60%" height="60%" />
 
 
 ### 配置HTTP重定向
@@ -309,7 +309,7 @@ DDNS更新方法在之前的教程中已讲解过 详见：[链接](./lucky-ddn
 5. 保存规则
 
 **示例**  
-<img src="../../images/lucky-web/web-重定向规则.webp" width="60%" height="60%" />
+<img src="../../images/lucky-web/web-redirect-rule.webp" width="60%" height="60%" />
 
 **接着添加子规则**  
 
@@ -325,10 +325,10 @@ DDNS更新方法在之前的教程中已讲解过 详见：[链接](./lucky-ddn
 其他可用变量：[链接]( https://lucky666.cn/docs/modules/web#%E5%8F%AF%E7%94%A8%E5%8F%98%E9%87%8F)  
 
 **示例**  
-<img src="../../images/lucky-web/web-重定向规则-2.webp" width="60%" height="60%" />
+<img src="../../images/lucky-web/web-redirect-rule-2.webp" width="60%" height="60%" />
 
 **检视效果**  
-<img src="../../images/lucky-web/web-重定向规则-3.webp" width="60%" height="60%" />
+<img src="../../images/lucky-web/web-redirect-rule-3.webp" width="60%" height="60%" />
 
 **测试重定向效果**  
 在浏览器中直接输入域名应该可以自动跳转到HTTPS  
@@ -374,17 +374,17 @@ DDNS更新方法在之前的教程中已讲解过 详见：[链接](./lucky-ddn
 
 编辑反向代理主规则 **切换到 定制模式**  
 
-<img src="../../images/lucky-web/web-安全重定向-1.webp"  />
+<img src="../../images/lucky-web/web-secure-redirect-1.webp"  />
 
 滚动页面 》 点开默认规则 》 修改服务类型为 重定向 》  
 填写默认目标地址 `https://www.baidu.com` 》 **保存规则**  
 
-<img src="../../images/lucky-web/web-安全重定向-2.webp"  />
+<img src="../../images/lucky-web/web-secure-redirect-2.webp"  />
 
-<img src="../../images/lucky-web/web-安全重定向-3.webp" width="60%" height="60%" />
+<img src="../../images/lucky-web/web-secure-redirect-3.webp" width="60%" height="60%" />
 
 **检视效果**  
-<img src="../../images/lucky-web/web-安全重定向-4.webp" width="60%" height="60%" />
+<img src="../../images/lucky-web/web-secure-redirect-4.webp" width="60%" height="60%" />
 
 ----
 
@@ -395,14 +395,14 @@ DDNS更新方法在之前的教程中已讲解过 详见：[链接](./lucky-ddn
 
 **设置方法**  
 在默认规则中将服务类型设置为 **关闭连接**即可 默认目标地址不用填写  
-<img src="../../images/lucky-web/web-关闭连接.webp" width="60%" height="60%" />
+<img src="../../images/lucky-web/web-close-connection.webp" width="60%" height="60%" />
 
 **检视效果**  
-<img src="../../images/lucky-web/web-关闭连接-2.webp" width="60%" height="60%" />
+<img src="../../images/lucky-web/web-close-connection-2.webp" width="60%" height="60%" />
 
 **访问测试**  
 直接使用IP+端口进行访问  **连接直接关闭**没有发出任何响应  
-<img src="../../images/lucky-web/web-关闭连接-3.webp" />
+<img src="../../images/lucky-web/web-close-connection-3.webp" />
 
 ---
 
@@ -412,7 +412,7 @@ DDNS更新方法在之前的教程中已讲解过 详见：[链接](./lucky-ddn
 
 **检视效果**
 
-<img src="../../images/lucky-web/web-安全重定向-5.webp" width="60%" height="60%" />
+<img src="../../images/lucky-web/web-secure-redirect-5.webp" width="60%" height="60%" />
 
 **测试重定向效果**
 直接使用IP加端口访问应会被重定向到百度  
@@ -423,13 +423,13 @@ DDNS更新方法在之前的教程中已讲解过 详见：[链接](./lucky-ddn
 在开启 Basic认证后会多一个登录验证的过程  
 
 设置Basic认证之前  
-<img src="../../images/lucky-web/web-认证-1.webp" width="60%" height="60%" />
+<img src="../../images/lucky-web/web-authentication-1.webp" width="60%" height="60%" />
 
 编辑子规则 **开启Basic认证开关** 设置用户名和密码  
-<img src="../../images/lucky-web/web-认证-2.webp" width="60%" height="60%" />
+<img src="../../images/lucky-web/web-authentication-2.webp" width="60%" height="60%" />
 
 **检视效果**  
-<img src="../../images/lucky-web/web-认证-3.webp" />
+<img src="../../images/lucky-web/web-authentication-3.webp" />
 
 ---
 

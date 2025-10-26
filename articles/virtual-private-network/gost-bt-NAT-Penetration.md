@@ -128,7 +128,7 @@ gost的隧道部分则是基于 wireguard-go 实现的 其运行在用户空间�
 感谢[泥浆](https://space.bilibili.com/14913)提供的技术支持  
 
 **示意图**  
-<img src="../../images/gost-bt-NAT-Penetration/gost-bt-穿透_gost穿透流程图.jpg" width="60%" height="60%" />
+<img src="../../images/gost-bt-NAT-Penetration/gost-bt-NAT-Penetration-process.jpg" width="60%" height="60%" />
 
 
 ## Linux服务端布置
@@ -144,8 +144,8 @@ gost的隧道部分则是基于 wireguard-go 实现的 其运行在用户空间�
 可以将 sysctl.conf 下载到win上 修改后再上传  
 **需要注意换行符 Windows的换行符和Linux下的换行符不一样**  
 
-<img src="../../images/gost-bt-NAT-Penetration/下载sysctl.jpg" width="60%" height="60%" />
-<img src="../../images/gost-bt-NAT-Penetration/编辑sysctl.jpg" width="60%" height="60%" />
+<img src="../../images/gost-bt-NAT-Penetration/download-sysctl.jpg" width="60%" height="60%" />
+<img src="../../images/gost-bt-NAT-Penetration/edit-sysctl.jpg" width="60%" height="60%" />
 
 当然也可以使用直接在终端中使用文本编辑器进行编辑  
 这里推荐使用近似图形界面的编辑工具 **nano**  
@@ -158,7 +158,7 @@ Ctrl + X 退出编辑器
 
 使用 `sysctl –p` 重载文件使配置生效 此命令无输出  
 输入 `sysctl net.ipv4.ip_forward`以检查值  
-<img src="../../images/gost-bt-NAT-Penetration/sysctl-检查值.jpg" width="60%" height="60%" />
+<img src="../../images/gost-bt-NAT-Penetration/sysctl-check-value.jpg" width="60%" height="60%" />
 
 ### 配置 NAT 规则
 
@@ -198,12 +198,12 @@ NAT转换到 `192.168.123.2` 的6666TCP和UDP
 
 使用 `iptables -L` 检查已经添加的规则  
 默认只列出 filter 表  
-<img src="../../images/gost-bt-NAT-Penetration/检查iptable规则-1.jpg" width="60%" height="60%" />
+<img src="../../images/gost-bt-NAT-Penetration/check-iptable-rules-1.jpg" width="60%" height="60%" />
 
 
 而 DNAT 是在 nat 表里面的  
 需要使用 `iptables -t nat -vL`  
-<img src="../../images/gost-bt-NAT-Penetration/检查iptable规则-2.jpg" width="60%" height="60%" />
+<img src="../../images/gost-bt-NAT-Penetration/check-iptable-rules-2.jpg" width="60%" height="60%" />
 
 
 若要删除这些转发条目只需要将原先命令中的"I"都替换成"D"  
@@ -212,7 +212,7 @@ NAT转换到 `192.168.123.2` 的6666TCP和UDP
 ### 下载Gost
 
 查看 CPU 架构 输入 `lscpu`  
-<img src="../../images/gost-bt-NAT-Penetration/查看架构.jpg" width="60%" height="60%" />
+<img src="../../images/gost-bt-NAT-Penetration/check-schema.jpg" width="60%" height="60%" />
 
 
 Gost GitHub 仓库：[链接](https://github.com/go-gost/gost/releases)  
@@ -227,13 +227,13 @@ Gost GitHub 仓库：[链接](https://github.com/go-gost/gost/releases)
 wget -O /usr/local/bin/gost.tar.gz https://github.com/go-gost/gost/releases/download/v3.2.4/gost_3.2.4_linux_amd64.tar.gz
 ```
 
-<img src="../../images/gost-bt-NAT-Penetration/下载gost.jpg" width="60%" height="60%" />
+<img src="../../images/gost-bt-NAT-Penetration/download-gost.jpg" width="60%" height="60%" />
 
 **查看目录下文件**
 切换目录 `cd /usr/local/bin/`
 列出目录下载的文件 `ls -l`  
 
-<img src="../../images/gost-bt-NAT-Penetration/下载文件位置.jpg" width="60%" height="60%" />
+<img src="../../images/gost-bt-NAT-Penetration/download-file-location.jpg" width="60%" height="60%" />
 
 
 **创建gost文件夹**  
@@ -265,7 +265,7 @@ Gost 官方教程：[链接](https://gost.run/tutorials/tuntap/)
 gost -L=tun://:8421?net=192.168.123.1/24 -L relay+wss://:8443?bind=true -L socks5+wss://:7080?udp=true&notls=true
 ```
 
-<img src="../../images/gost-bt-NAT-Penetration/gost-命令解析.jpg" width="60%" height="60%" />
+<img src="../../images/gost-bt-NAT-Penetration/gost-command-parsing.jpg" width="60%" height="60%" />
 
 各端口号和转发协议可自定义 此处使用8443作为隧道最终的隧道端口  
 7080为socks5服务端端口 wss作为转发协议  
@@ -338,7 +338,7 @@ WantedBy=multi-user.target
 其中最重要的部分为 `ExecStart`  
 **填写gost主程序所在的绝对路径 外加启动参数**  
 
-<img src="../../images/gost-bt-NAT-Penetration/Linux-注册服务信息.jpg" width="60%" height="60%" />
+<img src="../../images/gost-bt-NAT-Penetration/Linux-reg-service-info.jpg" width="60%" height="60%" />
 
 **重新加载服务配置文件**  
 `systemctl daemon-reload`
@@ -351,7 +351,7 @@ WantedBy=multi-user.target
 
 
 检查服务状态 和 服务日志内容  
-<img src="../../images/gost-bt-NAT-Penetration/gost-服务信息.jpg" width="60%" height="60%" />
+<img src="../../images/gost-bt-NAT-Penetration/gost-service-info.jpg" width="60%" height="60%" />
 
 
 ---
@@ -421,7 +421,7 @@ IPv4流量通过socks5代理 而IPv6直接从本地发出
 
 **建议使用火狐浏览器 其可以非常方便的设置代理功能**  
 通过浏览网页来测试代理是否可以接通  
-<img src="../../images/gost-bt-NAT-Penetration/火狐代理设置.jpg" width="60%" height="60%" />
+<img src="../../images/gost-bt-NAT-Penetration/firefox-proxy-settings.jpg" width="60%" height="60%" />
 
 
 **IPv6分流测试**  
@@ -432,7 +432,7 @@ IPv4流量通过socks5代理 而IPv6直接从本地发出
 而IPv6地址则是本机对外IPv6地址  
 **若本地设备无IPv6 则跳过此步骤**  
 
-<img src="../../images/gost-bt-NAT-Penetration/网站-ip检测.jpg" width="60%" height="60%" />
+<img src="../../images/gost-bt-NAT-Penetration/website-iptest.jpg" width="60%" height="60%" />
 
 
 
@@ -451,7 +451,7 @@ route add 0.0.0.0 mask 0.0.0.0 192.168.123.2 metric 1000
 跃点数设置的很大 使此条路由表的优先级低于正常上网流量的路由  
 以防止影响正常上网  
 
-<img src="../../images/gost-bt-NAT-Penetration/添加路由表.jpg" width="60%" height="60%" />
+<img src="../../images/gost-bt-NAT-Penetration/add-routing-table.jpg" width="60%" height="60%" />
 
 检查路由表 `route print -4`
 
@@ -459,8 +459,8 @@ route add 0.0.0.0 mask 0.0.0.0 192.168.123.2 metric 1000
 **若显示 IP地址 则说明 路由在 TUN 网卡创建前就添加了**  
 其是无法正常工作的 需要删除 将原先添加命令中的 add 换成 delete 再次运行  
 
-<img src="../../images/gost-bt-NAT-Penetration/检查路由表-1.jpg" width="60%" height="60%" />
-<img src="../../images/gost-bt-NAT-Penetration/检查路由表-2.jpg" width="60%" height="60%" />
+<img src="../../images/gost-bt-NAT-Penetration/check-routing-table-1.jpg" width="60%" height="60%" />
+<img src="../../images/gost-bt-NAT-Penetration/check-routing-table-2.jpg" width="60%" height="60%" />
 
 
 **ping对端**  
@@ -475,7 +475,7 @@ ping 服务端虚拟网卡使用的IP 应有回应
 在确定隧道和代理畅通 以及添加路由表后 就可以打开 比特彗星进行测试了  
 修改 比特彗星 监听端口 为6666 对应iptables 上的NAT转发端口  
 
-<img src="../../images/gost-bt-NAT-Penetration/监听端口.jpg" width="60%" height="60%" />
+<img src="../../images/gost-bt-NAT-Penetration/listening-port.jpg" width="60%" height="60%" />
 
 **设置代理服务器**  
 
@@ -487,20 +487,20 @@ ping 服务端虚拟网卡使用的IP 应有回应
 * **使用代理端口转发检测**
 * **使用代理连接tracker**
 
-<img src="../../images/gost-bt-NAT-Penetration/bc-代理设置.jpg" width="60%" height="60%" />
+<img src="../../images/gost-bt-NAT-Penetration/bc-proxy-settings.jpg" width="60%" height="60%" />
 
 
 点击右下角的黄灯选择重新检查端口 重新检查后 应变成绿灯  
 且显示的外网IP应该会变成 Linux服务器的IP 由于使用了代理 内网IP无法检测会显示为空  
 
-<img src="../../images/gost-bt-NAT-Penetration/绿灯.jpg" width="60%" height="60%" />
-<img src="../../images/gost-bt-NAT-Penetration/绿灯-2.jpg" width="60%" height="60%" />
+<img src="../../images/gost-bt-NAT-Penetration/green-light.jpg" width="60%" height="60%" />
+<img src="../../images/gost-bt-NAT-Penetration/green-light-2.jpg" width="60%" height="60%" />
 
 下载任意热门种子 例如 [乌班图镜像](../bitcomet-FAQ/BC-download-speed-test.md)  
 查看 **用户选项卡** 中的发起列 若看不到发起列 则需要右键表头弹出菜单勾选发起  
 **若有远程发起 且传入用户的IP显示正常 则穿透功能已经实现**  
 
-<img src="../../images/gost-bt-NAT-Penetration/远程传入用户.jpg" width="60%" height="60%" />
+<img src="../../images/gost-bt-NAT-Penetration/remote-incoming-user.jpg" width="60%" height="60%" />
 
 
 ### 设置启动脚本
@@ -645,11 +645,11 @@ log 记录模式选择了无 因为socks5和隧道在处理网络流量
 ### 最后检查
 
 启动服务 使用命令提示符或者图形界面管理  
-<img src="../../images/gost-bt-NAT-Penetration/注册的服务.jpg" width="60%" height="60%" />
+<img src="../../images/gost-bt-NAT-Penetration/registered-services.jpg" width="60%" height="60%" />
 
 命令：`net start 任务id`  
 注意这里使用的是任务id而非任务的显示名称  
-<img src="../../images/gost-bt-NAT-Penetration/命令-启动服务.jpg" width="60%" height="60%" />
+<img src="../../images/gost-bt-NAT-Penetration/command-start-service.jpg" width="60%" height="60%" />
 
 ping网关并打开比特彗星  
 检查右下角的端口检测情况和对外IP  
