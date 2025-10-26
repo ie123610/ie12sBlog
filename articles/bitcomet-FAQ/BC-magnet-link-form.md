@@ -4,7 +4,7 @@
 
 **问：** 磁力链接为什么有两种不同的格式？(使用磁力链接向彗星添加任务后再复制出的磁力链接会发变化？)  
 
-<img src="../../images/BC磁力链接格式问题/BC磁力链接格式问题-1.jpg" width="60%" height="60%" />
+<img src="../../images/BC-magnet-link-form/BC-magnet-link-form-1.jpg" width="60%" height="60%" />
 
 **答:只是表示方法不同而已** 表示的内容都是相同的SHA-1散列  
 全部大写且稍短的是由base32编码表示的  

@@ -8,11 +8,11 @@
 
 **问：** 任务前面有一个红叉 从新启动任务也是这样  
 
-<img src="../../images/BC常见问题下载缓慢-重置/BC下载缓慢_任务红叉.webp" width="60%" height="60%" />
+<img src="../../images/BC-download-speed-issues-2/task-red-x.webp" width="60%" height="60%" />
 
 **答：** 这说明任务出错了可以选中任务看一下**任务日志**或者**摘要**  
 
-<img src="../../images/BC常见问题下载缓慢-重置/BC下载缓慢_文件写入错误.webp" width="60%" height="60%" />
+<img src="../../images/BC-download-speed-issues-2/file-write-error.webp" width="60%" height="60%" />
 
 **问：** 遇到这些报错要这么解决呢？  
 
@@ -50,7 +50,7 @@
 
 **问：** 更换完目录后任务变成了黄色的向下的箭头 显示 **“等待种子元数据下载中”**  
 
-<img src="../../images/BC常见问题下载缓慢-重置/BC下载缓慢_等待下载元数据.webp" width="60%" height="60%" />
+<img src="../../images/BC-download-speed-issues-2/waiting-for-metadata-download.webp" width="60%" height="60%" />
 
 **答：** 这是元数据下载问题 在之前的教程中有讲解过  
 教程链接：[比特彗星常见问题-元数据获取问题](./BC-get-metadata-error.md) 
@@ -61,17 +61,17 @@
 
 **答：** 选中任务查看 **种子/用户[总]这一列** 鼠标放在上面会有悬浮显示  
 
-<img src="../../images/BC常见问题下载缓慢-重置/BC下载缓慢_用户和种子.webp" width="60%" height="60%" />
-<img src="../../images/BC常见问题下载缓慢-重置/BC下载缓慢_用户和种子-2.webp" width="60%" height="60%" />
+<img src="../../images/BC-download-speed-issues-2/peers-and-seeds.webp" width="60%" height="60%" />
+<img src="../../images/BC-download-speed-issues-2/peers-and-seeds-2.webp" width="60%" height="60%" />
 
 也可以选择任务 后点开 **用户选项卡** 可以更直观的看到  
 连接上的用户及其详情  
 
-<img src="../../images/BC常见问题下载缓慢-重置/BC下载缓慢_用户列表.webp" width="60%" height="60%" />
+<img src="../../images/BC-download-speed-issues-2/peer-list.webp" width="60%" height="60%" />
 
 **问：** 全部用户数很少 用户选项卡里是空的  
 
-<img src="../../images/BC常见问题下载缓慢-重置/BC下载缓慢_死种.webp" width="60%" height="60%" />
+<img src="../../images/BC-download-speed-issues-2/dead-torrent.webp" width="60%" height="60%" />
 
 **答：** 这样的话**说明这个种子可能已经 “凉了” 也就是死种了 没法下载了**  
 
@@ -117,7 +117,7 @@
 如果是使用的贴吧解锁版则无需此操作 已经设置好了  
 贴吧解锁版：[链接](https://github.com/bitcomet-post-bar/BC-modified/tree/main/bitcomet-modified)  
 
-<img src="../../images/BC常见问题下载缓慢-重置/BC下载缓慢_添加tracker.webp" width="60%" height="60%" />
+<img src="../../images/BC-download-speed-issues-2/add-trackers.webp" width="60%" height="60%" />
 
 填写如下内容 `https://cf.trackerslist.com/best.txt` 保存即可  
 如果这里的地址失效了可以到项目主页查看新的地址(https://trackerslist.com/)  
@@ -126,7 +126,7 @@
 **问：** 用户数量 确实变多了 有的任务开始有下载速度了！  
 那用户选项卡里的 下载速度、上传速度、下载大小、上传大小 都是什么意思？  
 
-<img src="../../images/BC常见问题下载缓慢-重置/BC下载缓慢_用户列表_有下载速度.webp" width="60%" height="60%" />
+<img src="../../images/BC-download-speed-issues-2/peer-list-with-download-speed.webp" width="60%" height="60%" />
 
 **答：**  
 
@@ -210,7 +210,7 @@
 
 迅雷论坛中客服对离线下载是否有上传的回复  
 
-<img src="../../images/BC常见问题下载缓慢-重置/BC下载缓慢_迅雷离线问题.webp" width="60%" height="60%" />
+<img src="../../images/BC-download-speed-issues-2/xunlei-offline-issue.webp" width="60%" height="60%" />
 
 **问：** 那这不也是一种吸血行为吗？  
 
@@ -232,7 +232,7 @@
 倒是运营商可能会干扰bt下载 可以开个**协议加密**  
 设置为优先即可  
 
-<img src="../../images/BC常见问题下载缓慢-重置/BC下载缓慢_协议加密.webp" width="60%" height="60%" />
+<img src="../../images/BC-download-speed-issues-2/protocol-encryption.webp" width="60%" height="60%" />
 
 ---
 

@@ -22,8 +22,8 @@
 **并不支持自动使用系统默认播放器**  
 
 **示例**  
-<img src="../../images/BC播放器路径设置/bc-播放器路径-填写路径.jpg" width="60%" height="60%" />
-<img src="../../images/BC播放器路径设置/bc-播放器路径-自动检测.jpg" width="60%" height="60%" />
+<img src="../../images/BC-player-path/fill-path.jpg" width="60%" height="60%" />
+<img src="../../images/BC-player-path/auto-detect.jpg" width="60%" height="60%" />
 
 
 **问：** 那在2.01之后想要直接使用系统默认的播放器就只需要把`ui.preview_program_detection`  
@@ -39,7 +39,7 @@
 **答：** 他会弹出一个窗口让你选择播放器路径 同时推荐比特彗星的影音之星播放器  
 
 **示例**  
-<img src="../../images/BC播放器路径设置/bc-播放器路径-影音之星.jpg" width="60%" height="60%" />
+<img src="../../images/BC-player-path/movie-audio-star.jpg" width="60%" height="60%" />
 
 **问：** 比特彗星所推荐的影音之星播放器可以用吗？  
 

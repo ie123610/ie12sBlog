@@ -5,7 +5,7 @@
 **问：** 比特彗星内存占用过高怎么办？  
 
 **答：** 请打开 [专家模式](./BC-expert-mode.md) 并查看统计中 展开 内存使用 选项 以查看是什么占用了内存  
-<img src="../../images/BC内存占用过高/内存详情.webp" width="60%" title="内存使用明细" height="60%" />
+<img src="../../images/BC-OOM/memory-details.webp" width="60%" title="内存使用明细" height="60%" />
 
 **问：** 一般哪些项目容易占用较多的内存？  
 
@@ -16,7 +16,7 @@
 如果启用了 **种子市场** 并且加载的其中有大量的种子就会造成此项占用大  
 解决办法： **限制种子市场最大条数** 右键弹出菜单以选择限制条目数  
 
-<img src="../../images/BC内存占用过高/限制种子市场.webp" width="60%" title="限制他人共享数量" height="60%" />
+<img src="../../images/BC-OOM/limit-torrent-marketplace.webp" width="60%" title="限制他人共享数量" height="60%" />
 
 如果不使用种子市场请 **直接禁用以避免不必要的内存占用**  
 右键种子市场 取消勾选启用种子市场  
@@ -28,17 +28,17 @@
 ### 调整虚拟内存
 
 win+R键 打开运行 输入 `control sysdm.cpl,,3` 点击确定  
-<img src="../../images/BC内存占用过高/运行-系统属性.webp" width="60%" height="60%" />
+<img src="../../images/BC-OOM/run-system-properties.webp" width="60%" height="60%" />
 
 高级》性能 点击设置按钮  
-<img src="../../images/BC内存占用过高/系统属性1.webp" width="60%" height="60%" />
+<img src="../../images/BC-OOM/system-properties-1.webp" width="60%" height="60%" />
 
 高级》虚拟内存 点击更改按钮  
-<img src="../../images/BC内存占用过高/系统属性2.webp" width="60%" height="60%" />
+<img src="../../images/BC-OOM/system-properties-2.webp" width="60%" height="60%" />
 
 取消勾选 自动管理分页文件大小  
 选择C盘 设置为无分页文件  
-<img src="../../images/BC内存占用过高/C盘无分页文件.webp" width="60%" title="迁移虚拟内存" height="60%" />
+<img src="../../images/BC-OOM/c-drive-no-pagefile.webp" width="60%" title="迁移虚拟内存" height="60%" />
 
 **注意！**  
 **虚拟内存默认在 C盘 如果要手动调整虚拟内存 建议选择 C盘以外的分区**  
@@ -46,10 +46,10 @@ win+R键 打开运行 输入 `control sysdm.cpl,,3` 点击确定
 
 
 会弹出警告 不用担心 我们会在其他分区设置虚拟内存 点是  
-<img src="../../images/BC内存占用过高/无分页文件警告.webp" width="60%" height="60%" />
+<img src="../../images/BC-OOM/no-pagefile-warning.webp" width="60%" height="60%" />
 
 选择其他分区并设置虚拟内存 **一定要选择使用固态硬盘的分区**  
-<img src="../../images/BC内存占用过高/选择其他分区.webp" width="60%" height="60%" />
+<img src="../../images/BC-OOM/select-other-partition.webp" width="60%" height="60%" />
 
 **选择自定义大小 初始大小和最大值相同**
 虚拟内存设置大小参考：  
@@ -72,7 +72,7 @@ win+R键 打开运行 输入 `control sysdm.cpl,,3` 点击确定
 
 在 UDP 发起量为10 的情况下 可以设置为 300 或更小  
 在 UDP 发起量为200-500 时可以设置为 1000 或更小  
-<img src="../../images/BC内存占用过高/UDP队列大小.webp" width="60%" height="60%" />
+<img src="../../images/BC-OOM/udp-queue-size.webp" width="60%" height="60%" />
 
 ---
 
@@ -90,7 +90,7 @@ win+R键 打开运行 输入 `control sysdm.cpl,,3` 点击确定
 
 例如默认下载到 D盘其为固态硬盘 完成后移动到 E盘即机械硬盘  
 **针对移动硬盘也是相同的道理**  
-<img src="../../images/BC内存占用过高/下载后移动文件.webp" title="完成后移动文件" width="60%" height="60%" />
+<img src="../../images/BC-OOM/move-files-after-download.webp" title="完成后移动文件" width="60%" height="60%" />
 
 ---
 
@@ -98,7 +98,7 @@ win+R键 打开运行 输入 `control sysdm.cpl,,3` 点击确定
 
 使用内存做缓存加快硬盘读写速度 对机械硬盘来说十分重要  
 一般来说在内存足够的情况下缓存越大越好  
-<img src="../../images/BC内存占用过高/磁盘缓存.webp" title="磁盘缓存设置" width="60%" height="60%" />
+<img src="../../images/BC-OOM/disk-cache.webp" title="磁盘缓存设置" width="60%" height="60%" />
 
 官方版的磁盘缓存设置相当保守  
 如果使用的是调整过参数的版本 磁盘缓存大小会有所区别  

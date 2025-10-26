@@ -41,7 +41,7 @@
 
 打开powershell 生成 GUID `New-Guid`  
 复制GUID 创建防火墙规则并绑定动态关键字（其依靠GUID进行区分）  
-<img src="../../images/win防火墙反吸血/生成GUID.webp" width="60%" height="60%" />
+<img src="../../images/win-firewall-anti-leech/generate-guid.webp" width="60%" height="60%" />
 
 **入站规则**  
 `New-NetFirewallRule -DisplayName “规则名称” -Direction Inbound -Action Block -Program "BT客户端路径" -RemoteDynamicKeywordAddresses "{GUID}"`  
@@ -59,7 +59,7 @@ New-NetFirewallRule -DisplayName “BT_BC_BAN_IN” -Direction Inbound -Action B
 New-NetFirewallRule -DisplayName “BT_BC_BAN_OUT” -Direction Outbound -Action Block -Program "C:\BitComet_2.07\BitComet_x64.exe" -RemoteDynamicKeywordAddresses "{3817fa89-3f21-49ca-a4a4-80541ddf7465}"
 ```
 
-<img src="../../images/win防火墙反吸血/规则详情.webp" width="60%" height="60%" />
+<img src="../../images/win-firewall-anti-leech/rule-details.webp" width="60%" height="60%" />
 
 **在刚才我们已经将代表动态关键字的GUID绑定到了防火墙规则上**  
 接下来创建与GUID对应的动态关键字  
@@ -76,7 +76,7 @@ New-NetFirewallRule -DisplayName “BT_BC_BAN_OUT” -Direction Outbound -Action
 8.8.8.0/255.255.255.0
 ```
 
-<img src="../../images/win防火墙反吸血/ip列表.webp" width="60%" height="60%" />
+<img src="../../images/win-firewall-anti-leech/ip-list.webp" width="60%" height="60%" />
 
 **将IP列表写入动态关键字**  
 ```
@@ -89,7 +89,7 @@ New-NetFirewallDynamicKeywordAddress -Id "{3817fa89-3f21-49ca-a4a4-80541ddf7465}
 ```
 
 运行成功后会显示出规则内容  
-<img src="../../images/win防火墙反吸血/运行成功.webp" width="60%" height="60%" />
+<img src="../../images/win-firewall-anti-leech/run-success.webp" width="60%" height="60%" />
 
 这样我们就完成了防火墙规则和动态关键字的创建  
 **若IP列表有更新则只需要更新动态关键字即可**  

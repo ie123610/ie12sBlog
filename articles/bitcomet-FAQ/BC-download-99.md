@@ -4,7 +4,7 @@
 
 **问：** 为什么有的任务下载进度卡在了99.9% 就是无法完成？  
 
-<img src="../../images/BC下载卡99问题/下载卡99.webp" width="60%" height="60%" />
+<img src="../../images/BC-download-99/download-stuck-at-99-percent.webp" width="60%" height="60%" />
 
 **答：** 可以尝试 **重新启动任务** 看看有没有效果？
 
@@ -46,12 +46,12 @@
 **答：** 选中要查看的 **任务** 再点开 **文件选项卡**  
 查看 任务中包含的文件 **及其下载进度**  
 
-<img src="../../images/BC下载卡99问题/文件列表-1.webp" width="60%" height="60%" />
+<img src="../../images/BC-download-99/file-list-1.webp" width="60%" height="60%" />
 
 **问：** 我这里有很多文件 **其中大部分文件都下载完了**  
 **只有一些小文件没有下载完**  
 
-<img src="../../images/BC下载卡99问题/文件列表-2.webp" width="60%" height="60%" />
+<img src="../../images/BC-download-99/file-list-2.webp" width="60%" height="60%" />
 
 **答：** 对 一些小文件 **例如广告或者说明文件** 很少有人会去下载 自然也就没什么人上传  
 可以在文件列表中 **取消勾选** 即不下载这些文件  
@@ -62,7 +62,7 @@
 **问：** 还有些任务像这样的 **是视频**  
 但是有很多 大部都下载完了 **有一些没有下载完**  
 
-<img src="../../images/BC下载卡99问题/文件列表-3.webp" width="60%" height="60%" />
+<img src="../../images/BC-download-99/file-list-3.webp" width="60%" height="60%" />
 
 **答：** 这种情况可以尝试多等待一段时间 或者看看 下载缓慢和无法下载问题  
 [比特彗星常见问题-下载缓慢和无法下载问题[重置]](./BC-download-speed-issues-2.md)  
@@ -70,12 +70,12 @@
 
 **问：** 还有些任务只有一个视频文件 但也卡在了99.9%
 
-<img src="../../images/BC下载卡99问题/文件列表-4.webp" width="60%" height="60%" />
+<img src="../../images/BC-download-99/file-list-4.webp" width="60%" height="60%" />
 
 **答：** 可以看一下 **分块图**  
 
 **问：**  
-<img src="../../images/BC下载卡99问题/分块缺失-中部.webp" width="60%" height="60%" />
+<img src="../../images/BC-download-99/missing-chunks-middle.webp" width="60%" height="60%" />
 
 **答：** **有一个分块没有下载完成 好在不是头部分块**  
 不过这个不影响播放 点击预览按钮就能播放了  
@@ -86,18 +86,18 @@
 **答：** 把文件 .bc! 的后缀名去掉即可  
 **建议复制一份修改后缀名** 这样不会影响彗星继续上传  
 
-<img src="../../images/BC下载卡99问题/文件后缀.webp" width="60%" height="60%" />
-<img src="../../images/BC下载卡99问题/文件重命名.webp" width="60%" height="60%" />
-<img src="../../images/BC下载卡99问题/文件重命名2.webp" width="60%" height="60%" />
+<img src="../../images/BC-download-99/file-extension.webp" width="60%" height="60%" />
+<img src="../../images/BC-download-99/file-rename.webp" width="60%" height="60%" />
+<img src="../../images/BC-download-99/file-rename-2.webp" width="60%" height="60%" />
 
 **问：** 刚才说 还好 好在不是头部分块 是什么意思?  
 
 **答：** 如果是头部分块没有下载 即使其他分块都下载完成  
 仍有可能会无法播放像这样  
 
-<img src="../../images/BC下载卡99问题/文件首部缺失-1.webp" width="60%" height="60%" />
-<img src="../../images/BC下载卡99问题/文件首部缺失-2.webp" width="60%" height="60%" />
-<img src="../../images/BC下载卡99问题/文件首部缺失-3.webp" width="60%" height="60%" />
+<img src="../../images/BC-download-99/file-header-missing-1.webp" width="60%" height="60%" />
+<img src="../../images/BC-download-99/file-header-missing-2.webp" width="60%" height="60%" />
+<img src="../../images/BC-download-99/file-header-missing-3.webp" width="60%" height="60%" />
 
 **问：** 为什么呢？  
 
@@ -112,11 +112,11 @@
 **答：** 可以启用 **为预览而优化下载 和 顺序下载**  
 设置>任务>勾选 为预览而优化下载 这样会优先下头部和尾部分块  
 
-<img src="../../images/BC下载卡99问题/顺序下载.webp" width="60%" height="60%" />
+<img src="../../images/BC-download-99/sequential-download.webp" width="60%" height="60%" />
 
 **右键任务 弹出菜单 勾选顺序下载**  
 
-<img src="../../images/BC下载卡99问题/为优化而下载.webp" width="60%" height="60%" />
+<img src="../../images/BC-download-99/download-for-optimization.webp" width="60%" height="60%" />
 
 ---
 
