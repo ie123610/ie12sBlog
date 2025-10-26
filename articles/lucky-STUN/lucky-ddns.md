@@ -49,14 +49,14 @@ dynv6创建账户和动态域名的方法 其实在之前的教程中已经讲�
 点开 **details** 查看内容 **注意不要泄露token** 如果泄露应马上更换  
 将token复制下来我们马上就要用到  
 
-<img src="../../images/lucky-ddns/HTTP-TOKEN.webp" width="60%" height="60%" />
+<img src="../../images/lucky-ddns/http-token.webp" width="60%" height="60%" />
 
 
 ### 编辑更新规则
 
 打开lucky》选择左侧的动态域名解析》添加任务  
 
-<img src="../../images/lucky-ddns/添加ddns.webp" width="60%" height="60%" />
+<img src="../../images/lucky-ddns/add-ddns.webp" width="60%" height="60%" />
 
 
 * 规则名称任意
@@ -80,7 +80,7 @@ dynv6创建账户和动态域名的方法 其实在之前的教程中已经讲�
 ### 检查更新结果
 
 等待片刻后显示 **公网IP未改变** 或 **更新成功** 即设置正确  
-<img src="../../images/lucky-ddns/更新成功-dynv6.webp" width="60%" height="60%" />
+<img src="../../images/lucky-ddns/update-successful-dynv6.webp" width="60%" height="60%" />
 
 如果出现 **公网IP获取失败** 请检查网络是否可以正常访问  
 这种问题可能较多的出现在IPv6上 请检查IPv6网络是否畅通  
@@ -90,13 +90,13 @@ dynv6创建账户和动态域名的方法 其实在之前的教程中已经讲�
 
 **IPv4地址**  
 
-<img src="../../images/lucky-ddns/dynv6控制板-v4.webp" width="60%" height="60%" />
+<img src="../../images/lucky-ddns/dynv6-dashboard-v4.webp" width="60%" height="60%" />
 
 **IPv6地址**  
 
 不是IPv4地址下面的那个选项 **而是在记录选项卡里中的AAAA记录**  
 
-<img src="../../images/lucky-ddns/dynv6控制板-v6.webp" width="60%" height="60%" />
+<img src="../../images/lucky-ddns/dynv6-dashboard-v6.webp" width="60%" height="60%" />
 
 
 ---
@@ -114,31 +114,31 @@ CF的设置方法和dynv6的基本相同
 
 
 点击 **创建令牌**  
-<img src="../../images/lucky-ddns/cf-创建令牌.webp" width="60%" height="60%" />
+<img src="../../images/lucky-ddns/cf-create-token.webp" width="60%" height="60%" />
 
 
 选择 编辑区域DNS》 **使用模版**  
-<img src="../../images/lucky-ddns/cf-使用模版.webp" width="60%" height="60%" />
+<img src="../../images/lucky-ddns/cf-using-template.webp" width="60%" height="60%" />
 
 
 在区域资源中的特定区域选择要更新的的域名（顶级域名）  
 其他保持默认 点击 **继续以显示摘要**  
-<img src="../../images/lucky-ddns/cf-继续.webp" width="60%" height="60%" />
+<img src="../../images/lucky-ddns/cf-continue.webp" width="60%" height="60%" />
 
 
 继续点击 **创建令牌**  
-<img src="../../images/lucky-ddns/cf-完成创建.webp" width="60%" height="60%" />
+<img src="../../images/lucky-ddns/cf-creation-complete.webp" width="60%" height="60%" />
 
 
 令牌已创建 **复制下来** 我们马上就需要使用  
 **其只会显示一次** 要保存好 关闭页面  
-<img src="../../images/lucky-ddns/cf-复制令牌.webp" width="60%" height="60%" />
+<img src="../../images/lucky-ddns/cf-copy-token.webp" width="60%" height="60%" />
 
 
 ### 编辑规则
 
 打开lucky》选择左侧的动态域名解析》添加任务  
-<img src="../../images/lucky-ddns/添加ddns.webp" width="60%" height="60%" />
+<img src="../../images/lucky-ddns/add-ddns.webp" width="60%" height="60%" />
 
 
 规则名称任意  
@@ -155,12 +155,12 @@ CF的设置方法和dynv6的基本相同
 
 
 **示例**  
-<img src="../../images/lucky-ddns/cf-ddns配置.webp" width="60%" height="60%" />
+<img src="../../images/lucky-ddns/cf-ddns-configuration.webp" width="60%" height="60%" />
 
 ### 检查更新结果
 
 等待片刻后显示 **更新成功** 即设置正确  
-<img src="../../images/lucky-ddns/更新成功-cf.webp" width="60%" height="60%" />
+<img src="../../images/lucky-ddns/update-successful-cf.webp" width="60%" height="60%" />
 
 ---
 
@@ -177,15 +177,15 @@ NOIP其实有自己的专用更新客户端
 ### 编辑规则
 
 打开lucky》选择左侧的动态域名解析》添加任务  
-<img src="../../images/lucky-ddns/添加ddns.webp" width="60%" height="60%" />
+<img src="../../images/lucky-ddns/add-ddns.webp" width="60%" height="60%" />
 
 规则名称任意  
 托管服务商： **自定义callback**  
 Callback DNS服务商 : **NOIP**  
 点击 **根据DNS服务商自动填充模版**  
 
-<img src="../../images/lucky-ddns/使用模版.webp" width="60%" height="60%" />
-<img src="../../images/lucky-ddns/使用模版-2.webp" width="60%" height="60%" />
+<img src="../../images/lucky-ddns/using-template.webp" width="60%" height="60%" />
+<img src="../../images/lucky-ddns/using-template-2.webp" width="60%" height="60%" />
 
 参数会自动填充完毕但是我们仍然需要进行一些修改  
 **比如NOIP的账户和密码**  
@@ -194,7 +194,7 @@ Callback DNS服务商 : **NOIP**
 以及将更新地址的 **HTTP** 换成 **HTTPS**  
 账户密码直接明文传输还是有些危险  
 
-<img src="../../images/lucky-ddns/noip-修改配置.webp" width="60%" height="60%" />
+<img src="../../images/lucky-ddns/noip-modify-configuration.webp" width="60%" height="60%" />
 
 
 类型：选择IPv4
@@ -205,12 +205,12 @@ Callback DNS服务商 : **NOIP**
 保存规则  
 
 **示例**  
-<img src="../../images/lucky-ddns/ddns-noip配置.webp" width="60%" height="60%" />
+<img src="../../images/lucky-ddns/ddns-noip-configuration.webp" width="60%" height="60%" />
 
 ### 检查更新结果
 
 等待片刻后显示更新成功即设置正确  
 至此我们便完成了动态域名的更新设置  
 
-<img src="../../images/lucky-ddns/noip-更新效果.webp" width="60%" height="60%" />
+<img src="../../images/lucky-ddns/noip-update-result.webp" width="60%" height="60%" />
 
