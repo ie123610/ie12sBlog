@@ -134,23 +134,23 @@ TCP 135和445端口 **默认只允许本地子网访问**
 
 
 搜索栏搜索 **检查防火墙状态** 并打开  
-<img src="../../images/特别篇-关闭v6防火墙/防火墙-状态.webp" width="60%" height="60%" />
+<img src="../../images/bitcomet-port-forwarding-special-episode/firewall-status.webp" width="60%" height="60%" />
 
 检查防火墙是否启用  
 并点击左侧的 高级设置 以打开高级widows防火墙  
-<img src="../../images/特别篇-关闭v6防火墙/控制面板-高级设置.webp" width="60%" height="60%" />
+<img src="../../images/bitcomet-port-forwarding-special-episode/control-panel-advanced-settings.webp" width="60%" height="60%" />
 
 高级Windows防火墙  
-<img src="../../images/特别篇-关闭v6防火墙/防火墙-高级.webp" width="60%" height="60%" />
+<img src="../../images/bitcomet-port-forwarding-special-episode/firewall-advanced.webp" width="60%" height="60%" />
 
 查看防火墙属性  
-<img src="../../images/特别篇-关闭v6防火墙/防火墙-属性.webp" width="60%" height="60%" />
+<img src="../../images/bitcomet-port-forwarding-special-episode/firewall-properties.webp" width="60%" height="60%" />
 
 检查 **公用网络配置** 和 **专用网络配置**  
 状态中的选项均为 **默认**  
 
-<img src="../../images/特别篇-关闭v6防火墙/防火墙-配置-1.webp" width="60%" height="60%" />
-<img src="../../images/特别篇-关闭v6防火墙/防火墙-配置-2.webp" width="60%" height="60%" />
+<img src="../../images/bitcomet-port-forwarding-special-episode/firewall-configuration-1.webp" width="60%" height="60%" />
+<img src="../../images/bitcomet-port-forwarding-special-episode/firewall-configuration-2.webp" width="60%" height="60%" />
 
 
 **添加规则**  
@@ -159,39 +159,39 @@ Windows防火墙上的远程桌面默认规则 是允许所有地址访问的
 
 
 选择入站规则  
-<img src="../../images/特别篇-关闭v6防火墙/防火墙-入站规则.webp" width="60%" height="60%" />
+<img src="../../images/bitcomet-port-forwarding-special-episode/firewall-inbound-rules.webp" width="60%" height="60%" />
 
 新建规则  
-<img src="../../images/特别篇-关闭v6防火墙/防火墙-新建规则.webp" width="60%" height="60%" />
+<img src="../../images/bitcomet-port-forwarding-special-episode/firewall-new-rule.webp" width="60%" height="60%" />
 
 选择自定义规则  
-<img src="../../images/特别篇-关闭v6防火墙/防火墙-自定义规则.webp" width="60%" height="60%" />
+<img src="../../images/bitcomet-port-forwarding-special-episode/firewall-custom-rule.webp" width="60%" height="60%" />
 
 程序 保持默认  
-<img src="../../images/特别篇-关闭v6防火墙/防火墙-程序.webp" width="60%" height="60%" />
+<img src="../../images/bitcomet-port-forwarding-special-episode/firewall-program.webp" width="60%" height="60%" />
 
 协议选择TCP 本地端口选择 特定端口 端口号 3389  
-<img src="../../images/特别篇-关闭v6防火墙/防火墙-端口.webp" width="60%" height="60%" />
+<img src="../../images/bitcomet-port-forwarding-special-episode/firewall-port.webp" width="60%" height="60%" />
 
 远程IP 选择 **下列IP地址** 并点击 添加  
-<img src="../../images/特别篇-关闭v6防火墙/防火墙-ip范围-1.webp" width="60%" height="60%" />
+<img src="../../images/bitcomet-port-forwarding-special-episode/firewall-ip-range-1.webp" width="60%" height="60%" />
 
 填写 `2000::/3` 此为 IPv6全球单播地址的前缀 可以理解为匹配所有公网IPv6地址  
 曾经尝试使用 `::` 进行匹配 但并不成功 其表示所有IPv6地址 IPv6前缀划分：[链接](https://www.iana.org/assignments/ipv6-address-space/ipv6-address-space.xhtml)  
-<img src="../../images/特别篇-关闭v6防火墙/防火墙-ip范围-2.webp" width="60%" height="60%" />
-<img src="../../images/特别篇-关闭v6防火墙/防火墙-ip范围-3.webp" width="60%" height="60%" />
+<img src="../../images/bitcomet-port-forwarding-special-episode/firewall-ip-range-2.webp" width="60%" height="60%" />
+<img src="../../images/bitcomet-port-forwarding-special-episode/firewall-ip-range-3.webp" width="60%" height="60%" />
 
 操作选择 **阻止连接**  
-<img src="../../images/特别篇-关闭v6防火墙/防火墙-阻止连接.webp" width="60%" height="60%" />
+<img src="../../images/bitcomet-port-forwarding-special-episode/firewall-block-connection.webp" width="60%" height="60%" />
 
 配置文件 保持默认  
-<img src="../../images/特别篇-关闭v6防火墙/防火墙-作用域.webp" width="60%" height="60%" />
+<img src="../../images/bitcomet-port-forwarding-special-episode/firewall-scope.webp" width="60%" height="60%" />
 
 名称任意填写 这里使用 Block IPv6 TCP 3389  
-<img src="../../images/特别篇-关闭v6防火墙/防火墙-规则名称.webp" width="60%" height="60%" />
+<img src="../../images/bitcomet-port-forwarding-special-episode/firewall-rule-name.webp" width="60%" height="60%" />
 
 点击完成 规则已经添加  
-<img src="../../images/特别篇-关闭v6防火墙/防火墙-添加完成.webp" width="60%" height="60%" />
+<img src="../../images/bitcomet-port-forwarding-special-episode/firewall-add-complete.webp" width="60%" height="60%" />
 
 端口检查工具：[链接](https://zh.infobyip.com/tcpportchecker.php)  
 

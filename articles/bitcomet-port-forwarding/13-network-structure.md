@@ -19,10 +19,10 @@ win+r 弹出运行 输入这段命令
 `cmd /k tracert -d -4 www.baidu.com`  
 点击确定后会弹出命令提示符窗口  
 
-<img src="../../images/BC阻塞_网络结构/运行-路由追踪.webp" width="60%" height="60%" />
+<img src="../../images/bitcomet-port-forwarding-network-structure/run-traceroute.webp" width="60%" height="60%" />
 
 显示 **跟踪完成后** 即可截图保存进行分析  
-<img src="../../images/BC阻塞_网络结构/路由追踪-示例.webp" width="60%" height="60%" />
+<img src="../../images/bitcomet-port-forwarding-network-structure/traceroute-example.webp" width="60%" height="60%" />
 
 ---
 
@@ -75,7 +75,7 @@ win+r 弹出运行 输入这段命令
 
 ### 情况一
 
-<img src="../../images/BC阻塞_网络结构/路由追踪-情况2.webp" width="60%" height="60%" />
+<img src="../../images/bitcomet-port-forwarding-network-structure/traceroute-case-2.webp" width="60%" height="60%" />
 
 **问：** 这样是一种什么样的结构呢？  
 
@@ -198,7 +198,7 @@ win+r 弹出运行 输入这段命令
 
 ### 情况二
 
-<img src="../../images/BC阻塞_网络结构/路由追踪-情况2.webp" width="60%" height="60%" />
+<img src="../../images/bitcomet-port-forwarding-network-structure/traceroute-case-2.webp" width="60%" height="60%" />
 
 这种结构和刚才的情况一差不多  
 不过在此结构中并没有路由器 电脑直接连接在光猫上  
@@ -235,7 +235,7 @@ win+r 弹出运行 输入这段命令
 
 ### 情况三
 
-<img src="../../images/BC阻塞_网络结构/路由追踪-情况3.webp" width="60%" height="60%" />
+<img src="../../images/bitcomet-port-forwarding-network-structure/traceroute-case-3.webp" width="60%" height="60%" />
 
 这种情况依然是 **情况一** 的变体  
 相比之下 **光猫处于桥接模式** 所以我们从路由追踪上 **看不出来**  
@@ -265,7 +265,7 @@ win+r 弹出运行 输入这段命令
 
 ### 情况四
 
-<img src="../../images/BC阻塞_网络结构/路由追踪-情况4.webp" width="60%" height="60%" />
+<img src="../../images/bitcomet-port-forwarding-network-structure/traceroute-case-4.webp" width="60%" height="60%" />
 
 
 此结构和 **情况一** 相比 **运营商从一层变成了多层**  
@@ -313,7 +313,7 @@ win+r 弹出运行 输入这段命令
 
 ### 情况五
 
-<img src="../../images/BC阻塞_网络结构/路由追踪-情况5.webp" width="60%" height="60%" />
+<img src="../../images/bitcomet-port-forwarding-network-structure/traceroute-case-5.webp" width="60%" height="60%" />
 
 * 第一层（跳）192.168.31.1 [小米路由器]
 * 第二层（跳）192.168.1.1  [光猫]
@@ -339,7 +339,7 @@ win+r 弹出运行 输入这段命令
 
 ### 情况六
 
-<img src="../../images/BC阻塞_网络结构/路由追踪-情况6.webp" width="60%" height="60%" />
+<img src="../../images/bitcomet-port-forwarding-network-structure/traceroute-case-6.webp" width="60%" height="60%" />
 
 * 第一层（跳）192.168.0.1  [路由器1]
 * 第二层（跳）192.168.3.1  [路由器2]
@@ -398,7 +398,7 @@ win+r 弹出运行 输入这段命令
 
 ### 情况七
 
-<img src="../../images/BC阻塞_网络结构/路由追踪-情况7.webp" width="60%" height="60%" />
+<img src="../../images/bitcomet-port-forwarding-network-structure/traceroute-case-7.webp" width="60%" height="60%" />
 
 * 第一层（跳）192.168.10.1 [路由器]
 * 第二层（跳）219.131.76.1 [公网IP]
@@ -434,7 +434,7 @@ win+r 弹出运行 输入这段命令
 
 在这个网络结构中 IPv4 公网地址直接分配到电脑  
 
-<img src="../../images/BC阻塞_网络结构/路由追踪-情况8.webp" width="60%" height="60%" />
+<img src="../../images/bitcomet-port-forwarding-network-structure/traceroute-case-8.webp" width="60%" height="60%" />
 
 ```
 ================
@@ -502,9 +502,9 @@ win+r 弹出运行 输入这段命令
 从观察来看一些地区的移动似乎已经开始隐藏运营商NAT了  
 **这导致从路由追踪看起来是有IPv4公网的**  
 
-<img src="../../images/BC阻塞_网络结构/路由追踪-假公网.webp" width="60%" height="60%" title="隐藏了运营商级NAT的移动宽带网络" />
+<img src="../../images/bitcomet-port-forwarding-network-structure/traceroute-fake-public-ip.webp" width="60%" height="60%" title="隐藏了运营商级NAT的移动宽带网络" />
 
-<img src="../../images/BC阻塞_网络结构/光猫-wan接口ip.webp" width="60%" height="60%" title="光猫拨号获得的还是是私有地址" />
+<img src="../../images/bitcomet-port-forwarding-network-structure/modem-wan-interface-ip.webp" width="60%" height="60%" title="光猫拨号获得的还是是私有地址" />
 
 相对保险的方式是 **登录到光猫/路由器的后台查看其获取到IP地址**  
 不过对使用移动宽带的用户来说其实也不需要这一步  

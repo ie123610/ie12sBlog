@@ -13,7 +13,7 @@
 我们平时使用的应用大部是 C/S 模式的  
 
 CS结构看起来像这样：  
-<img src="../../images/BC阻塞_cs和p2p/cs.webp" title="有中心服务器的中央网络系统" />
+<img src="../../images/bitcomet-port-forwarding-cs-p2p/cs.webp" title="有中心服务器的中央网络系统" />
 
 在这个结构中有一台中心服务器  
 用户想要下载文件必须连接这个中心服务器  
@@ -48,7 +48,7 @@ bt下载 电骡（eMule）部分游戏联机 等 会使用这种模式
 
 P2P结构看起来像这样：  
 
-<img src="../../images/BC阻塞_cs和p2p/p2p.webp" title="无中心服务器的对等网络系统" /> 
+<img src="../../images/bitcomet-port-forwarding-cs-p2p/p2p.webp" title="无中心服务器的对等网络系统" /> 
 
 **在P2P模式中没有 客户端 和 服务端之分**  
 也可以认为每台设备**既是**服务端**也是**客户端  
