@@ -293,7 +293,7 @@ Content-Type: application/json
 
 在浏览器中输入 `redirect.ie12.com/test/abc/search?q=123`  
 应会跳转到 `redirect.stun.ie12.com:STUN穿透端口/test/abc/search?q=123`  
-(lucky反向代理服务的前端地址 似乎不会匹配查询字符串)
+(lucky反向代理服务的前端地址 似乎不会匹配查询字符串)  
 
 
 **示例**  
