@@ -77,12 +77,12 @@ Homer项目地址：[链接](https://github.com/bastienwirtz/homer)
 在lucky web 服务中添加**新的子规则**  
 有关lucky web规则设置的具体方法详见之前的教程：[链接](./lucky-web.md)  
 
-<img src="../../images/stun-home-page/添加子规则.jpg" width="60%" height="60%" />
+<img src="../../images/stun-home-page/add-sub-rule.jpg" width="60%" height="60%" />
 
 类型选择 **文件服务**  
 挂载目录选择解压后 homer 所在的文件夹  
 
-<img src="../../images/stun-home-page/挂载homer.jpg" width="60%" height="60%" />
+<img src="../../images/stun-home-page/mount-homer.jpg" width="60%" height="60%" />
 
 前端域名可以先填写一个简短的不存在的域名 用作测试  
 在host文件将其指向 `127.0.0.1` 这里使用 `ie12.lan`  
@@ -92,7 +92,7 @@ Homer项目地址：[链接](https://github.com/bastienwirtz/homer)
 
 访问页面应该可以看到以下内容  
 
-<img src="../../images/stun-home-page/homer-待配置.jpg" width="60%" height="60%" />
+<img src="../../images/stun-home-page/homer-pending-configuration.jpg" width="60%" height="60%" />
 
 转到 homer 目录下的 assets 文件夹  
 找到 `config.yml.dist` 文件 复制一份 去掉名称中的 `.dist`  
@@ -100,12 +100,12 @@ Homer项目地址：[链接](https://github.com/bastienwirtz/homer)
 这是一个预设的配置文件 我们将在这个配置文件的基础上进行修改  
 （其实那个 config-demo.yml.dist 也可以 不过那个预设文件更复杂 此处我们用不到）
 
-<img src="../../images/stun-home-page/homer-文件夹.jpg" width="60%" height="60%" />
-<img src="../../images/stun-home-page/homer-复制配置.jpg" width="60%" height="60%" />
+<img src="../../images/stun-home-page/homer-folder.jpg" width="60%" height="60%" />
+<img src="../../images/stun-home-page/homer-copy-configuration.jpg" width="60%" height="60%" />
 
 完成上述操作后 回到浏览器刷新页面应该可以看到 这些预设内容  
 
-<img src="../../images/stun-home-page/homer-预设效果.jpg" width="60%" height="60%" />
+<img src="../../images/stun-home-page/homer-preset-effect.jpg" width="60%" height="60%" />
 
 
 ---
@@ -229,7 +229,7 @@ services:
 
 最重要的部分是 `services`  它控制着这些服务卡片的内容  
 
-<img src="../../images/stun-home-page/homer-分组和卡片.jpg" width="60%" height="60%" />
+<img src="../../images/stun-home-page/homer-grouping-and-cards.jpg" width="60%" height="60%" />
 
 其中缩进少且带 `items` 项的为 **分组** 可以对服务卡片进行归类  
 `items` 下的内容就是服务卡片了  
@@ -272,8 +272,8 @@ lucky的全局变量详见：[链接](https://lucky666.cn/docs/modules/globaldat
 
 ### 标题
 
-<img src="../../images/stun-home-page/homer-标题-显示.jpg" width="60%" height="60%" />
-<img src="../../images/stun-home-page/homer-标题-配置.jpg" width="60%" height="60%" />
+<img src="../../images/stun-home-page/homer-title-display.jpg" width="60%" height="60%" />
+<img src="../../images/stun-home-page/homer-title-configuration.jpg" width="60%" height="60%" />
 
 * `title` 主标题内容
 * `subtitle` 副标题内容
@@ -283,8 +283,8 @@ lucky的全局变量详见：[链接](https://lucky666.cn/docs/modules/globaldat
 
 ### 消息
 
-<img src="../../images/stun-home-page/homer-消息-显示.jpg" width="60%" height="60%" />
-<img src="../../images/stun-home-page/homer-消息-配置.jpg" width="60%" height="60%" />
+<img src="../../images/stun-home-page/homer-message-display.jpg" width="60%" height="60%" />
+<img src="../../images/stun-home-page/homer-message-configuration.jpg" width="60%" height="60%" />
 
 可以用于显示一些提示消息  在本教程中此处将用于显示实时时间  
 当然显示时间的功能也可以放到服务卡片中  
@@ -295,15 +295,15 @@ lucky的全局变量详见：[链接](https://lucky666.cn/docs/modules/globaldat
 
 ### 菜单栏
 
-<img src="../../images/stun-home-page/homer-菜单-显示.jpg" width="60%" height="60%" />
-<img src="../../images/stun-home-page/homer-菜单-配置.jpg" width="60%" height="60%" />
+<img src="../../images/stun-home-page/homer-menu-display.jpg" width="60%" height="60%" />
+<img src="../../images/stun-home-page/homer-menu-configuration.jpg" width="60%" height="60%" />
 
 可添加一些常用的链接  
 
 ### 页脚
 
-<img src="../../images/stun-home-page/homer-页脚-显示.jpg" width="60%" height="60%" />
-<img src="../../images/stun-home-page/homer-页脚-配置.jpg" width="60%" height="60%" />
+<img src="../../images/stun-home-page/homer-footer-display.jpg" width="60%" height="60%" />
+<img src="../../images/stun-home-page/homer-footer-configuration.jpg" width="60%" height="60%" />
 
 页面底部的信息显示 可修改 填写的内容为html格式  
 
@@ -320,7 +320,7 @@ lucky的全局变量详见：[链接](https://lucky666.cn/docs/modules/globaldat
 
 ### 示例效果
 
-<img src="../../images/stun-home-page/演示效果1.jpg" width="60%" height="60%" />
+<img src="../../images/stun-home-page/demo-effect-1.jpg" width="60%" height="60%" />
 
 <details>
 
@@ -452,17 +452,17 @@ services:
 前端地址为 `homer主域名/assets/config.yml`  
 其路径与之前在磁盘上的配置文件路径相同  
 
-<img src="../../images/stun-home-page/挂载配置文件.jpg" width="60%" height="60%" />
+<img src="../../images/stun-home-page/mount-configuration-file.jpg" width="60%" height="60%" />
 
 输出内容为之前的写好的配置  
 为防止冲突 要修改原有配置文件的文件名 使其失效  
 
-<img src="../../images/stun-home-page/修改配置文件扩展名.jpg" width="60%" height="60%" />
+<img src="../../images/stun-home-page/modify-configuration-file-extension.jpg" width="60%" height="60%" />
 
 完成这些设置后刷新页面 应该可以看到之前的变量已经起作用了  
 若刷新后无效 则需要在F12中禁用缓存再刷新 或在隐私/无痕 模式打开  
 
-<img src="../../images/stun-home-page/演示效果2.jpg" width="60%" height="60%" />
+<img src="../../images/stun-home-page/demo-effect-2.jpg" width="60%" height="60%" />
 
 如果变量依然无法显示 请检查对应的STUN穿透规则是否穿透成功  
 
@@ -476,8 +476,8 @@ services:
 用户名和密码以英文冒号隔开 每行一条 允许配置多条  
 这样只有在登录后才能显示页面并读取配置文件  
 
-<img src="../../images/stun-home-page/基本验证.jpg" width="60%" height="60%" />
-<img src="../../images/stun-home-page/验证弹窗.jpg" width="60%" height="60%" />
+<img src="../../images/stun-home-page/basic-authentication.jpg" width="60%" height="60%" />
+<img src="../../images/stun-home-page/authentication-popup.jpg" width="60%" height="60%" />
 
 ---
 
