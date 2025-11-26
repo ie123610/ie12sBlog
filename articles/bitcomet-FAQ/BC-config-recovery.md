@@ -55,7 +55,18 @@
 
 ---
 
+**2.15 版本之后**  
+
+在 2.15 版中 配置文件及任务列表文件采用事务性写入和版本化备份  
+事务性写入使得配置文件更不容易发生损坏  
+而版本化备份 则使得配置文件像下载列表那样会生成备份文件  
+
+<img src="../../images/BC-config-recovery/config-backup.webp" width="60%" height="60%" />
+
+---
+
 参考：  
 * https://www.cometbbs.com/t/42493
+* https://www.cometbbs.com/t/96574
 
 
