@@ -6,10 +6,10 @@
 
 在之前的一系列教程中我们介绍了许多“固定”stun穿透端口的方法  
 
-主要用于 MC java 版联机的 **SRV 记录**  
+主要用于 MC java 版联机的 **SRV 记录方案**  
 * [[LUCKY]在Windows下使用STUN穿透实现Minecraft联机并设置SRV记录](./stun-mc-srv.md)
 
-适用于大部分HTTP(S)服务的**重定向方案**  
+适用于大部分HTTP(S)服务的 **重定向方案**  
 * [「LUCKY STUN穿透」使用Cloudflare的页面规则固定和隐藏网页端口](./stun-web-serve-CF.md)
 * [「扩展篇」使用Cloudflare的重定向规则传递资源路径和查询字符串](./stun-cf-redirection.md)
 
@@ -21,7 +21,7 @@
 * [「LUCKY STUN穿透」使用邮件通知端口变化情况](./email-notification-port.md)
 
 但是有些服务 **不支持 srv记录 不使用http协议**  
-也不方便安装VPN客户端  
+**也不方便安装VPN客户端**  
 
 而使用邮件通知的方案在长期运行和端口变化较为频繁的情况下  
 **会积累大量的通知邮件 查看起来并不方便**  
@@ -41,7 +41,7 @@
 是因为要使用lucky web 服务中的 **文本输出功能** 替代磁盘上的配置文件  
 
 将配置文件的内容写入到文本输出功能中 以便在其中加入用于指示stun穿透端口号的变量  
-**此处建议添加上time变量 用于显示实时的时间** 以防止页面或者配置文件被缓存  
+**同时建议添加上time变量 用于显示实时的时间** 以防止页面或者配置文件被缓存  
 
 ### 非HTTP服务
 
@@ -71,7 +71,7 @@
 
 ## 下载和挂载Homer
 
-homer项目地址：[链接](https://github.com/bastienwirtz/homer)  
+Homer项目地址：[链接](https://github.com/bastienwirtz/homer)  
 下载项目压缩包并解压：[链接](https://github.com/bastienwirtz/homer/releases/)    
 
 在lucky web 服务中添加**新的子规则**  
@@ -95,7 +95,7 @@ homer项目地址：[链接](https://github.com/bastienwirtz/homer)
 <img src="../../images/stun-home-page/homer-待配置.jpg" width="60%" height="60%" />
 
 转到 homer 目录下的 assets 文件夹  
-找到 config.yml.dist 文件 复制一份 去掉名称中的 `.dist`  
+找到 `config.yml.dist` 文件 复制一份 去掉名称中的 `.dist`  
 
 这是一个预设的配置文件 我们将在这个配置文件的基础上进行修改  
 （其实那个 config-demo.yml.dist 也可以 不过那个预设文件更复杂 此处我们用不到）
@@ -241,7 +241,7 @@ services:
 * `icon` 和 `logo` 用于显示 图标 
 
 其中 `icon` 表示使用 `https://fontawesome.com/search` 上的字体图标  
-可以在改网站上搜索其他的字体图标对应的名称 复制到此处即可  
+可以在该网站上搜索其他的字体图标 将其对应的名称复制到此处即可  
 而 `logo` 则表示使用图像文件作为图标  
 
 对于 **非HTTP服务** 来说我们不需要 `url` 项 直接在 `subtitle` 中写端口即可  
@@ -249,8 +249,8 @@ services:
 写法为 `{STUN_规则名_PORT}` 其中的规则名称 要替换为具体的STUN规则名称  
 
 lucky的全局变量详见：[链接](https://lucky666.cn/docs/modules/globaldata)  
-至于IP地址应交由 **动态域名解析（DDNS）** 处理  此处不填写  
-域名其应已预先输入到需要的服务中 其不需要在每次连接时都进行输入  
+至于IP地址的更新应交由 **动态域名解析（DDNS）** 处理  此处不填写  
+该域名应已预先输入到需要的服务中 其不需要在每次连接时都进行输入  
 
 而对于 **HTTP服务** 而则需要填写 `url` 项 以实现跳转  
 建议先按照之前的教程 **设置反向代理 使所有HTTP服务共用同一个端口**  
@@ -455,7 +455,7 @@ services:
 <img src="../../images/stun-home-page/挂载配置文件.jpg" width="60%" height="60%" />
 
 输出内容为之前的写好的配置  
-防止冲突修改原有配置文件的文件名 使其失效  
+为防止冲突 要修改原有配置文件的文件名 使其失效  
 
 <img src="../../images/stun-home-page/修改配置文件扩展名.jpg" width="60%" height="60%" />
 
@@ -471,10 +471,10 @@ services:
 ## 访问控制
 
 为提高安全性可为导航页面主体和配置文件 添加 **basic验证**  
-主体挂载和都配置文件挂载规则都需要设置相同的用户名和密码  
+主体页面和配置文都件都设置相同的用户名和密码  
 
 用户名和密码以英文冒号隔开 每行一条 允许配置多条  
-在登录后才能显示页面和读取配置文件  
+这样只有在登录后才能显示页面并读取配置文件  
 
 <img src="../../images/stun-home-page/基本验证.jpg" width="60%" height="60%" />
 <img src="../../images/stun-home-page/验证弹窗.jpg" width="60%" height="60%" />
@@ -483,7 +483,7 @@ services:
 
 ## 导航页对外访问
 
-在完成上述设置后 接下来就是要让导航页面本身 **可以方便的被访问到**  
+在完成上述设置后 接下来需要做的是要让导航页面本身 **可以方便的被访问到**  
 由于导航页面本身也是依靠stun穿透实现对外访问的  
 
 因此我们也需要给导航页面本身 “固定”一下端口  
@@ -498,6 +498,6 @@ services:
 
 ## 结尾
 
-至此我们就完成了使用homer导航页指示stun穿透后的端口的设置  
+至此我们就完成了使用Homer导航页指示stun穿透后的端口的设置  
 事实上 homer 还有一些更高级的功能没有介绍到有兴趣的用户可自行探索  
 

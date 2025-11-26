@@ -16,7 +16,7 @@
 * [「LUCKY STUN穿透」使用UptimeRobot使UPnP映射的TCP规则保持活跃](articles/lucky-STUN/uptime-upnp-keep-alive.md)
 * [「LUCKY STUN穿透」IPv4和IPv6分离重定向](articles/lucky-STUN/stun-v4-v6-redirect.md)
 * [「LUCKY STUN穿透」使用邮件通知端口变化情况](articles/lucky-STUN/email-notification-port.md)
-* [「LUCKY STUN穿透」使用homer导航页指示stun穿透后的端口](articles/lucky-STUN/stun-home-page.md)
+* [「LUCKY STUN穿透」使用Homer导航页指示stun穿透后的端口](articles/lucky-STUN/stun-home-page.md)
 * [「补充篇」在Cloudflare上设置并更新SRV记录](articles/lucky-STUN/cf-srv-record-settings.md)
 * [「扩展篇」使用Cloudflare的重定向规则传递资源路径和查询字符串](articles/lucky-STUN/stun-cf-redirection.md)
 * [「前置」在Dynv6和Cloudflare上更新TXT记录](articles/lucky-STUN/update-TXT-record-on-cf-and-dynv6.md)
