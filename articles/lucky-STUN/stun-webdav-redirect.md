@@ -1,4 +1,4 @@
-# 「LUCKY STUN穿透」 WebDAV 重定向问题
+# 「LUCKY STUN穿透」解决WebDAV重定向问题
 
 2026.1
 
@@ -10,8 +10,8 @@
 * [「扩展篇」使用Cloudflare的重定向规则传递资源路径和查询字符串](./stun-cf-redirection.md)
 * [「LUCKY STUN穿透」使用Cloudflare的页面规则固定和隐藏网页端口](./stun-web-serve-CF.md)
 
-以及组网方案可以通过DNS记录更新端口  
-当然这需要组网软件本身支持此功能  
+组网方案可以通过DNS记录更新端口 当然这需要组网软件本身支持此功能  
+几乎适用于任何服务 不过需要在两端安装专用客户端  
 
 * [「LUCKY STUN穿透」在Windows下使用VNT组网为非HTTP服务固定STUN穿透端口](./stun-VNT-networkin.md)
 * [「EasyTier」使用SRV TXT HTTP重定向获取对端IP端口](../virtual-private-network/easytier-get-port-form-dns-record.md)
@@ -26,43 +26,43 @@
 WebDAV协议用于对远程web服务器上的文件进行编辑和管理  
 各种存储服务基本都支使用持WebDAV协议进行访问  
 
-事实上这并不是WebDAV协议本身的问题  
+**事实上这并不是WebDAV协议本身的问题** 
 其本身使用标准的是标准的HTTP请求 可以兼容之前的重定向方案  
 
 **问题在于很多webdav客户端并不支持重定向**  
 这不是因为技术上的困难 而是没有意识到这种使用场景  
 
 当然这种问题在其他一些使用HTTP协议的 **专用客户端** 上也广泛存在  
-这些服务大都使用标准的HTTP协议 **但没有考虑的重定向处理重定向响应的问题**  
+这些服务大都使用标准的HTTP协议 **但没有考虑到处理重定向响应的问题**  
 
-有两个方法可以解决这个问题：  
+有两条路线可以解决这个问题：  
 
 1 **更换支持重定向的客户端**
 2 **设置本地反向代理**
 
-若只是执行文件传输那客户端可以随意替换  
+若只是执行文件传输 那客户端可以随意替换  
 **但有些专用客户端无法替代** 只能通过反向代理 使其正常工作  
 
 反向代理的原理也很简单  
-在本地设置反向代理 由这个反向代理程序出处理重定向工作  
-不支持重定向的专用客户端 连接本地的反向代理  
-本教程依然使用lucky作为本地反向代理程序  
+在本地设置反向代理 由这个反向代理程序处理重定向工作  
+不支持重定向的专用客户端 连接本地的反向代理程序  
+本教中使用lucky作为本地反向代理程序  
 
 之所以让反向代理服务器运行在本地是因为  
 在使用反向代理时所有的流量都会通过反代服务器  
 
-若反代服务器在本地 这不会增加额外的流量  
+若反代服务器在本地 则不会增加额外的流量  
 如果在是远程 那就意味着需要一个开放固定端口且有足够带宽和流量的服务器  
-如果是这样的话 相当于是纯中转方案  
+若是这样的话其就相当于是中转方案  
 
 ---
 
 ## Windows系统
 
-在Windows上对于传输文件而言 建议使用 [WinSCP](https://winscp.net/eng/docs/lang:chs)  
-但其并不具备挂载webdav为驱动器的能力  
+Windows上对于传输文件而言 建议使用 [WinSCP](https://winscp.net/eng/docs/lang:chs)  
+不过其并不具备挂载webdav为驱动器的能力  
 
-若要挂载webdav为驱动器仍建议使用RaiDrive 其本身不支持重定向  
+若要挂载webdav为驱动器仍建议使用 RaiDrive 但其本身不支持重定向  
 我们需要为其在本地设置反向代理  
 
 [Cyberduck](https://cyberduck.io/) 这个软件原生支持重定向 也可以挂载webdav为驱动器  
@@ -101,7 +101,7 @@ WebDAV协议用于对远程web服务器上的文件进行编辑和管理
 <img src="../../images/stun-webdav-redirect/winscp-login.jpg" width="60%" height="60%" />
 
 WinSCP默认是 双面板布局 即同时显示本地文件和远程文件  
-可以修改成单面板模式即只显示 远程文件  
+可以修改成单面板模式即只显示远程文件  
 
 <img src="../../images/stun-webdav-redirect/winscp-login-2.jpg" width="60%" height="60%" />
 <img src="../../images/stun-webdav-redirect/winscp-user-interface-setting.jpg" width="60%" height="60%" />
@@ -117,7 +117,7 @@ WinSCP默认是 双面板布局 即同时显示本地文件和远程文件
 
 RaiDrive支持将webdav挂载为本地启动器且使用较为广泛  
 RaiDrive 的下载和安装不是本教程讲述的内容  
-此方法对其他不支持重定向的专用客户端也是适用的  
+**此方法对其他不支持重定向的专用客户端也是适用的**  
 
 ### 设置本地域名
 
@@ -140,7 +140,7 @@ RaiDrive 的下载和安装不是本教程讲述的内容
 若之前已添加过主规则 则只需要添加子规则即可  
 详见之前的教程：[链接](./lucky-web.md)  
 
-主规则名称可自定义 默认不勾选IPv4 要手动勾选一下  
+主规则名称可自定义 **默认不勾选IPv4 要手动勾选一下**  
 不建议使用80端口 最好使用其他高位端口  
 
 <img src="../../images/stun-webdav-redirect/lucky-web-rules-add.jpg" width="60%" height="60%" />
@@ -149,7 +149,7 @@ RaiDrive 的下载和安装不是本教程讲述的内容
 **添加反向代理子规则**  
 
 添加完主规则后添加用于实现反向代理的子规则  
-每个主规则其实有一个默认响应规则 不过我们不用这个  
+每个主规则其实有一个默认响应规则 不过我们不用那个  
 右键弹出菜单 添加子规则  
 
 <img src="../../images/stun-webdav-redirect/lucky-web-new-rules.jpg" />
