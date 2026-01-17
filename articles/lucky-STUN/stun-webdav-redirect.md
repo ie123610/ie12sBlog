@@ -1,6 +1,6 @@
 # 「LUCKY STUN穿透」解决WebDAV重定向问题
 
-2026.1
+2026.1.17  
 
 ## 关于本教程
 
@@ -26,7 +26,7 @@
 WebDAV协议用于对远程web服务器上的文件进行编辑和管理  
 各种存储服务基本都支使用持WebDAV协议进行访问  
 
-**事实上这并不是WebDAV协议本身的问题** 
+**事实上这并不是WebDAV协议本身的问题**  
 其本身使用标准的是标准的HTTP请求 可以兼容之前的重定向方案  
 
 **问题在于很多webdav客户端并不支持重定向**  
@@ -37,8 +37,8 @@ WebDAV协议用于对远程web服务器上的文件进行编辑和管理
 
 有两条路线可以解决这个问题：  
 
-1 **更换支持重定向的客户端**
-2 **设置本地反向代理**
+1. **更换支持重定向的客户端**
+2. **设置本地反向代理**
 
 若只是执行文件传输 那客户端可以随意替换  
 **但有些专用客户端无法替代** 只能通过反向代理 使其正常工作  
@@ -60,7 +60,7 @@ WebDAV协议用于对远程web服务器上的文件进行编辑和管理
 ## Windows系统
 
 Windows上对于传输文件而言 建议使用 [WinSCP](https://winscp.net/eng/docs/lang:chs)  
-不过其并不具备挂载webdav为驱动器的能力  
+虽然其并不具备挂载webdav为驱动器的能力  
 
 若要挂载webdav为驱动器仍建议使用 RaiDrive 但其本身不支持重定向  
 我们需要为其在本地设置反向代理  
@@ -84,16 +84,15 @@ Windows上对于传输文件而言 建议使用 [WinSCP](https://winscp.net/eng/
 
 **新建连接**  
 
-<img src="../../images/stun-webdav-redirect/winscp-webdav-add.jpg" width="60%" height="60%" />
-
 为方便观察重定向效果 **这里使用本地的lucky重定向** 替代实际中cloudflare的重定向  
 本地重定向没有使用TLS 在使用CF重定向时需要启用TLS  
 
-<img src="../../images/stun-webdav-redirect/winscp-dav.jpg" width="60%" height="60%" />
+<img src="../../images/stun-webdav-redirect/winscp-webdav-add.jpg" width="60%" height="60%" />
 
 对于openlist（原alist）的webdav服务来说 其目录在 `/dav/` 路径下 **而非根目录下**  
 若使用根目录请求会收到405错误 根目录下的路径是给浏览器访问使用的  
 
+<img src="../../images/stun-webdav-redirect/winscp-dav.jpg" width="60%" height="60%" />
 <img src="../../images/stun-webdav-redirect/winscp-405.jpg" width="60%" height="60%" />
 
 **登录成功**  
@@ -226,7 +225,7 @@ WinSCP在接受重定向后新的请求都会发向新的地址
 ### 流舟文件
 
 <img src="../../images/stun-webdav-redirect/liuzhou-1.jpg" width="60%" height="60%" />
-<img src="../../images/stun-webdav-redirect/liuzhou-2.jpg" width="60%" height="60%" />、
+<img src="../../images/stun-webdav-redirect/liuzhou-2.jpg" width="60%" height="60%" />
 
 需要输入 HTTP/HTTPS协议头以指定协议  
 <img src="../../images/stun-webdav-redirect/liuzhou-3.jpg" width="60%" height="60%" />
