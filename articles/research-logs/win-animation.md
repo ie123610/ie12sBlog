@@ -1,32 +1,93 @@
-# Windows 传输动画 WIP
+# Windows 传输动画提取
+
+## 传输动画
+
+在Windows XP 和更早的 Win9X 系统中 系统程序在传输过程中  
+会播放一些有趣的动画  
+
+有趣的是这些动画是以AVI格式存在于exe或dll文件中的  
+可以通过Resource Hacker 提取  
+
+不过AVI也只是封装格式 不代表其编码格式  
+其视频编码格式为 `Run length encoded 8bpp RGB image`  
+即一系列使用RLE压缩的8位（256色）位图 按顺序打包在AVI容器中
+
+其都带有一个纯色的背景 通过色键的方式实现透明效果  
+当时应该是没有透明通道的  
 
 
-Resource Hacker 提取
-AVI文件
-视频编码格式 `Run length encoded 8bpp RGB image`
+## 提取方法
 
-一系列使用RLE压缩的8位（256色）位图，按顺序打包在AVI容器中
+通过Resource Hacker 打开exe或dll文件 提取带有纯色背景的AVI文件  
+使用转换工具将AVI格式转换成GIF格式 由于其本质是就是一组图片  
+转换效果是不会有什么问题的  
 
-AVI源文件
+不过转换完成后的GIF文件依然带有纯色背景  
+可以通过PS的魔棒将每一帧的纯色背景删除 这样就得到了透明背景的GIF  
 
 
-
-字段	含义	为什么这样设计
-Run length encoded	游程编码（RLE）	最简单的无损压缩，CPU解码极快，适合大面积纯色
-8bpp	8位每像素（256色）	系统调色板模式，节省内存和存储
-RGB image	颜色空间	实际使用调色板索引，非真彩色
-在AVI容器中	包装格式	利用系统已有的AVI播放框架
-
+## ieframe.dll
 
 IE浏览器下载动画 （IE8+风格）  
-<img src="../../images/win-animation/ie8-download.gif" width="60%" height="60%" />
+AVI文件：[链接](../../images/win-animation/ie8-download.avi)  
+<img src="../../images/win-animation/ie8-download.gif"  />
 
-IE浏览器下载动画 (IE7-/Win9X风格)  
-<img src="../../images/win-animation/ie7-download.gif" width="60%" height="60%" />
 
-资源管理器 复制文件动画 （Windows XP 风格 ）  
-<img src="../../images/win-animation/winxp-copy-file.gif" width="60%" height="60%" />
+IE浏览器下载动画 (IE7-/Win9X风格 256色)  
+AVI文件：[链接](../../images/win-animation/ie7-download.avi)  
+<img src="../../images/win-animation/ie7-download.gif"  />
 
-资源管理器 复制文件动画 （Windows 9X 风格 ）  
-<img src="../../images/win-animation/win9X-copy-file.gif" width="60%" height="60%" />
+---
 
+## shell32.dll
+
+资源管理器 复制文件动画 （Windows XP 风格）  
+AVI文件：[链接](../../images/win-animation/winxp-copy-files.avi)  
+<img src="../../images/win-animation/winxp-copy-files.gif"  />
+
+资源管理器 复制文件动画 （Windows 9X 风格 256色）  
+AVI文件：[链接](../../images/win-animation/win9X-copy-files.avi)  
+<img src="../../images/win-animation/win9X-copy-files.gif"  />
+
+资源管理器 移动文件动画 （Windows XP 风格）  
+AVI文件：[链接](../../images/win-animation/winxp-move-files.avi)  
+<img src="../../images/win-animation/winxp-move-files.gif"  />
+
+资源管理器 移动文件动画 （Windows 9X 风格 256色）  
+AVI文件：[链接](../../images/win-animation/win9x-move-files.avi)  
+<img src="../../images/win-animation/win9x-move-files.gif"  />
+
+资源管理器 删除文件动画 （Windows XP 风格）  
+AVI文件：[链接](../../images/win-animation/winxp-delete-files.avi)  
+<img src="../../images/win-animation/winxp-delete-files.gif"  />
+
+资源管理器 删除文件动画 （Windows 9X 风格 256色）  
+AVI文件：[链接](../../images/win-animation/win9x-delete-files.avi)  
+<img src="../../images/win-animation/win9x-delete-files.gif"  />
+
+资源管理器 移动到回收站动画 （Windows XP 风格）  
+AVI文件：[链接](../../images/win-animation/winxp-move-to-recycle-bin.avi)  
+<img src="../../images/win-animation/winxp-move-to-recycle-bin.gif"  />
+
+资源管理器 清空回收站动画 （Windows XP 风格）  
+AVI文件：[链接](../../images/win-animation/winxp-empty-recycle-bin.avi)  
+<img src="../../images/win-animation/winxp-empty-recycle-bin.gif"  />
+
+应用设置？  
+AVI文件：[链接](../../images/win-animation/wwinxp-apply-settings..avi)  
+<img src="../../images/win-animation/winxp-apply-settings..gif"  />
+
+资源管理器 查找目标 （Windows 9X 风格 256色）  
+AVI文件：[链接](../../images/win-animation/find-target.avi)  
+<img src="../../images/win-animation/find-target.gif"  />
+
+资源管理器 搜索 （Windows XP 风格）  
+AVI文件：[链接](../../images/win-animation/search-1.avi)|[链接](../../images/win-animation/search-2.avi)|[链接](../../images/win-animation/search-3.avi)  
+
+<img src="../../images/win-animation/search-1.gif"/><img src="../../images/win-animation/search-2.gif"/><img src="../../images/win-animation/search-3.gif"/>
+
+## xpnetdiag.exe
+
+Windows XP 网络诊断 （Windows 9X 风格 256色）  
+AVI文件：[链接](../../images/win-animation/xpnetdiag.avi)  
+<img src="../../images/win-animation/xpnetdiag .gif"  />
