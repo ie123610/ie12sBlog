@@ -15,6 +15,7 @@
 ### Windows类
 
 * [Windows无法启用休眠问题](./win休眠问题.md)
+* [Windows 传输动画提取](./win-animation.md)
 
 
 ### 网络类
