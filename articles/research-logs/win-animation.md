@@ -46,8 +46,8 @@ AVI文件：<a href="../../images/win-animation/winxp-copy-files.avi">链接</a>
 <img src="../../images/win-animation/winxp-copy-files.gif"/>
 
 资源管理器 复制文件动画 （Windows 9X 风格 256色）  
-AVI文件：<a href="../../images/win-animation/win9X-copy-files.avi">链接</a>  
-<img src="../../images/win-animation/win9X-copy-files.gif"/>
+AVI文件：<a href="../../images/win-animation/win9x-copy-files.avi">链接</a>  
+<img src="../../images/win-animation/win9x-copy-files.gif"/>
 
 资源管理器 移动文件动画 （Windows XP 风格）  
 AVI文件：<a href="../../images/win-animation/winxp-move-files.avi">链接</a>  
