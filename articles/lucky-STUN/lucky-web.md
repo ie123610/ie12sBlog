@@ -1,3 +1,12 @@
+---
+title: Windows 下 Lucky 反向代理配置教程：实现多域名端口复用与 HTTPS 安全访问
+description: 手把手教你在 Windows 环境下使用 Lucky 配置反向代理，实现单端口多服务访问（端口复用）。包含子域名 CNAME 设置、TLS 证书自动化、HTTP 自动重定向以及利用“关闭连接”功能防范恶意端口扫描的进阶安全技巧。
+keywords: [Lucky 反向代理教程, Windows 反向代理, 端口复用, HTTPS 加密, 域名防扫描, Basic 认证, 家庭服务器安全]
+---
+
+# 在Windows下使用lucky配置反向代理以实现较为安全的WEB访问
+...
+
 # 在Windows下使用lucky配置反向代理以实现较为安全的WEB访问
 
 2024.06.22  
