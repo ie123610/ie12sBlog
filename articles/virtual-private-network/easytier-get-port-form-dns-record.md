@@ -1,11 +1,8 @@
 ---
-title: EasyTier 自动化连接教程：利用 SRV/TXT 记录与 HTTP 重定向解决动态端口问题 - ie12sBlog
+title: EasyTier 自动化连接：利用 DNS 与 HTTP 获取端口 - ie12sBlog
 description: 深度解析 EasyTier v2.2.3 新功能：教你如何结合 Lucky 的 STUN 穿透，通过 DNS 的 TXT/SRV 记录及 HTTP 30x 重定向自动获取对端动态端口。实现异地组网下 TCP 穿透端口变更后的全自动化连接，无需再手动修改配置。
 keywords: [EasyTier 教程, SRV 记录, TXT 记录, Lucky STUN 穿透, 异地组网, 动态端口自动获取, NAT1 TCP 穿透]
 ---
-
-# 「EasyTier」使用SRV TXT HTTP重定向获取对端IP端口
-...
 
 # 「EasyTier」使用SRV TXT HTTP重定向获取对端IP端口
 

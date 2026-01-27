@@ -27,7 +27,7 @@
 
 ### Docusaurus
 
-* [解决showLastUpdateTime总是显示相同日期问题](./Docusaurus-最后修改时间.md)
+* [解决showLastUpdateTime总是显示相同日期问题](./Docusaurus-showLastUpdateTime.md)
 
 ### 杂项
 
