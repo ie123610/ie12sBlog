@@ -1,5 +1,6 @@
 ---
 title: 解决 Docusaurus 文章更新时间显示相同的问题 - ie12sBlog
+sidebar_label: Docusaurus-解决showLastUpdateTime总是显示相同日期问题
 description: 详细解析在 Docusaurus 中 showLastUpdateTime 总是显示相同日期的原因。针对本地开发模式（start）与 Cloudflare Pages 部署环境，提供深度克隆（unshallow）修复方案，确保 GitHub 提交时间能正确映射到文章更新时间。
 keywords: [Docusaurus 教程, showLastUpdateTime 错误, Cloudflare Pages 部署, Git 深度克隆, git fetch unshallow, 静态网站更新时间]
 ---

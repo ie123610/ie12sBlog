@@ -1,5 +1,6 @@
 ---
 title: 关闭路由器IPv6防火墙安全吗？Windows防火墙封堵高危端口教程 - ie12sBlog
+sidebar_label: 「特别篇」在关闭光猫、路由器IPv6防火墙后可能遇到的安全问题
 description: 为了BT下载开放端口而关闭光猫或路由器IPv6防火墙后，如何保障网络安全？本文深度解析IPv6隐私扩展协议，并手把手教你通过Windows高级防火墙封堵3389、445等高危端口，防止公网IPv6扫描与攻击。
 keywords: [IPv6防火墙关闭, IPv6安全问题, Windows防火墙配置, 3389端口防护, 2000::/3 规则, BT下载IPv6安全]
 ---

@@ -1,5 +1,6 @@
 ---
 title: Cloudflare 代理实现纯 IPv6 站点 IPv4 访问教程 - ie12sBlog
+sidebar_label: 使用Cloudflare代理为纯IPv6站点添加IPv4访问
 description: 解决在纯 IPv4 环境下无法访问家庭 IPv6 服务器的难题。手把手教你配置 Cloudflare 代理实现双栈访问，包含 Origin Rules 回源规则避开 80/443 端口封锁、SSL/TLS 模式设置以及 Windows/安卓端 Cloudflare ST IP 优选加速教程。
 keywords: [IPv6 开启 IPv4 访问, Cloudflare 双栈代理, 回源规则, Origin Rules, CF IP 优选, 家庭服务器内网穿透, IPv6 建站]
 ---
