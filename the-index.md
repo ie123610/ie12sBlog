@@ -52,7 +52,7 @@
 * [下载进度卡在 99.9% 问题](articles/bitcomet-FAQ/BC-download-99.md)
 * [下载缓慢和无法下载问题[重置]](articles/bitcomet-FAQ/BC-download-speed-issues-2.md)
 * [「补档」 像素帝的比特彗星教程](articles/bitcomet-FAQ/reupload-xiang-su-di-bc-tutorial.md)
-* [屏蔽吸血客户端和设置自动反吸血](articles/bitcomet-FAQ/BC-anti-leech)
+* [屏蔽吸血客户端和设置自动反吸血](articles/bitcomet-FAQ/BC-anti-leech.md)
 * [反吸血 设置IP过滤和客户端过滤](articles/bitcomet-FAQ/BC-anti-leech-2.md)
 * [意外退出程序后下载列表清空的解决方法](articles/bitcomet-FAQ/BC-config-recovery.md)
 * [测试BT下载速度的方法和测速种子的选择](articles/bitcomet-FAQ/BC-download-speed-test.md)
