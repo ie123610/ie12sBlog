@@ -7,14 +7,14 @@
 
 ### P2P类
 
-* [qb匿名模式名称显示研究](./qb匿名模式名称显示研究.md)
+* [qb匿名模式名称显示研究](./qb-anonymous-mode.md)
 * [已知bittorrent客户端生存调查](./已知bittorrent客户端生存调查/已知客户端调查-说明.md)
 * [比特彗星改进建议](./BC改进建议.md)
-* [eMule设置IP绑定](./emule的ip绑定.md)
+* [eMule设置IP绑定](./emule-ip-binding.md)
 
 ### Windows类
 
-* [Windows无法启用休眠问题](./win休眠问题.md)
+* [Windows无法启用休眠问题](./win-sleep-mode-issue.md)
 * [Windows 传输动画提取](./win-animation.md)
 
 
@@ -24,14 +24,16 @@
 * [小米路由支持更多IPv6获取方式](./小米路由更多IPv6获取方式.md)
 * [L2TP特性研究](./L2TP特性研究.md)
 * [在Windows上使用ncat测试UDP端口](./ncat-udp-port-check.md)
+* [HTTPS/SVCB记录和HTTP3/QUIC排障](./https-record-http3-test.md)
+
 
 ### Docusaurus
 
-* [解决showLastUpdateTime总是显示相同日期问题](./Docusaurus-最后修改时间.md)
+* [解决showLastUpdateTime总是显示相同日期问题](./Docusaurus-showLastUpdateTime.md)
 
 ### 杂项
 
 * [B站专栏文本复制问题](./B站专栏文本复制问题.md)
 * [「转」基于爱奇艺HCDN视频分发网络的开放缓存](./爱奇艺HCDN.md)
-
+* [博客园映射表](./cnblog-index.md)
 

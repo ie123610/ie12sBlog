@@ -1,3 +1,10 @@
+---
+title: 解决 Docusaurus 文章更新时间显示相同的问题 - ie12sBlog
+sidebar_label: Docusaurus-解决showLastUpdateTime总是显示相同日期问题
+description: 详细解析在 Docusaurus 中 showLastUpdateTime 总是显示相同日期的原因。针对本地开发模式（start）与 Cloudflare Pages 部署环境，提供深度克隆（unshallow）修复方案，确保 GitHub 提交时间能正确映射到文章更新时间。
+keywords: [Docusaurus 教程, showLastUpdateTime 错误, Cloudflare Pages 部署, Git 深度克隆, git fetch unshallow, 静态网站更新时间]
+---
+
 # Docusaurus-解决showLastUpdateTime总是显示相同日期问题
 
 在Docusaurus中可以通过 `showLastUpdateTime` 在文章的末尾自动显示其最后更新时间  
@@ -21,7 +28,7 @@
 其相当于调试状态 在此状态下所有的文章总是显示相同时间  
 且与文件时间的修改时间不相符 其只起到占位符的作用  
 
-<img src="../../images/showLastUpdateTime/调试状态下的时间.jpg" width="60%" height="60%" />
+<img src="../../images/showLastUpdateTime/time-in-debug-mode.jpg" width="60%" height="60%" />
 
 
 ## Cloudflare Pages
@@ -38,7 +45,7 @@
 `git fetch --unshallow && npm run build`  
 在构建前先进行深度克隆 修改后文章末尾的时间应能正常显示  
 
-<img src="../../images/showLastUpdateTime/新构建命令.jpg" width="60%" height="60%" />
+<img src="../../images/showLastUpdateTime/new-build-command.jpg" width="60%" height="60%" />
 
 ---
 

@@ -1,3 +1,7 @@
+---
+sidebar_label: 磁力链接格式问题
+---
+
 # 比特彗星常见问题-磁力链接格式问题
 
 2023.08.04  
@@ -37,6 +41,15 @@ magnet:?xt=urn:btih:9fc20b9e98ea98b4a35e6223041a5ef94ea27809
 
 我们可以使用在线工具将base32编码格式转换成16进制格式：[链接](http://www.tomeko.net/online_tools/base32.php?lang=en)  
 
+---
+
+## v2.20版本以后
+
+v2.20版本以后 增加高级选项 `ui.copy_magnet_with_base32_infohash`  
+可以设置磁链里的特征码默认编码方式  
+
+<img src="../../images/BC-magnet-link-form/BC-magnet-link-form-2.jpg" width="60%" height="60%" />
+
 
 ---
 
@@ -44,4 +57,5 @@ magnet:?xt=urn:btih:9fc20b9e98ea98b4a35e6223041a5ef94ea27809
 
 * [cometbbs-为什么磁链有两个哈希值?](https://www.cometbbs.com/t/%E4%B8%BA%E4%BB%80%E4%B9%88%E7%A3%81%E9%93%BE%E6%9C%89%E4%B8%A4%E4%B8%AA%E5%93%88%E5%B8%8C%E5%80%BC/83763)
 * [Wikipedia-磁力链接](https://zh.wikipedia.org/zh-cn/%E7%A3%81%E5%8A%9B%E9%93%BE%E6%8E%A5)
+* [2.20测试版](https://www.cometbbs.com/t/220%E6%B5%8B%E8%AF%95%E7%89%88/97560?u=ie12)
 

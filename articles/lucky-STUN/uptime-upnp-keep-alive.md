@@ -126,7 +126,7 @@ API文档：`https://uptimerobot.com/api/`
 回到旧版界面后  
 点击右上角的用户名 弹出 菜单 选择 **My Settings**  
 
-<img src="../../images/uptime-upnp-keep-alive/账户设置.webp" width="60%" height="60%" />
+<img src="../../images/uptime-upnp-keep-alive/account-settings.webp" width="60%" height="60%" />
 <img src="../../images/uptime-upnp-keep-alive/account-settings-2.webp" width="60%" height="60%" />
 
 滚动页面到底部可以看到 **API Settings**  
