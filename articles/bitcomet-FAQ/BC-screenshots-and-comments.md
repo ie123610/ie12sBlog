@@ -1,5 +1,5 @@
 ---
-sidebar_label:截图和评论显示问题
+sidebar_label: 截图和评论显示问题
 ---
 
 

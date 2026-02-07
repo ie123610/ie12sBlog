@@ -1,5 +1,5 @@
 ---
-sidebar_label:有关绿灯的常见误区
+sidebar_label: 有关绿灯的常见误区
 ---
 
 

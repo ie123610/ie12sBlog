@@ -1,5 +1,5 @@
 ---
-sidebar_label:断网问题
+sidebar_label: 断网问题
 ---
 
 # 比特彗星常见问题-断网问题

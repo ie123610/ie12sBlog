@@ -1,5 +1,5 @@
 ---
-sidebar_label:种子市场使用教程
+sidebar_label: 种子市场使用教程
 ---
 
 

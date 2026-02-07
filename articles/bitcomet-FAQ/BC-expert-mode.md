@@ -1,6 +1,6 @@
 
 ---
-sidebar_label:专家模式及其作用
+sidebar_label: 专家模式及其作用
 ---
 
 
