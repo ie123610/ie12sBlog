@@ -60,8 +60,8 @@ Windows中预装的curl可能并不支持HTTP3 下载curl：[链接](https://cur
 
 <img src="../../images/https-record-http3-test/curl-features.jpg" width="60%" height="60%" />
 
-强制使用HTTP3连接站点 `curl --http3-only -v URL` **V要小写** 其中的v参数用于显示连接详情  **注意URL要加上https协议头**  
-`--http3-only`表示强制使用 HTTP3 且不允许降级  
+强制使用HTTP3连接站点 `curl --http3-only -v URL` **V要小写** 其中的v参数用于显示连接详情  
+**注意URL要加上https协议头** `--http3-only`表示强制使用 HTTP3 且不允许降级  
 
 **示例**  
 <img src="../../images/https-record-http3-test/curl-http3.jpg" width="60%" height="60%" />
