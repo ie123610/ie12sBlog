@@ -25,15 +25,13 @@
 * [L2TP特性研究](./L2TP特性研究.md)
 * [在Windows上使用ncat测试UDP端口](./ncat-udp-port-check.md)
 * [HTTPS/SVCB记录和HTTP3/QUIC排障](./https-record-http3-test.md)
+* [使用Gost将SoftEther转换为socks5代理](./gost-softether-vpn-to-proxy.md)
 
-
-### Docusaurus
-
-* [解决showLastUpdateTime总是显示相同日期问题](./Docusaurus-showLastUpdateTime.md)
 
 ### 杂项
 
 * [B站专栏文本复制问题](./B站专栏文本复制问题.md)
 * [「转」基于爱奇艺HCDN视频分发网络的开放缓存](./爱奇艺HCDN.md)
 * [博客园映射表](./cnblog-index.md)
+* [解决showLastUpdateTime总是显示相同日期问题](./Docusaurus-showLastUpdateTime.md)
 
