@@ -14,7 +14,7 @@
 
 ### Windows类
 
-* [Windows无法启用休眠问题](./win-sleep-mode-issue.md)
+* [Windows 无法启用休眠问题](./win-sleep-mode-issue.md)
 * [Windows 传输动画提取](./win-animation.md)
 
 
