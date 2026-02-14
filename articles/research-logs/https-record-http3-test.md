@@ -82,7 +82,7 @@ SVCB/HTTPS记录才能正常工作
 在勾选通过代理查询DNS时 可能会使火狐浏览器使用传统的UDP查询方法  
 DoH被跳过 导致SVCB/HTTPS记录不起效果  
 
-不过在开启通过 通过代理查询DNS 后连接的错误信息总是 ``  
+不过在开启通过 通过代理查询DNS 后连接的错误信息总是 `PR_END_OF_FILE_ERROR`  
 这是TLS握手问题 而非DNS问题 不过尝试搜索错误信息后  
 一些解决方法也提到关闭代理和虚拟专用网络  
 
@@ -100,16 +100,17 @@ DoH被跳过 导致SVCB/HTTPS记录不起效果
 >3 - Only. Only use TRR. Never use the native (This mode also requires the bootstrapAddress pref to be set)
 >4 - Reserved (used to be Shadow mode)
 >5 - Off by choice. This is the same as 0 but marks it as done by choice and not done by default.
+>...
 >```
 
->```
->0 - 关闭（默认）。仅使用标准原生解析（完全不使用 TRR）。
->1 - 保留（以前称为竞速模式）。
->2 - 优先。首先使用 TRR，仅当名称解析失败时才使用原生解析器作为备用方案。
->3 - 仅使用。仅使用 TRR。从不使用原生解析器。（此模式还需要设置 bootstrapAddress 首选项。）
->4 - 保留（以前称为影子模式）。
->5 - 可选择性关闭。这与 0 相同，但表示此操作由用户选择而非默认关闭。
->```
+```
+0 - 关闭（默认）。仅使用标准原生解析（完全不使用 TRR）。
+1 - 保留（以前称为竞速模式）。
+2 - 优先。首先使用 TRR，仅当名称解析失败时才使用原生解析器作为备用方案。
+3 - 仅使用。仅使用 TRR。从不使用原生解析器。（此模式还需要设置 bootstrapAddress 首选项。）
+4 - 保留（以前称为影子模式）。
+5 - 可选择性关闭。这与 0 相同，但表示此操作由用户选择而非默认关闭。
+```
 
 
 测试发现即使在3模式下 勾选通过代理查询DNS后 连接依然会失败  
@@ -121,9 +122,9 @@ DoH被跳过 导致SVCB/HTTPS记录不起效果
 
 ### ipv4hint ipv6hint 问题
 
-记录中的 `ipv4hint` 和 `ipv6hint` 字段应是起到辅助作用  
-其不能替代A类记录或AAAA记录 这大概解释了在SVCB/HTTPS记录中有hint  
-而无A记录或AAAA记录时火狐无法连接站点的原因  
+记录中的 `ipv4hint` 和 `ipv6hint` 字段似乎能替代A类记录或AAAA记录 
+但火狐浏览器目前应该是并不支持此操作的 即必须要有A类记录或AAAA记录才行  
+苹果的Safari有可能已经支持  
 
 ### ECH 问题
 
@@ -135,4 +136,4 @@ DoH被跳过 导致SVCB/HTTPS记录不起效果
 
 排查是否设置tls证书 证书是否受信任 证书是否过期  
 ~~输入时一定要写明 `https://` 协议头~~  
-在输入时是否添加https协议头记录生效对无影响  
+在输入时是否添加https协议头对记录是否生效对无影响  
