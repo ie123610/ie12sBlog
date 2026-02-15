@@ -27,6 +27,7 @@
 * [使用Gost将SoftEther转换为socks5代理](./gost-softether-vpn-to-proxy.md)
 * [HTTPS/SVCB记录和HTTP3/QUIC排障](./https-record-http3-test.md)
 * [SVCB/HTTPS记录与免费FRP穿透配合使用](./svcb-frp.md)
+* [cURL SVCB/HTTPS 记录测试](./curl-test.md)
 
 
 
