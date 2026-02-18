@@ -20,7 +20,7 @@ sidebar_label: 磁力链接长度问题
 
 **答：** 在高级设置中找到 `ui.copy_magnet_with_tracker` 改成 **否** 这样复制磁力时就不会包含tracker服务器了  
 
-<img src="../../images/BC-magnet-link-length/BC-magnet-link-length-1.jpg" width="60%" height="60%" />
+<img loading="lazy" src="../../images/BC-magnet-link-length/BC-magnet-link-length-1.jpg" width="60%" height="60%" />
 
 ---
 

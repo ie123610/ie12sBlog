@@ -37,23 +37,23 @@
 
 下载安装程序 根据系统情况选择 这里使用的是64位版本  
 
-<img src="../../images/fort-firewall-anti-leech/download.jpg" width="60%" height="60%" />
+<img loading="lazy" src="../../images/fort-firewall-anti-leech/download.jpg" width="60%" height="60%" />
 
 安装位置可自定义 之后可以选择安装为便携版  
 
-<img src="../../images/fort-firewall-anti-leech/installation-1.jpg" width="60%" height="60%" />
+<img loading="lazy" src="../../images/fort-firewall-anti-leech/installation-1.jpg" width="60%" height="60%" />
 
-<img src="../../images/fort-firewall-anti-leech/installation-2.jpg" width="60%" height="60%" />
-<img src="../../images/fort-firewall-anti-leech/installation-3.jpg" width="60%" height="60%" />
+<img loading="lazy" src="../../images/fort-firewall-anti-leech/installation-2.jpg" width="60%" height="60%" />
+<img loading="lazy" src="../../images/fort-firewall-anti-leech/installation-3.jpg" width="60%" height="60%" />
 
 可以选择安装为便携版 这样配置文件就存储在程序目录下  
 而不是AppDat中 这里勾选便携版  
 
-<img src="../../images/fort-firewall-anti-leech/installation-4.jpg" width="60%" height="60%" />
-<img src="../../images/fort-firewall-anti-leech/installation-5.jpg" width="60%" height="60%" />
-<img src="../../images/fort-firewall-anti-leech/installation-6.jpg" width="60%" height="60%" />
+<img loading="lazy" src="../../images/fort-firewall-anti-leech/installation-4.jpg" width="60%" height="60%" />
+<img loading="lazy" src="../../images/fort-firewall-anti-leech/installation-5.jpg" width="60%" height="60%" />
+<img loading="lazy" src="../../images/fort-firewall-anti-leech/installation-6.jpg" width="60%" height="60%" />
 
-<img src="../../images/fort-firewall-anti-leech/portable-edition-description.jpg" width="60%" height="60%" />
+<img loading="lazy" src="../../images/fort-firewall-anti-leech/portable-edition-description.jpg" width="60%" height="60%" />
 
 **便携版说明**  
 
@@ -83,17 +83,17 @@ Fort Firewall 需要管理员权限才能安装驱动程序。
 如果在修改期间已经拦截了程序则应进行放行  
 
 **修改拦截模式：**  
-<img src="../../images/fort-firewall-anti-leech/modify-blocking-mode.jpg" width="60%" height="60%" />
+<img loading="lazy" src="../../images/fort-firewall-anti-leech/modify-blocking-mode.jpg" width="60%" height="60%" />
 
 **放行程序：**  
 右键托盘图标》应用程序  
-<img src="../../images/fort-firewall-anti-leech/allow-program.jpg" width="60%" height="60%" />
+<img loading="lazy" src="../../images/fort-firewall-anti-leech/allow-program.jpg" width="60%" height="60%" />
 
 
 ### 订阅IP列表
 
 右键托盘图标》选项》区域  
-<img src="../../images/fort-firewall-anti-leech/open-area.jpg" width="60%" height="60%" />
+<img loading="lazy" src="../../images/fort-firewall-anti-leech/open-area.jpg" width="60%" height="60%" />
 
 编辑》添加  
 这里使用PBH的IP列表：[链接](https://github.com/PBH-BTN/BTN-Collected-Rules)  
@@ -106,11 +106,11 @@ Fort Firewall 需要管理员权限才能安装驱动程序。
 https://bcr.pbh-btn.ghorg.ghostchu-services.top/combine/all.txt
 ```
 
-<img src="../../images/fort-firewall-anti-leech/subscribe-to-rules.jpg" width="60%" height="60%" />
+<img loading="lazy" src="../../images/fort-firewall-anti-leech/subscribe-to-rules.jpg" width="60%" height="60%" />
 
-<img src="../../images/fort-firewall-anti-leech/update-rules-prompt.jpg" width="60%" height="60%" />
+<img loading="lazy" src="../../images/fort-firewall-anti-leech/update-rules-prompt.jpg" width="60%" height="60%" />
 
-<img src="../../images/fort-firewall-anti-leech/update-rules-complete.jpg" width="60%" height="60%" />
+<img loading="lazy" src="../../images/fort-firewall-anti-leech/update-rules-complete.jpg" width="60%" height="60%" />
 
 
 **配置自动更新规则**  
@@ -119,7 +119,7 @@ https://bcr.pbh-btn.ghorg.ghostchu-services.top/combine/all.txt
 勾选区域下载器 时间设置为1小时 确定以保存规则  
 在点击确定/应用后列表中的时间才会更新  
 
-<img src="../../images/fort-firewall-anti-leech/configure-automatic-rule-updates.jpg" width="60%" height="60%" />
+<img loading="lazy" src="../../images/fort-firewall-anti-leech/configure-automatic-rule-updates.jpg" width="60%" height="60%" />
 
 
 ### 设置规则
@@ -130,7 +130,7 @@ https://bcr.pbh-btn.ghorg.ghostchu-services.top/combine/all.txt
 名称可自定义 这里使用“BT-BAN”  
 勾选之前订阅的区域 操作选择阻止  
 
-<img src="../../images/fort-firewall-anti-leech/configure-program-rules.jpg" width="60%" height="60%" />
+<img loading="lazy" src="../../images/fort-firewall-anti-leech/configure-program-rules.jpg" width="60%" height="60%" />
 
 
 **设置端口过滤**  
@@ -149,13 +149,13 @@ https://bcr.pbh-btn.ghorg.ghostchu-services.top/combine/all.txt
 [::]/0:(15000,15001)
 ```
 
-<img src="../../images/fort-firewall-anti-leech/port-filtering-rules.jpg" width="60%" height="60%" />
+<img loading="lazy" src="../../images/fort-firewall-anti-leech/port-filtering-rules.jpg" width="60%" height="60%" />
 
 其表示过滤所有IPv4和IPv6地址中有15000和15001端口的流量  
 堡垒默认不处理内网流量 不用担心其会影响其他程序  
 编辑之前设置好的程序规则 将此预设规则叠加上去  
 
-<img src="../../images/fort-firewall-anti-leech/additional-preset-rules.jpg" width="60%" height="60%" />
+<img loading="lazy" src="../../images/fort-firewall-anti-leech/additional-preset-rules.jpg" width="60%" height="60%" />
 
 
 现在可以**分配规则**了 右键托盘图标》应用程序  
@@ -167,16 +167,16 @@ https://bcr.pbh-btn.ghorg.ghostchu-services.top/combine/all.txt
 可以手写规则 但是更简单的方法是使用右键菜单进行快捷添加  
 找到要添加的程序 右键选择 “Fort Firewall...”  
 
-<img src="../../images/fort-firewall-anti-leech/add-program-to-right-click-menu.jpg" width="60%" height="60%" />
+<img loading="lazy" src="../../images/fort-firewall-anti-leech/add-program-to-right-click-menu.jpg" width="60%" height="60%" />
 
 点击后会弹出编辑窗口 这里为了方便演示依然使用比特彗星  
 点击右侧的 纸卷图标 即可分配规则 每个程序应只能分配一条规则  
 要叠加多个规则 可以使用之前的附加预设规则的方式  
 
-<img src="../../images/fort-firewall-anti-leech/assign-rules-1.jpg" width="60%" height="60%" />
-<img src="../../images/fort-firewall-anti-leech/assign-rules-2.jpg" width="60%" height="60%" />
-<img src="../../images/fort-firewall-anti-leech/assign-rules-3.jpg" width="60%" height="60%" />
-<img src="../../images/fort-firewall-anti-leech/assign-rules-4.jpg" width="60%" height="60%" />
+<img loading="lazy" src="../../images/fort-firewall-anti-leech/assign-rules-1.jpg" width="60%" height="60%" />
+<img loading="lazy" src="../../images/fort-firewall-anti-leech/assign-rules-2.jpg" width="60%" height="60%" />
+<img loading="lazy" src="../../images/fort-firewall-anti-leech/assign-rules-3.jpg" width="60%" height="60%" />
+<img loading="lazy" src="../../images/fort-firewall-anti-leech/assign-rules-4.jpg" width="60%" height="60%" />
 
 ### 检视效果
 
@@ -184,7 +184,7 @@ https://bcr.pbh-btn.ghorg.ghostchu-services.top/combine/all.txt
 托盘》统计数据》已阻止的连接  
 可以看到已经被过滤的连接  
 
-<img src="../../images/fort-firewall-anti-leech/view-results.jpg" width="60%" height="60%" />
+<img loading="lazy" src="../../images/fort-firewall-anti-leech/view-results.jpg" width="60%" height="60%" />
 
 
 ### 调整日志记录设置
@@ -195,7 +195,7 @@ https://bcr.pbh-btn.ghorg.ghostchu-services.top/combine/all.txt
 收集已经阻止的连接 选项可以关闭  
 需要进行诊断和故障排除时再打开 以节约磁盘空间  
 
-<img src="../../images/fort-firewall-anti-leech/log-settings.jpg" width="60%" height="60%" />
+<img loading="lazy" src="../../images/fort-firewall-anti-leech/log-settings.jpg" width="60%" height="60%" />
 
 
 ---

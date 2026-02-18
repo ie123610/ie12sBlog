@@ -46,7 +46,7 @@ BT下载一开始的速度比较慢后面缓慢升高 最终达到峰值
 即从开始下载到速度达峰需一段时间  
 千兆带宽下载时的速度曲线  
 
-<img src="../../images/BC-download-speed-test/download-speed-graph.webp" title="千兆带宽下载时的速度曲线" width="60%" height="60%" />
+<img loading="lazy" src="../../images/BC-download-speed-test/download-speed-graph.webp" title="千兆带宽下载时的速度曲线" width="60%" height="60%" />
 
 ---
 
@@ -63,6 +63,6 @@ BT下载一开始的速度比较慢后面缓慢升高 最终达到峰值
 https://cn.ubuntu.com/download/alternative-downloads  
 （需要往下翻一点）  
 
-<img src="../../images/BC-download-speed-test/ubuntu-iso.webp" title="千兆带宽下载时的速度曲线" width="60%" height="60%" />
+<img loading="lazy" src="../../images/BC-download-speed-test/ubuntu-iso.webp" title="千兆带宽下载时的速度曲线" width="60%" height="60%" />
 
 

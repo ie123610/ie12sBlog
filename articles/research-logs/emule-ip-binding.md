@@ -14,14 +14,14 @@ eMule在图形界面中无法设置IP绑定
 值得注意的是这个字段的添加位置 **（编码必须选择 ANSI）**  
 不能随意的将其插入到节中 从帮助文件列出的字段顺序来看  
 其应在 `HighresTimer`字段的下面 就像eMule帮助页面中列出的那样  
-<img src="../../images/eMule-IP-binding/help-page.jpg" width="60%" height="60%" />
+<img loading="lazy" src="../../images/eMule-IP-binding/help-page.jpg" width="60%" height="60%" />
 
 **配置示例**  
-<img src="../../images/eMule-IP-binding/relative-position.jpg" width="60%" height="60%" />
+<img loading="lazy" src="../../images/eMule-IP-binding/relative-position.jpg" width="60%" height="60%" />
 
 **检视效果**  
-<img src="../../images/eMule-IP-binding/review-results.jpg" width="60%" height="60%" />
-<img src="../../images/eMule-IP-binding/review-results-2.jpg" width="60%" height="60%" />
+<img loading="lazy" src="../../images/eMule-IP-binding/review-results.jpg" width="60%" height="60%" />
+<img loading="lazy" src="../../images/eMule-IP-binding/review-results-2.jpg" width="60%" height="60%" />
 
 ---
 

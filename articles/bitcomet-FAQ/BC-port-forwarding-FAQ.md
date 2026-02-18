@@ -52,7 +52,7 @@ sidebar_label: 有关绿灯的常见误区
 认为其表示左下角有两个绿色的点  
 
 **示例**  
-<img src="../../images/BC-port-forwarding-FAQ/listening-port-and-dht.jpg" width="60%" height="60%" />
+<img loading="lazy" src="../../images/BC-port-forwarding-FAQ/listening-port-and-dht.jpg" width="60%" height="60%" />
 
 
 然而这是不正确的 其正确的含义应该是  
@@ -60,7 +60,7 @@ sidebar_label: 有关绿灯的常见误区
 即在统计中展开TCP监听端口可以看到 IPv4和IPv6都显示已开通  
 
 **示例**  
-<img src="../../images/BC-port-forwarding-FAQ/ipv4-and-ipv6-ports.jpg" width="60%" height="60%" />
+<img loading="lazy" src="../../images/BC-port-forwarding-FAQ/ipv4-and-ipv6-ports.jpg" width="60%" height="60%" />
 
 其更为准确的称呼应该为“双栈”或“双栈公网”  
 这里的栈指协议IP栈 双栈就是IPv4和IPv6协议  

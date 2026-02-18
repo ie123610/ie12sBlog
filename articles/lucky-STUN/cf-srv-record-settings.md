@@ -53,8 +53,8 @@
 
 **示例**  
 
-<img src="../../images/cf-srv-record-settings/cf-srv-dns-record-setup.JPG" width="60%" height="60%" />
-<img src="../../images/cf-srv-record-settings/cf-srv-dns-record-setup-2.JPG" width="60%" height="60%" />
+<img loading="lazy" src="../../images/cf-srv-record-settings/cf-srv-dns-record-setup.JPG" width="60%" height="60%" />
+<img loading="lazy" src="../../images/cf-srv-record-settings/cf-srv-dns-record-setup-2.JPG" width="60%" height="60%" />
 
 ---
 
@@ -73,7 +73,7 @@
 
 点击侧边栏中的 **概述** 页面向下滚动 在右侧即可查看区域ID
 
-<img src="../../images/cf-srv-record-settings/cf-srv-get-zone-id.JPG" width="60%" height="60%" />
+<img loading="lazy" src="../../images/cf-srv-record-settings/cf-srv-get-zone-id.JPG" width="60%" height="60%" />
 
 ---
 
@@ -104,8 +104,8 @@
 
 **示例**  
 
-<img src="../../images/cf-srv-record-settings/cf-srv-get-dns-record-id-0.JPG" width="60%" height="60%" />
-<img src="../../images/cf-srv-record-settings/cf-srv-get-dns-record-id-1.JPG" width="60%" height="60%" />
+<img loading="lazy" src="../../images/cf-srv-record-settings/cf-srv-get-dns-record-id-0.JPG" width="60%" height="60%" />
+<img loading="lazy" src="../../images/cf-srv-record-settings/cf-srv-get-dns-record-id-1.JPG" width="60%" height="60%" />
 
 关闭任务开关并点击 手动触发 查看日志中输出的内容  
 应可以查看到当前域名下所有的DNS记录以及其对应的ID  
@@ -113,7 +113,7 @@
 
 **示例**  
 
-<img src="../../images/cf-srv-record-settings/cf-srv-get-dns-record-id-3.JPG" width="60%" height="60%" />
+<img loading="lazy" src="../../images/cf-srv-record-settings/cf-srv-get-dns-record-id-3.JPG" width="60%" height="60%" />
 
 ---
 
@@ -147,14 +147,14 @@
 
 **示例**  
 
-<img src="../../images/cf-srv-record-settings/cf-srv-update-srv-record-0.JPG" width="60%" height="60%" />
+<img loading="lazy" src="../../images/cf-srv-record-settings/cf-srv-update-srv-record-0.JPG" width="60%" height="60%" />
 
 保存任务后 关闭任务开关并点击 手动触发 查看日志中的输出内容  
 若设置正确则可以看到返回的规则中端口号已经改变  
 
 **示例**  
 
-<img src="../../images/cf-srv-record-settings/cf-srv-update-srv-record-1.JPG" width="60%" height="60%" />
+<img loading="lazy" src="../../images/cf-srv-record-settings/cf-srv-update-srv-record-1.JPG" width="60%" height="60%" />
 
 
 ## 结尾

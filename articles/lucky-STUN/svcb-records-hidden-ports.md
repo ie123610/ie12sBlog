@@ -44,11 +44,11 @@
 **简单来说就在当前页面里面又插入了网页**  
 
 其有些类似于Windows中的嵌套窗口  
-<img src="../../images/svcb-records-hidden-ports/windows-nested-window.webp" width="60%" height="60%" />
+<img loading="lazy" src="../../images/svcb-records-hidden-ports/windows-nested-window.webp" width="60%" height="60%" />
 
 当然地址栏的变化并没有消失  
 其只是从浏览器的地址栏中转移到了iframe框架的地址栏中  
-<img src="../../images/svcb-records-hidden-ports/iframe-example.webp" width="60%" height="60%" />
+<img loading="lazy" src="../../images/svcb-records-hidden-ports/iframe-example.webp" width="60%" height="60%" />
 
 相比其显性重定向 隐性重定向的兼容性其实更差  
 一些元素和网页可能不被允许镶嵌在iframe框架中  
@@ -118,7 +118,7 @@ ECH 记录的特殊要求：
 填写完成后的 IPv4记录 即为 `svcb.ie12.com`  
 
 **示例**  
-<img src="../../images/svcb-records-hidden-ports/traditional-records.webp" width="60%" height="60%" />
+<img loading="lazy" src="../../images/svcb-records-hidden-ports/traditional-records.webp" width="60%" height="60%" />
 
 ### 添加HTTPS记录
 
@@ -127,7 +127,7 @@ HTTPS记录也是支持泛域名解析的 例如 `XXX.svcb.ie12.com`
 这里为了方便演示 没有使用泛域名  
 
 **示例**  
-<img src="../../images/svcb-records-hidden-ports/https-record.webp" width="60%" height="60%" />
+<img loading="lazy" src="../../images/svcb-records-hidden-ports/https-record.webp" width="60%" height="60%" />
 
 **类型** 选择 HTTPS  
 名称应与之前设置的传统记录名称相同  
@@ -170,8 +170,8 @@ Linux上也需要专门的DNS查询软件
 
 **示例**  
 
-<img src="../../images/svcb-records-hidden-ports/query-result.webp" width="60%" height="60%" />
-<img src="../../images/svcb-records-hidden-ports/query-result-2.webp" width="60%" height="60%" />
+<img loading="lazy" src="../../images/svcb-records-hidden-ports/query-result.webp" width="60%" height="60%" />
+<img loading="lazy" src="../../images/svcb-records-hidden-ports/query-result-2.webp" width="60%" height="60%" />
 
 ---
 
@@ -185,7 +185,7 @@ Linux上也需要专门的DNS查询软件
 打开 设置》隐私与安全》基于HTTPS的DNS启用策略  
 将安全等级设置到 **增强保护或更高** 不然火狐基本不会使用 DoH 查询功能  
 
-<img src="../../images/svcb-records-hidden-ports/firefox-settings-1.webp" width="60%" height="60%" />
+<img loading="lazy" src="../../images/svcb-records-hidden-ports/firefox-settings-1.webp" width="60%" height="60%" />
 
 默认使用 cloudflare 的DoH 其在国内的连接效果可能不佳  
 可以更换成国内的 DoH 服务  
@@ -203,7 +203,7 @@ https://doh.pub/dns-query
 
 
 **示例**  
-<img src="../../images/svcb-records-hidden-ports/firefox-settings-2.webp" width="60%" height="60%" />
+<img loading="lazy" src="../../images/svcb-records-hidden-ports/firefox-settings-2.webp" width="60%" height="60%" />
 
 
 ### 测试 DoH 查询工作状况
@@ -226,12 +226,12 @@ ECH 测试网站：
 
 通过上述设置后 应该可以通过ECH测试  
 
-<img src="../../images/svcb-records-hidden-ports/ech-test-1.webp" width="60%" height="60%" />
-<img src="../../images/svcb-records-hidden-ports/ech-test-2.webp" width="60%" height="60%" />
+<img loading="lazy" src="../../images/svcb-records-hidden-ports/ech-test-1.webp" width="60%" height="60%" />
+<img loading="lazy" src="../../images/svcb-records-hidden-ports/ech-test-2.webp" width="60%" height="60%" />
 
 
 (其实在F12里面看DNS解析这一项就行了)  
-<img src="../../images/svcb-records-hidden-ports/dns-request-method.webp" width="60%" height="60%" />
+<img loading="lazy" src="../../images/svcb-records-hidden-ports/dns-request-method.webp" width="60%" height="60%" />
 
 
 ### 火狐浏览器代理问题
@@ -248,7 +248,7 @@ socks5 协议支持UDP 当然上游服务器也需要支持UDP
 这同样会造成DOH失效 具体原因尚不明确  
 可能是火狐自身的一些特性造成的  
 
-<img src="../../images/svcb-records-hidden-ports/firefox-manual-proxy.webp" width="60%" height="60%" />
+<img loading="lazy" src="../../images/svcb-records-hidden-ports/firefox-manual-proxy.webp" width="60%" height="60%" />
 
 ---
 
@@ -261,7 +261,7 @@ socks5 协议支持UDP 当然上游服务器也需要支持UDP
 则需要新的域名 添加到web服务规则中的 **前端地址** 内  
 这里为了方便演示 使用了单域名 并设置了独立的web服务规则  
 
-<img src="../../images/svcb-records-hidden-ports/example-web-service.webp" width="60%" height="60%" />
+<img loading="lazy" src="../../images/svcb-records-hidden-ports/example-web-service.webp" width="60%" height="60%" />
 
 
 ### 附加端口访问
@@ -270,14 +270,14 @@ socks5 协议支持UDP 当然上游服务器也需要支持UDP
 此步骤用于验证 web服务本身是否可用  
 以防止 如端口未打开 域名输入错误等其他原因影响访问  
 
-<img src="../../images/svcb-records-hidden-ports/port-access.webp" width="60%" height="60%" />
+<img loading="lazy" src="../../images/svcb-records-hidden-ports/port-access.webp" width="60%" height="60%" />
 
 ### 删除端口后访问
 
 在附加端口访问成功后 即可尝试删除端口访问  
 若上述设置均正确 则删除端口后依然可以访问  
 
-<img src="../../images/svcb-records-hidden-ports/no-port-access.webp" width="60%" height="60%" />
+<img loading="lazy" src="../../images/svcb-records-hidden-ports/no-port-access.webp" width="60%" height="60%" />
 
 
 ### 更新HTTPS记录
@@ -285,8 +285,8 @@ socks5 协议支持UDP 当然上游服务器也需要支持UDP
 使用lucky更新 HTTPS 记录的方法和之前更新SRV记录时基本相同  
 依然可以使用全局变量来动态引用STUN穿透后获得的端口  
 
-<img src="../../images/svcb-records-hidden-ports/update-https-record-1.webp" width="60%" height="60%" />
-<img src="../../images/svcb-records-hidden-ports/update-https-record-2.webp" width="60%" height="60%" />
+<img loading="lazy" src="../../images/svcb-records-hidden-ports/update-https-record-1.webp" width="60%" height="60%" />
+<img loading="lazy" src="../../images/svcb-records-hidden-ports/update-https-record-2.webp" width="60%" height="60%" />
 
 第一项为 **优先级** 这里填写的是1  
 第二项为 **目标** 因为是服务模式 指向的是自身 故填写的是一个点  
@@ -320,13 +320,13 @@ socks5 协议支持UDP 当然上游服务器也需要支持UDP
 如 加密DNS、安全DNS、私人/私有DNS  
 可以直接在系统设置中使用 DNS 为关键字 进行搜索  
 
-<img src="../../images/svcb-records-hidden-ports/android-secure-dns-1.webp" width="60%" height="60%" />
-<img src="../../images/svcb-records-hidden-ports/android-secure-dns-2.webp" width="60%" height="60%" />
-<img src="../../images/svcb-records-hidden-ports/android-secure-dns-3.webp" width="60%" height="60%" />
-<img src="../../images/svcb-records-hidden-ports/android-secure-dns-4.webp" width="60%" height="60%" />
+<img loading="lazy" src="../../images/svcb-records-hidden-ports/android-secure-dns-1.webp" width="60%" height="60%" />
+<img loading="lazy" src="../../images/svcb-records-hidden-ports/android-secure-dns-2.webp" width="60%" height="60%" />
+<img loading="lazy" src="../../images/svcb-records-hidden-ports/android-secure-dns-3.webp" width="60%" height="60%" />
+<img loading="lazy" src="../../images/svcb-records-hidden-ports/android-secure-dns-4.webp" width="60%" height="60%" />
 
 **示例**  
-<img src="../../images/svcb-records-hidden-ports/firefox-android-https-record.webp" width="60%" height="60%" />
+<img loading="lazy" src="../../images/svcb-records-hidden-ports/firefox-android-https-record.webp" width="60%" height="60%" />
 
 ---
 

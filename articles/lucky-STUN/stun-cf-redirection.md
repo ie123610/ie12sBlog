@@ -104,8 +104,8 @@ wildcard_replace(http.request.full_uri, "*://*.ie12.com/*", "https://${2}.stun.i
 
 **示例**  
 
-<img src="../../images/stun-cf-redirection/CF-redirect-set-redirect-rule-0.jpg" width="60%" height="60%" />
-<img src="../../images/stun-cf-redirection/CF-redirect-set-redirect-rule-1.jpg" width="60%" height="60%" />
+<img loading="lazy" src="../../images/stun-cf-redirection/CF-redirect-set-redirect-rule-0.jpg" width="60%" height="60%" />
+<img loading="lazy" src="../../images/stun-cf-redirection/CF-redirect-set-redirect-rule-1.jpg" width="60%" height="60%" />
 
 
 **表达式含义**  
@@ -123,7 +123,7 @@ wildcard_replace(http.request.full_uri, "*://*.ie12.com/*", "https://${2}.stun.i
 表示合成输出的内容 变量`${2}` `${3}` 为刚才存储截取部分的变量  
 
 **图示**  
-<img src="../../images/stun-cf-redirection/CF-redirect-expression-meaning.jpg" width="60%" height="60%" />
+<img loading="lazy" src="../../images/stun-cf-redirection/CF-redirect-expression-meaning.jpg" width="60%" height="60%" />
 
 ---
 
@@ -139,10 +139,10 @@ wildcard_replace(http.request.full_uri, "*://*.ie12.com/*", "https://${2}.stun.i
 CF对重定向的命名方式发生了改变  
 原先的**动态重定向**已经改为**单一重定向**  
 
-<img src="../../images/stun-cf-redirection/CF-redirect-240921-naming-method-change-1.jpg" width="60%" height="60%" />
+<img loading="lazy" src="../../images/stun-cf-redirection/CF-redirect-240921-naming-method-change-1.jpg" width="60%" height="60%" />
 
 与此同时设置界面的描述也发生了变化 不过在设置方法上并没有变化  
-<img src="../../images/stun-cf-redirection/CF-redirect-240921-naming-method-change-2.jpg" width="60%" height="60%" />
+<img loading="lazy" src="../../images/stun-cf-redirection/CF-redirect-240921-naming-method-change-2.jpg" width="60%" height="60%" />
 
 ---
 
@@ -156,8 +156,8 @@ CF对重定向的命名方式发生了改变
 * 区域 》动态重定向 》编辑
 
 **示例**  
-<img src="../../images/stun-cf-redirection/CF-redirect-access-token-0.jpg" width="60%" height="60%" />
-<img src="../../images/stun-cf-redirection/CF-redirect-access-token-1.jpg" width="60%" height="60%" />
+<img loading="lazy" src="../../images/stun-cf-redirection/CF-redirect-access-token-0.jpg" width="60%" height="60%" />
+<img loading="lazy" src="../../images/stun-cf-redirection/CF-redirect-access-token-1.jpg" width="60%" height="60%" />
 
 
 ### 获取区域ID
@@ -166,7 +166,7 @@ CF对重定向的命名方式发生了改变
 有了令牌和区域ID之后就可以开始获取规则集ID了  
 
 **示例**  
-<img src="../../images/stun-cf-redirection/CF-redirect-get-zone-id.jpg" width="60%" height="60%" />
+<img loading="lazy" src="../../images/stun-cf-redirection/CF-redirect-get-zone-id.jpg" width="60%" height="60%" />
 
 
 ### 获取规则集ID
@@ -190,7 +190,7 @@ Content-Type: application/json
 
 
 **示例**  
-<img src="../../images/stun-cf-redirection/CF-redirect-get-ruleset-id-0.jpg" width="60%" height="60%" />
+<img loading="lazy" src="../../images/stun-cf-redirection/CF-redirect-get-ruleset-id-0.jpg" width="60%" height="60%" />
 
 
 按下手动触发并查看日志中的返回结果  
@@ -199,7 +199,7 @@ Content-Type: application/json
 
 
 **示例**  
-<img src="../../images/stun-cf-redirection/CF-redirect-get-ruleset-id-1.jpg" width="60%" height="60%" />
+<img loading="lazy" src="../../images/stun-cf-redirection/CF-redirect-get-ruleset-id-1.jpg" width="60%" height="60%" />
 
 
 ### 获取重定向规则ID
@@ -214,13 +214,13 @@ Content-Type: application/json
 * 请求头：不变
 
 **示例**  
-<img src="../../images/stun-cf-redirection/CF-redirect-get-redirect-rule-id-0.jpg" width="60%" height="60%" />
+<img loading="lazy" src="../../images/stun-cf-redirection/CF-redirect-get-redirect-rule-id-0.jpg" width="60%" height="60%" />
 
 按下手动触发并查看日志中的返回结果  
 图中划线的ID即为重定向规则ID  
 
 **示例**  
-<img src="../../images/stun-cf-redirection/CF-redirect-get-redirect-rule-id-1.jpg" width="60%" height="60%" />
+<img loading="lazy" src="../../images/stun-cf-redirection/CF-redirect-get-redirect-rule-id-1.jpg" width="60%" height="60%" />
 
 ### 测试更新
 
@@ -262,14 +262,14 @@ Content-Type: application/json
 
 
 **图示**  
-<img src="../../images/stun-cf-redirection/CF-redirect-test-update-0.jpg" width="60%" height="60%" />
+<img loading="lazy" src="../../images/stun-cf-redirection/CF-redirect-test-update-0.jpg" width="60%" height="60%" />
 
 按下手动触发并查看日志中的返回结果  
 若设置正确即可看到返回的重定向规则信息中目标URL的  
 地址和端口号已经发生变化  
 
 **示例**  
-<img src="../../images/stun-cf-redirection/CF-redirect-set-redirect-rule-1.jpg" width="60%" height="60%" />
+<img loading="lazy" src="../../images/stun-cf-redirection/CF-redirect-set-redirect-rule-1.jpg" width="60%" height="60%" />
 
 ---
 
@@ -297,8 +297,8 @@ Content-Type: application/json
 
 
 **示例**  
-<img src="../../images/stun-cf-redirection/CF-redirect-effect-verification-1.jpg" width="60%" height="60%" />
-<img src="../../images/stun-cf-redirection/CF-redirect-effect-verification-0.jpg" width="60%" height="60%" />
+<img loading="lazy" src="../../images/stun-cf-redirection/CF-redirect-effect-verification-1.jpg" width="60%" height="60%" />
+<img loading="lazy" src="../../images/stun-cf-redirection/CF-redirect-effect-verification-0.jpg" width="60%" height="60%" />
 
 ---
 

@@ -14,27 +14,27 @@
 ### 实验准备
 
 **qbittorrent 客户端信息**  
-<img src="../../images/qb-anonymous-mode/qb-info.jpg" width="60%" height="60%" />
+<img loading="lazy" src="../../images/qb-anonymous-mode/qb-info.jpg" width="60%" height="60%" />
 
 **比特彗星 客户端信息**  
-<img src="../../images/qb-anonymous-mode/bc-info.jpg" width="60%" height="60%" />
+<img loading="lazy" src="../../images/qb-anonymous-mode/bc-info.jpg" width="60%" height="60%" />
 
 ### qbittorrent 开启匿名模式
-<img src="../../images/qb-anonymous-mode/qb-anonymous-mode.jpg" width="60%" height="60%" />
+<img loading="lazy" src="../../images/qb-anonymous-mode/qb-anonymous-mode.jpg" width="60%" height="60%" />
 
 两客户端同时下载相同的测试资源  
 观察两客户端的用户栏信息  
 
 **比特彗星**  
-<img src="../../images/qb-anonymous-mode/bc-qb-client-name.jpg" width="60%" height="60%" />
+<img loading="lazy" src="../../images/qb-anonymous-mode/bc-qb-client-name.jpg" width="60%" height="60%" />
 
 **qbittorrent**  
-<img src="../../images/qb-anonymous-mode/qb-bc-client-name.jpg" width="60%" height="60%" />
+<img loading="lazy" src="../../images/qb-anonymous-mode/qb-bc-client-name.jpg" width="60%" height="60%" />
 
 观察比特彗星中对端 qbittorrent 的客户端名称  
 qbittorrent 被正确识别  
 
-<img src="../../images/qb-anonymous-mode/qb-client-name-and-peerid.jpg" width="60%" height="60%" />
+<img loading="lazy" src="../../images/qb-anonymous-mode/qb-client-name-and-peerid.jpg" width="60%" height="60%" />
 
 >hz6615997184904  
 >一个辨认方法是，通常扩展标识是带斜杠的。  
@@ -53,7 +53,7 @@ peer ID 为标准的 qbittorrent ID
 
 查看 qbittorrent 文档中对匿名模式的解释：[链接](https://github.com/qbittorrent/qBittorrent/wiki/Anonymous-Mode)
 
-<img src="../../images/qb-anonymous-mode/qb-doc.jpg" width="60%" height="60%" />
+<img loading="lazy" src="../../images/qb-anonymous-mode/qb-doc.jpg" width="60%" height="60%" />
 
 从文档来看在匿名模式下 qbittorrent 确实不会通过通告自己的客户端名称  
 

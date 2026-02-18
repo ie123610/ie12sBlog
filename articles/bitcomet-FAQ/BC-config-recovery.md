@@ -16,7 +16,7 @@ sidebar_label: 意外退出程序后下载列表清空的解决方法
 
 打开目录可以看到一些 名为 **Downloads.xml.[日期].bak** 的文件  
 这些就是下载列表的备份文件日期部分表示其备份的时间  
-<img src="../../images/BC-config-recovery/backup-files.webp" width="60%" height="60%" />
+<img loading="lazy" src="../../images/BC-config-recovery/backup-files.webp" width="60%" height="60%" />
 
 **恢复方法**  
 
@@ -32,7 +32,7 @@ sidebar_label: 意外退出程序后下载列表清空的解决方法
 
 种子存档功能默认启用 **在添加任务时会自动保存一份种子文件**  
 右键可以重新添加到下载列表中 其保存在torrents文件夹中和配置文件在同一个目录  
-<img src="../../images/BC-config-recovery/from-archive-to-list.webp" title="查看存档的种子文件" width="60%" height="60%" />
+<img loading="lazy" src="../../images/BC-config-recovery/from-archive-to-list.webp" title="查看存档的种子文件" width="60%" height="60%" />
 
 不过**我们不需要重新下载文件**  
 在创建任务的时候 **选择之前任务下载的目录**  
@@ -65,7 +65,7 @@ sidebar_label: 意外退出程序后下载列表清空的解决方法
 事务性写入使得配置文件更不容易发生损坏  
 而版本化备份 则使得配置文件像下载列表那样会生成备份文件  
 
-<img src="../../images/BC-config-recovery/config-backup.webp" width="60%" height="60%" />
+<img loading="lazy" src="../../images/BC-config-recovery/config-backup.webp" width="60%" height="60%" />
 
 ---
 

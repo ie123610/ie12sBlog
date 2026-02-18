@@ -20,4 +20,4 @@
 使用的是Windows自带的记事本进行编辑 没有注意到最后的空格  
 以后还是使用Notepad3之类的专门的文本编辑器 可以提示那些不可打印字符  
 
-<img src="../../images/B站专栏文本复制问题/B站专栏文本复制问题-1.jpg" width="60%" height="60%" />
+<img loading="lazy" src="../../images/B站专栏文本复制问题/B站专栏文本复制问题-1.jpg" width="60%" height="60%" />

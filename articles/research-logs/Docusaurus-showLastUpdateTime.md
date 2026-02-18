@@ -28,7 +28,7 @@ keywords: [Docusaurus 教程, showLastUpdateTime 错误, Cloudflare Pages 部署
 其相当于调试状态 在此状态下所有的文章总是显示相同时间  
 且与文件时间的修改时间不相符 其只起到占位符的作用  
 
-<img src="../../images/showLastUpdateTime/time-in-debug-mode.jpg" width="60%" height="60%" />
+<img loading="lazy" src="../../images/showLastUpdateTime/time-in-debug-mode.jpg" width="60%" height="60%" />
 
 
 ## Cloudflare Pages
@@ -45,7 +45,7 @@ keywords: [Docusaurus 教程, showLastUpdateTime 错误, Cloudflare Pages 部署
 `git fetch --unshallow && npm run build`  
 在构建前先进行深度克隆 修改后文章末尾的时间应能正常显示  
 
-<img src="../../images/showLastUpdateTime/new-build-command.jpg" width="60%" height="60%" />
+<img loading="lazy" src="../../images/showLastUpdateTime/new-build-command.jpg" width="60%" height="60%" />
 
 ---
 

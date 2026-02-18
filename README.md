@@ -24,5 +24,5 @@
 
 本博客中所有的文章若无特殊说明则均使用  
 [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/deed.zh-hans) 共享协议  
-<img src="./images/CC-ico/by-sa.svg" alt="CC BY-SA 4.0 logo" width="100" height="35" />
+<img loading="lazy" src="./images/CC-ico/by-sa.svg" alt="CC BY-SA 4.0 logo" width="100" height="35" />
 

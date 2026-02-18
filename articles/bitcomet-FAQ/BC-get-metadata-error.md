@@ -7,12 +7,12 @@ sidebar_label: 元数据获取问题
 2023.10.29  
 
 **问：** 添加任务后一直显示 等待元数据文件下载中  
-<img src="../../images/BC-get-metadata-error/waiting-for-metadata-download.webp" width="60%" height="60%" />
+<img loading="lazy" src="../../images/BC-get-metadata-error/waiting-for-metadata-download.webp" width="60%" height="60%" />
 
 **答：** 点  立即下载 即可，获取元数据需要一些时间，获取后会开始下载  
 
 **问：** 部分任务获取到了，但是还有一些任务 还是不行  
-<img src="../../images/BC-get-metadata-error/task-yellow-arrow.webp" width="60%" height="60%" />
+<img loading="lazy" src="../../images/BC-get-metadata-error/task-yellow-arrow.webp" width="60%" height="60%" />
 
 **答：** 可以尝试重启任务 即暂停任务后再开始 BC下载元数据时似乎不支持断点续传  
 即必须从一个用户那里完整的获取到元数据，不能从多个用户获得一部分后再拼接起来  
@@ -26,16 +26,16 @@ BTSOW：https://btsow.bond/convert/magnet
 在btsow用磁力转换成种子是比较方便的  
 将磁力复制到剪贴板后直接粘贴即可  
 
-<img src="../../images/BC-get-metadata-error/btsow-1.webp" width="60%" height="60%" />
+<img loading="lazy" src="../../images/BC-get-metadata-error/btsow-1.webp" width="60%" height="60%" />
 
 获取成功后会来到详情页面  
 
-<img src="../../images/BC-get-metadata-error/btsow-2.webp" width="60%" height="60%" />
+<img loading="lazy" src="../../images/BC-get-metadata-error/btsow-2.webp" width="60%" height="60%" />
 
 点击中间的按钮下载 种子文件  
 会跳转到 btcache.me   
 
-<img src="../../images/BC-get-metadata-error/btchash-1.webp" width="60%" height="60%" />
+<img loading="lazy" src="../../images/BC-get-metadata-error/btchash-1.webp" width="60%" height="60%" />
 
 输入验证码后即可进行下载  
 缺点是 btsow的网址会频繁更换 可能需要代理才能访问  
@@ -48,7 +48,7 @@ BTSOW：https://btsow.bond/convert/magnet
 而直接在btcache.me下载只能使用特征码并且有格式要求  
 （相当于btsow在调用btcache.me时对输入的磁力进行了一次转换）  
 
-<img src="../../images/BC-get-metadata-error/btchash-2.webp" width="60%" height="60%" />
+<img loading="lazy" src="../../images/BC-get-metadata-error/btchash-2.webp" width="60%" height="60%" />
 
 其只能使用16进制哈希即特征码 并且全部字母要大写（使用URL链接下载时必须全部大写）  
 
@@ -56,11 +56,11 @@ BTSOW：https://btsow.bond/convert/magnet
 
 **答：** 先在BC中选择无法获取元数据的任务，右键弹出菜单 选择复制> 特征码v1  
 
-<img src="../../images/BC-get-metadata-error/copy-infohash.webp" width="60%" height="60%" />
+<img loading="lazy" src="../../images/BC-get-metadata-error/copy-infohash.webp" width="60%" height="60%" />
 
 粘贴特征码并点击下载  
 
-<img src="../../images/BC-get-metadata-error/btcash-3.webp" width="60%" height="60%" />
+<img loading="lazy" src="../../images/BC-get-metadata-error/btcash-3.webp" width="60%" height="60%" />
 
 若获取成功会和之前一样跳转到下载界面  
 也可以去 https://itorrents.org/ 看看  
@@ -81,7 +81,7 @@ BTSOW：https://btsow.bond/convert/magnet
 此部分 来自 像素帝的教程 ： ~~https://www.cometbbs.com/t/83650~~  
 如果看不清楚可以 右键图片选择在新标签页打开图片  
 
-<img src="../../images/BC-get-metadata-error/xunlei-download.webp" width="60%" height="60%" />
+<img loading="lazy" src="../../images/BC-get-metadata-error/xunlei-download.webp" width="60%" height="60%" />
 
 ---
 

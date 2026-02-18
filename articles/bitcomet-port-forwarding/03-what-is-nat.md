@@ -80,7 +80,7 @@ IP地址的范围是从 0.0.0.0到255.255.255.255
 这样路由器获得的也是私网地址  
 运营商可以让多个家庭共用一个公网IP上网  
 
-<img src="../../images/bitcomet-port-forwarding-nat/cgn_nat.webp" width="60%" height="60%" title="运营商级NAT示意图  来自test-ipv6.com" />
+<img loading="lazy" src="../../images/bitcomet-port-forwarding-nat/cgn_nat.webp" width="60%" height="60%" title="运营商级NAT示意图  来自test-ipv6.com" />
 
 **问：** 老是这样套娃也不是办法吧？  
 
