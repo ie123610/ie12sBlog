@@ -16,7 +16,7 @@
 
 * [Windows 无法启用休眠问题](./win-sleep-mode-issue.md)
 * [Windows 传输动画提取](./win-animation.md)
-
+* [Lucky 执行批处理报错和乱码问题](./lucky-cmd-error.md)
 
 ### 网络类
 
