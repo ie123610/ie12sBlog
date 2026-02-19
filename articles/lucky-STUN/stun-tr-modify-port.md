@@ -45,23 +45,23 @@ win10和win11中应该已经预装了curl
 curl -V
 ```
 
-<img loading="lazy" src="../../images/stun-tr-modify-port/curl-info-win.webp" width="60%" height="60%" />
+<img loading="lazy" src="../../images/stun-tr-modify-port/curl-info-win.webp" width="60%" />
 
 如果使用的是win7或显示  
 "‘curl’ 不是内部或外部命令，也不是可运行的程序或批处理文件。"  
 就需要手动下载curl 下载curl：[链接](https://curl.se/windows/)  
 
-<img loading="lazy" src="../../images/stun-tr-modify-port/curl-download-interface.webp" title="一般选择最上面的64-bit" width="60%" height="60%" />
+<img loading="lazy" src="../../images/stun-tr-modify-port/curl-download-interface.webp" title="一般选择最上面的64-bit" width="60%" />
 
 <img loading="lazy" src="../../images/stun-tr-modify-port/curl-compressed-file.webp" title="解压文件" />
 
-<img loading="lazy" src="../../images/stun-tr-modify-port/curl-folder.webp" width="60%" height="60%" />
+<img loading="lazy" src="../../images/stun-tr-modify-port/curl-folder.webp" width="60%" />
 
 进入bin文件夹 将curl.exe 复制到到system32文件夹  
 `C:\Windows\System32`  
 
-<img loading="lazy" src="../../images/stun-tr-modify-port/curl-folder-2.webp" width="60%" height="60%" />
-<img loading="lazy" src="../../images/stun-tr-modify-port/curl-main-program.webp" width="60%" height="60%" />
+<img loading="lazy" src="../../images/stun-tr-modify-port/curl-folder-2.webp" width="60%" />
+<img loading="lazy" src="../../images/stun-tr-modify-port/curl-main-program.webp" width="60%" />
 
 
 完成后重复刚才的命令 有版本号显示即表示安装正确  
@@ -72,7 +72,7 @@ curl -V
 
 **关闭** transmission自己的UPnP以防止影响STUN穿透效果  
 
-<img loading="lazy" src="../../images/stun-tr-modify-port/tr-upnp-settings.webp" width="60%" height="60%" />
+<img loading="lazy" src="../../images/stun-tr-modify-port/tr-upnp-settings.webp" width="60%" />
 
 
 ### 设置自动更新脚本
@@ -80,16 +80,16 @@ curl -V
 打开lucky添加计划任务  
 在计划任务中测试完命令之后再填写到STUN穿透规则中  
 
-<img loading="lazy" src="../../images/stun-tr-modify-port/lucky-add-scheduled-task.webp" width="60%" height="60%" />
+<img loading="lazy" src="../../images/stun-tr-modify-port/lucky-add-scheduled-task.webp" width="60%" />
 
 子规则选择自定义脚本 其他选项任意设置  
 不填写脚本内容**先保存计划任务**  
 
-<img loading="lazy" src="../../images/stun-tr-modify-port/lucky-custom-script.webp" width="60%" height="60%" />
+<img loading="lazy" src="../../images/stun-tr-modify-port/lucky-custom-script.webp" width="60%" />
 
 关闭规则开关 我们只使用手动触发  
 
-<img loading="lazy" src="../../images/stun-tr-modify-port/lucky-manual-trigger.webp" width="60%" height="60%" />
+<img loading="lazy" src="../../images/stun-tr-modify-port/lucky-manual-trigger.webp" width="60%" />
 
 编辑规则并填写下列命令  
 其中的参数要根据实际情况填写  
@@ -141,7 +141,7 @@ for /f "tokens=27 delims=<>" %%a in ('curl -X POST http://"%username%":"%passwor
 curl -X POST http://"%username%":"%password%"@"%ip%":"%webport%"/transmission/rpc/ -H "%token%" -d "%json%"
 ```
 
-<img loading="lazy" src="../../images/stun-tr-modify-port/script-content-win-1.webp" width="60%" height="60%" />
+<img loading="lazy" src="../../images/stun-tr-modify-port/script-content-win-1.webp" width="60%" />
 
 
 **填写完成后保存规则**  
@@ -150,7 +150,7 @@ curl -X POST http://"%username%":"%password%"@"%ip%":"%webport%"/transmission/rp
 不过最好还是去到transmission的设置中检查一下端口没有变化  
 **若成功变更了端口则表示脚本设置正确**  
 
-<img loading="lazy" src="../../images/stun-tr-modify-port/manual-trigger-success.webp" width="60%" height="60%" />
+<img loading="lazy" src="../../images/stun-tr-modify-port/manual-trigger-success.webp" width="60%" />
 
 **如果有错误代码 且不显示具体内容**  
 建议创建一个批处理文件 手动运行以查看报错内容  
@@ -170,7 +170,7 @@ set "port=${port}"
 
 **示例**  
 
-<img loading="lazy" src="../../images/stun-tr-modify-port/script-content-win-2.webp" width="60%" height="60%" />
+<img loading="lazy" src="../../images/stun-tr-modify-port/script-content-win-2.webp" width="60%" />
 
 打开穿透规则 查看日志 以及 transmission 端口  
 **若显示 success 且端口成功更换 则配置正确**  
@@ -195,13 +195,13 @@ set "port=${port}"
 sed -i 's/dl-cdn.alpinelinux.org/mirrors.tuna.tsinghua.edu.cn/g' /etc/apk/repositories
 ```
 
-<img loading="lazy" src="../../images/stun-tr-modify-port/change-download-source.webp" width="60%" height="60%" />
+<img loading="lazy" src="../../images/stun-tr-modify-port/change-download-source.webp" width="60%" />
 
 **按下手动触发按钮并查看日志**  
 此步的输出内容为空白  
 
-<img loading="lazy" src="../../images/stun-tr-modify-port/change-source-trigger.webp" width="60%" height="60%" />
-<img loading="lazy" src="../../images/stun-tr-modify-port/change-source-blank.webp" width="60%" height="60%" title="输出内容为空白" />
+<img loading="lazy" src="../../images/stun-tr-modify-port/change-source-trigger.webp" width="60%" />
+<img loading="lazy" src="../../images/stun-tr-modify-port/change-source-blank.webp" width="60%" title="输出内容为空白" />
 
 
 ### 安装curl  
@@ -211,11 +211,11 @@ sed -i 's/dl-cdn.alpinelinux.org/mirrors.tuna.tsinghua.edu.cn/g' /etc/apk/reposi
 apk add curl 2>&1 &
 ```
 
-<img loading="lazy" src="../../images/stun-tr-modify-port/curl-script.webp" width="60%" height="60%" />
+<img loading="lazy" src="../../images/stun-tr-modify-port/curl-script.webp" width="60%" />
 
 检查日志输出 有显示OK表示安装成功  
 
-<img loading="lazy" src="../../images/stun-tr-modify-port/curl-installation-success.webp" width="60%" height="60%" />
+<img loading="lazy" src="../../images/stun-tr-modify-port/curl-installation-success.webp" width="60%" />
 
 
 **验证安装效果**  
@@ -226,14 +226,14 @@ curl -V
 ```
 检查日志 看到curl的版本号即表示成功  
 
-<img loading="lazy" src="../../images/stun-tr-modify-port/curl-info-linux.webp" width="60%" height="60%" />
+<img loading="lazy" src="../../images/stun-tr-modify-port/curl-info-linux.webp" width="60%" />
 
 
 ### 调整transmission设置
 
 **关闭** transmission自己的upnp以防止影响STUN穿透效果  
 
-<img loading="lazy" src="../../images/stun-tr-modify-port/tr-disable-upnp.webp" width="60%" height="60%" />
+<img loading="lazy" src="../../images/stun-tr-modify-port/tr-disable-upnp.webp" width="60%" />
 
 **测试脚本**  
 
@@ -281,7 +281,7 @@ token=`curl -X POST http://$username:$password@$host:$webui/transmission/rpc/ | 
 curl -X POST http://$username:$password@$host:$webui/transmission/rpc/  -H "$token" -d "$json"
 ```
 
-<img loading="lazy" src="../../images/stun-tr-modify-port/script-linux-1.webp" width="60%" height="60%" />
+<img loading="lazy" src="../../images/stun-tr-modify-port/script-linux-1.webp" width="60%" />
 
 **填写完成后保存规则**  
 
@@ -289,7 +289,7 @@ curl -X POST http://$username:$password@$host:$webui/transmission/rpc/  -H "$tok
 不过最好还是去到transmission的设置中检查一下端口没有变化  
 **若成功变更了端口则表示脚本设置正确**  
 
-<img loading="lazy" src="../../images/stun-tr-modify-port/curl-info-linux.webp" width="60%" height="60%" />
+<img loading="lazy" src="../../images/stun-tr-modify-port/curl-info-linux.webp" width="60%" />
 
 
 ### 编辑STUN 穿透规则
@@ -305,7 +305,7 @@ port=${port}
 
 **示例**  
 
-<img loading="lazy" src="../../images/stun-tr-modify-port/script-linux-2.webp" width="60%" height="60%" />
+<img loading="lazy" src="../../images/stun-tr-modify-port/script-linux-2.webp" width="60%" />
 
 打开穿透规则 查看日志 以及 transmission 端口  
 **若显示 success 且端口成功更换 则配置正确**  

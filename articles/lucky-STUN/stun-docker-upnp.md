@@ -44,12 +44,12 @@
 
 **子规则选择自定义脚本** 其他选项任意设置 不填写脚本内容先保存  
 
-<img loading="lazy" src="../../images/stun-docker-upnp/add-scheduled-task.webp" width="60%" height="60%" />
-<img loading="lazy" src="../../images/stun-docker-upnp/custom-script.webp" width="60%" height="60%" />
+<img loading="lazy" src="../../images/stun-docker-upnp/add-scheduled-task.webp" width="60%" />
+<img loading="lazy" src="../../images/stun-docker-upnp/custom-script.webp" width="60%" />
 
 
 关闭规则开关 我们只使用 **手动触发**  
-<img loading="lazy" src="../../images/stun-docker-upnp/disable-scheduled-task.webp" width="60%" height="60%" />
+<img loading="lazy" src="../../images/stun-docker-upnp/disable-scheduled-task.webp" width="60%" />
 
 
 ### 修改下载源
@@ -61,13 +61,13 @@
 ```
 sed -i 's/dl-cdn.alpinelinux.org/mirrors.tuna.tsinghua.edu.cn/g' /etc/apk/repositories
 ```
-<img loading="lazy" src="../../images/stun-docker-upnp/change-download-source-1.webp" width="60%" height="60%" />
+<img loading="lazy" src="../../images/stun-docker-upnp/change-download-source-1.webp" width="60%" />
 
 
 按下手动触发按钮并查看日志 **此步的输出内容应为空白**  
 
-<img loading="lazy" src="../../images/stun-docker-upnp/change-download-source-2.webp" width="60%" height="60%" />
-<img loading="lazy" src="../../images/stun-docker-upnp/change-download-source-3.webp" width="60%" height="60%" title="输出内容为空白" />
+<img loading="lazy" src="../../images/stun-docker-upnp/change-download-source-2.webp" width="60%" />
+<img loading="lazy" src="../../images/stun-docker-upnp/change-download-source-3.webp" width="60%" title="输出内容为空白" />
 
 
 ### 安装MiniUPnP
@@ -77,10 +77,10 @@ sed -i 's/dl-cdn.alpinelinux.org/mirrors.tuna.tsinghua.edu.cn/g' /etc/apk/reposi
 apk add miniupnpc 2>&1 &
 ```
 
-<img loading="lazy" src="../../images/stun-docker-upnp/install-mupnp-1.webp" width="60%" height="60%" />
+<img loading="lazy" src="../../images/stun-docker-upnp/install-mupnp-1.webp" width="60%" />
 
 检查日志输出 有显示OK表示安装成功  
-<img loading="lazy" src="../../images/stun-docker-upnp/install-upnp-ok.webp" width="60%" height="60%" />
+<img loading="lazy" src="../../images/stun-docker-upnp/install-upnp-ok.webp" width="60%" />
 
 
 ### 检查UPnP设置
@@ -90,18 +90,18 @@ apk add miniupnpc 2>&1 &
 upnpc -i -l 2>&1 &
 ```
 
-<img loading="lazy" src="../../images/stun-docker-upnp/check-upnp-1.webp" width="60%" height="60%" />
+<img loading="lazy" src="../../images/stun-docker-upnp/check-upnp-1.webp" width="60%" />
 
 如果有很多输出内容且其中包括 **“Status : Connected”**  
 说明路由器/光猫上的UPnP功能 **已经正确打开**  
 
-<img loading="lazy" src="../../images/stun-docker-upnp/check-upnp-2.webp" width="60%" height="60%" />
+<img loading="lazy" src="../../images/stun-docker-upnp/check-upnp-2.webp" width="60%" />
 
 
 如果显示 **"No IGD UPnP Device found on the network"**  
 则路由器/光猫上的UPnP功能尚未打开 **请检查其设置以及Docker容器的网络模式**  
 
-<img loading="lazy" src="../../images/stun-docker-upnp/check-upnp-3.webp" width="60%" height="60%" />
+<img loading="lazy" src="../../images/stun-docker-upnp/check-upnp-3.webp" width="60%" />
 
 
 ### 设置STUN穿透规则
@@ -132,8 +132,8 @@ upnpc -i -e "TR-TCP" -a @ ${port} 5656 TCP 2>&1 &
 **大部分硬路由无法调整 故建议lucky和BT客户端设置在同一IP上则**  
 openwrt可以 通过关闭UPnP的安全模式来解决出问题  
 
-<img loading="lazy" src="../../images/stun-docker-upnp/penetration-rule-content-1.webp" width="60%" height="60%" />
-<img loading="lazy" src="../../images/stun-docker-upnp/penetration-rule-content-2.webp" width="60%" height="60%" />
+<img loading="lazy" src="../../images/stun-docker-upnp/penetration-rule-content-1.webp" width="60%" />
+<img loading="lazy" src="../../images/stun-docker-upnp/penetration-rule-content-2.webp" width="60%" />
 
 ### 开启穿透规则并检查日志输出
 
@@ -142,7 +142,7 @@ openwrt可以 通过关闭UPnP的安全模式来解决出问题
 
 **示例**  
 
-<img loading="lazy" src="../../images/stun-docker-upnp/run-effect-1.webp" width="60%" height="60%" />
+<img loading="lazy" src="../../images/stun-docker-upnp/run-effect-1.webp" width="60%" />
 
 
 **检视添加效果**  
@@ -153,7 +153,7 @@ openwrt可以 通过关闭UPnP的安全模式来解决出问题
 `upnpc -i -l 2>&1 &`  
 应该可以看到刚刚添加的规则  
 
-<img loading="lazy" src="../../images/stun-docker-upnp/run-effect-2.webp" width="60%" height="60%" />
+<img loading="lazy" src="../../images/stun-docker-upnp/run-effect-2.webp" width="60%" />
 
 至此我们就实现了在Docker中使用MiniUPnP为BT客户端自动添加内外端口不同的映射规则  
 

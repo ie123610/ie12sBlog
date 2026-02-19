@@ -36,9 +36,9 @@ Cloudflare 下文简称 CF
 其按照实际情况进行填写 这里使用 "test"和"1234"  
 
 
-<img loading="lazy" src="../../images/update-TXT-record-on-cf-and-dynv6/TXT_dynv6-create-new-txt-record-1.jpg" width="60%" height="60%" />
-<img loading="lazy" src="../../images/update-TXT-record-on-cf-and-dynv6/TXT_dynv6-create-new-txt-record-2.jpg" width="60%" height="60%" />
-<img loading="lazy" src="../../images/update-TXT-record-on-cf-and-dynv6/TXT_dynv6-create-new-txt-record-3.jpg" width="60%" height="60%" />
+<img loading="lazy" src="../../images/update-TXT-record-on-cf-and-dynv6/TXT_dynv6-create-new-txt-record-1.jpg" width="60%" />
+<img loading="lazy" src="../../images/update-TXT-record-on-cf-and-dynv6/TXT_dynv6-create-new-txt-record-2.jpg" width="60%" />
+<img loading="lazy" src="../../images/update-TXT-record-on-cf-and-dynv6/TXT_dynv6-create-new-txt-record-3.jpg" width="60%" />
 
 
 ### 获取 更新Token
@@ -62,7 +62,7 @@ Cloudflare 下文简称 CF
 详情请查看之前的教程：[链接](./stun-mc-srv.md)  
 
 
-<img loading="lazy" src="../../images/update-TXT-record-on-cf-and-dynv6/TXT_dynv6-dns-record_id.jpg" width="60%" height="60%" />
+<img loading="lazy" src="../../images/update-TXT-record-on-cf-and-dynv6/TXT_dynv6-dns-record_id.jpg" width="60%" />
 
 
 ### 更新 TXT 记录
@@ -82,8 +82,8 @@ name为记录名称 data为记录的内容
 
 **更新效果**  
 
-<img loading="lazy" src="../../images/update-TXT-record-on-cf-and-dynv6/TXT_dynv6-record-update-completed-1.jpg" width="60%" height="60%" />
-<img loading="lazy" src="../../images/update-TXT-record-on-cf-and-dynv6/TXT_dynv6-record-update-completed-2.jpg" width="60%" height="60%" />
+<img loading="lazy" src="../../images/update-TXT-record-on-cf-and-dynv6/TXT_dynv6-record-update-completed-1.jpg" width="60%" />
+<img loading="lazy" src="../../images/update-TXT-record-on-cf-and-dynv6/TXT_dynv6-record-update-completed-2.jpg" width="60%" />
 
 ---
 
@@ -105,8 +105,8 @@ name为记录名称 data为记录的内容
 
 假想主域名为 `ie12.com`
 
-<img loading="lazy" src="../../images/update-TXT-record-on-cf-and-dynv6/TXT_cf-create-new-txt-record-1.jpg" width="60%" height="60%" />
-<img loading="lazy" src="../../images/update-TXT-record-on-cf-and-dynv6/TXT_cf-create-new-txt-record-2.jpg" width="60%" height="60%" />
+<img loading="lazy" src="../../images/update-TXT-record-on-cf-and-dynv6/TXT_cf-create-new-txt-record-1.jpg" width="60%" />
+<img loading="lazy" src="../../images/update-TXT-record-on-cf-and-dynv6/TXT_cf-create-new-txt-record-2.jpg" width="60%" />
 
 
 ### 获取 更新Token
@@ -129,7 +129,7 @@ name为记录名称 data为记录的内容
 也就是我们之前创建的TXT记录的ID  
 详情请查看之前的教程：[链接](./cf-srv-record-settings.md)  
 
-<img loading="lazy" src="../../images/update-TXT-record-on-cf-and-dynv6/TXT_cf-dns-record_id.jpg" width="60%" height="60%" />
+<img loading="lazy" src="../../images/update-TXT-record-on-cf-and-dynv6/TXT_cf-dns-record_id.jpg" width="60%" />
 
 ### 更新 TXT 记录
 
@@ -148,8 +148,8 @@ tpye为记录类型 填写TXT content为记录的内容
 
 **更新效果**  
 
-<img loading="lazy" src="../../images/update-TXT-record-on-cf-and-dynv6/TXT_cf-record-update-completed-1.jpg" width="60%" height="60%" />
-<img loading="lazy" src="../../images/update-TXT-record-on-cf-and-dynv6/TXT_cf-record-update-completed-2.jpg" width="60%" height="60%" />
+<img loading="lazy" src="../../images/update-TXT-record-on-cf-and-dynv6/TXT_cf-record-update-completed-1.jpg" width="60%" />
+<img loading="lazy" src="../../images/update-TXT-record-on-cf-and-dynv6/TXT_cf-record-update-completed-2.jpg" width="60%" />
 
 ---
 

@@ -26,8 +26,8 @@
 要想使用此更新方法则比特彗星的版本要**大于等于2.10**  
 
 **检查软件版本号**  
-<img loading="lazy" src="../../images/stun-bc-port-automation/check-version-1.jpg" width="60%" height="60%" />
-<img loading="lazy" src="../../images/stun-bc-port-automation/check-version-2.jpg" width="60%" height="60%" />
+<img loading="lazy" src="../../images/stun-bc-port-automation/check-version-1.jpg" width="60%" />
+<img loading="lazy" src="../../images/stun-bc-port-automation/check-version-2.jpg" width="60%" />
 
 ---
 
@@ -40,18 +40,18 @@
 
 启用 远程下载 设置 用户名和密码 并检查端口号  
 
-<img loading="lazy" src="../../images/stun-bc-port-automation/remote-access-setup-1.jpg" width="60%" height="60%" />
-<img loading="lazy" src="../../images/stun-bc-port-automation/remote-access-setup-2.jpg" width="60%" height="60%" />
+<img loading="lazy" src="../../images/stun-bc-port-automation/remote-access-setup-1.jpg" width="60%" />
+<img loading="lazy" src="../../images/stun-bc-port-automation/remote-access-setup-2.jpg" width="60%" />
 
 先登录到旧版  再通过下方的链接跳转到新版WebUI  
 
-<img loading="lazy" src="../../images/stun-bc-port-automation/remote-login-1.jpg" width="60%" height="60%" />
-<img loading="lazy" src="../../images/stun-bc-port-automation/remote-login-2.jpg" width="60%" height="60%" />
+<img loading="lazy" src="../../images/stun-bc-port-automation/remote-login-1.jpg" width="60%" />
+<img loading="lazy" src="../../images/stun-bc-port-automation/remote-login-2.jpg" width="60%" />
 
 显示出新版 WebUI 后需要再次登录  
 
-<img loading="lazy" src="../../images/stun-bc-port-automation/remote-login-3.jpg" width="60%" height="60%" />
-<img loading="lazy" src="../../images/stun-bc-port-automation/remote-login-4.jpg" width="60%" height="60%" />
+<img loading="lazy" src="../../images/stun-bc-port-automation/remote-login-3.jpg" width="60%" />
+<img loading="lazy" src="../../images/stun-bc-port-automation/remote-login-4.jpg" width="60%" />
 
 ### 检视HTTP请求
 
@@ -62,7 +62,7 @@
 查看 请求标头 寻找 `Authorization` 字段  
 以 `Bearer`开头的部分即为令牌 **复制 Bearer 之后的字符**  
 
-<img loading="lazy" src="../../images/stun-bc-port-automation/obtain-token.jpg" width="60%" height="60%" />
+<img loading="lazy" src="../../images/stun-bc-port-automation/obtain-token.jpg" width="60%" />
 
 ---
 
@@ -108,7 +108,7 @@ curl -Lks "%WEBUI%/api/config/connection/set" -H "Authorization: Bearer %TOKEN%"
 最后加上 `pause` 保持窗口以便于检视运行效果  
 
 **示例**  
-<img loading="lazy" src="../../images/stun-bc-port-automation/script-example.jpg" width="60%" height="60%" />
+<img loading="lazy" src="../../images/stun-bc-port-automation/script-example.jpg" width="60%" />
 
 ### 测试效果
 
@@ -116,8 +116,8 @@ curl -Lks "%WEBUI%/api/config/connection/set" -H "Authorization: Bearer %TOKEN%"
 若设置都正确 则可以看到脚本成功获取到了旧的端口号  
 并成功的提交了新端口 与此同时BC弹出了设置更新的通知  
 
-<img loading="lazy" src="../../images/stun-bc-port-automation/test-result.jpg" width="60%" height="60%" />
-<img loading="lazy" src="../../images/stun-bc-port-automation/test-result-2.jpg" width="60%" height="60%" />
+<img loading="lazy" src="../../images/stun-bc-port-automation/test-result.jpg" width="60%" />
+<img loading="lazy" src="../../images/stun-bc-port-automation/test-result-2.jpg" width="60%" />
 
 ---
 
@@ -128,13 +128,13 @@ curl -Lks "%WEBUI%/api/config/connection/set" -H "Authorization: Bearer %TOKEN%"
 
 **示例**  
 
-<img loading="lazy" src="../../images/stun-bc-port-automation/script-filling.jpg" width="60%" height="60%" />
+<img loading="lazy" src="../../images/stun-bc-port-automation/script-filling.jpg" width="60%" />
 
 若设置都正确则STUN规则在穿透成功后  
 其会自动的修改BC的监听端口 BC也会在右下角弹出通知  
 
 **检视STUN穿透日志**  
-<img loading="lazy" src="../../images/stun-bc-port-automation/final-output-result.jpg" width="60%" height="60%" />
+<img loading="lazy" src="../../images/stun-bc-port-automation/final-output-result.jpg" width="60%" />
 
 ---
 

@@ -14,17 +14,17 @@
 DNS服务商设置和过去没有什么太大的变化  
 不过应该支持了更多的提供商  
 
-<img loading="lazy" src="../../images/lucky-ddns-2.15/provider.jpg" width="60%" height="60%" />
+<img loading="lazy" src="../../images/lucky-ddns-2.15/provider.jpg" width="60%" />
 
 新增了 `{ipv6Addr}` 和 `{ipv4Addr}` 两个变量用于记录IPv4和IPv6地址  
 可调整获取方式 默认为 从接口获取 还支持 通过网卡 和 脚本获取  
 
-<img loading="lazy" src="../../images/lucky-ddns-2.15/ip-acquisition.jpg" width="60%" height="60%" />
+<img loading="lazy" src="../../images/lucky-ddns-2.15/ip-acquisition.jpg" width="60%" />
 
 DNS记录设置发生了较大变化 其在过去是一个大的文本框 每行一个填写要更新的记录  
 现在改成了与web服务类似的子规则模式 每一个子规则对应一个记录  
 
-<img loading="lazy" src="../../images/lucky-ddns-2.15/blank-record.jpg" width="60%" height="60%" />
+<img loading="lazy" src="../../images/lucky-ddns-2.15/blank-record.jpg" width="60%" />
 
 目前已经支持的DNS记录类型：  
 
@@ -50,7 +50,7 @@ DNS记录设置发生了较大变化 其在过去是一个大的文本框 每行
 在之前的教程中演示了 dynv6 NOIP 和 cloudflare 的配置方法  
 
 **此处使用dynv6进行演示**  
-<img loading="lazy" src="../../images/lucky-ddns-2.15/set-provider.jpg" width="60%" height="60%" />
+<img loading="lazy" src="../../images/lucky-ddns-2.15/set-provider.jpg" width="60%" />
 
 
 **启用IP获取功能**  
@@ -58,31 +58,31 @@ DNS记录设置发生了较大变化 其在过去是一个大的文本框 每行
 打开 `{ipv6Addr}` 和 `{ipv4Addr}` 两个变量的开关  
 这样lucky便可获取对外的IPv4和IPv6地址并存入这个两个变量中以供后续使用  
 
-<img loading="lazy" src="../../images/lucky-ddns-2.15/enable-ip-acquisition.jpg" width="60%" height="60%" />
+<img loading="lazy" src="../../images/lucky-ddns-2.15/enable-ip-acquisition.jpg" width="60%" />
 
 **填写需要更新的域名**  
 
 点击添加 **同步记录** 添加子规则  
 
-<img loading="lazy" src="../../images/lucky-ddns-2.15/add-sync-record.jpg" width="60%" height="60%" />
+<img loading="lazy" src="../../images/lucky-ddns-2.15/add-sync-record.jpg" width="60%" />
 
 * 记录名称：即要更新的域名  
 * 选择记录类型：此处演示IPv6  
 * 记录内容：因为记录类型选择了IPv6所以自动填上了`{ipv6Addr}`  
 
-<img loading="lazy" src="../../images/lucky-ddns-2.15/record-v6.jpg" width="60%" height="60%" />
+<img loading="lazy" src="../../images/lucky-ddns-2.15/record-v6.jpg" width="60%" />
 
 IPv4记录设置也是相同的方式  
 值得注意的是一个域名可以同时拥有IPv4和IPv6记录  
 这里为了方便演示 使用了两个不同的子域名  
 
-<img loading="lazy" src="../../images/lucky-ddns-2.15/record-v4.jpg" width="60%" height="60%" />
+<img loading="lazy" src="../../images/lucky-ddns-2.15/record-v4.jpg" width="60%" />
 
 **检视效果**  
 `{ipv6Addr}` 和 `{ipv4Addr}` 已经正确获取到了地址  
 同步状态为绿色则表示设置均正确且更新成功  
 
-<img loading="lazy" src="../../images/lucky-ddns-2.15/inspect-result.jpg" width="60%" height="60%" />
+<img loading="lazy" src="../../images/lucky-ddns-2.15/inspect-result.jpg" width="60%" />
 
 ---
 
@@ -108,10 +108,10 @@ IPv4记录设置也是相同的方式
 * 选择记录类型：TXT  
 * 记录内容：填写要添加到TXT记录中的内容 此处填写 "test" 作为演示  
 
-<img loading="lazy" src="../../images/lucky-ddns-2.15/record-txt.jpg" width="60%" height="60%" />
+<img loading="lazy" src="../../images/lucky-ddns-2.15/record-txt.jpg" width="60%" />
 
 **检视效果**  
-<img loading="lazy" src="../../images/lucky-ddns-2.15/txt-record-result.jpg" width="60%" height="60%" />
+<img loading="lazy" src="../../images/lucky-ddns-2.15/txt-record-result.jpg" width="60%" />
 
 在之前的教程中TXT主要用于记录STUN穿透后的端口  
 这里也给出与STUN穿透联合使用的方法  
@@ -136,11 +136,11 @@ IPv4记录设置也是相同的方式
 ```
 
 **示例**  
-<img loading="lazy" src="../../images/lucky-ddns-2.15/stun-rule.jpg" width="60%" height="60%" />
+<img loading="lazy" src="../../images/lucky-ddns-2.15/stun-rule.jpg" width="60%" />
 
-<img loading="lazy" src="../../images/lucky-ddns-2.15/record-txt-stun.jpg" width="60%" height="60%" />
+<img loading="lazy" src="../../images/lucky-ddns-2.15/record-txt-stun.jpg" width="60%" />
 
-<img loading="lazy" src="../../images/lucky-ddns-2.15/stun-result.jpg" width="60%" height="60%" />
+<img loading="lazy" src="../../images/lucky-ddns-2.15/stun-result.jpg" width="60%" />
 
 
 ### 更新SRV记录
@@ -157,12 +157,12 @@ IPv4记录设置也是相同的方式
 这个点的作用是告诉dynv6不要在后面附加当前的主域名  
 
 **主机名加点**  
-<img loading="lazy" src="../../images/lucky-ddns-2.15/srv-issue-example-1.jpg" width="60%" height="60%" />
-<img loading="lazy" src="../../images/lucky-ddns-2.15/srv-issue-example-2.jpg" width="60%" height="60%" />
+<img loading="lazy" src="../../images/lucky-ddns-2.15/srv-issue-example-1.jpg" width="60%" />
+<img loading="lazy" src="../../images/lucky-ddns-2.15/srv-issue-example-2.jpg" width="60%" />
 
 **主机名不加点**  
-<img loading="lazy" src="../../images/lucky-ddns-2.15/srv-issue-example-3.jpg" width="60%" height="60%" />
-<img loading="lazy" src="../../images/lucky-ddns-2.15/srv-issue-example-4.jpg" width="60%" height="60%" />
+<img loading="lazy" src="../../images/lucky-ddns-2.15/srv-issue-example-3.jpg" width="60%" />
+<img loading="lazy" src="../../images/lucky-ddns-2.15/srv-issue-example-4.jpg" width="60%" />
 
 由于有这个"小特性"的存在 在dynv6上更新SRV记录时  
 主机名这一项只能使用该主域名下的子域名 比如要以 `ie12test.dynv6.net`结尾  
@@ -172,21 +172,21 @@ IPv4记录设置也是相同的方式
 
 
 **示例-子域名**  
-<img loading="lazy" src="../../images/lucky-ddns-2.15/dynv6-srv-1.jpg" width="60%" height="60%" />
+<img loading="lazy" src="../../images/lucky-ddns-2.15/dynv6-srv-1.jpg" width="60%" />
 
 **更新效果**  
-<img loading="lazy" src="../../images/lucky-ddns-2.15/dynv6-srv-2.jpg" width="60%" height="60%" />
+<img loading="lazy" src="../../images/lucky-ddns-2.15/dynv6-srv-2.jpg" width="60%" />
 
 **解析效果**  
-<img loading="lazy" src="../../images/lucky-ddns-2.15/dynv6-srv-3.jpg" width="60%" height="60%" />
+<img loading="lazy" src="../../images/lucky-ddns-2.15/dynv6-srv-3.jpg" width="60%" />
 
 ---
 
 **示例-完整域名**  
-<img loading="lazy" src="../../images/lucky-ddns-2.15/dynv6-srv-1-modified.jpg" width="60%" height="60%" />
+<img loading="lazy" src="../../images/lucky-ddns-2.15/dynv6-srv-1-modified.jpg" width="60%" />
 
 **更新效果**  
-<img loading="lazy" src="../../images/lucky-ddns-2.15/dynv6-srv-2-modified.jpg" width="60%" height="60%" />
+<img loading="lazy" src="../../images/lucky-ddns-2.15/dynv6-srv-2-modified.jpg" width="60%" />
 
 **解析效果**  
-<img loading="lazy" src="../../images/lucky-ddns-2.15/dynv6-srv-3-modified.jpg" width="60%" height="60%" />
+<img loading="lazy" src="../../images/lucky-ddns-2.15/dynv6-srv-3-modified.jpg" width="60%" />

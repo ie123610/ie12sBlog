@@ -61,7 +61,7 @@ TLS/SSL 证书被用于协商安全连接和验证网站或服务器的身份。
 
 选择SSL证书选项卡 并点击 **添加证书**  
 
-<img loading="lazy" src="../../images/lucky-tls-automation/add-certificate.webp" width="60%" height="60%" />
+<img loading="lazy" src="../../images/lucky-tls-automation/add-certificate.webp" width="60%" />
 
 
 * 备注 任意填写
@@ -107,7 +107,7 @@ xyz.ie12test.dynv6.net
 
 
 **示例**  
-<img loading="lazy" src="../../images/lucky-tls-automation/example-dynv6.webp" width="60%" height="60%" />
+<img loading="lazy" src="../../images/lucky-tls-automation/example-dynv6.webp" width="60%" />
 
 
 ### 检视效果
@@ -116,7 +116,7 @@ xyz.ie12test.dynv6.net
 若看到 **未申请到/申请中** 的字样 变成了时间日期  
 同时多出了 绑定域名 颁发时间 和到期时间这三项 **表示申请成功**  
 
-<img loading="lazy" src="../../images/lucky-tls-automation/application-successful-dynv6.webp" width="60%" height="60%" />
+<img loading="lazy" src="../../images/lucky-tls-automation/application-successful-dynv6.webp" width="60%" />
 
 
 ---
@@ -137,7 +137,7 @@ xyz.ie12test.dynv6.net
 
 选择SSL证书选项卡 并点击 **添加证书**  
 
-<img loading="lazy" src="../../images/lucky-tls-automation/add-certificate.webp" width="60%" height="60%" />
+<img loading="lazy" src="../../images/lucky-tls-automation/add-certificate.webp" width="60%" />
 
 
 * 备注 任意填写
@@ -180,7 +180,7 @@ mc.xyz.ie12.net
 
 
 **示例**  
-<img loading="lazy" src="../../images/lucky-tls-automation/example-cf.webp" width="60%" height="60%" />
+<img loading="lazy" src="../../images/lucky-tls-automation/example-cf.webp" width="60%" />
 
 
 
@@ -192,7 +192,7 @@ mc.xyz.ie12.net
 
 
 **示例**  
-<img loading="lazy" src="../../images/lucky-tls-automation/application-successful-cf.webp" width="60%" height="60%" />
+<img loading="lazy" src="../../images/lucky-tls-automation/application-successful-cf.webp" width="60%" />
 
 ---
 
@@ -203,20 +203,20 @@ mc.xyz.ie12.net
 
 转到证书列表 点击 **修改**  
 
-<img loading="lazy" src="../../images/lucky-tls-automation/modify-certificate-settings.webp" width="60%" height="60%" />
+<img loading="lazy" src="../../images/lucky-tls-automation/modify-certificate-settings.webp" width="60%" />
 
 
 打开证书映射开关 并填写目录   
 申请到的证书和私钥将被映射到该目录中  
 
-<img loading="lazy" src="../../images/lucky-tls-automation/map-certificate.webp" width="60%" height="60%" />
+<img loading="lazy" src="../../images/lucky-tls-automation/map-certificate.webp" width="60%" />
 
 
 **检视效果**  
 
 证书和私钥已输出 **请小心保管这些文件**  
 
-<img loading="lazy" src="../../images/lucky-tls-automation/map-output.webp" width="60%" height="60%" />
+<img loading="lazy" src="../../images/lucky-tls-automation/map-output.webp" width="60%" />
 
 
 ---
@@ -232,7 +232,7 @@ mc.xyz.ie12.net
 申请失败 **一般是网络问题造成的**  
 例如下图中就是连接 dynv6 的 API 超时引起的错误  
 
-<img loading="lazy" src="../../images/lucky-tls-automation/timeout-error.webp" width="60%" height="60%" />
+<img loading="lazy" src="../../images/lucky-tls-automation/timeout-error.webp" width="60%" />
 
 可以尝试用浏览器访问一下 dynv6 看是否能打开  
 若lucky所在的设备无法使用浏览器则应使用其他方法验证  
@@ -241,7 +241,7 @@ mc.xyz.ie12.net
 当然也可能出现下图中的情况  
 这是由于TXT记录查询失败引起的  
 
-<img loading="lazy" src="../../images/lucky-tls-automation/txt-query-error.webp" width="60%" height="60%" />
+<img loading="lazy" src="../../images/lucky-tls-automation/txt-query-error.webp" width="60%" />
 
 **请关闭任何形式的代理、加速器等可能影响DNS查询的软件后再次尝试申请**  
 

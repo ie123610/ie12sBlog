@@ -26,8 +26,8 @@ sidebar_label: 设置视频预览播放器
 **并不支持自动使用系统默认播放器**  
 
 **示例**  
-<img loading="lazy" src="../../images/BC-player-path/fill-path.jpg" width="60%" height="60%" />
-<img loading="lazy" src="../../images/BC-player-path/auto-detect.jpg" width="60%" height="60%" />
+<img loading="lazy" src="../../images/BC-player-path/fill-path.jpg" width="60%" />
+<img loading="lazy" src="../../images/BC-player-path/auto-detect.jpg" width="60%" />
 
 
 **问：** 那在2.01之后想要直接使用系统默认的播放器就只需要把`ui.preview_program_detection`  
@@ -43,7 +43,7 @@ sidebar_label: 设置视频预览播放器
 **答：** 他会弹出一个窗口让你选择播放器路径 同时推荐比特彗星的影音之星播放器  
 
 **示例**  
-<img loading="lazy" src="../../images/BC-player-path/movie-audio-star.jpg" width="60%" height="60%" />
+<img loading="lazy" src="../../images/BC-player-path/movie-audio-star.jpg" width="60%" />
 
 **问：** 比特彗星所推荐的影音之星播放器可以用吗？  
 

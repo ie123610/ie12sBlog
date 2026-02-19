@@ -103,28 +103,28 @@
 
 登录账户 点击右上角的 **My Zones 选择 More**  
 
-<img loading="lazy" src="../../images/stun-mc-srv/MyZones-More.webp" width="60%" height="60%" />
+<img loading="lazy" src="../../images/stun-mc-srv/MyZones-More.webp" width="60%" />
 
 再点击右侧的 Create new Zone  
 
-<img loading="lazy" src="../../images/stun-mc-srv/Create-new-Zone.webp" width="60%" height="60%" />
+<img loading="lazy" src="../../images/stun-mc-srv/Create-new-Zone.webp" width="60%" />
 
 1. 名称可以设置 你喜欢的名字 只能为数字和字母
 2. 选择一个方便记忆的一级域名这里选择 dynv6.net
 3. IP地址先不设置 之后会设置解析
 4. 创建
 
-<img loading="lazy" src="../../images/stun-mc-srv/create-ddns-domain.webp" width="60%" height="60%" />
+<img loading="lazy" src="../../images/stun-mc-srv/create-ddns-domain.webp" width="60%" />
 
 创建完成后会自动切换到该域名的配置页面  
 选择 **Records** 选项卡  
 添加 记录类型选择 **SRV**  
 
-<img loading="lazy" src="../../images/stun-mc-srv/add-srv-record.webp" width="60%" height="60%" />
+<img loading="lazy" src="../../images/stun-mc-srv/add-srv-record.webp" width="60%" />
 
 填写 Name Server Port 这几个选项（后面会解释为什么这样填）  
 
-<img loading="lazy" src="../../images/stun-mc-srv/fill-srv-content.webp" width="60%" height="60%" />
+<img loading="lazy" src="../../images/stun-mc-srv/fill-srv-content.webp" width="60%" />
 
 Port:任意填写之后还要修改 这里使用25565  
 Name: `_minecraft._tcp.mc`  
@@ -133,7 +133,7 @@ Server 中填写的则是之前创建的域名（注意最后有一个点）
 
 
 **配置效果**  
-<img loading="lazy" src="../../images/stun-mc-srv/srv-fill-effect.webp" width="60%" height="60%" />
+<img loading="lazy" src="../../images/stun-mc-srv/srv-fill-effect.webp" width="60%" />
 
 **检查解析效果**  
 
@@ -143,7 +143,7 @@ Server 中填写的则是之前创建的域名（注意最后有一个点）
 注意前面的 `_minecraft._tcp.` 不能少  
 看到如下中的内容表示设置正确  
 
-<img loading="lazy" src="../../images/stun-mc-srv/srv-query-effect.webp" width="60%" height="60%" />
+<img loading="lazy" src="../../images/stun-mc-srv/srv-query-effect.webp" width="60%" />
 
 ---
 
@@ -172,13 +172,13 @@ server 选项 **表示使用的实际域名或者IP**
 而实际客户端查询的是 `_minecraft._tcp.mc.ie12test.dynv6.net`  
 `mc.ie12test.dynv6.net` 这个地址不需要设置IP地址 自然解析不出IP来  
 
-<img loading="lazy" src="../../images/stun-mc-srv/hide-ip.webp" width="60%" height="60%" />
+<img loading="lazy" src="../../images/stun-mc-srv/hide-ip.webp" width="60%" />
 
 而且实际使用的地址是 `_minecraft._tcp.mc.ie12test.dynv6.net` 中srv记录里指定的地址
 直接解析这个地址也是解析不出来IP的  
 因为DNS解析一般默认解析的都是 A（IPv4地址）和AAAA（IPv6地址）记录  
 
-<img loading="lazy" src="../../images/stun-mc-srv/hide-ip-2.webp" width="60%" height="60%" />
+<img loading="lazy" src="../../images/stun-mc-srv/hide-ip-2.webp" width="60%" />
 
 必须要像刚才检查解析效果时那样指定查询记录类型为srv才行  
 所以这 **只能算是一种障眼法** 对不了解srv记录的人有一定效果
@@ -206,14 +206,14 @@ API定义：`https://dynv6.github.io/api-spec/`
 **我们先从token开始**  
 点击右上角的账户名选择 keys  
 
-<img loading="lazy" src="../../images/stun-mc-srv/keys.webp" width="60%" height="60%" />
+<img loading="lazy" src="../../images/stun-mc-srv/keys.webp" width="60%" />
 
 
 在HTTP Tokens 应该已经有了一个默认的Token  
 点开 details 查看内容  
 **注意不要泄露token 如果泄露应马上更换**  
 
-<img loading="lazy" src="../../images/stun-mc-srv/HTTP_Tokens.webp" width="60%" height="60%" />
+<img loading="lazy" src="../../images/stun-mc-srv/HTTP_Tokens.webp" width="60%" />
 
 将token复制下来获取ID的时候要用到  
 ID的获取相对麻烦一些 dynv6的文档中用的是curl  
@@ -221,7 +221,7 @@ ID的获取相对麻烦一些 dynv6的文档中用的是curl
 
 
 打开lucky 点击左侧的 计划任务 添加计划任务  
-<img loading="lazy" src="../../images/stun-mc-srv/scheduled-task.webp" width="60%" height="60%" />
+<img loading="lazy" src="../../images/stun-mc-srv/scheduled-task.webp" width="60%" />
 
 
 设置内容如下：  
@@ -240,17 +240,17 @@ ID的获取相对麻烦一些 dynv6的文档中用的是curl
   启用 禁用成功字符检测  
   **保存任务**
 
-<img loading="lazy" src="../../images/stun-mc-srv/task-get-id.webp" title="设置效果" width="60%" height="60%" />
+<img loading="lazy" src="../../images/stun-mc-srv/task-get-id.webp" title="设置效果" width="60%" />
 
 
 点击手动触发  
-<img loading="lazy" src="../../images/stun-mc-srv/manual-trigger-task.webp" width="60%" height="60%" />
+<img loading="lazy" src="../../images/stun-mc-srv/manual-trigger-task.webp" width="60%" />
 
 查看日志中输出的信息  
 如果配置正确会 **返回域名和ID**  
 这里的ID就是域名ID即zoneID 有了这个我们才能获取记录ID  
 
-<img loading="lazy" src="../../images/stun-mc-srv/returned-zone-id.webp" width="60%" height="60%" />
+<img loading="lazy" src="../../images/stun-mc-srv/returned-zone-id.webp" width="60%" />
 
 
 **接下来获取record ID**  
@@ -262,7 +262,7 @@ ID的获取相对麻烦一些 dynv6的文档中用的是curl
 保存规则再次点击手动触发
 查看日志中的返回内容如果配置正确会返回域名和ID
 
-<img loading="lazy" src="../../images/stun-mc-srv/returned-record-id.webp" width="60%" height="60%" />
+<img loading="lazy" src="../../images/stun-mc-srv/returned-record-id.webp" width="60%" />
 
 这次的ID就是 **记录ID** 了即recordID  
 现在我们就可以进行srv记录的端口更新了  
@@ -292,7 +292,7 @@ ID的获取相对麻烦一些 dynv6的文档中用的是curl
 }
 ```
 
-<img loading="lazy" src="../../images/stun-mc-srv/test-update-srv-record-response.webp" title="配置效果" width="60%" height="60%" />
+<img loading="lazy" src="../../images/stun-mc-srv/test-update-srv-record-response.webp" title="配置效果" width="60%" />
 
 
 
@@ -300,7 +300,7 @@ ID的获取相对麻烦一些 dynv6的文档中用的是curl
 查看日志中的返回内容如果配置正确会返回srv记录的详细信息
 同时查看端口是否已经更新
 
-<img loading="lazy" src="../../images/stun-mc-srv/test-update-srv-record-response.webp" width="60%" height="60%" />
+<img loading="lazy" src="../../images/stun-mc-srv/test-update-srv-record-response.webp" width="60%" />
 
 记录下刚才填写的配置一会儿要在stun穿透里面设置  
 （这里踩了个坑 name 必须要有不然会报错 之前没加上导致一直报错 还在QQ群友帮助测试后才发现这个问题）  
@@ -314,7 +314,7 @@ ID的获取相对麻烦一些 dynv6的文档中用的是curl
 
 添加任务  
 
-<img loading="lazy" src="../../images/stun-mc-srv/add-ddns.webp" width="60%" height="60%" />
+<img loading="lazy" src="../../images/stun-mc-srv/add-ddns.webp" width="60%" />
 
 * **名称：** 任意
 * **托管服务商：** dynv6
@@ -323,13 +323,13 @@ ID的获取相对麻烦一些 dynv6的文档中用的是curl
 * **域名列表：** 填写 之前SRV记录指向的域名
 * **保存规则**
 
-<img loading="lazy" src="../../images/stun-mc-srv/ddns-configuration.webp" width="60%" height="60%" />
+<img loading="lazy" src="../../images/stun-mc-srv/ddns-configuration.webp" width="60%" />
 
 
 **配置效果**  
 等待片刻后显示 **公网IP未改变** 或 **更新成功** 即设置正确  
 
-<img loading="lazy" src="../../images/stun-mc-srv/ddns-effect.webp" width="60%" height="60%" />
+<img loading="lazy" src="../../images/stun-mc-srv/ddns-effect.webp" width="60%" />
 
 ---
 
@@ -338,7 +338,7 @@ ID的获取相对麻烦一些 dynv6的文档中用的是curl
 选择左侧的stun内网穿透 添加穿透规则  
 
 <img loading="lazy" src="../../images/stun-mc-srv/add-stun.webp" />
-<img loading="lazy" src="../../images/stun-mc-srv/add-stun-2.webp" width="60%" height="60%" />
+<img loading="lazy" src="../../images/stun-mc-srv/add-stun-2.webp" width="60%" />
 
 **名称：** 任意  
 **穿透类型：** IPv4 TCP  
@@ -346,7 +346,7 @@ ID的获取相对麻烦一些 dynv6的文档中用的是curl
 **目标地址：** 设置为mc服务端运行的地址 如果和lucky运行在同一设备上使用127.0.0.1即可  
 **目标端口：** 设置为mc服务端监听的端口 这里用的是25678  
 
-<img loading="lazy" src="../../images/stun-mc-srv/stun-rule-configuration.webp" width="60%" height="60%" />
+<img loading="lazy" src="../../images/stun-mc-srv/stun-rule-configuration.webp" width="60%" />
 
 **打开webook开关**  
 
@@ -380,18 +380,18 @@ Accept: application/json
 ```
 调用成功字符串检检测：SRV（要大写）  
 
-<img loading="lazy" src="../../images/stun-mc-srv/stun-rule-webhook.webp" width="60%" height="60%" />
+<img loading="lazy" src="../../images/stun-mc-srv/stun-rule-webhook.webp" width="60%" />
 
 填写完成后点击 **右上角的手动触发** 查看是否调用成功  
 **成功** 会返回记录的详细信息 注意这里的端口号变成了 **6666** 
 保存规则
 
-<img loading="lazy" src="../../images/stun-mc-srv/webhook-prompt.webp" width="60%" height="60%" />
-<img loading="lazy" src="../../images/stun-mc-srv/stun-rule-webhook-response.webp" width="60%" height="60%" />
+<img loading="lazy" src="../../images/stun-mc-srv/webhook-prompt.webp" width="60%" />
+<img loading="lazy" src="../../images/stun-mc-srv/stun-rule-webhook-response.webp" width="60%" />
 
 
 **最终效果**  
-<img loading="lazy" src="../../images/stun-mc-srv/stun-rule-final-effect.webp" width="60%" height="60%" />
+<img loading="lazy" src="../../images/stun-mc-srv/stun-rule-final-effect.webp" width="60%" />
 
 
 **至此我们已经完成了配置**  
@@ -421,10 +421,10 @@ pause
 离线登录玩家无法进行多人游戏即多人游戏按钮被禁用 加个[Mod](https://www.mcmod.cn/class/10643.html)即可修复  
 
 
-<img loading="lazy" src="../../images/stun-mc-srv/mc-create-server.webp" title="对局域网开放" width="60%" height="60%" />
-<img loading="lazy" src="../../images/stun-mc-srv/mc-add-server.webp" title="填写地址" width="60%" height="60%" />
-<img loading="lazy" src="../../images/stun-mc-srv/mc-server-status.webp" title="服务器已正常显示" width="60%" height="60%" />
-<img loading="lazy" src="../../images/stun-mc-srv/mc-login-success.webp" title="登录成功" width="60%" height="60%" />
+<img loading="lazy" src="../../images/stun-mc-srv/mc-create-server.webp" title="对局域网开放" width="60%" />
+<img loading="lazy" src="../../images/stun-mc-srv/mc-add-server.webp" title="填写地址" width="60%" />
+<img loading="lazy" src="../../images/stun-mc-srv/mc-server-status.webp" title="服务器已正常显示" width="60%" />
+<img loading="lazy" src="../../images/stun-mc-srv/mc-login-success.webp" title="登录成功" width="60%" />
 
 
 ---

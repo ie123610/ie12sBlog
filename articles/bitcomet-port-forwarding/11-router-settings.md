@@ -114,15 +114,15 @@ https://help.onethingcloud.com/9dd6/e9ec
 ### 启用UPnP（光猫）
 
 应用>UPnP设置 勾选启用UPnP 后保存即可  
-<img loading="lazy" src="../../images/bitcomet-port-forwarding-router-settings/modem-upnp-mobile.webp" width="60%" height="60%" title="UPnP功能" />
+<img loading="lazy" src="../../images/bitcomet-port-forwarding-router-settings/modem-upnp-mobile.webp" width="60%" title="UPnP功能" />
 
 ### 设置DMZ 和虚拟服务器（光猫）
 
 应用>高级NAT设置>DMZ设置/虚拟服务器设置  
-<img loading="lazy" src="../../images/bitcomet-port-forwarding-router-settings/modem-port-forwarding-telecom.webp" width="60%" height="60%" title="虚拟服务器即端口转发" />
+<img loading="lazy" src="../../images/bitcomet-port-forwarding-router-settings/modem-port-forwarding-telecom.webp" width="60%" title="虚拟服务器即端口转发" />
 
-<img loading="lazy" src="../../images/bitcomet-port-forwarding-router-settings/modem-port-forwarding-telecom.webp" width="60%" height="60%" title="DMZ" />
-<img loading="lazy" src="../../images/bitcomet-port-forwarding-router-settings/modem-dmz-modem.webp" width="60%" height="60%" title="DMZ" />
+<img loading="lazy" src="../../images/bitcomet-port-forwarding-router-settings/modem-port-forwarding-telecom.webp" width="60%" title="DMZ" />
+<img loading="lazy" src="../../images/bitcomet-port-forwarding-router-settings/modem-dmz-modem.webp" width="60%" title="DMZ" />
 
 
 **问：** 为什么DMZ和端口转发（虚拟服务器）设置后一段时间有效果 **时间久了就失效了呢？**  
@@ -216,14 +216,14 @@ https://www.asus.com.cn/support/FAQ/1000906
 **答：** 要先确定现在电脑的IPv4配置  
 
 win+R 弹出运行 输入 **ncpa.cpl** 点击 确定  
-<img loading="lazy" src="../../images/bitcomet-port-forwarding-router-settings/run-network-connections-window.webp" width="60%" height="60%" />
+<img loading="lazy" src="../../images/bitcomet-port-forwarding-router-settings/run-network-connections-window.webp" width="60%" />
 
 弹出 **网络连接** 窗口  
 选择 正在使用的网卡 **右键** 选择 **状态**  
-<img loading="lazy" src="../../images/bitcomet-port-forwarding-router-settings/network-adapter-status.webp" width="60%" height="60%" />
+<img loading="lazy" src="../../images/bitcomet-port-forwarding-router-settings/network-adapter-status.webp" width="60%" />
 
 点开 **详细信息**  
-<img loading="lazy" src="../../images/bitcomet-port-forwarding-router-settings/network-adapter-details.webp" width="60%" height="60%" />
+<img loading="lazy" src="../../images/bitcomet-port-forwarding-router-settings/network-adapter-details.webp" width="60%" />
 
 **记录以下项目：**  
 
@@ -232,18 +232,18 @@ win+R 弹出运行 输入 **ncpa.cpl** 点击 确定
 * **IPv4 DNS服务器**
 * **子网掩码**
 
-<img loading="lazy" src="../../images/bitcomet-port-forwarding-router-settings/network-adapter-details-content.webp" width="60%" height="60%" />
+<img loading="lazy" src="../../images/bitcomet-port-forwarding-router-settings/network-adapter-details-content.webp" width="60%" />
 
 点击 关闭 回到 **网络连接** 窗口  
 再次右键网卡 选择 **属性**  
-<img loading="lazy" src="../../images/bitcomet-port-forwarding-router-settings/network-adapter-properties.webp" width="60%" height="60%" />
+<img loading="lazy" src="../../images/bitcomet-port-forwarding-router-settings/network-adapter-properties.webp" width="60%" />
 
 
 **Internet协议版本4**（TCP/IPv4）点击 **属性**  
 选择 **使用下面的IP地址** 和 **使用下面的DNS服务器地址**  
 
-<img loading="lazy" src="../../images/bitcomet-port-forwarding-router-settings/network-adapter-ipv4-protocol.webp" width="60%" height="60%" />
-<img loading="lazy" src="../../images/bitcomet-port-forwarding-router-settings/network-adapter-static-ip-1.webp" width="60%" height="60%" />
+<img loading="lazy" src="../../images/bitcomet-port-forwarding-router-settings/network-adapter-ipv4-protocol.webp" width="60%" />
+<img loading="lazy" src="../../images/bitcomet-port-forwarding-router-settings/network-adapter-static-ip-1.webp" width="60%" />
 
 * **默认网关 ：**  填写的内容和刚才记录下的相同 即 上级路由器/光猫本身的地址
 * **首选DNS服务器：** 填写的内容和刚才记录下的相同 即 上级路由器/光猫本身的地址
@@ -268,7 +268,7 @@ win+R 弹出运行 输入 **ncpa.cpl** 点击 确定
 原先 `192.168.31.20` 变为 `192.168.31.150`  
 
 修改完成后记得点确定（其实最好是同时调整DHCP地址池的范围 ）  
-<img loading="lazy" src="../../images/bitcomet-port-forwarding-router-settings/network-adapter-static-ip-2.webp" width="60%" height="60%" title="修改完成后的状态" />
+<img loading="lazy" src="../../images/bitcomet-port-forwarding-router-settings/network-adapter-static-ip-2.webp" width="60%" title="修改完成后的状态" />
 
 **问：** 还有点复杂 不过除了IPv4地址这一项和之前使用自动获取时略有不同  
 其他的选项其实差不多 ？这样就不用担心内网IP变化了吧？  

@@ -78,7 +78,7 @@ Windows上对于传输文件而言 建议使用 [WinSCP](https://winscp.net/eng/
 下载：[链接](https://winscp.net/eng/download.php)  
 一路单击“下一步”即可完成安装  
 
-<img loading="lazy" src="../../images/stun-webdav-redirect/winscp-download.jpg" width="60%" height="60%" />
+<img loading="lazy" src="../../images/stun-webdav-redirect/winscp-download.jpg" width="60%" />
 
 
 ### 连接站点
@@ -88,28 +88,28 @@ Windows上对于传输文件而言 建议使用 [WinSCP](https://winscp.net/eng/
 为方便观察重定向效果 **这里使用本地的lucky重定向** 替代实际中cloudflare的重定向  
 本地重定向没有使用TLS 在使用CF重定向时需要启用TLS  
 
-<img loading="lazy" src="../../images/stun-webdav-redirect/winscp-webdav-add.jpg" width="60%" height="60%" />
+<img loading="lazy" src="../../images/stun-webdav-redirect/winscp-webdav-add.jpg" width="60%" />
 
 对于openlist（原alist）的webdav服务来说 其目录在 `/dav/` 路径下 **而非根目录下**  
 若使用根目录请求会收到405错误 根目录下的路径是给浏览器访问使用的  
 
-<img loading="lazy" src="../../images/stun-webdav-redirect/winscp-dav.jpg" width="60%" height="60%" />
-<img loading="lazy" src="../../images/stun-webdav-redirect/winscp-405.jpg" width="60%" height="60%" />
+<img loading="lazy" src="../../images/stun-webdav-redirect/winscp-dav.jpg" width="60%" />
+<img loading="lazy" src="../../images/stun-webdav-redirect/winscp-405.jpg" width="60%" />
 
 **登录成功**  
 
-<img loading="lazy" src="../../images/stun-webdav-redirect/winscp-login.jpg" width="60%" height="60%" />
+<img loading="lazy" src="../../images/stun-webdav-redirect/winscp-login.jpg" width="60%" />
 
 WinSCP默认是 双面板布局 即同时显示本地文件和远程文件  
 可以修改成单面板模式即只显示远程文件  
 
-<img loading="lazy" src="../../images/stun-webdav-redirect/winscp-login-2.jpg" width="60%" height="60%" />
-<img loading="lazy" src="../../images/stun-webdav-redirect/winscp-user-interface-setting.jpg" width="60%" height="60%" />
+<img loading="lazy" src="../../images/stun-webdav-redirect/winscp-login-2.jpg" width="60%" />
+<img loading="lazy" src="../../images/stun-webdav-redirect/winscp-user-interface-setting.jpg" width="60%" />
 
 
 ### 检视重定向信息
 
-<img loading="lazy" src="../../images/stun-webdav-redirect/lucky-local-rd.jpg" width="60%" height="60%" />
+<img loading="lazy" src="../../images/stun-webdav-redirect/lucky-local-rd.jpg" width="60%" />
 
 ---
 
@@ -143,7 +143,7 @@ RaiDrive 的下载和安装不是本教程讲述的内容
 主规则名称可自定义 **默认不勾选IPv4 要手动勾选一下**  
 不建议使用80端口 最好使用其他高位端口  
 
-<img loading="lazy" src="../../images/stun-webdav-redirect/lucky-web-rules-add.jpg" width="60%" height="60%" />
+<img loading="lazy" src="../../images/stun-webdav-redirect/lucky-web-rules-add.jpg" width="60%" />
 
 
 **添加反向代理子规则**  
@@ -159,7 +159,7 @@ RaiDrive 的下载和安装不是本教程讲述的内容
 打开 使用目标地址Host请求头 开关  
 
 
-<img loading="lazy" src="../../images/stun-webdav-redirect/lucky-reverse-proxy.jpg" width="60%" height="60%" />
+<img loading="lazy" src="../../images/stun-webdav-redirect/lucky-reverse-proxy.jpg" width="60%" />
 
 
 ### RaiDrive 连接测试
@@ -168,16 +168,16 @@ RaiDrive 的下载和安装不是本教程讲述的内容
 取消勾选地址后面的复选框 以使用HTTP 默认为HTTPS  
 输入地址端口和资源路径  
 
-<img loading="lazy" src="../../images/stun-webdav-redirect/raidrive-add.jpg" width="60%" height="60%" />
+<img loading="lazy" src="../../images/stun-webdav-redirect/raidrive-add.jpg" width="60%" />
 
 **连接成功**  
 
-<img loading="lazy" src="../../images/stun-webdav-redirect/raidrive-successful.jpg" width="60%" height="60%" />
+<img loading="lazy" src="../../images/stun-webdav-redirect/raidrive-successful.jpg" width="60%" />
 
 
 ### 检视反向代理日志
 
-<img loading="lazy" src="../../images/stun-webdav-redirect/lucky-raidrive-log.jpg" width="60%" height="60%" />
+<img loading="lazy" src="../../images/stun-webdav-redirect/lucky-raidrive-log.jpg" width="60%" />
 
 ---
 
@@ -206,15 +206,15 @@ CX文件管理器：[官网](https://cxfileexplorer.com/)|[谷歌商店](https:/
 **添加webdav连接**  
 为了方便观察重定向效果 这里依然连接本地的lucky重定向  
 
-<img loading="lazy" src="../../images/stun-webdav-redirect/cx-add-0.jpg" width="60%" height="60%" />
-<img loading="lazy" src="../../images/stun-webdav-redirect/cx-add-1.jpg" width="60%" height="60%" />
-<img loading="lazy" src="../../images/stun-webdav-redirect/cx-add-2.jpg" width="60%" height="60%" />
+<img loading="lazy" src="../../images/stun-webdav-redirect/cx-add-0.jpg" width="60%" />
+<img loading="lazy" src="../../images/stun-webdav-redirect/cx-add-1.jpg" width="60%" />
+<img loading="lazy" src="../../images/stun-webdav-redirect/cx-add-2.jpg" width="60%" />
 
 **连接成功**  
-<img loading="lazy" src="../../images/stun-webdav-redirect/cx-add-3.jpg" width="60%" height="60%" />
+<img loading="lazy" src="../../images/stun-webdav-redirect/cx-add-3.jpg" width="60%" />
 
 **检视重定向效果**  
-<img loading="lazy" src="../../images/stun-webdav-redirect/lucky-cx-log.jpg" width="60%" height="60%" />
+<img loading="lazy" src="../../images/stun-webdav-redirect/lucky-cx-log.jpg" width="60%" />
 
 值得注意的是CX文件管理器对重定向的处理和WinSCP不同  
 WinSCP在接受重定向后新的请求都会发向新的地址  
@@ -225,17 +225,17 @@ WinSCP在接受重定向后新的请求都会发向新的地址
 
 ### 流舟文件
 
-<img loading="lazy" src="../../images/stun-webdav-redirect/liuzhou-1.jpg" width="60%" height="60%" />
-<img loading="lazy" src="../../images/stun-webdav-redirect/liuzhou-2.jpg" width="60%" height="60%" />
+<img loading="lazy" src="../../images/stun-webdav-redirect/liuzhou-1.jpg" width="60%" />
+<img loading="lazy" src="../../images/stun-webdav-redirect/liuzhou-2.jpg" width="60%" />
 
 需要输入 HTTP/HTTPS协议头以指定协议  
-<img loading="lazy" src="../../images/stun-webdav-redirect/liuzhou-3.jpg" width="60%" height="60%" />
+<img loading="lazy" src="../../images/stun-webdav-redirect/liuzhou-3.jpg" width="60%" />
 
 登录成功  
-<img loading="lazy" src="../../images/stun-webdav-redirect/liuzhou-4.jpg" width="60%" height="60%" />
+<img loading="lazy" src="../../images/stun-webdav-redirect/liuzhou-4.jpg" width="60%" />
 
 其可以显示连接错误信息方便排障  
-<img loading="lazy" src="../../images/stun-webdav-redirect/liuzhou-error.jpg" width="60%" height="60%" />
+<img loading="lazy" src="../../images/stun-webdav-redirect/liuzhou-error.jpg" width="60%" />
 
 
 ---

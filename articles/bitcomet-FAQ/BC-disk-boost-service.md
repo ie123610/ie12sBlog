@@ -9,7 +9,7 @@ sidebar_label: 磁盘提速服务问题
 
 **问：** 磁盘提速服务出现 未安装\拒绝访问\其他错误 该怎么办？  
 
-<img loading="lazy" src="../../images/BC-disk-boost-service/disk-boost-not-running.webp" width="60%" height="60%" />
+<img loading="lazy" src="../../images/BC-disk-boost-service/disk-boost-not-running.webp" width="60%" />
 
 **答：** **磁盘提速服务有异常** 可以通过重新安装服务来解决  
 通常在彗星启动的时候会检查提速服务状态 若有异常会弹出通知提示修复

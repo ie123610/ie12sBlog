@@ -43,7 +43,7 @@ ncat 本身是有建立htpps连接功能的
 
 **检视效果**  
 
-<img loading="lazy" src="../../images/ncat-udp-port-check/view-results.jpg" width="60%" height="60%" />
+<img loading="lazy" src="../../images/ncat-udp-port-check/view-results.jpg" width="60%" />
 
 ## 参考
 

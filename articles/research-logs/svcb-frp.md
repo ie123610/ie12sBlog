@@ -67,9 +67,9 @@ ftp连接的是专门的穿透节点
 
 **示例**  
 
-<img loading="lazy" src="../../images/svcb-frp/dns-1.jpg" width="60%" height="60%" />
-<img loading="lazy" src="../../images/svcb-frp/dns-2.jpg" width="60%" height="60%" />
-<img loading="lazy" src="../../images/svcb-frp/dns-3.jpg" width="60%" height="60%" />
+<img loading="lazy" src="../../images/svcb-frp/dns-1.jpg" width="60%" />
+<img loading="lazy" src="../../images/svcb-frp/dns-2.jpg" width="60%" />
+<img loading="lazy" src="../../images/svcb-frp/dns-3.jpg" width="60%" />
 
 
 ---

@@ -13,10 +13,10 @@
 可通过将退出代码设置为 0 即正常退出来解决此问题  
 在尾部添加 `exit /b 0`即可  
 
-<img loading="lazy" src="../../images/lucky-cmd-error/exit-1.jpg" width="60%" height="60%" />
-<img loading="lazy" src="../../images/lucky-cmd-error/exit-2.jpg" width="60%" height="60%" />
-<img loading="lazy" src="../../images/lucky-cmd-error/exit-3.jpg" width="60%" height="60%" />
-<img loading="lazy" src="../../images/lucky-cmd-error/exit-4.jpg" width="60%" height="60%" />
+<img loading="lazy" src="../../images/lucky-cmd-error/exit-1.jpg" width="60%" />
+<img loading="lazy" src="../../images/lucky-cmd-error/exit-2.jpg" width="60%" />
+<img loading="lazy" src="../../images/lucky-cmd-error/exit-3.jpg" width="60%" />
+<img loading="lazy" src="../../images/lucky-cmd-error/exit-4.jpg" width="60%" />
 
 ---
 
@@ -40,9 +40,9 @@
 在开始部分添加 `chcp 65001` 切换区域为utf8即可解决乱码问题  
 此时系统提示变成了英文  
 
-<img loading="lazy" src="../../images/lucky-cmd-error/exit-3.jpg" width="60%" height="60%" />
-<img loading="lazy" src="../../images/lucky-cmd-error/exit-4.jpg" width="60%" height="60%" />
-<img loading="lazy" src="../../images/lucky-cmd-error/coding-1.jpg" width="60%" height="60%" />
-<img loading="lazy" src="../../images/lucky-cmd-error/coding-2.jpg" width="60%" height="60%" />
+<img loading="lazy" src="../../images/lucky-cmd-error/exit-3.jpg" width="60%" />
+<img loading="lazy" src="../../images/lucky-cmd-error/exit-4.jpg" width="60%" />
+<img loading="lazy" src="../../images/lucky-cmd-error/coding-1.jpg" width="60%" />
+<img loading="lazy" src="../../images/lucky-cmd-error/coding-2.jpg" width="60%" />
 
 

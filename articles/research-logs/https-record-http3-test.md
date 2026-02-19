@@ -37,12 +37,12 @@ dnslookup：[链接](https://github.com/ameshkov/dnslookup)
 其中的 RRTYPE 为环境变量 而非参数 所以需要用这种方法书写  
 在Linux中的请求方法为：`RRTYPE=HTTPS dnslookup example.org tls://127.0.0.1`  
 
-<img loading="lazy" src="../../images/https-record-http3-test/dnslookup-require.jpg" width="60%" height="60%" />
+<img loading="lazy" src="../../images/https-record-http3-test/dnslookup-require.jpg" width="60%" />
 
 进一步研究发现火狐其实内置DNS查询工具 地址为：`about:networking#dnslookuptool`  
 可以直接在浏览器内部查询记录内容 顺便测试填写到浏览器中的DoH服务器情况  
 
-<img loading="lazy" src="../../images/https-record-http3-test/firefox-dns.jpg" width="60%" height="60%" />
+<img loading="lazy" src="../../images/https-record-http3-test/firefox-dns.jpg" width="60%" />
 
 
 ---
@@ -58,13 +58,13 @@ UDP端口的测试没有TCP来的方便 很多时候不通可能是UDP端口的�
 运行 `curl -V` **V要大写** 查看输出内容中是否有 `HTTP3` 字样  
 Windows中预装的curl可能并不支持HTTP3 下载curl：[链接](https://curl.se/download.html#Win32)  
 
-<img loading="lazy" src="../../images/https-record-http3-test/curl-features.jpg" width="60%" height="60%" />
+<img loading="lazy" src="../../images/https-record-http3-test/curl-features.jpg" width="60%" />
 
 强制使用HTTP3连接站点 `curl --http3-only -v URL` **V要小写** 其中的v参数用于显示连接详情  
 **注意URL要加上https协议头** `--http3-only`表示强制使用 HTTP3 且不允许降级  
 
 **示例**  
-<img loading="lazy" src="../../images/https-record-http3-test/curl-http3.jpg" width="60%" height="60%" />
+<img loading="lazy" src="../../images/https-record-http3-test/curl-http3.jpg" width="60%" />
 
 ---
 
@@ -116,8 +116,8 @@ DoH被跳过 导致SVCB/HTTPS记录不起效果
 测试发现即使在3模式下 勾选通过代理查询DNS后 连接依然会失败  
 入口：`about:networking#dns`  
 
-<img loading="lazy" src="../../images/https-record-http3-test/firefox-doh-model.jpg" width="60%" height="60%" />
-<img loading="lazy" src="../../images/https-record-http3-test/firfox-dns-over-https-setting.jpg" width="60%" height="60%" />
+<img loading="lazy" src="../../images/https-record-http3-test/firefox-doh-model.jpg" width="60%" />
+<img loading="lazy" src="../../images/https-record-http3-test/firfox-dns-over-https-setting.jpg" width="60%" />
 
 
 ### ipv4hint ipv6hint 问题

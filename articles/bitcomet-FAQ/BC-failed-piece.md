@@ -9,19 +9,19 @@ sidebar_label: 分块校验失败问题
 **问：** 任务的下载速度很快 但任务进度涨的很慢  
 **甚至下载大小超过了文件大小**  
 
-<img loading="lazy" src="../../images/BC-failed-piece/BC-failed-piece-1.jpg" width="60%" height="60%" />
+<img loading="lazy" src="../../images/BC-failed-piece/BC-failed-piece-1.jpg" width="60%" />
 
 
 **答：** 选中任务 切换到 **任务日志** 选项卡 查看是否有分块校验错误的记录  
 
 **问：** 有分块校验失败 丢弃数据的记录  
 
-<img loading="lazy" src="../../images/BC-failed-piece/BC-failed-piece-2.jpg" width="60%" height="60%" />
+<img loading="lazy" src="../../images/BC-failed-piece/BC-failed-piece-2.jpg" width="60%" />
 
 **答：** 到 高级设置中 搜索 **分块**  
 将 `bittorrent.separate_sources_for_failed_piece` 设置为 **是**  
 
-<img loading="lazy" src="../../images/BC-failed-piece/BC-failed-piece-3.jpg" width="60%" height="60%" />
+<img loading="lazy" src="../../images/BC-failed-piece/BC-failed-piece-3.jpg" width="60%" />
 
 **注意！**  
 

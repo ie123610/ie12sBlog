@@ -40,7 +40,7 @@ sidebar_label: 反吸血 设置IP过滤和客户端过滤
 
 ## 配置 IP过滤
 
-<img loading="lazy" src="../../images/BC-anti-leech-2/ip-filter.jpg" width="60%" height="60%" />
+<img loading="lazy" src="../../images/BC-anti-leech-2/ip-filter.jpg" width="60%" />
 
 * 支持黑白名单切换 
 * 支持从文件中添加IP地址
@@ -75,7 +75,7 @@ IP地址的分配是动态 不应该长期的封禁这些地址
 相比起订阅列表其可视性更好 可以在文本框中直接看到填写的内容  
 此外其还支持注释 以 `#` 开头
 
-<img loading="lazy" src="../../images/BC-anti-leech-2/ip-filter.jpg" width="60%" height="60%" />
+<img loading="lazy" src="../../images/BC-anti-leech-2/ip-filter.jpg" width="60%" />
 
 
 ### 用户列表中的IP过滤器
@@ -87,7 +87,7 @@ IP地址的分配是动态 不应该长期的封禁这些地址
 若是选择永久封禁 其IP会自动添加到上文中的手动列表里  
 其他非永久封禁则不会 计时结束后会自动取消封禁  
 
-<img loading="lazy" src="../../images/BC-anti-leech-2/menu-ip-filter.jpg" width="60%" height="60%" />
+<img loading="lazy" src="../../images/BC-anti-leech-2/menu-ip-filter.jpg" width="60%" />
 
 
 ---
@@ -108,7 +108,7 @@ IP地址的分配是动态 不应该长期的封禁这些地址
 
 ### 客户端过滤详解
 
-<img loading="lazy" src="../../images/BC-anti-leech-2/client-filter-manual.jpg" width="60%" height="60%" />
+<img loading="lazy" src="../../images/BC-anti-leech-2/client-filter-manual.jpg" width="60%" />
 
 客户端过滤与IP过滤类似有 **手动列表** 和 **订阅列表** 之分  
 
@@ -193,7 +193,7 @@ ABC789
 存储在BC配置文件夹内的rules文件夹中  
 
 
-<img loading="lazy" src="../../images/BC-anti-leech-2/client-filter-subscribe.jpg" width="60%" height="60%" />
+<img loading="lazy" src="../../images/BC-anti-leech-2/client-filter-subscribe.jpg" width="60%" />
 
 
 ---

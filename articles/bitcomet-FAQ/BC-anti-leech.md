@@ -17,7 +17,7 @@ sidebar_label: 屏蔽吸血客户端和设置自动反吸血
 
 **答：** 设置》BT下载》客户端列表 中取消勾选迅雷  
 不过这可能会有误伤  
-<img loading="lazy" src="../../images/BC-anti-leech/client-list.webp" width="60%" height="60%" />
+<img loading="lazy" src="../../images/BC-anti-leech/client-list.webp" width="60%" />
 
 **问：** 误伤？  
 
@@ -39,23 +39,23 @@ sidebar_label: 屏蔽吸血客户端和设置自动反吸血
  不使用 15000 或 15001 端口 且 有下载进度汇报的迅雷  
  **其为迅雷极速版 不是吸血客户端**  
 
-<img loading="lazy" src="../../images/BC-anti-leech/xunlei-extreme-edition.webp" title="迅雷极速版" width="60%" height="60%" />
+<img loading="lazy" src="../../images/BC-anti-leech/xunlei-extreme-edition.webp" title="迅雷极速版" width="60%" />
 
 **问：** 那该如何屏蔽这些吸血客户端，同时防止误伤呢？  
 
 **答：** 在高级设置中 屏蔽 ID XL0018 以及15000 和 15001 端口  
 
-<img loading="lazy" src="../../images/BC-anti-leech/block-id.webp" title="屏蔽 ID XL0018" width="60%" height="60%" />
-<img loading="lazy" src="../../images/BC-anti-leech/block-port.webp" title="屏蔽 15000 和 15001 端口" width="60%" height="60%" />
+<img loading="lazy" src="../../images/BC-anti-leech/block-id.webp" title="屏蔽 ID XL0018" width="60%" />
+<img loading="lazy" src="../../images/BC-anti-leech/block-port.webp" title="屏蔽 15000 和 15001 端口" width="60%" />
 
 **效果：**  
-<img loading="lazy" src="../../images/BC-anti-leech/blocked-xunlei.webp" title="被屏蔽的迅雷客户端" width="60%" height="60%" />
+<img loading="lazy" src="../../images/BC-anti-leech/blocked-xunlei.webp" title="被屏蔽的迅雷客户端" width="60%" />
 
 **问：** 如果还有其他的吸血客户端 该如何进行屏蔽呢？  
 
 **答：** 手动添加ID 需要填写实际ID  
 将鼠标放在 **客户端名** 上 可查看实际客户端ID  
-<img loading="lazy" src="../../images/BC-anti-leech/client-id.webp" width="60%" height="60%" />
+<img loading="lazy" src="../../images/BC-anti-leech/client-id.webp" width="60%" />
 
 不同的版本客户端对应的ID号也不一样  
 **需要至少6字符才能匹配**  
@@ -69,13 +69,13 @@ BC在2.08版本支持了 **客户端名称屏蔽** 可直接使用客户端名�
 相比起ID其可以更方便的屏蔽某个系列的客户端  
 
 **示例**  
-<img loading="lazy" src="../../images/BC-anti-leech/client-name-blocking.webp" width="60%" height="60%" />
+<img loading="lazy" src="../../images/BC-anti-leech/client-name-blocking.webp" width="60%" />
 
 每个客户端名称之间使用 **英文逗号** 分开   
 端口号和ID屏蔽也是如此  
 
 **效果**  
-<img loading="lazy" src="../../images/BC-anti-leech/client-name-blocking-effect.webp" width="60%" height="60%" />
+<img loading="lazy" src="../../images/BC-anti-leech/client-name-blocking-effect.webp" width="60%" />
 
 **问：** 这样可以百分百屏蔽吸血客户端吗？
 
@@ -86,7 +86,7 @@ BC在2.08版本支持了 **客户端名称屏蔽** 可直接使用客户端名�
 **答：** 是的 毕竟你看到的客户端ID是对方汇报的 可以伪装  
 一些客户端中可以直接设置客户端ID  
 
-<img loading="lazy" src="../../images/BC-anti-leech/file-centipede-disguise-settings.webp" title="文件蜈蚣中的客户端ID设置" width="60%" height="60%" />
+<img loading="lazy" src="../../images/BC-anti-leech/file-centipede-disguise-settings.webp" title="文件蜈蚣中的客户端ID设置" width="60%" />
 
 常见被用于伪装的正常客户端名：  
 
@@ -97,7 +97,7 @@ BC在2.08版本支持了 **客户端名称屏蔽** 可直接使用客户端名�
 
 **答：** 更好的方法是使用 **基于上传量的自动反吸血**  
 **即设置》bt下载 中的反吸血保护设置**  
-<img loading="lazy" src="../../images/BC-anti-leech/anti-leech-automatic.webp" width="60%" height="60%" />
+<img loading="lazy" src="../../images/BC-anti-leech/anti-leech-automatic.webp" width="60%" />
 
 其根据对方的上传量来判断是否吸血  
 比特彗星中文维基中的解释：[链接](http://http://wiki-zh.bitcomet.com/bitcomet%E5%85%A8%E5%B1%80%E9%80%89%E9%A1%B9?s%5B%5D=%E5%90%B8%E8%A1%80)  
@@ -121,7 +121,7 @@ BC在2.08版本支持了 **客户端名称屏蔽** 可直接使用客户端名�
 
 **客户端列表中连接状态的含义：**  
 ~~截图自比特彗星中文维基（官方维基年久失修图片无法显示 此为网页时光机记录的内容）~~  
-<img loading="lazy" src="../../images/BC-anti-leech/connection-status-icon.webp" width="60%" height="60%" />
+<img loading="lazy" src="../../images/BC-anti-leech/connection-status-icon.webp" width="60%" />
 
 
 * **绿脸：** 已经连接 给你上传 （从这个这个用户获得了下载速度）  

@@ -74,7 +74,7 @@ BC 在 选项>网络连接>端口映射 **取消勾选** “添加UPNP端口映�
 <img loading="lazy" src="../../images/stun-bt/bc-disable-upnp.webp" title="比特彗星中的UPNP映射" />
 
 qb在 选项>连接 取消勾选 “使用我的路由器的UPnP/NAT-PMP端口转发”  
-<img loading="lazy" src="../../images/stun-bt/qb-disable-upnp.webp" width="60%" height="60%" title="qb上UPNP设置" />
+<img loading="lazy" src="../../images/stun-bt/qb-disable-upnp.webp" width="60%" title="qb上UPNP设置" />
 
 确保路由器/光猫上的UPnP功能已经打开  
 
@@ -84,18 +84,18 @@ qb在 选项>连接 取消勾选 “使用我的路由器的UPnP/NAT-PMP端口�
 文件路径过长会对接下来的设置造成麻烦  
 同时下载解压 UPnP Wizard 建议与lucky放在一起  
 
-<img loading="lazy" src="../../images/stun-bt/program-lucky.webp" width="60%" height="60%" />
-<img loading="lazy" src="../../images/stun-bt/program-upnp.webp" width="60%" height="60%" />
+<img loading="lazy" src="../../images/stun-bt/program-lucky.webp" width="60%" />
+<img loading="lazy" src="../../images/stun-bt/program-upnp.webp" width="60%" />
 
 来到 UPnP_Wizard 目录 打开 UPNPWizard.exe 后面没有C  
 应该可以看到这样的窗口  
-<img loading="lazy" src="../../images/stun-bt/program-upnpw-interface-1.webp" width="60%" height="60%" />
+<img loading="lazy" src="../../images/stun-bt/program-upnpw-interface-1.webp" width="60%" />
 
 可以看到本地IP地址 UPnP设备名和地址以及一些映射规则  
 这些说明光猫/路由器上的 **UPnP功能已经打开**  
 若弹出 下面这个窗口说明 路由器/光猫上的 **UPnP功能没有开启**  
 
-<img loading="lazy" src="../../images/stun-bt/program-upnpw-interface-2.webp" width="60%" height="60%" />
+<img loading="lazy" src="../../images/stun-bt/program-upnpw-interface-2.webp" width="60%" />
 
 **UPnP_Wizard对一些设备的兼容性较差** 如果打开路由器/光猫上的 UPnP 功能后  
 依然会看到此错误提示请尝试换用 MiniUPnP Client 其配置方法在后面会讲  
@@ -107,14 +107,14 @@ qb在 选项>连接 取消勾选 “使用我的路由器的UPnP/NAT-PMP端口�
 lucky触发自定义脚本的行为可能会被一些杀毒软件误判（主要是Windows defender）  
 **建议提前将lucky加为信任或者排除**  
 
-<img loading="lazy" src="../../images/stun-bt/program-antivirus-false-alarm.webp" width="60%" height="60%" />
+<img loading="lazy" src="../../images/stun-bt/program-antivirus-false-alarm.webp" width="60%" />
 
 
 ### LUCKY上的设置
 
 双击运行 lucky.exe任务栏会出现一个图标  
 
-<img loading="lazy" src="../../images/stun-bt/program-lucky.webp" width="60%" height="60%" />
+<img loading="lazy" src="../../images/stun-bt/program-lucky.webp" width="60%" />
 
 <img loading="lazy" src="../../images/stun-bt/win-tray-icon.webp" />
 
@@ -132,7 +132,7 @@ lucky触发自定义脚本的行为可能会被一些杀毒软件误判（主要
 
 
 **点击 添加穿透规**则 并参照图中的方式填写  
-<img loading="lazy" src="../../images/stun-bt/lucky-penetration-rule.webp" width="60%" height="60%" />
+<img loading="lazy" src="../../images/stun-bt/lucky-penetration-rule.webp" width="60%" />
 
 自定义脚本内容如下 **部分参数按照实际情况修改**  
 
@@ -186,7 +186,7 @@ C:\UPnP_Wizard\UPnPWizardC.exe -add "BC-TCP" -ip default -intport ${port} -extpo
 ```
 
 **(这里的图是旧的 还在使用timeout命令)**  
-<img loading="lazy" src="../../images/stun-bt/lucky-penetration-rule-2.webp" width="60%" height="60%" />
+<img loading="lazy" src="../../images/stun-bt/lucky-penetration-rule-2.webp" width="60%" />
 
 
 ## 使用 MiniUPnP Client 的配置方法
@@ -200,7 +200,7 @@ C:\UPnP_Wizard\UPnPWizardC.exe -add "BC-TCP" -ip default -intport ${port} -extpo
 或者UPNP映射规则列表即可 规则数量可能会有所不同 说明UPNP已经启用  
 使用 MiniUPnP 应该不太会遇到兼容问题  
 
-<img loading="lazy" src="../../images/stun-bt/miniupnp-test.webp" width="60%" height="60%" />
+<img loading="lazy" src="../../images/stun-bt/miniupnp-test.webp" width="60%" />
 
 如果仍然显示 “No IGD UPnP Device found on the network !”  
 **请再次检查 光猫/路由器上的UPnP功能是否开启**  
@@ -232,7 +232,7 @@ C:\MiniUPnP_Client\upnpc-static.exe -i -e "BC-TCP" -a @ ${port} 6000 TCP
 同时 打开 UPNPWizard.exe 或 upnpc-static.exe  
 刷新一下 看看映射规则是否已经添加 刷新按钮在左上角  
 
-<img loading="lazy" src="../../images/stun-bt/program-upnpw-interface-3.webp" width="60%" height="60%" />
+<img loading="lazy" src="../../images/stun-bt/program-upnpw-interface-3.webp" width="60%" />
 
 **如果无法获取到外网端口**  
 请按照 上文链接中的教程继续优化网络环境  
@@ -250,11 +250,11 @@ C:\MiniUPnP_Client\upnpc-static.exe -i -e "BC-TCP" -a @ ${port} 6000 TCP
 首次添加时用于删除旧端口的命令会报错 这是正常的  
 主要看 下一行显示是否添加成功  
 
-<img loading="lazy" src="../../images/stun-bt/program-upnpw-command-line-1.webp" width="60%" height="60%" />
+<img loading="lazy" src="../../images/stun-bt/program-upnpw-command-line-1.webp" width="60%" />
 
 添加成功过一次后 下一次移除端口的命令就可以正常工作了  
 
-<img loading="lazy" src="../../images/stun-bt/program-upnpw-command-line-2.webp" width="60%" height="60%" />
+<img loading="lazy" src="../../images/stun-bt/program-upnpw-command-line-2.webp" width="60%" />
 
 ### 使用MiniUPnP
 
@@ -262,7 +262,7 @@ MiniUPnP输出日志和UPnP_Wizard不太一样
 删除端口时会返回 `UPNP_DeletePortMapping() returned : 0`
 规则创建成功后会返回规则的详细信息  
 
-<img loading="lazy" src="../../images/stun-bt/miniupnp-return.webp" width="60%" height="60%" />
+<img loading="lazy" src="../../images/stun-bt/miniupnp-return.webp" width="60%" />
 
 如果有 返回类似 `Call Script error: exit status 1` 这样的错误  
 建议检查一下填写UPnPWizardC.exe或MiniUPnP的路径是否正确  
@@ -276,15 +276,15 @@ MiniUPnP输出日志和UPnP_Wizard不太一样
 在成功获取外网端口和地址获取以及正确添加UPnP规则后  
 **就可以设置BT软件中的监听端口为获取到的外网端口**
 
-<img loading="lazy" src="../../images/stun-bt/qb-modify-listening-port.webp" width="60%" height="60%" />
-<img loading="lazy" src="../../images/stun-bt/bc-modify-listening-port.webp" width="60%" height="60%" />
+<img loading="lazy" src="../../images/stun-bt/qb-modify-listening-port.webp" width="60%" />
+<img loading="lazy" src="../../images/stun-bt/bc-modify-listening-port.webp" width="60%" />
 
 ### 检查最终效果
 
 BC在设置新端口后会自动从新检测端口 如果设置都
 **重新检测完成后就能获得绿灯**  
 
-<img loading="lazy" src="../../images/stun-bt/bc-port-opened.webp" width="60%" height="60%" />
+<img loading="lazy" src="../../images/stun-bt/bc-port-opened.webp" width="60%" />
 
 qb没有主动端口检测功能  
 只有在被动接受外部发起的连接后 状态栏才会显示 联机  
