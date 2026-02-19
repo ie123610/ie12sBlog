@@ -63,7 +63,7 @@ L2TP本身不提供加密 需要由IPsec完成
 
 IPsec/L2TP设置 》 勾选 启用 L2TP 服务器功能 （没有加密的 RAW L2TP）  
 
-<img src="../../images/L2TP特性研究/L2TP特性研究-se启用功能.jpg" width="60%" height="60%" />
+<img loading="lazy" src="../../images/L2TP特性研究/L2TP特性研究-se启用功能.jpg" width="60%" />
 
 客户端部分的设置和之前softether 联机教程中的基本相同  
 不过需要修改一些设置  
@@ -71,19 +71,19 @@ IPsec/L2TP设置 》 勾选 启用 L2TP 服务器功能 （没有加密的 RAW L
 在L2TP 的高级属性中 选择将证书用于身份验证  
 不要勾选下面的复选框 （因为softether 的L2TP 是不支持证书验证的）  
 
-<img src="../../images/L2TP特性研究/L2TP特性研究-客户端设置1.jpg" width="60%" height="60%" />
+<img loading="lazy" src="../../images/L2TP特性研究/L2TP特性研究-客户端设置1.jpg" width="60%" />
 
 同时在身份验证 选项中 允许使用这些协议里  
 至少勾选一种协议  
 
-<img src="../../images/L2TP特性研究/L2TP特性研究-客户端设置2.jpg" width="60%" height="60%" />
+<img loading="lazy" src="../../images/L2TP特性研究/L2TP特性研究-客户端设置2.jpg" width="60%" />
 
 至此我们便基本完成了设置  
 连接VPN并在服务端查看加密情况  
 
 **加密已经禁用**  
-<img src="../../images/L2TP特性研究/L2TP特性研究-无加密.jpg" width="60%" height="60%" />
+<img loading="lazy" src="../../images/L2TP特性研究/L2TP特性研究-无加密.jpg" width="60%" />
 
 **启用加密时的显示内容**  
-<img src="../../images/L2TP特性研究/L2TP特性研究-有加密.jpg" width="60%" height="60%" />
+<img loading="lazy" src="../../images/L2TP特性研究/L2TP特性研究-有加密.jpg" width="60%" />
 

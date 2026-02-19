@@ -12,7 +12,7 @@ sidebar_label: 专家模式及其作用
 **答：** 高级设置中 搜索 `system.enable_expert_mode` 选择**是**  
 并应用 即可开启专家模式  
 
-<img src="../../images/BC-expert-mode/enable-expert-mode.jpg" width="60%" height="60%" />
+<img loading="lazy" src="../../images/BC-expert-mode/enable-expert-mode.jpg" width="60%" />
 
 
 **问：** 开启专家模式有有什么用？  
@@ -31,15 +31,15 @@ sidebar_label: 专家模式及其作用
 或者左侧点击长效做种，也可以看到 **完整的列表**  
 可用于观察哪个（些）任务在进行长效上传  
 
-<img src="../../images/BC-expert-mode/show-long-term-seeds-upload-speed.jpg" width="60%" height="60%" />
-<img src="../../images/BC-expert-mode/show-all-long-term-seeds.jpg" width="60%" height="60%" />
+<img loading="lazy" src="../../images/BC-expert-mode/show-long-term-seeds-upload-speed.jpg" width="60%" />
+<img loading="lazy" src="../../images/BC-expert-mode/show-all-long-term-seeds.jpg" width="60%" />
 
 ---
 
 ## 详细内存占用
 
 可以查看内存占用的细节，用于内存占用过高时的诊断  
-<img src="../../images/BC-expert-mode/detailed-memory-usage-statistics.jpg" width="60%" height="60%" />
+<img loading="lazy" src="../../images/BC-expert-mode/detailed-memory-usage-statistics.jpg" width="60%" />
 
 
 ---
@@ -49,7 +49,7 @@ sidebar_label: 专家模式及其作用
 
 一般用于确定网络发生断流时哪一项发送了过多的UDP包  
 
-<img src="../../images/BC-expert-mode/detailed-udp-transmission-statistics.jpg" width="60%" height="60%" />
+<img loading="lazy" src="../../images/BC-expert-mode/detailed-udp-transmission-statistics.jpg" width="60%" />
 
 
 ---

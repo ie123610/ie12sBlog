@@ -33,27 +33,27 @@
 
 win+R 键 弹出 **运行** 
 输入 `cmd` 点确定 打开命令提示符  
-<img src="../../images/bitcomet-port-forwarding-win-settings/run-cmd.webp" width="60%" height="60%" />
+<img loading="lazy" src="../../images/bitcomet-port-forwarding-win-settings/run-cmd.webp" width="60%" />
 
 
 输入 `ipconfig` 回车 查看网卡信息  
 查看当前使用的网卡是否有 本地链接 IPv6 地址 
 这一项如果有则说明IPv6协议已经启用反之则没有
 
-<img src="../../images/bitcomet-port-forwarding-win-settings/ipv6-link-local.webp" width="60%" height="60%" title="本地链接 IPv6 地址" />
+<img loading="lazy" src="../../images/bitcomet-port-forwarding-win-settings/ipv6-link-local.webp" width="60%" title="本地链接 IPv6 地址" />
 
 
 当然也可以直接到 网络适配器选项 里去查看 
 win+R 弹出运行 输入 `ncpa.cpl` 点击 确定  
-<img src="../../images/bitcomet-port-forwarding-win-settings/run-network-connections.webp" width="60%" height="60%" />
+<img loading="lazy" src="../../images/bitcomet-port-forwarding-win-settings/run-network-connections.webp" width="60%" />
 
 弹出 **网络连接** 窗口  
 选择 正在使用的网卡 **右键** 选择 **属性**  
-<img src="../../images/bitcomet-port-forwarding-win-settings/network-adapter-properties.webp" width="60%" height="60%" />
+<img loading="lazy" src="../../images/bitcomet-port-forwarding-win-settings/network-adapter-properties.webp" width="60%" />
 
 查看 Internet协议版本 6 （TCP/IPv6） 是否勾选上  
 将 IPv6协议 勾选上 后点击确定 即可  
-<img src="../../images/bitcomet-port-forwarding-win-settings/network-adapter-enable-ipv6.webp" width="60%" height="60%" />
+<img loading="lazy" src="../../images/bitcomet-port-forwarding-win-settings/network-adapter-enable-ipv6.webp" width="60%" />
 
 
 ---
@@ -98,22 +98,22 @@ Windows会优先使用IPv6进行访问 失败后再尝试使用IPv4连接
 **答：** 比较好的方法是通过 **修改注册表** 实现  
 
 win+R 弹出运行 输入 `regedit` 确定 打开注册表编辑器  
-<img src="../../images/bitcomet-port-forwarding-win-settings/run-registry.webp" width="60%" height="60%" />
+<img loading="lazy" src="../../images/bitcomet-port-forwarding-win-settings/run-registry.webp" width="60%" />
 
 
 转到以下路径 （win10及以上版本可以直接复制粘贴路径 win7下要手动选择）
 ```
 HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Tcpip6\Parameters
 ```
-<img src="../../images/bitcomet-port-forwarding-win-settings/registry-path.webp" width="60%" height="60%" />
+<img loading="lazy" src="../../images/bitcomet-port-forwarding-win-settings/registry-path.webp" width="60%" />
 
 找到 **DisabledComponents** 右键 修改  
 如果没有这一项 则需要手动创建 或者直接用后文中的命令  
-<img src="../../images/bitcomet-port-forwarding-win-settings/registry-modify.webp" width="60%" height="60%" />
+<img loading="lazy" src="../../images/bitcomet-port-forwarding-win-settings/registry-modify.webp" width="60%" />
 
 选择 **十进制** 值 填写 **32** 填写完成后点确定  
 **重启计算机后生效**  
-<img src="../../images/bitcomet-port-forwarding-win-settings/registry-save.webp" width="60%" height="60%" />
+<img loading="lazy" src="../../images/bitcomet-port-forwarding-win-settings/registry-save.webp" width="60%" />
 
 **问：** 有更简单的方法吗？手动改注册表还是麻烦  
 
@@ -136,7 +136,7 @@ reg add "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\TCPIP6\Parameters"
 并且显示 “你已经有 IPv6 地址了，但你的浏览器不太愿意用，这一点比较令人担心。”
 **这说明IPv4优先策略已经生效**  
 
-<img src="../../images/bitcomet-port-forwarding-win-settings/test-ipv4-priority.webp" width="60%" height="60%" />
+<img loading="lazy" src="../../images/bitcomet-port-forwarding-win-settings/test-ipv4-priority.webp" width="60%" />
 
 
 **问：** ping 测试中是响应的 **是IPv4地址 但是浏览器测试中没有显示这段话 ** 
@@ -182,10 +182,10 @@ reg add "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\TCPIP6\Parameters"
 **答：** 在Windows上修改方法如下  
 
 按照上文 2.2.4.1 节中的方法找到 网卡上的 **IPv6协议** 点击属性  
-<img src="../../images/bitcomet-port-forwarding-win-settings/network-adapter-ipv6-properties.webp" width="60%" height="60%" />
+<img loading="lazy" src="../../images/bitcomet-port-forwarding-win-settings/network-adapter-ipv6-properties.webp" width="60%" />
 
 选择 **使用下面的DNS服务器地址**  
-<img src="../../images/bitcomet-port-forwarding-win-settings/network-adapter-ipv6-dns.webp" width="60%" height="60%" />
+<img loading="lazy" src="../../images/bitcomet-port-forwarding-win-settings/network-adapter-ipv6-dns.webp" width="60%" />
 
 这里收集了一些公共 IPv6 DNS 服务器地址  
 在填入前可以先 ping 一下选择延迟较低的填写  完成以后点 确定  
@@ -243,8 +243,8 @@ https://dudns.baidu.com/support/localdns/Address/index.html
 
 **问：** IPv6测试出现一这个 **“大数据包传输失败”**  
 
-<img src="../../images/bitcomet-port-forwarding-win-settings/test-large-packet-transfer-failure.webp" width="60%" height="60%" />
-<img src="../../images/bitcomet-port-forwarding-win-settings/test-large-packet-transfer-failure-2.webp" width="60%" height="60%" />
+<img loading="lazy" src="../../images/bitcomet-port-forwarding-win-settings/test-large-packet-transfer-failure.webp" width="60%" />
+<img loading="lazy" src="../../images/bitcomet-port-forwarding-win-settings/test-large-packet-transfer-failure-2.webp" width="60%" />
 
 **答：** 可以先尝试刷新几次后再次进行测试或者是访问其他镜像站点  
 以排除测试网站自身的问题 [测试站点列表](http://testipv6.cn/mirrors.html.zh_CN)  

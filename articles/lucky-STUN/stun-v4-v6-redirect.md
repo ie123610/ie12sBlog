@@ -44,30 +44,30 @@
 
 自上次的重定向教程后 Cloudflare的重定向规则界面又发生了不小的变化  
 不过好在设置方法上的变化不大  
-<img src="../../images/stun-v4-v6-redirect/new-layout.jpg" width="60%" height="60%" />
+<img loading="lazy" src="../../images/stun-v4-v6-redirect/new-layout.jpg" width="60%" />
 
 为了分别处理IPv6和IPv4请求  
 我们需要两条重定向规则  
 
 **在配置新的规则之前 先禁用之前的规则**  
-<img src="../../images/stun-v4-v6-redirect/disable-old-rule.jpg" width="60%" height="60%" />
+<img loading="lazy" src="../../images/stun-v4-v6-redirect/disable-old-rule.jpg" width="60%" />
 
 **复制旧规则** 先点击 部署 之后再进行编辑  
 复制出来的规则默认是启用状态 先禁用编辑完成后再启用  
-<img src="../../images/stun-v4-v6-redirect/copy-rule.jpg" width="60%" height="60%" />
-<img src="../../images/stun-v4-v6-redirect/deploy-rule.jpg" width="60%" height="60%" />
+<img loading="lazy" src="../../images/stun-v4-v6-redirect/copy-rule.jpg" width="60%" />
+<img loading="lazy" src="../../images/stun-v4-v6-redirect/deploy-rule.jpg" width="60%" />
 
 **编辑旧规则** 修改规则名称 这里加上v4后缀  
-<img src="../../images/stun-v4-v6-redirect/rename-old-rule.jpg" width="60%" height="60%" />
+<img loading="lazy" src="../../images/stun-v4-v6-redirect/rename-old-rule.jpg" width="60%" />
 
 联立新的条件 逻辑选择 `And`  
 字段选择 IP源地址 运算符 选择 包含以下各项  
 值填写 `0.0.0.0/0` 表示所有IPv4地址 **保存规则**  
-<img src="../../images/stun-v4-v6-redirect/edit-old-rule-condition.jpg" width="60%" height="60%" />
+<img loading="lazy" src="../../images/stun-v4-v6-redirect/edit-old-rule-condition.jpg" width="60%" />
 
 
 **编辑复制的规则** 修改名称 添加v6后缀   
-<img src="../../images/stun-v4-v6-redirect/rename-new-rule.jpg" width="60%" height="60%" />
+<img loading="lazy" src="../../images/stun-v4-v6-redirect/rename-new-rule.jpg" width="60%" />
 
 联立新的条件 和之前的设置基本一致  
 逻辑选择 And 字段选择 IP源地址  
@@ -75,7 +75,7 @@
 
 值填写 `2000::/3` 其为IPv6全球单播地址  
 相当于表示所有的IPv6公网地址  
-<img src="../../images/stun-v4-v6-redirect/edit-new-rule-condition.jpg" width="60%" height="60%" />
+<img loading="lazy" src="../../images/stun-v4-v6-redirect/edit-new-rule-condition.jpg" width="60%" />
 
 **此外重定向的目标子域名和端口号也需要修改**  
 
@@ -86,11 +86,11 @@
 端口号可自定义 填写实际开放的IPv6端口  
 一般为lucky web 规则所监听的端口号  
 其是固定的 无需动态更新 记得保存规则  
-<img src="../../images/stun-v4-v6-redirect/edit-new-rule-redirect-target.jpg" width="60%" height="60%" />
+<img loading="lazy" src="../../images/stun-v4-v6-redirect/edit-new-rule-redirect-target.jpg" width="60%" />
 
 此外要设置DNS记录将这个新的子域名（泛域名）指向源服务器的IPv6地址  
 模式为仅DNS 只填写IPv6地址即可  
-<img src="../../images/stun-v4-v6-redirect/cf-dns-record.jpg" width="60%" height="60%" />
+<img loading="lazy" src="../../images/stun-v4-v6-redirect/cf-dns-record.jpg" width="60%" />
 
 ---
 
@@ -127,7 +127,7 @@ op.v6.ie12.com
 alist.v6.ie12.com
 ```
 
-<img src="../../images/stun-v4-v6-redirect/modify-frontend-address.jpg" width="60%" height="60%" />
+<img loading="lazy" src="../../images/stun-v4-v6-redirect/modify-frontend-address.jpg" width="60%" />
 
 **TLS证书配置**  
 

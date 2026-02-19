@@ -14,9 +14,9 @@
 
 ### Windows类
 
-* [Windows无法启用休眠问题](./win-sleep-mode-issue.md)
+* [Windows 无法启用休眠问题](./win-sleep-mode-issue.md)
 * [Windows 传输动画提取](./win-animation.md)
-
+* [Lucky 执行批处理报错和乱码问题](./lucky-cmd-error.md)
 
 ### 网络类
 
@@ -24,16 +24,17 @@
 * [小米路由支持更多IPv6获取方式](./小米路由更多IPv6获取方式.md)
 * [L2TP特性研究](./L2TP特性研究.md)
 * [在Windows上使用ncat测试UDP端口](./ncat-udp-port-check.md)
+* [使用Gost将SoftEther转换为socks5代理](./gost-softether-vpn-to-proxy.md)
 * [HTTPS/SVCB记录和HTTP3/QUIC排障](./https-record-http3-test.md)
+* [SVCB/HTTPS记录与免费FRP穿透配合使用](./svcb-frp.md)
+* [cURL SVCB/HTTPS 记录测试](./curl-test.md)
 
 
-### Docusaurus
-
-* [解决showLastUpdateTime总是显示相同日期问题](./Docusaurus-showLastUpdateTime.md)
 
 ### 杂项
 
 * [B站专栏文本复制问题](./B站专栏文本复制问题.md)
 * [「转」基于爱奇艺HCDN视频分发网络的开放缓存](./爱奇艺HCDN.md)
 * [博客园映射表](./cnblog-index.md)
+* [解决showLastUpdateTime总是显示相同日期问题](./Docusaurus-showLastUpdateTime.md)
 

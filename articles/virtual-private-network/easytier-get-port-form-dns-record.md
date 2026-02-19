@@ -46,19 +46,19 @@ TXT记录是最简单最灵活的方法 就像在客户端中连接时那样
 使用lucky更新 TXT记录的具体方法:[教程](https://www.bilibili.com/read/cv41904858/?jump_opus=1)  
 
 **STUN规则**  
-<img src="../../images/easytier-get-port-form-dns-record/stun-rules.jpg" width="60%" height="60%" />
+<img loading="lazy" src="../../images/easytier-get-port-form-dns-record/stun-rules.jpg" width="60%" />
 
 **设置TXT记录更新**  
-<img src="../../images/easytier-get-port-form-dns-record/txt-record-update-settings.jpg" width="60%" height="60%" />
+<img loading="lazy" src="../../images/easytier-get-port-form-dns-record/txt-record-update-settings.jpg" width="60%" />
 
 **检视更新效果**  
-<img src="../../images/easytier-get-port-form-dns-record/txt-record-update-effect.jpg" width="60%" height="60%" />
+<img loading="lazy" src="../../images/easytier-get-port-form-dns-record/txt-record-update-effect.jpg" width="60%" />
 
 **连接测试**  
-<img src="../../images/easytier-get-port-form-dns-record/txt-connection-effect-1.jpg" width="60%" height="60%" />
+<img loading="lazy" src="../../images/easytier-get-port-form-dns-record/txt-connection-effect-1.jpg" width="60%" />
 
 **连接成功**  
-<img src="../../images/easytier-get-port-form-dns-record/txt-connection-effect-2.jpg" width="60%" height="60%" />
+<img loading="lazy" src="../../images/easytier-get-port-form-dns-record/txt-connection-effect-2.jpg" width="60%" />
 
 ----
 
@@ -103,22 +103,22 @@ _easytier._wg.et2.ie12test.dynv6.net
 其不能是 CNAME 详见：[链接](https://www.cloudflare.com/zh-cn/learning/dns/dns-records/dns-srv-record/)  
 
 **STUN规则**  
-<img src="../../images/easytier-get-port-form-dns-record/stun-rules.jpg" width="60%" height="60%" />
+<img loading="lazy" src="../../images/easytier-get-port-form-dns-record/stun-rules.jpg" width="60%" />
 
 **设置SRV记录更新**  
-<img src="../../images/easytier-get-port-form-dns-record/srv-record-update-settings.jpg" width="60%" height="60%" />
+<img loading="lazy" src="../../images/easytier-get-port-form-dns-record/srv-record-update-settings.jpg" width="60%" />
 
 **检视更新效果**  
-<img src="../../images/easytier-get-port-form-dns-record/srv-record-update-effect.jpg" width="60%" height="60%" />
+<img loading="lazy" src="../../images/easytier-get-port-form-dns-record/srv-record-update-effect.jpg" width="60%" />
 
 **解析效果**  
-<img src="../../images/easytier-get-port-form-dns-record/srv-record-analysis-effect.jpg" width="60%" height="60%" />
+<img loading="lazy" src="../../images/easytier-get-port-form-dns-record/srv-record-analysis-effect.jpg" width="60%" />
 
 **连接测试**  
-<img src="../../images/easytier-get-port-form-dns-record/srv-connection-effect-1.jpg" width="60%" height="60%" />
+<img loading="lazy" src="../../images/easytier-get-port-form-dns-record/srv-connection-effect-1.jpg" width="60%" />
 
 **连接成功**  
-<img src="../../images/easytier-get-port-form-dns-record/srv-connection-effect-2.jpg" width="60%" height="60%" />
+<img loading="lazy" src="../../images/easytier-get-port-form-dns-record/srv-connection-effect-2.jpg" width="60%" />
 
 ---
 
@@ -132,11 +132,11 @@ _easytier._wg.et2.ie12test.dynv6.net
 这里使用lucky 制作一个本地网页  
 
 **示例**  
-<img src="../../images/easytier-get-port-form-dns-record/http200-1.jpg" width="60%" height="60%" />
-<img src="../../images/easytier-get-port-form-dns-record/http200-2.jpg" width="60%" height="60%" />
-<img src="../../images/easytier-get-port-form-dns-record/http200-3.jpg" width="60%" height="60%" />
-<img src="../../images/easytier-get-port-form-dns-record/http200-4.jpg" width="60%" height="60%" />
-<img src="../../images/easytier-get-port-form-dns-record/http200-5.jpg" width="60%" height="60%" />
+<img loading="lazy" src="../../images/easytier-get-port-form-dns-record/http200-1.jpg" width="60%" />
+<img loading="lazy" src="../../images/easytier-get-port-form-dns-record/http200-2.jpg" width="60%" />
+<img loading="lazy" src="../../images/easytier-get-port-form-dns-record/http200-3.jpg" width="60%" />
+<img loading="lazy" src="../../images/easytier-get-port-form-dns-record/http200-4.jpg" width="60%" />
+<img loading="lazy" src="../../images/easytier-get-port-form-dns-record/http200-5.jpg" width="60%" />
 
 不过其在外置STUN场景下可能用处不大  
 因为访问网页也需要固定端口即进行重定向  
@@ -178,12 +178,12 @@ HTTP重定向方法根据格式有可以分为两种
 * [「扩展篇」使用Cloudflare的重定向规则传递资源路径和查询字符串](../lucky-STUN/stun-cf-redirection.md)
 
 **第一种重定向格式效果演示**  
-<img src="../../images/easytier-get-port-form-dns-record/redirect-url-1.jpg" width="60%" height="60%" />
-<img src="../../images/easytier-get-port-form-dns-record/redirect-url-2.jpg" width="60%" height="60%" />
-<img src="../../images/easytier-get-port-form-dns-record/redirect-url-3.jpg" width="60%" height="60%" />
+<img loading="lazy" src="../../images/easytier-get-port-form-dns-record/redirect-url-1.jpg" width="60%" />
+<img loading="lazy" src="../../images/easytier-get-port-form-dns-record/redirect-url-2.jpg" width="60%" />
+<img loading="lazy" src="../../images/easytier-get-port-form-dns-record/redirect-url-3.jpg" width="60%" />
 
 
 **第二种重定向格式效果显示**  
-<img src="../../images/easytier-get-port-form-dns-record/redirect-query-1.jpg" width="60%" height="60%" />
-<img src="../../images/easytier-get-port-form-dns-record/redirect-query-2.jpg" width="60%" height="60%" />
-<img src="../../images/easytier-get-port-form-dns-record/redirect-query-3.jpg" width="60%" height="60%" />
+<img loading="lazy" src="../../images/easytier-get-port-form-dns-record/redirect-query-1.jpg" width="60%" />
+<img loading="lazy" src="../../images/easytier-get-port-form-dns-record/redirect-query-2.jpg" width="60%" />
+<img loading="lazy" src="../../images/easytier-get-port-form-dns-record/redirect-query-3.jpg" width="60%" />

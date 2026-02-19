@@ -8,7 +8,7 @@ sidebar_label: 磁力链接格式问题
 
 **问：** 磁力链接为什么有两种不同的格式？(使用磁力链接向彗星添加任务后再复制出的磁力链接会发变化？)  
 
-<img src="../../images/BC-magnet-link-form/BC-magnet-link-form-1.jpg" width="60%" height="60%" />
+<img loading="lazy" src="../../images/BC-magnet-link-form/BC-magnet-link-form-1.jpg" width="60%" />
 
 **答:只是表示方法不同而已** 表示的内容都是相同的SHA-1散列  
 全部大写且稍短的是由base32编码表示的  
@@ -48,7 +48,7 @@ magnet:?xt=urn:btih:9fc20b9e98ea98b4a35e6223041a5ef94ea27809
 v2.20版本以后 增加高级选项 `ui.copy_magnet_with_base32_infohash`  
 可以设置磁链里的特征码默认编码方式  
 
-<img src="../../images/BC-magnet-link-form/BC-magnet-link-form-2.jpg" width="60%" height="60%" />
+<img loading="lazy" src="../../images/BC-magnet-link-form/BC-magnet-link-form-2.jpg" width="60%" />
 
 
 ---

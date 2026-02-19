@@ -17,7 +17,7 @@ sidebar_label: 截图和评论显示问题
 ## 软件问题部分
 
 **问：** 打开评论和截图显示以下内容  
-<img src="../../images/BC-screenshots-and-comments/webview2-error.webp" width="60%" height="60%" />
+<img loading="lazy" src="../../images/BC-screenshots-and-comments/webview2-error.webp" width="60%" />
 
 **答： 未安装WebView2** 造成的  
 
@@ -53,14 +53,14 @@ WebView2 可以简单的理解为一个简易的 Edge 浏览器 API
 下载并运行安装程序，在安装向导的指引下即可完成安装  
 安装完成后重新BC或电脑即可  
 
-<img src="../../images/BC-screenshots-and-comments/webview2-download.webp" width="60%" height="60%" />
-<img src="../../images/BC-screenshots-and-comments/webview2-download-2.webp" width="60%" height="60%" />
+<img loading="lazy" src="../../images/BC-screenshots-and-comments/webview2-download.webp" width="60%" />
+<img loading="lazy" src="../../images/BC-screenshots-and-comments/webview2-download-2.webp" width="60%" />
 
 **问：** 我已经安装了WebView2\我无需安装 评论、截图显示为一片空白
 也没有任何提示或报错  
 
-<img src="../../images/BC-screenshots-and-comments/comments-blank.webp" width="60%" height="60%" />
-<img src="../../images/BC-screenshots-and-comments/screenshot-blank.webp" width="60%" height="60%" />
+<img loading="lazy" src="../../images/BC-screenshots-and-comments/comments-blank.webp" width="60%" />
+<img loading="lazy" src="../../images/BC-screenshots-and-comments/screenshot-blank.webp" width="60%" />
 
 **答：** 这可能是WebView2 控件没有及时创建造成的，应该算是1.99版本一个小bug   
 2.0预览版好像已经修复了 **在1.99版本可以通过重启BC的方式来解决**  
@@ -69,7 +69,7 @@ WebView2 可以简单的理解为一个简易的 Edge 浏览器 API
 >1.99正式版开始windows10下如果启用始终显示选项卡会无法显示截图  
 >未选中BT任务的时候，点击了截图选项卡，灰屏无法加载出来，后续点击BT任务在点截图也没用，必须重启软件了  
 
-<img src="../../images/BC-screenshots-and-comments/right-click-menu.webp" width="60%" height="60%" />
+<img loading="lazy" src="../../images/BC-screenshots-and-comments/right-click-menu.webp" width="60%" />
 
 v1.99 Beta1 [20230222]之前的版本的解决方法：  
 * https://www.cometbbs.com/t/83650
@@ -80,7 +80,7 @@ v1.99 Beta1 [20230222]之前的版本的解决方法：
 ## 网络问题部分
 
 **问：** 评论、截图区出现报错\白屏仍然存在  
-<img src="../../images/BC-screenshots-and-comments/right-click-menu.webp" width="60%" height="60%" />
+<img loading="lazy" src="../../images/BC-screenshots-and-comments/right-click-menu.webp" width="60%" />
 
 **答：** 这应该是网络问题造成的  
 
@@ -152,25 +152,25 @@ image.fileshot.net
 
 先通过系统自带的查询功能进行查询IP  
 同时按下 **win和R键** 弹出运行  
-<img src="../../images/BC-screenshots-and-comments/run.webp" width="60%" height="60%" />
+<img loading="lazy" src="../../images/BC-screenshots-and-comments/run.webp" width="60%" />
 
 输入 **cmd** 点确定 弹出命令提示符 窗口  
-<img src="../../images/BC-screenshots-and-comments/command-prompt.webp" width="60%" height="60%" />
+<img loading="lazy" src="../../images/BC-screenshots-and-comments/command-prompt.webp" width="60%" />
 
 输入 nslookup 并加上想要查询的域名 例如：  
 `nslookup passport-client.bitcomet.com`  
 
 输入后回车 查看查询结果  
-<img src="../../images/BC-screenshots-and-comments/resolution-result.webp" width="60%" height="60%" />
+<img loading="lazy" src="../../images/BC-screenshots-and-comments/resolution-result.webp" width="60%" />
 
 这就是本地查询得到的结果，下面使用在线工具进行查询  
 访问：https://www.nslookup.io/  
 
 输入域名 并查询  
-<img src="../../images/BC-screenshots-and-comments/online-query-1.webp" width="60%" height="60%" />
+<img loading="lazy" src="../../images/BC-screenshots-and-comments/online-query-1.webp" width="60%" />
 
 查看结果  
-<img src="../../images/BC-screenshots-and-comments/online-query-2.webp" width="60%" height="60%" />
+<img loading="lazy" src="../../images/BC-screenshots-and-comments/online-query-2.webp" width="60%" />
 
 其他的几个域名也是同样的做法  
 比较两种查询得到的IP地址 如果一致则dns没有问题  
@@ -181,19 +181,19 @@ image.fileshot.net
 （此部分来自 像素帝 的教程 ）~~https://www.cometbbs.com/t/83650~~  
 
 搜索“记事本”，右键，以管理员身份运行  
-<img src="../../images/BC-screenshots-and-comments/open-notepad.webp" width="60%" height="60%" />
+<img loading="lazy" src="../../images/BC-screenshots-and-comments/open-notepad.webp" width="60%" />
 
 点击【文件→打开】  
-<img src="../../images/BC-screenshots-and-comments/file-filter.webp" width="60%" height="60%" />
+<img loading="lazy" src="../../images/BC-screenshots-and-comments/file-filter.webp" width="60%" />
 
 选择显示【所有文件】  
-<img src="../../images/BC-screenshots-and-comments/file-filter.webp" width="60%" height="60%" />
+<img loading="lazy" src="../../images/BC-screenshots-and-comments/file-filter.webp" width="60%" />
 
 选中【C:\Windows\System32\drivers\etc\hosts】，点击【打开】  
 **注意 如果C:\Windows\System32\drivers\etc 中没有hosts文件**  
 **请手动创建 右键空白处>新建>文本文档>重命名为hosts 并删除 .txt 扩展名**  
 
-<img src="../../images/BC-screenshots-and-comments/open-hosts-file.webp" width="60%" height="60%" />
+<img loading="lazy" src="../../images/BC-screenshots-and-comments/open-hosts-file.webp" width="60%" />
 
 在 host 文件添加以下文本：  
 
@@ -206,9 +206,9 @@ image.fileshot.net
 
 注意，服务器的IP可能会发生变化，请以在线工具查询的结果为准  
 
-<img src="../../images/BC-screenshots-and-comments/dns-1.webp" width="60%" height="60%" />
-<img src="../../images/BC-screenshots-and-comments/dns-2.webp" width="60%" height="60%" />
-<img src="../../images/BC-screenshots-and-comments/dns-3.webp" width="60%" height="60%" />
+<img loading="lazy" src="../../images/BC-screenshots-and-comments/dns-1.webp" width="60%" />
+<img loading="lazy" src="../../images/BC-screenshots-and-comments/dns-2.webp" width="60%" />
+<img loading="lazy" src="../../images/BC-screenshots-and-comments/dns-3.webp" width="60%" />
 
 DNS 部分排查到此结束
 
@@ -226,7 +226,7 @@ DNS 部分排查到此结束
 **问：** 如何设置？  
 
 **答：** 可以在彗星内设置代理服务器  
-<img src="../../images/BC-screenshots-and-comments/bc-proxy-settings.webp" width="60%" height="60%" />
+<img loading="lazy" src="../../images/BC-screenshots-and-comments/bc-proxy-settings.webp" width="60%" />
 
 勾选 **使用代理显示网页** 和 **将代理用于其他网络流量**  
 这样显示截图和评论时会通过代理服务器来连接，以防止直接连接时被阻断  

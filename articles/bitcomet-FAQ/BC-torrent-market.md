@@ -57,8 +57,8 @@ sidebar_label: 种子市场使用教程
 如果有你不喜欢的东西出现可以设置关键字黑名单加以屏蔽 支持正则表达式  
 （右键弹出菜单以设置黑名单）或者自行接忽略  
 
-<img src="../../images/BC-torrent-market/others-sharing-blacklist.webp" width="60%" height="60%" />
-<img src="../../images/BC-torrent-market/others-sharing-blacklist-2.webp" width="60%" height="60%" />
+<img loading="lazy" src="../../images/BC-torrent-market/others-sharing-blacklist.webp" width="60%" />
+<img loading="lazy" src="../../images/BC-torrent-market/others-sharing-blacklist-2.webp" width="60%" />
 
 ---
 
@@ -96,7 +96,7 @@ e1c9ef19ba10bd3f47c9945176236440869e67a8
 
 **示例**  
 
-<img src="../../images/BC-torrent-market/never-completing-task.webp" width="60%" height="60%" />
+<img loading="lazy" src="../../images/BC-torrent-market/never-completing-task.webp" width="60%" />
 
 **问：** 如何导入、导出他人共享？  
 
@@ -122,16 +122,16 @@ e1c9ef19ba10bd3f47c9945176236440869e67a8
 
 **导出：**
 打开彗星 选择 文件>导入和导出下载列表  
-<img src="../../images/BC-torrent-market/import-export-options.webp" width="60%" height="60%" />
+<img loading="lazy" src="../../images/BC-torrent-market/import-export-options.webp" width="60%" />
 
 选择 要导出的内容 这里只选择 他人共享 点击 … 选择保存路径  
-<img src="../../images/BC-torrent-market/export.webp" width="60%" height="60%" />
+<img loading="lazy" src="../../images/BC-torrent-market/export.webp" width="60%" />
 
 选择 保存路径 输入文件名 点确定  
-<img src="../../images/BC-torrent-market/save-export-configuration.webp" width="60%" height="60%" />
+<img loading="lazy" src="../../images/BC-torrent-market/save-export-configuration.webp" width="60%" />
 
 回到了刚才的界面 点击导出即可  
-<img src="../../images/BC-torrent-market/export-2.webp" width="60%" height="60%" />
+<img loading="lazy" src="../../images/BC-torrent-market/export-2.webp" width="60%" />
 
 **注意 如果他人共享条数很多 软件很有可能会未响应或者卡死**  
 **如果长时间卡死或者未响应 请尝试后面的数据库法**  
@@ -139,11 +139,11 @@ e1c9ef19ba10bd3f47c9945176236440869e67a8
 **导入：**  
 使用.bc_bak 文件导入 和导出方法差不多  
 打开彗星 选择 文件>导入和导出下载列表  
-<img src="../../images/BC-torrent-market/import-export-options.webp" width="60%" height="60%" />
+<img loading="lazy" src="../../images/BC-torrent-market/import-export-options.webp" width="60%" />
 
 选择 **导入** 选项卡 点击 … 选择要导入的配置文件  
 要导入的内容会 自动选择上 最后点击导入即可  
-<img src="../../images/BC-torrent-market/import.webp" width="60%" height="60%" />
+<img loading="lazy" src="../../images/BC-torrent-market/import.webp" width="60%" />
 
 **注意 如果他人共享条数很多 软件很有可能会未响应或者卡死**  
 **如果长时间卡死或者未响应 请尝试后面的数据库法**  
@@ -157,7 +157,7 @@ e1c9ef19ba10bd3f47c9945176236440869e67a8
 比特彗星安装目录\share\peer_shares.db  
 找到这个数据库 **复制下来** 将这个文件以任何 **分享给其他人即可**  
 
-<img src="../../images/BC-torrent-market/database-file.webp" title="数据库存储位置" width="60%" height="60%" />
+<img loading="lazy" src="../../images/BC-torrent-market/database-file.webp" title="数据库存储位置" width="60%" />
 
 **导入：**  
 与导出方法类似 将别人分享的数据库文件复制到  
@@ -165,7 +165,7 @@ e1c9ef19ba10bd3f47c9945176236440869e67a8
 
 **注意操作时要退出彗星 不然会提示文件被占用**  
 **覆盖原有数据库后 重新打开彗星 即开始加载 他人共享**  
-<img src="../../images/BC-torrent-market/loading-others-sharing.webp" title="加载他人共享" width="60%" height="60%" />
+<img loading="lazy" src="../../images/BC-torrent-market/loading-others-sharing.webp" title="加载他人共享" width="60%" />
 
 --
 
@@ -178,13 +178,13 @@ e1c9ef19ba10bd3f47c9945176236440869e67a8
 此部分参考像素帝的教程：~~https://www.cometbbs.com/t/85757~~  
 
 下载并解压缩 SQLiteStudio 打开 SQLiteStudio.exe  
-<img src="../../images/BC-torrent-market/sql-main-program.webp" width="60%" height="60%" />
+<img loading="lazy" src="../../images/BC-torrent-market/sql-main-program.webp" width="60%" />
 
 首次运行时要选择语言  
-<img src="../../images/BC-torrent-market/select-language.webp" width="60%" height="60%" />
+<img loading="lazy" src="../../images/BC-torrent-market/select-language.webp" width="60%" />
 
 **添加数据库**  
-<img src="../../images/BC-torrent-market/add-database.webp" width="60%" height="60%" />
+<img loading="lazy" src="../../images/BC-torrent-market/add-database.webp" width="60%" />
 
 * **数据库类型：** 不用修改
 * **文件：** 选择数据库文件所在的路径
@@ -194,16 +194,16 @@ e1c9ef19ba10bd3f47c9945176236440869e67a8
 他人共享数据库位于 比特彗星安装目录\share\  
 数据库名称为 peer_shares.db **最后点 OK**  
 
-<img src="../../images/BC-torrent-market/add-database-2.webp" width="60%" height="60%" />
+<img loading="lazy" src="../../images/BC-torrent-market/add-database-2.webp" width="60%" />
 
 **查询数据库内容** 双击添加的数据库 连接并展开  
-<img src="../../images/BC-torrent-market/expand-database.webp" width="60%" height="60%" />
+<img loading="lazy" src="../../images/BC-torrent-market/expand-database.webp" width="60%" />
 
 **展开 表** 并选择 **数据** 选项卡  
 
-<img src="../../images/BC-torrent-market/expand-table.webp" width="60%" height="60%" />
+<img loading="lazy" src="../../images/BC-torrent-market/expand-table.webp" width="60%" />
 
-<img src="../../images/BC-torrent-market/loaded-entries.webp" title="数据条目" width="60%" height="60%" />
+<img loading="lazy" src="../../images/BC-torrent-market/loaded-entries.webp" title="数据条目" width="60%" />
 
 主要关注的是  
 * **hash** 
@@ -223,8 +223,8 @@ e1c9ef19ba10bd3f47c9945176236440869e67a8
 建议勾选 **在每个列上展示筛选器输入框**  
 在 **title列** 进行搜索 可能比直接搜索更快些  
 
-<img src="../../images/BC-torrent-market/column-filter-box.webp" title="在每个列上展示筛选器输入框" width="60%" height="60%" />
-<img src="../../images/BC-torrent-market/search-results.webp" title="搜索效果" width="60%" height="60%" />
+<img loading="lazy" src="../../images/BC-torrent-market/column-filter-box.webp" title="在每个列上展示筛选器输入框" width="60%" />
+<img loading="lazy" src="../../images/BC-torrent-market/search-results.webp" title="搜索效果" width="60%" />
 
 **下载内容**  
 找到了合适的资源 **右键** 哈希值 选择 **复制**  
@@ -237,7 +237,7 @@ e1c9ef19ba10bd3f47c9945176236440869e67a8
 
 **答：** 可能是限制了最大条数   
 右键》他人共享》弹出菜单》调整最大条数 例如设置为无限  
-<img src="../../images/BC-torrent-market/others-sharing-unrestricted.webp" width="60%" height="60%" />
+<img loading="lazy" src="../../images/BC-torrent-market/others-sharing-unrestricted.webp" width="60%" />
 
 ---
 

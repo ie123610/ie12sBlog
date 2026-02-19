@@ -29,7 +29,7 @@ Github项目链接：[链接](https://github.com/EasyTier/EasyTier/releases)
 下载最后的 **easytier-windows-x86_64** 
 
 **示例**  
-<img src="../../images/setup-easytier-server-on-win/download-et.jpg" width="60%" height="60%" />
+<img loading="lazy" src="../../images/setup-easytier-server-on-win/download-et.jpg" width="60%" />
 
 下载并解压文件  
 其中的 easytier-core.exe 为**程序核心**  
@@ -50,7 +50,7 @@ Github项目地址：[链接](https://github.com/winsw/winsw/releases)
 选择**WinSW-x64.exe**  
 
 **示例**  
-<img src="../../images/setup-easytier-server-on-win/download-winsw.jpg" width="60%" height="60%" />
+<img loading="lazy" src="../../images/setup-easytier-server-on-win/download-winsw.jpg" width="60%" />
 
 下载完成后将其复制到EasyTier目录下面  
 
@@ -100,7 +100,7 @@ Github项目地址：[链接](https://github.com/winsw/winsw/releases)
 
 
 **示例**  
-<img src="../../images/setup-easytier-server-on-win/core-help-commands.jpg" width="60%" height="60%" />
+<img loading="lazy" src="../../images/setup-easytier-server-on-win/core-help-commands.jpg" width="60%" />
 
 
 ### 保存配置文件
@@ -108,13 +108,13 @@ Github项目地址：[链接](https://github.com/winsw/winsw/releases)
 使用参数启动 ET 后若设置正确则可看到输出了配置信息和端口监听信息  
 
 **示例**  
-<img src="../../images/setup-easytier-server-on-win/configuration-file-printing-effect.jpg" width="60%" height="60%" />
+<img loading="lazy" src="../../images/setup-easytier-server-on-win/configuration-file-printing-effect.jpg" width="60%" />
 
 将其中的配置信息复制下来保存到EasyTier的目录下 文件名为 `config.yaml`  
 （### TOML ### 和--- 之间的部分）  
 
 **示例**  
-<img src="../../images/setup-easytier-server-on-win/configuration-file-save-location.jpg" width="60%" height="60%" />
+<img loading="lazy" src="../../images/setup-easytier-server-on-win/configuration-file-save-location.jpg" width="60%" />
 
 附加`-c 配置文件路径` 的参数以使用配置文件启动  
 若设置正确则可以看到和上一小节中相同的内容  
@@ -126,7 +126,7 @@ Github项目地址：[链接](https://github.com/winsw/winsw/releases)
 -c C:\easytier\config.yaml
 ```
 
-<img src="../../images/setup-easytier-server-on-win/start-from-configuration-file.jpg" width="60%" height="60%" />
+<img loading="lazy" src="../../images/setup-easytier-server-on-win/start-from-configuration-file.jpg" width="60%" />
 
 
 ---
@@ -188,7 +188,7 @@ WinSW配置可设置的内容很多 但我们只需要使用部分的参数字�
 若显示 `installed successfully` 则表示注册成功  
 
 **示例**  
-<img src="../../images/setup-easytier-server-on-win/reg-service-successful.jpg" width="60%" height="60%" />
+<img loading="lazy" src="../../images/setup-easytier-server-on-win/reg-service-successful.jpg" width="60%" />
 
 ---
 
@@ -203,13 +203,13 @@ win搜索栏搜索 **服务** 进入服务管理工具
 若配置都正确则服务进入运行状态  
 
 **示例**  
-<img src="../../images/setup-easytier-server-on-win/service-is-running.jpg" width="60%" height="60%" />
+<img loading="lazy" src="../../images/setup-easytier-server-on-win/service-is-running.jpg" width="60%" />
 
 我们可以在 目录下的WinSW-x64.out.log 文件中看到  
 输出了和之前在控制台中相类似的信息  
 
 **示例**  
-<img src="../../images/setup-easytier-server-on-win/output-log.jpg" width="60%" height="60%" />
+<img loading="lazy" src="../../images/setup-easytier-server-on-win/output-log.jpg" width="60%" />
 
 
 ### 检查端口
@@ -218,7 +218,7 @@ win搜索栏搜索 **服务** 进入服务管理工具
 （示例中使用的是[TCPING](https://www.elifulkerson.com/projects/tcping.php)）  
 
 **示例**  
-<img src="../../images/setup-easytier-server-on-win/port-scan.jpg" width="60%" height="60%" />
+<img loading="lazy" src="../../images/setup-easytier-server-on-win/port-scan.jpg" width="60%" />
 
 
 ### 使用命令行管理工具
@@ -229,13 +229,13 @@ ET核心程序和管理工具是相分离的 在以服务运行的情况下
 由于是在本地运行且使用的是默认RPC端口故无需额外指定地址和端口号  
 可使用`help`参数以查看管理工具的可用命令  
 
-<img src="../../images/setup-easytier-server-on-win/available-commands-for-management-tools.jpg" width="60%" height="60%" />
+<img loading="lazy" src="../../images/setup-easytier-server-on-win/available-commands-for-management-tools.jpg" width="60%" />
 
 接着使用 `peer` 命令查看已经连接的节点  
 当然现在没有连接其他节点 但可以显示出自身 表明核心已在正常运行  
 节点名称默认为计算机名 如果想更改可以通过 `--hostname 主机名`进行修改  
 
-<img src="../../images/setup-easytier-server-on-win/management-tools-table.jpg" width="60%" height="60%" />
+<img loading="lazy" src="../../images/setup-easytier-server-on-win/management-tools-table.jpg" width="60%" />
 
 ### 故障排除
 
