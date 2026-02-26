@@ -1,5 +1,7 @@
 # eMule设置IP绑定 
 
+2025.8.31  
+
 eMule在图形界面中无法设置IP绑定  
 但可以通过修改preferences.ini配置文件实现  
 此选项可以让eMule从指定的本地IP发起连接 这对UDP和TCP均有效  

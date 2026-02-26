@@ -2,6 +2,8 @@
 
 # 「转」基于爱奇艺HCDN视频分发网络的开放缓存
 
+2025.8.24  
+
 <img loading="lazy" src="../../images/爱奇艺HCDN/头图.webp" />
 
 > 为通过Internet向海量用户传输高清晰度、高码率的视频节目，爱奇艺融合CDN和P2P技术，开发

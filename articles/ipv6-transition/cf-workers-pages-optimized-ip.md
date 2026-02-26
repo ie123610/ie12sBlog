@@ -1,5 +1,7 @@
 # 「转」Cloudflare Workers & Pages 优选IP
 
+2025.11.12  
+
 ## 转载说明
 
 本文是对 linux do 用户 keyikai [“Cloudflare Workers & Pages 优选IP”](https://linux.do/t/topic/224038) 的转载 有删改  

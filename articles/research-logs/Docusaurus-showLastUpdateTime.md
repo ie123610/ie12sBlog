@@ -7,6 +7,8 @@ keywords: [Docusaurus 教程, showLastUpdateTime 错误, Cloudflare Pages 部署
 
 # Docusaurus-解决showLastUpdateTime总是显示相同日期问题
 
+2025.10.1  
+
 在Docusaurus中可以通过 `showLastUpdateTime` 在文章的末尾自动显示其最后更新时间  
 具体配置方法：[链接](https://docusaurus.io/docs/next/api/plugins/@docusaurus/plugin-content-pages#showLastUpdateTime)  
 
