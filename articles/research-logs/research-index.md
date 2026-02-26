@@ -34,7 +34,7 @@
 ### 杂项
 
 * [B站专栏文本复制问题](./B站专栏文本复制问题.md)
-* [「转」基于爱奇艺HCDN视频分发网络的开放缓存](./爱奇艺HCDN.md)
+* [「转」基于爱奇艺HCDN视频分发网络的开放缓存](./iQiyi-HCDN.md)
 * [博客园映射表](./cnblog-index.md)
 * [解决showLastUpdateTime总是显示相同日期问题](./Docusaurus-showLastUpdateTime.md)
 

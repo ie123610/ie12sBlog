@@ -25,7 +25,7 @@ Gost interface 选项：[链接](https://gost.run/tutorials/multi-homed/)
 
 ```
 控制面板》网络和共享中心》更改适配器设置》选择虚拟网卡右键菜单选择属性  
-》选择TCP/IPv4协议点击属性》高级设置》取消勾选自动跃点数 **设置跃点数为100**  
+》选择TCP/IPv4协议点击属性》高级设置》取消勾选自动跃点数 设置跃点数为100  
 ```
 图片教程：[链接](http://www.softether.cn/jishu/113.html)  
 
