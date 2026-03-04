@@ -28,6 +28,7 @@
 * [HTTPS/SVCB记录和HTTP3/QUIC排障](./https-record-http3-test.md)
 * [SVCB/HTTPS记录与免费FRP穿透配合使用](./svcb-frp.md)
 * [cURL SVCB/HTTPS 记录测试](./curl-test.md)
+* [战地1 EA反作弊无法启动问题 ExitType: 115 (0)](./ea-anti-cheat-115-0.md)
 
 
 
