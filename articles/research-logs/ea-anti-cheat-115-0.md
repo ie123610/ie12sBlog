@@ -42,12 +42,11 @@
 问题的答案就呈现在眼前了 **是EA反作弊服务在不停的崩溃重启**  
 其在短时间内反复崩溃重启了200多次 间隔时间极短 也难怪系统会出现卡顿
 
+### 日志内容
+
 <img loading="lazy" src="../../images/ea-annti-cheat/log1.jpg" width="60%" />
 <img loading="lazy" src="../../images/ea-annti-cheat/log2.jpg" width="60%" />
 <img loading="lazy" src="../../images/ea-annti-cheat/log3.jpg" width="60%" />
-
-
-**日志内容**  
 
 ```
 无法找到来自源 Application 的事件 ID 1 的描述。本地计算机上未安装引发此事件的组件，或者安装已损坏。可以安装或修复本地计算机上的组件。
@@ -119,7 +118,7 @@ ea的反作弊帮助页面没有记录此错误代码 [链接](https://help.ea.c
 至于加速器 应该是这些游戏加速器为了加速效果  
 会自动清除系统代理以及host文件 使得在开启加速器时不会触发此问题  
 
-至此 EAAntiCheatService ExitType: 115 (0) 的含义已经完全揭晓了  
+**至此 EAAntiCheatService ExitType: 115 (0) 的含义已经完全揭晓了**  
 其可以被翻译为 "EA反作弊系统检测到不可接受的配置：Windows系统代理"
 
 
