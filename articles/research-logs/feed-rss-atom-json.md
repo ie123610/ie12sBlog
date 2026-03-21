@@ -188,8 +188,8 @@ ATOM和RSS都基于XML 均可以添加命名空间（XML Namespaces 即 xmlns）
 不过这个 雅虎的media扩展 已经被RSS咨询委员会 收编 [链接](https://www.rssboard.org/media-rss)  
 原先的链接已经失效 当然通过 网页时光机 还是可以看到的  
 
-* `http://search.yahoo.com/mrss/` 网页时光机(https://web.archive.org/web/20260301000000*/http://search.yahoo.com/mrss/)
-* ` http://video.search.yahoo.com/mrss` 网页时光机(https://web.archive.org/web/20260000000000*/http://video.search.yahoo.com/mrss)
+* `http://search.yahoo.com/mrss/` [网页时光机](https://web.archive.org/web/20260301000000*/http://search.yahoo.com/mrss/)
+* ` http://video.search.yahoo.com/mrss` [网页时光机](https://web.archive.org/web/20260000000000*/http://video.search.yahoo.com/mrss)
 
 
 YouTube这个空间声明中的链接似乎没有真正的内容  
