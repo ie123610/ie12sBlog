@@ -61,7 +61,7 @@ RSS 2.X 规范 在全球大部分网站得到使用 但其并没有通过W3C、I
 
 ---
 
-### ATOM
+## ATOM
 
 ATOM（Atom Syndication Format）与RSS一样基于XML格式 其是IETF的建议标准（RFC 4287）  
 借鉴了各种版本RSS的使用经验 被设计作为RSS的替代品 发展Atom的动机在于解决 RSS 2.0 所存在的一些问题  
