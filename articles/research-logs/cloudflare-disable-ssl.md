@@ -20,16 +20,16 @@ Cloudflare 提供网站加速服务和免费的SSL/TLS证书
 
 1.打开cloudflare 仪表板 `选择域名 》侧边栏 》SSL/TSL 》边缘证书`  
 
-<img loading="lazy" src="../../images/cloudflare-disable-ssl/cf-tls-ssl-settings.jpg" width="60%" />
+<img loading="lazy" src="../../images/cloudflare-disable-ssl/cf-tls-ssl-settings.jpg" />
 
 3.找到 “始终使用 HTTPS” 设置为 **关闭**  
 
-<img loading="lazy" src="../../images/cloudflare-disable-ssl/cf-always-use-https.jpg" width="60%" />
+<img loading="lazy" src="../../images/cloudflare-disable-ssl/cf-always-use-https.jpg" />
 
 `侧边栏 》规则 》概述 》Configuration Rules` 创建新规则  
 
-<img loading="lazy" src="../../images/cloudflare-disable-ssl/cf-rules.jpg" width="60%" />
-<img loading="lazy" src="../../images/cloudflare-disable-ssl/cf-rules-2.jpg" width="60%" />
+<img loading="lazy" src="../../images/cloudflare-disable-ssl/cf-rules.jpg" />
+<img loading="lazy" src="../../images/cloudflare-disable-ssl/cf-rules-2.jpg" />
 
 
 * 规则名称可自定义
@@ -39,18 +39,18 @@ Cloudflare 提供网站加速服务和免费的SSL/TLS证书
 * 运算符 选择 **等于**
 * 值填写 **需要禁用SSL的子域名**
 
-<img loading="lazy" src="../../images/cloudflare-disable-ssl/cf-configuration-rules.jpg" width="60%" />
+<img loading="lazy" src="../../images/cloudflare-disable-ssl/cf-configuration-rules.jpg" />
 
 当然更重要的是后面的选项  
 
 3.**自动HTTPS重写** 设置为关闭  
-<img loading="lazy" src="../../images/cloudflare-disable-ssl/cf-configuration-rules-2.jpg" width="60%" />
+<img loading="lazy" src="../../images/cloudflare-disable-ssl/cf-configuration-rules-2.jpg" />
 
 4.**随机加密** 设置为关闭  
-<img loading="lazy" src="../../images/cloudflare-disable-ssl/cf-configuration-rules-3.jpg" width="60%" />
+<img loading="lazy" src="../../images/cloudflare-disable-ssl/cf-configuration-rules-3.jpg" />
 
 5.**SSL** 设置为 关  
-<img loading="lazy" src="../../images/cloudflare-disable-ssl/cf-configuration-rules-4.jpg" width="60%" />
+<img loading="lazy" src="../../images/cloudflare-disable-ssl/cf-configuration-rules-4.jpg" />
 
 设置完成后 **在CF侧HTTP请求将不再会被重定向到HTTPS**  
 
