@@ -1,4 +1,4 @@
-# Cloudflare 在指定域名下禁用SSL/TSL
+# Cloudflare 在指定域名下禁用SSL/TLS
 
 2026.4.4  
 
