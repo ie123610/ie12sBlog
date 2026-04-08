@@ -122,7 +122,7 @@ DoH被跳过 导致SVCB/HTTPS记录不起效果
 
 ### ipv4hint ipv6hint 问题
 
-记录中的 `ipv4hint` 和 `ipv6hint` 字段似乎能替代A类记录或AAAA记录 
+记录中的 `ipv4hint` 和 `ipv6hint` 字段似乎能替代A类记录或AAAA记录  
 但火狐浏览器目前应该是并不支持此操作的 即必须要有A类记录或AAAA记录才行  
 苹果的Safari有可能已经支持  
 

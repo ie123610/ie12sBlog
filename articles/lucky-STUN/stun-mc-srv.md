@@ -1,4 +1,4 @@
-# [LUCKY」在Windows下使用STUN穿透实现Minecraft联机并设置SRV记录
+# 「LUCKY」在Windows下使用STUN穿透实现Minecraft联机并设置SRV记录
 
 2024.02.18  
 
