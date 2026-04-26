@@ -316,6 +316,8 @@ lucky的全局变量详见：[链接](https://lucky666.cn/docs/modules/globaldat
 * [homarr-labs/dashboard-icons](https://github.com/homarr-labs/dashboard-icons)
 * [NX211/homer-icons](https://github.com/NX211/homer-icons)
 * [edent/SuperTinyIcons](https://github.com/edent/SuperTinyIcons)
+* [iconduck(freepik)](https://www.freepik.com/icons)
+* [icones.js.org](https://icones.js.org)
 
 
 ### 示例效果
