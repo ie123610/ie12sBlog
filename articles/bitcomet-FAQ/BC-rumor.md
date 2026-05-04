@@ -67,6 +67,12 @@ Copyright (C) Ran Ningyu, All Rights Reserved.
 
 ---
 
+冉宁煜 的名字至今依然存在于比特彗星中  
+打开BC配置文件中任意一个XML文件（如Downloads.xml）就能看到  
+`<BitComet Author="RnySmile" Version="0.1">`  
+
+---
+
 不过来自爱企查的企业变更信息 却似乎显示了一些不同的内容：[链接](https://aiqicha.baidu.com/company_detail_32340882805849)  
 
 <img loading="lazy" src="../../images/BC-rumor/change-log-1.jpg" width="60%" />
