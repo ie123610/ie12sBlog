@@ -52,8 +52,113 @@ XSLT（Extensible Stylesheet Language Transformations）可扩展样式表转换
 如果不需要XML中的某些元素及内容 那在写 xsl文件的时候就不设置对应的匹配规则  
 这样那些不被需要的内容就不会被带到新生成的 HTML文件中  
 
-本博客中使用的xsl样式：<a href="/rss-style/rss-style.css">链接</a>  
-  
+<details>
+<summary>本博客中使用的xsl样式</summary>
+
+```
+<?xml version="1.0" encoding="utf-8"?>
+<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+  <xsl:output method="html" encoding="utf-8" indent="yes" />
+
+  <xsl:template match="/">
+    <html lang="zh-CN">
+      <head>
+        <meta charset="utf-8" />
+        <title>ie12sBlog - Windows Internet Explorer</title>
+        <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+        <link rel="stylesheet" href="/rss-style/xp.css" />
+        <link rel="stylesheet" href="/rss-style/rss-style.css" />
+      </head>
+      <body>
+        <!-- 模拟浏览器窗口 -->
+        <div class="window ie-window-frame">
+          <!-- 标题栏 -->
+          <div class="title-bar">
+            <div class="title-bar-text">
+              <div class="title-bar-icon"></div>
+              <span>ie12sBlog - Windows Internet Explorer</span>
+            </div>
+            <div class="title-bar-controls">
+              <button aria-label="Minimize"></button>
+              <button aria-label="Maximize"></button>
+              <button aria-label="Close"></button>
+            </div>
+          </div>
+
+          <div class="ie-client-area">
+            <!-- 导航区 -->
+            <div class="ie8-nav-zone">
+              <div class="ie8-nav-buttons" title="后退/前进"></div>
+              <div class="address-bar-container">
+                <div class="address-favicon"></div>
+                <select class="ie8-address-select">
+                  <option selected="selected">https://ie12blog.36102025.xyz/rss.xml</option>
+                </select>
+              </div>
+              <div class="action-button-group">
+                <div class="address-action-div" title="刷新"><div class="action-icon" id="ie-go-btn-icon"></div></div>
+                <div class="address-action-div" title="停止"><div class="action-icon" id="ie-stop-btn-icon"></div></div>
+              </div>
+            </div>
+
+            <!-- 菜单栏 -->
+            <div class="ie8-menu-bar">
+              <menu role="tablist" style="margin:0; padding: 2px 10px; display:flex; gap:15px; list-style:none;">
+                <li style="font-size:12px; cursor:default;">文件(F)</li>
+                <li style="font-size:12px; cursor:default;">编辑(E)</li>
+                <li style="font-size:12px; cursor:default;">查看(V)</li>
+                <li style="font-size:12px; cursor:default;">收藏夹(A)</li>
+                <li style="font-size:12px; cursor:default;">工具(T)</li>
+                <li style="font-size:12px; cursor:default;">帮助(H)</li>
+              </menu>
+            </div>
+
+            <!-- 网页主内容 (包含嵌入式提示) -->
+            <div class="web-page-content">
+              <div class="rss-info-banner">
+                <div class="rss-icon-small">RSS</div>
+                <div>
+                  这是一个RSS订阅源。 复制当前URL到RSS阅读器，即可订阅本博客的所有文章。
+                </div>
+              </div>
+
+              <div class="feed-container">
+                <div class="feed-header">ie12sBlog</div>
+                <xsl:for-each select="/rss/channel/item">
+                  <div class="entry-item">
+                    <!-- 修改此处：添加 target="_blank" -->
+                    <a class="entry-title" href="{link}" target="_blank">
+                      <xsl:value-of select="title" />
+                    </a>
+                    <div style="color:#666; font-size:12px; margin-bottom:12px;">发布日期: <xsl:value-of select="pubDate" /></div>
+                    <div style="line-height: 1.6; color: #333; font-size: 13px;">
+                      <xsl:value-of select="description" disable-output-escaping="yes" />
+                    </div>
+                  </div>
+                </xsl:for-each>
+              </div>
+            </div>
+
+            <!-- 状态栏 -->
+            <div class="status-bar">
+              <p class="status-bar-field">完成</p>
+              <p class="status-bar-field field-zone">Internet</p> 
+              <p class="status-bar-field field-zoom">100%</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 窗口之外，网页最底部的信息行 -->
+        <div class="global-footer-info">
+          Powered by <a href="https://botoxparty.github.io/XP.css/" target="_blank">XP.css</a>
+        </div>
+      </body>
+    </html>
+  </xsl:template>
+</xsl:stylesheet>
+```
+</details>
+
 
 ---
 
@@ -168,7 +273,6 @@ chrome迁移方案中给出的插件是[ **polyfill** ](https://github.com/mfree
 
 在本博客中使用js创建了一个iframe窗口用于覆盖原有xml内容 以显示预生成的美化页面  
 当然也可以用js把预生成 html内容复制过来替换现有内容  
-本博客中使用的js脚本：<a href="/rss-style/rss-ifrm-loader.js">链接</a>  
 
 至于在服务端如何进行xml文件的转换其实和之前在客户端上方法差不多  
 如果已经编写了xsl文件 那就使用可以进行XSLT转换的脚本或程序  
@@ -177,6 +281,63 @@ chrome迁移方案中给出的插件是[ **polyfill** ](https://github.com/mfree
 之所以使用iframe是因为担心在xml文档浏览器下会使用非标准渲染方法  
 从而产生布局偏移或其他奇奇怪怪的问题 但是实测下来发现  
 **其是以标准模式渲染的** 不会有显示方面的问题  
+
+<details>
+<summary>本博客中使用的js脚本</summary>
+
+```
+window.onload = function() {
+    try {
+        // 1. 使用你提供的精准选择器查找并移除临时样式
+        // "rss > style:nth-child(1)" 表示根元素 rss 下的第一个 style 子元素
+        const tempStyle = document.querySelector("rss > style:nth-child(1)");
+        if (tempStyle) {
+            tempStyle.remove();
+            console.log('✅ 已移除拦截样式表');
+        }
+
+        // 2. 创建全屏 iframe (使用 XHTML 命名空间以确保在 XML 环境下的渲染兼容性)
+        const ifrm = document.createElementNS('http://www.w3.org/1999/xhtml', 'iframe');
+        
+        // 设置样式使其完全覆盖原页面，并强制消除 iframe 自身的边距
+        ifrm.setAttribute('style', `
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            border: none;
+            margin: 0;
+            padding: 0;
+            z-index: 999;
+            background: #3b70b3;
+        `);
+        
+        // 3. 设置目标页面
+        ifrm.setAttribute('src', '/rss-friendly-view.htm');
+        
+        // 4. 将 iframe 挂载到根节点
+        document.documentElement.appendChild(ifrm);
+        
+        // 5. 隐藏 XML 渲染的残留内容
+        const style = document.createElementNS('http://www.w3.org/1999/xhtml', 'style');
+        style.textContent = 'channel { display: none; }'; 
+        document.documentElement.appendChild(style);
+        
+        /**
+         * 6. 恢复根节点显示但禁用滚动条
+         * 关键点：使用 !important 确保完全覆盖之前脚本可能残留的任何 display: none 状态
+         */
+        document.documentElement.setAttribute('style', 'display: block !important; margin: 0; padding: 0; overflow: hidden; height: 100vh;');
+        
+        console.log('✅ 成功接管 RSS 视图并禁用滚动条');
+    } catch (e) {
+        document.documentElement.setAttribute('style', 'display: block !important;');
+        console.error('❌ 脚本执行失败:', e);
+    }
+};
+```
+</details>
 
 ---
 
@@ -204,9 +365,140 @@ chrome迁移方案中给出的插件是[ **polyfill** ](https://github.com/mfree
 
 与html中的css不同 在RSS源中没有class和id  
 主要通过元素的层级来进行选择 当然直接作用于元素的选择器依然可用  
-本博客中使用的兜底css样式：<a href="/rss-style/css-for-xml.css">链接</a>
-  
 
+<details>
+<summary>本博客中使用的兜底css样式</summary>
+
+```
+/* 针对 RSS 根节点及 channel 的基础布局 */
+rss, channel {
+    display: block;
+    background: #3b70b3; /* 还原经典 XP 蓝色背景 */
+    font-family: "Microsoft YaHei", "微软雅黑", sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* 调整 rss 容器，通过 padding 让内容区与上下边缘产生间距 */
+rss {
+    padding: 30px 0; /* 上下预留 30px 的间距 */
+    min-height: 100vh;
+    box-sizing: border-box;
+}
+
+/* 模拟网页主内容区容器 */
+channel {
+    max-width: 1000px;
+    margin: 0 auto;
+    /* 修改 min-height，确保高度自适应内容且不再强制撑满全屏 */
+    min-height: calc(100vh - 60px); 
+    border: 1px inset #716f64;
+    background: white;
+    box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.2); 
+}
+
+/* --- 顶部黄色 RSS 提示横幅 --- */
+channel > description {
+    display: block;
+    background: #ffffcc; /* 浅黄色背景 */
+    border-bottom: 1px solid #e1d2b8;
+    padding: 15px 25px;
+    margin: 0 0 25px 0;
+    font-size: 0; 
+    line-height: 1.8; 
+}
+
+/* 插入指定的提示文字，并强制换行 */
+channel > description::after {
+    content: "这是一个RSS订阅源。 复制当前URL到RSS阅读器，即可订阅本博客的所有文章。\A 如果您看到此段内容说明 JavaScript 已经禁用，为获得更好的显示效果请启用 JavaScript 功能。";
+    color: #000;
+    font-size: 13px; 
+    display: inline-block;
+    /* 修改为 middle 以实现与图标的中线对齐 */
+    vertical-align: middle; 
+    white-space: pre; 
+    font-weight: bold;
+}
+
+channel > description::before {
+    content: "RSS";
+    background: #ff6600;
+    color: white;
+    font-weight: bold;
+    font-size: 10px; 
+    padding: 2px 6px;
+    margin-right: 12px;
+    border-radius: 2px;
+    display: inline-block;
+    /* 修改为 middle 实现垂直居中对齐 */
+    vertical-align: middle; 
+}
+
+/* --- 订阅源标题 (Feed Header) --- */
+channel > title {
+    display: block;
+    padding-top: 20px;
+    padding-left: 40px;
+    padding-bottom: 5px;
+    color: #2b579a;
+    font-size: 24px;
+    height: 45px;
+    font-weight: bold;
+    border-bottom: 1px solid #2b579a;
+    background: #ebe9d7; 
+}
+
+/* --- 文章条目 (Entry Item) --- */
+item {
+    display: block;
+    padding: 0 40px 15px 40px;
+    margin-bottom: 30px;
+    border-bottom: 1px dotted #ccc;
+}
+
+item > title {
+    display: block;
+    font-size: 18px;
+    color: #2b579a;
+    font-weight: bold;
+    text-decoration: underline;
+    margin-bottom: 8px;
+    cursor: pointer;
+}
+
+/* 发布日期容器 */
+item > pubDate {
+    display: block;
+    color: #666;
+    font-size: 12px;
+    margin-bottom: 12px;
+}
+
+/* 使用伪元素添加“发布时间：”字样 */
+item > pubDate::before {
+    content: "发布时间：";
+}
+
+item > description {
+    display: block;
+    line-height: 1.6;
+    color: #333;
+    font-size: 13px;
+    white-space: normal;
+}
+
+/* --- 隐藏元素 --- */
+link,
+guid,
+docs,
+generator,
+copyright,
+lastBuildDate,
+language {
+    display: none;
+}
+```
+</details>
 
 ---
 
