@@ -90,7 +90,7 @@ Gost使用go语言编写 集成了非常多的网络功能
 gost负责建立隧道和创建虚拟网卡  
 
 将gost和iptable或nftable配合使用可以达到  
-类似于传统VPN的效果 但又不完全一样  
+类似于传统虚拟专用网络的效果 但又不完全一样  
 
 其实frp也支持传递原始IP 但依靠的是 [Proxy Protocol](http://www.haproxy.org/download/1.8/doc/proxy-protocol.txt) 实现的  
 其应该是通过在标准的TCP首部之前插入额外的字段来传递真实IP  
