@@ -52,7 +52,8 @@ XSLT（Extensible Stylesheet Language Transformations）可扩展样式表转换
 如果不需要XML中的某些元素及内容 那在写 xsl文件的时候就不设置对应的匹配规则  
 这样那些不被需要的内容就不会被带到新生成的 HTML文件中  
 
-本博客中使用的xsl样式：[链接](/rss-style/rss-style.css)  
+本博客中使用的xsl样式：<a href="/rss-style/rss-style.css">链接</a>  
+  
 
 ---
 
@@ -167,7 +168,7 @@ chrome迁移方案中给出的插件是[ **polyfill** ](https://github.com/mfree
 
 在本博客中使用js创建了一个iframe窗口用于覆盖原有xml内容 以显示预生成的美化页面  
 当然也可以用js把预生成 html内容复制过来替换现有内容  
-本博客中使用的js脚本：[链接](/rss-style/rss-ifrm-loader.js)
+本博客中使用的js脚本：<a href="/rss-style/rss-ifrm-loader.js">链接</a>  
 
 至于在服务端如何进行xml文件的转换其实和之前在客户端上方法差不多  
 如果已经编写了xsl文件 那就使用可以进行XSLT转换的脚本或程序  
@@ -203,7 +204,8 @@ chrome迁移方案中给出的插件是[ **polyfill** ](https://github.com/mfree
 
 与html中的css不同 在RSS源中没有class和id  
 主要通过元素的层级来进行选择 当然直接作用于元素的选择器依然可用  
-本博客中使用的兜底css样式：[链接](/rss-style/css-for-xml.css)  
+本博客中使用的兜底css样式：<a href="/rss-style/css-for-xml.css">链接</a>
+  
 
 
 ---
