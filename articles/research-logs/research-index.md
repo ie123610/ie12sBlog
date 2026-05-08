@@ -31,6 +31,7 @@
 * [战地1 EA反作弊无法启动问题 ExitType: 115 (0)](./ea-anti-cheat-115-0.md)
 * [Feed RSS ATOM 以及 Feed JSON](./feed-rss-atom-json.md)
 * [Cloudflare 在指定域名下禁用SSL/TSL](./cloudflare-disable-ssl.md)
+* [XSLT 被移除后的RSS美化方案](./xml-xslt.md)
 
 
 
