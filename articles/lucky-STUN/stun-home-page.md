@@ -13,7 +13,7 @@
 * [「LUCKY STUN穿透」使用Cloudflare的页面规则固定和隐藏网页端口](./stun-web-serve-CF.md)
 * [「扩展篇」使用Cloudflare的重定向规则传递资源路径和查询字符串](./stun-cf-redirection.md)
 
-几乎适用于一切服务的 **VPN组网方案**  
+几乎适用于一切服务的 **虚拟专用网络组网方案**  
 * [「LUCKY STUN穿透」在Windows下使用VNT组网为非HTTP服务固定STUN穿透端口](./stun-VNT-networkin.md)
 * [「EasyTier」使用SRV TXT HTTP重定向获取对端IP端口](../virtual-private-network/easytier-get-port-form-dns-record.md)
 
@@ -21,7 +21,7 @@
 * [「LUCKY STUN穿透」使用邮件通知端口变化情况](./email-notification-port.md)
 
 但是有些服务 **不支持 srv记录 不使用http协议**  
-**也不方便安装VPN客户端**  
+**也不方便安装虚拟专用网络客户端**  
 
 而使用邮件通知的方案在长期运行和端口变化较为频繁的情况下  
 **会积累大量的通知邮件 查看起来并不方便**  

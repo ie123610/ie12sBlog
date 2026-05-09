@@ -1,4 +1,4 @@
-# eMule设置IP绑定 
+# eMule设置IP绑定
 
 2025.8.31  
 
@@ -6,8 +6,8 @@ eMule在图形界面中无法设置IP绑定
 但可以通过修改preferences.ini配置文件实现  
 此选项可以让eMule从指定的本地IP发起连接 这对UDP和TCP均有效  
 
-该选项为使用VPN让eMule获得highID 且不影响正常上网的方案提供了可能性  
-通过指定本地发起IP外加调整VPN网关的跃点数以实现正常上网和eMule流量的分离  
+该选项为使用虚拟专用网络让eMule获得highID 且不影响正常上网的方案提供了可能性  
+通过指定本地发起IP外加调整虚拟专用网络网关的跃点数以实现正常上网和eMule流量的分离  
 
 **设置方法：**  
 在 preferences.ini 的 `[emule]` 区段（节）中  
