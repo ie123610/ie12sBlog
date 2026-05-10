@@ -327,6 +327,6 @@ _____padding_file_?_如果您看到此文件，请升级到BitComet(比特彗星
 再进一步的挖掘后 又有了新的发现
 我想来自美国专利和商标局的这份商标注册记录  
 可以彻底的终结这个问题 [链接](https://tsdr.uspto.gov/#caseNumber=78932292&caseSearchType=US_APPLICATION&caseType=DEFAULT&searchType=statusSearch)  
-PDF版本：<a href="../../图片/BC历史遗留问题/BC-注册商标.pdf">链接</a>
+PDF版本：<a href="../../images/BC-historical-issues/BC-注册商标.pdf">链接</a>
 
 

@@ -103,7 +103,7 @@ Copyright (C) Ran Ningyu, All Rights Reserved.
 
 不过还是找到了一些线索 但有关BitComet,Inc.的具体信息我们也许永远也不会知道了  
 因为其已经被其注册机构除名了 [注册机构公报](https://eservices.gov.vg/gazette/sites/eservices.gov.vg.gazette/files/governmentandstatutorynotices/%23105%2018th%20November%2C%202022%20EXTRA.pdf)  
-PDF文件存档：<a href="../../图片/有关BC的奇谈怪论/英属于维吉尔群岛注册机构公报.pdf">链接</a>
+PDF文件存档：<a href="../../images/BC-rumor/英属于维吉尔群岛注册机构公报.pdf">链接</a>
   
 
 > 被除名名单
