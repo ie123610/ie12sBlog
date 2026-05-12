@@ -14,4 +14,4 @@
 curl构建方法和功能验证参考以下链接：  
 
 * [Support HTTPS and SVCB RRs](https://github.com/curl/curl/discussions/16855)
-* [Building curl with HTTPS-RR and ECH support](https://github.com/freebsd/pkg/blob/main/external/curl/docs/ECH.md)
+* [Building curl with HTTPS-RR and ECH support](https://github.com/curl/curl/blob/master/docs/ECH.md)

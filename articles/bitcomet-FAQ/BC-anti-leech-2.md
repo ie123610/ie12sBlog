@@ -200,4 +200,4 @@ ABC789
 
 ## 参考资料
 
-https://wiki.bitcomet.com/bitcomet_options#ip_filter
+https://web.archive.org/web/20250130142235/https://wiki.bitcomet.com/known_client_issues_and_incompatibilities?s%5B%5D=padding#what_are_these_padding_file_things_in_the_filelist#ip_filter

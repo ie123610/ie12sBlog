@@ -13,7 +13,7 @@
 
 而lucky大概在2.5.2版本开始使用go1.21或更新版本  
 **不过我们可以使用VxKex使lucky继续在Win7上运行**  
-GitHub项目地址：[链接](https://github.com/vxiiduu/VxKex/)
+GitHub项目地址：[链接](https://web.archive.org/web/20240407170753/https://github.com/vxiiduu/VxKex/)
 
 VxKex可能的工作原理：  
 低版本的Windows缺乏一些高版本中所新增的系统接口  
@@ -29,7 +29,7 @@ VxKex可能的工作原理：
 
 ### 下载VxKex
 
-* GitHub：[链接](https://github.com/vxiiduu/VxKex/releases)  
+* GitHub：[链接](https://web.archive.org/web/20240407170651/https://github.com/vxiiduu/VxKex/releases)  
 * 网盘：[链接](https://wwm.lanzoul.com/i1IaR1u7zgkf)  
 
 ### 安装
