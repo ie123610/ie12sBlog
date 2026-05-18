@@ -287,11 +287,11 @@ _____padding_file_?_如果您看到此文件，请升级到BitComet(比特彗星
 
 **截图**  
 
-<img loading="lazy" src="../../images/BC-historical-issues/signature-1.jpg" width="60%" />
+<img loading="lazy" src="../../images/BC-historical-issues/signature-1.jpg" />
 
-<img loading="lazy" src="../../images/BC-historical-issues/signature-2.jpg" width="60%" />
+<img loading="lazy" src="../../images/BC-historical-issues/signature-2.jpg" />
 
-<img loading="lazy" src="../../images/BC-historical-issues/signature-3.jpg" width="60%" />
+<img loading="lazy" src="../../images/BC-historical-issues/signature-3.jpg" />
 
 
 关于BC发展过程的考察内容较多 之后会单独进行讲解(已完成：[有关比特彗星的奇谈怪论](./BC-rumor.md))  
