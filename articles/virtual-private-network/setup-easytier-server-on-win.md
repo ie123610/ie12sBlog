@@ -29,7 +29,7 @@ Github项目链接：[链接](https://github.com/EasyTier/EasyTier/releases)
 下载最后的 **easytier-windows-x86_64** 
 
 **示例**  
-<img loading="lazy" src="../../images/setup-easytier-server-on-win/download-et.jpg" width="60%" />
+<img loading="lazy" src="../../images/setup-easytier-server-on-win/download-et.jpg" />
 
 下载并解压文件  
 其中的 easytier-core.exe 为**程序核心**  
@@ -50,7 +50,7 @@ Github项目地址：[链接](https://github.com/winsw/winsw/releases)
 选择**WinSW-x64.exe**  
 
 **示例**  
-<img loading="lazy" src="../../images/setup-easytier-server-on-win/download-winsw.jpg" width="60%" />
+<img loading="lazy" src="../../images/setup-easytier-server-on-win/download-winsw.jpg" />
 
 下载完成后将其复制到EasyTier目录下面  
 
@@ -114,7 +114,7 @@ Github项目地址：[链接](https://github.com/winsw/winsw/releases)
 （### TOML ### 和--- 之间的部分）  
 
 **示例**  
-<img loading="lazy" src="../../images/setup-easytier-server-on-win/configuration-file-save-location.jpg" width="60%" />
+<img loading="lazy" src="../../images/setup-easytier-server-on-win/configuration-file-save-location.jpg" />
 
 附加`-c 配置文件路径` 的参数以使用配置文件启动  
 若设置正确则可以看到和上一小节中相同的内容  
@@ -209,7 +209,7 @@ win搜索栏搜索 **服务** 进入服务管理工具
 输出了和之前在控制台中相类似的信息  
 
 **示例**  
-<img loading="lazy" src="../../images/setup-easytier-server-on-win/output-log.jpg" width="60%" />
+<img loading="lazy" src="../../images/setup-easytier-server-on-win/output-log.jpg" />
 
 
 ### 检查端口

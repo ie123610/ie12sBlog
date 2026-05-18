@@ -27,7 +27,8 @@
 
 **检查软件版本号**  
 <img loading="lazy" src="../../images/stun-bc-port-automation/check-version-1.jpg" width="60%" />
-<img loading="lazy" src="../../images/stun-bc-port-automation/check-version-2.jpg" width="60%" />
+
+<img loading="lazy" src="../../images/stun-bc-port-automation/check-version-2.jpg" />
 
 ---
 
@@ -43,9 +44,9 @@
 <img loading="lazy" src="../../images/stun-bc-port-automation/remote-access-setup-1.jpg" width="60%" />
 <img loading="lazy" src="../../images/stun-bc-port-automation/remote-access-setup-2.jpg" width="60%" />
 
-先登录到旧版  再通过下方的链接跳转到新版WebUI  
+先登录到旧版 再通过下方的链接跳转到新版WebUI  
 
-<img loading="lazy" src="../../images/stun-bc-port-automation/remote-login-1.jpg" width="60%" />
+<img loading="lazy" src="../../images/stun-bc-port-automation/remote-login-1.jpg" />
 <img loading="lazy" src="../../images/stun-bc-port-automation/remote-login-2.jpg" width="60%" />
 
 显示出新版 WebUI 后需要再次登录  
@@ -117,7 +118,7 @@ curl -Lks "%WEBUI%/api/config/connection/set" -H "Authorization: Bearer %TOKEN%"
 并成功的提交了新端口 与此同时BC弹出了设置更新的通知  
 
 <img loading="lazy" src="../../images/stun-bc-port-automation/test-result.jpg" width="60%" />
-<img loading="lazy" src="../../images/stun-bc-port-automation/test-result-2.jpg" width="60%" />
+<img loading="lazy" src="../../images/stun-bc-port-automation/test-result-2.jpg" />
 
 ---
 

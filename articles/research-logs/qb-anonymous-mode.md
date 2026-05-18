@@ -19,7 +19,7 @@
 <img loading="lazy" src="../../images/qb-anonymous-mode/qb-info.jpg" width="60%" />
 
 **比特彗星 客户端信息**  
-<img loading="lazy" src="../../images/qb-anonymous-mode/bc-info.jpg" width="60%" />
+<img loading="lazy" src="../../images/qb-anonymous-mode/bc-info.jpg" />
 
 ### qbittorrent 开启匿名模式
 <img loading="lazy" src="../../images/qb-anonymous-mode/qb-anonymous-mode.jpg" width="60%" />

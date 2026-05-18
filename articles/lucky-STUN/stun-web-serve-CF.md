@@ -117,7 +117,7 @@ Github 项目下载地址： [链接](https://github.com/HMBSbige/NatTypeTester/
 网盘下载地址: [链接](https://wwm.lanzoul.com/ivTFr2458oxc)  
 密码:NAT  
 
-<img loading="lazy" src="../../images/stun-web-serve-CF/nat-testing-tool-1.jpg" width="60%" />
+<img loading="lazy" src="../../images/stun-web-serve-CF/nat-testing-tool-1.jpg" />
 
 **旧版测试**
 
@@ -528,7 +528,7 @@ Content-Type: application/json
 详见：[链接](./lucky-tls-automation.md)  
  
 示例  
-<img loading="lazy" src="../../images/stun-web-serve-CF/cf-certificate-example.jpg" width="60%" />
+<img loading="lazy" src="../../images/stun-web-serve-CF/cf-certificate-example.jpg" />
 
 ---
 

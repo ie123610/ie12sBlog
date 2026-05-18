@@ -58,7 +58,7 @@ TXT记录是最简单最灵活的方法 就像在客户端中连接时那样
 <img loading="lazy" src="../../images/easytier-get-port-form-dns-record/txt-connection-effect-1.jpg" width="60%" />
 
 **连接成功**  
-<img loading="lazy" src="../../images/easytier-get-port-form-dns-record/txt-connection-effect-2.jpg" width="60%" />
+<img loading="lazy" src="../../images/easytier-get-port-form-dns-record/txt-connection-effect-2.jpg" />
 
 ----
 
@@ -118,7 +118,7 @@ _easytier._wg.et2.ie12test.dynv6.net
 <img loading="lazy" src="../../images/easytier-get-port-form-dns-record/srv-connection-effect-1.jpg" width="60%" />
 
 **连接成功**  
-<img loading="lazy" src="../../images/easytier-get-port-form-dns-record/srv-connection-effect-2.jpg" width="60%" />
+<img loading="lazy" src="../../images/easytier-get-port-form-dns-record/srv-connection-effect-2.jpg" />
 
 ---
 
@@ -136,7 +136,7 @@ _easytier._wg.et2.ie12test.dynv6.net
 <img loading="lazy" src="../../images/easytier-get-port-form-dns-record/http200-2.jpg" width="60%" />
 <img loading="lazy" src="../../images/easytier-get-port-form-dns-record/http200-3.jpg" width="60%" />
 <img loading="lazy" src="../../images/easytier-get-port-form-dns-record/http200-4.jpg" width="60%" />
-<img loading="lazy" src="../../images/easytier-get-port-form-dns-record/http200-5.jpg" width="60%" />
+<img loading="lazy" src="../../images/easytier-get-port-form-dns-record/http200-5.jpg" />
 
 不过其在外置STUN场景下可能用处不大  
 因为访问网页也需要固定端口即进行重定向  
@@ -180,10 +180,10 @@ HTTP重定向方法根据格式有可以分为两种
 **第一种重定向格式效果演示**  
 <img loading="lazy" src="../../images/easytier-get-port-form-dns-record/redirect-url-1.jpg" width="60%" />
 <img loading="lazy" src="../../images/easytier-get-port-form-dns-record/redirect-url-2.jpg" width="60%" />
-<img loading="lazy" src="../../images/easytier-get-port-form-dns-record/redirect-url-3.jpg" width="60%" />
+<img loading="lazy" src="../../images/easytier-get-port-form-dns-record/redirect-url-3.jpg" />
 
 
 **第二种重定向格式效果显示**  
 <img loading="lazy" src="../../images/easytier-get-port-form-dns-record/redirect-query-1.jpg" width="60%" />
 <img loading="lazy" src="../../images/easytier-get-port-form-dns-record/redirect-query-2.jpg" width="60%" />
-<img loading="lazy" src="../../images/easytier-get-port-form-dns-record/redirect-query-3.jpg" width="60%" />
+<img loading="lazy" src="../../images/easytier-get-port-form-dns-record/redirect-query-3.jpg" />

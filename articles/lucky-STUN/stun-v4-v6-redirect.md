@@ -50,11 +50,11 @@
 我们需要两条重定向规则  
 
 **在配置新的规则之前 先禁用之前的规则**  
-<img loading="lazy" src="../../images/stun-v4-v6-redirect/disable-old-rule.jpg" width="60%" />
+<img loading="lazy" src="../../images/stun-v4-v6-redirect/disable-old-rule.jpg" />
 
 **复制旧规则** 先点击 部署 之后再进行编辑  
 复制出来的规则默认是启用状态 先禁用编辑完成后再启用  
-<img loading="lazy" src="../../images/stun-v4-v6-redirect/copy-rule.jpg" width="60%" />
+<img loading="lazy" src="../../images/stun-v4-v6-redirect/copy-rule.jpg" />
 <img loading="lazy" src="../../images/stun-v4-v6-redirect/deploy-rule.jpg" width="60%" />
 
 **编辑旧规则** 修改规则名称 这里加上v4后缀  
@@ -67,7 +67,7 @@
 
 
 **编辑复制的规则** 修改名称 添加v6后缀   
-<img loading="lazy" src="../../images/stun-v4-v6-redirect/rename-new-rule.jpg" width="60%" />
+<img loading="lazy" src="../../images/stun-v4-v6-redirect/rename-new-rule.jpg" />
 
 联立新的条件 和之前的设置基本一致  
 逻辑选择 And 字段选择 IP源地址  
@@ -127,7 +127,7 @@ op.v6.ie12.com
 alist.v6.ie12.com
 ```
 
-<img loading="lazy" src="../../images/stun-v4-v6-redirect/modify-frontend-address.jpg" width="60%" />
+<img loading="lazy" src="../../images/stun-v4-v6-redirect/modify-frontend-address.jpg" />
 
 **TLS证书配置**  
 

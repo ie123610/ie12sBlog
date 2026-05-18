@@ -6,7 +6,7 @@ Softether 在中国和日本有商业版贩售
 当开源版本检测到其运行在这两个地区时会自动限制部分高级功能  
 如静态路由推送  
 
-<img loading="lazy" src="../../images/softether-enterprise-functions-unlock/unsupported.webp" width="60%" />
+<img loading="lazy" src="../../images/softether-enterprise-functions-unlock/unsupported.webp" />
 
 ## 解决方法1 
 

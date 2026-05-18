@@ -47,7 +47,7 @@ keywords: [Docusaurus 教程, showLastUpdateTime 错误, Cloudflare Pages 部署
 `git fetch --unshallow && npm run build`  
 在构建前先进行深度克隆 修改后文章末尾的时间应能正常显示  
 
-<img loading="lazy" src="../../images/showLastUpdateTime/new-build-command.jpg" width="60%" />
+<img loading="lazy" src="../../images/showLastUpdateTime/new-build-command.jpg" />
 
 ---
 
