@@ -90,9 +90,9 @@ sidebar_label: 下载进度卡在 99.9% 问题
 **答：** 把文件 .bc! 的后缀名去掉即可  
 **建议复制一份修改后缀名** 这样不会影响彗星继续上传  
 
-<img loading="lazy" src="../../images/BC-download-99/file-extension.webp" width="60%" />
-<img loading="lazy" src="../../images/BC-download-99/file-rename.webp" width="60%" />
-<img loading="lazy" src="../../images/BC-download-99/file-rename-2.webp" width="60%" />
+<img loading="lazy" src="../../images/BC-download-99/file-extension.webp" />
+<img loading="lazy" src="../../images/BC-download-99/file-rename.webp" />
+<img loading="lazy" src="../../images/BC-download-99/file-rename-2.webp" />
 
 **问：** 刚才说 还好 好在不是头部分块 是什么意思?  
 
@@ -116,7 +116,7 @@ sidebar_label: 下载进度卡在 99.9% 问题
 **答：** 可以启用 **为预览而优化下载 和 顺序下载**  
 设置>任务>勾选 为预览而优化下载 这样会优先下头部和尾部分块  
 
-<img loading="lazy" src="../../images/BC-download-99/sequential-download.webp" width="60%" />
+<img loading="lazy" src="../../images/BC-download-99/sequential-download.webp" />
 
 **右键任务 弹出菜单 勾选顺序下载**  
 
