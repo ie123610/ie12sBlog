@@ -52,7 +52,7 @@ sidebar_label: 有关绿灯的常见误区
 认为其表示左下角有两个绿色的点  
 
 **示例**  
-<img loading="lazy" src="../../images/BC-port-forwarding-FAQ/listening-port-and-dht.jpg" width="60%" />
+<img loading="lazy" src="../../images/BC-port-forwarding-FAQ/listening-port-and-dht.jpg" />
 
 
 然而这是不正确的 其正确的含义应该是  

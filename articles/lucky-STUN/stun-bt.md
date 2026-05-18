@@ -21,7 +21,7 @@
 但好在 v2.5.1版本中 已经增加了 在STUN穿透变化时触发自定义脚本的功能  
 这为使用其他程序实现自动添加内外端口号不同的UPnP映射规则提供了极大的便利  
 
-lucky更新日志：[链接](https://www.lucky666.cn/docs/updateresearch-logs/v2.X)  
+lucky更新日志：[链接](https://www.lucky666.cn/docs/updatelogs/v2.X)  
 所以要实现 本教程中的效果 lucky版本要大于等于 2.5.1  
 
 **在设置STUN穿透期间请不要开启任何形式的代理**  

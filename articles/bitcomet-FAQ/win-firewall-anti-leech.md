@@ -76,7 +76,7 @@ New-NetFirewallRule -DisplayName “BT_BC_BAN_OUT” -Direction Outbound -Action
 8.8.8.0/255.255.255.0
 ```
 
-<img loading="lazy" src="../../images/win-firewall-anti-leech/ip-list.webp" width="60%" />
+<img loading="lazy" src="../../images/win-firewall-anti-leech/ip-list.webp" />
 
 **将IP列表写入动态关键字**  
 ```

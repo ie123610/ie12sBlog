@@ -31,8 +31,8 @@ sidebar_label: 专家模式及其作用
 或者左侧点击长效做种，也可以看到 **完整的列表**  
 可用于观察哪个（些）任务在进行长效上传  
 
-<img loading="lazy" src="../../images/BC-expert-mode/show-long-term-seeds-upload-speed.jpg" width="60%" />
-<img loading="lazy" src="../../images/BC-expert-mode/show-all-long-term-seeds.jpg" width="60%" />
+<img loading="lazy" src="../../images/BC-expert-mode/show-long-term-seeds-upload-speed.jpg" />
+<img loading="lazy" src="../../images/BC-expert-mode/show-all-long-term-seeds.jpg" />
 
 ---
 

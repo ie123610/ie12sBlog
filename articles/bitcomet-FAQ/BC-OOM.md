@@ -20,7 +20,7 @@ sidebar_label: 内存占用过高问题
 如果启用了 **种子市场** 并且加载的其中有大量的种子就会造成此项占用大  
 解决办法： **限制种子市场最大条数** 右键弹出菜单以选择限制条目数  
 
-<img loading="lazy" src="../../images/BC-OOM/limit-torrent-marketplace.webp" width="60%" title="限制他人共享数量" />
+<img loading="lazy" src="../../images/BC-OOM/limit-torrent-marketplace.webp" title="限制他人共享数量" />
 
 如果不使用种子市场请 **直接禁用以避免不必要的内存占用**  
 右键种子市场 取消勾选启用种子市场  
@@ -32,7 +32,7 @@ sidebar_label: 内存占用过高问题
 ### 调整虚拟内存
 
 win+R键 打开运行 输入 `control sysdm.cpl,,3` 点击确定  
-<img loading="lazy" src="../../images/BC-OOM/run-system-properties.webp" width="60%" />
+<img loading="lazy" src="../../images/BC-OOM/run-system-properties.webp" />
 
 高级》性能 点击设置按钮  
 <img loading="lazy" src="../../images/BC-OOM/system-properties-1.webp" width="60%" />

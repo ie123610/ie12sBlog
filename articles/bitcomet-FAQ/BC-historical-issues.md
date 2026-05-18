@@ -1,10 +1,3 @@
----
-title: 比特彗星历史遗留问题深度考证：DHT 争议、吸血嫌疑与迅雷关系的真相 - ie12sBlog
-sidebar_label: 有关比特彗星若干历史遗留问题的整理
-description: 基于多年“考古研究”，全面梳理比特彗星（BitComet）的各种历史争议：从早期的 DHT 漏洞、Tracker 流量汇报 Bug，到争议巨大的分块填充文件（Padding File）与长效种子机制。深度解析其与迅雷的真实关系，用证据终结流传已久的谣言。
-keywords: [比特彗星历史, BitComet 争议, 填充文件原理, 长效种子吸血, 迅雷收购比特彗星谣言, PT 流量汇报异常]
----
-
 # 有关比特彗星若干历史遗留问题的整理
 
 2025.02.13  
@@ -161,7 +154,7 @@ _tcsstr(modversion, _T("FreeCD")) || //BitComet, changed to hardban
 
 * [中文版wiki](https://wiki-zh.bitcomet.com/%E5%AE%8C%E6%95%B4%E5%88%97%E8%A1%A8?s%5B%5D=%E5%88%86%E5%9D%97#%E6%96%87%E4%BB%B6%E5%88%97%E8%A1%A8%E9%87%8C%E4%B8%BA%E4%BB%80%E4%B9%88%E4%BC%9A%E5%87%BA%E7%8E%B0_padding_file_%E5%A6%82%E6%9E%9C%E6%82%A8%E7%9C%8B%E5%88%B0%E6%AD%A4%E6%96%87%E4%BB%B6_%E8%AF%B7%E5%8D%87%E7%BA%A7%E5%88%B0bitcomet_%E6%AF%94%E7%89%B9%E5%BD%97%E6%98%9F_085%E6%88%96%E4%BB%A5%E4%B8%8A%E7%89%88%E6%9C%AC)  
 
-* [英文版wiki](https://wiki.bitcomet.com/known_client_issues_and_incompatibilities?s%5B%5D=padding#what_are_these_padding_file_things_in_the_filelist)  
+* [英文版wiki](https://web.archive.org/web/20250130142235/https://wiki.bitcomet.com/known_client_issues_and_incompatibilities?s%5B%5D=padding#what_are_these_padding_file_things_in_the_filelist)  
 
 最主要的问题就是**出现的太早** 应该是是彗星首创的 (应在v0.85被加入即2007.03.19) 当时其他客户端并不支持  
 导致会下载这些无用填充文件 从而浪费带宽 在过去那个低带宽的时代是个比较大的问题  
@@ -187,7 +180,7 @@ _____padding_file_?_如果您看到此文件，请升级到BitComet(比特彗星
 这可能是所有问题中吵的最凶的一个了其实主要是两方面的争论  
 **长效种子是否会对私有种子启用** 以及 **长效种子是否是一种吸血行为:** [链接](https://github.com/c0re100/qBittorrent-Enhanced-Edition/issues/39)  
 
-其实关于长效种子官方wiki有非常详细的解释：[链接](https://wiki.bitcomet.com/long-term_seeding)（英文版比中文版更详细）  
+其实关于长效种子官方wiki有非常详细的解释：[链接](https://web.archive.org/web/20250114153718/https://wiki.bitcomet.com/long-term_seeding)（英文版比中文版更详细）  
 
 ### 长效种子和私有种子
 
@@ -294,11 +287,11 @@ _____padding_file_?_如果您看到此文件，请升级到BitComet(比特彗星
 
 **截图**  
 
-<img loading="lazy" src="../../images/BC-historical-issues/signature-1.jpg" width="60%" />
+<img loading="lazy" src="../../images/BC-historical-issues/signature-1.jpg" />
 
-<img loading="lazy" src="../../images/BC-historical-issues/signature-2.jpg" width="60%" />
+<img loading="lazy" src="../../images/BC-historical-issues/signature-2.jpg" />
 
-<img loading="lazy" src="../../images/BC-historical-issues/signature-3.jpg" width="60%" />
+<img loading="lazy" src="../../images/BC-historical-issues/signature-3.jpg" />
 
 
 关于BC发展过程的考察内容较多 之后会单独进行讲解(已完成：[有关比特彗星的奇谈怪论](./BC-rumor.md))  
@@ -327,6 +320,6 @@ _____padding_file_?_如果您看到此文件，请升级到BitComet(比特彗星
 再进一步的挖掘后 又有了新的发现
 我想来自美国专利和商标局的这份商标注册记录  
 可以彻底的终结这个问题 [链接](https://tsdr.uspto.gov/#caseNumber=78932292&caseSearchType=US_APPLICATION&caseType=DEFAULT&searchType=statusSearch)  
-PDF版本：<a href="../../图片/BC历史遗留问题/BC-注册商标.pdf">链接</a>
+PDF版本：<a href="../../images/BC-historical-issues/BC-注册商标.pdf">链接</a>
 
 

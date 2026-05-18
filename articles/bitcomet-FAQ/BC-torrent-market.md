@@ -57,8 +57,8 @@ sidebar_label: 种子市场使用教程
 如果有你不喜欢的东西出现可以设置关键字黑名单加以屏蔽 支持正则表达式  
 （右键弹出菜单以设置黑名单）或者自行接忽略  
 
-<img loading="lazy" src="../../images/BC-torrent-market/others-sharing-blacklist.webp" width="60%" />
-<img loading="lazy" src="../../images/BC-torrent-market/others-sharing-blacklist-2.webp" width="60%" />
+<img loading="lazy" src="../../images/BC-torrent-market/others-sharing-blacklist.webp" />
+<img loading="lazy" src="../../images/BC-torrent-market/others-sharing-blacklist-2.webp" />
 
 ---
 
@@ -125,13 +125,13 @@ e1c9ef19ba10bd3f47c9945176236440869e67a8
 <img loading="lazy" src="../../images/BC-torrent-market/import-export-options.webp" width="60%" />
 
 选择 要导出的内容 这里只选择 他人共享 点击 … 选择保存路径  
-<img loading="lazy" src="../../images/BC-torrent-market/export.webp" width="60%" />
+<img loading="lazy" src="../../images/BC-torrent-market/export.webp" />
 
 选择 保存路径 输入文件名 点确定  
-<img loading="lazy" src="../../images/BC-torrent-market/save-export-configuration.webp" width="60%" />
+<img loading="lazy" src="../../images/BC-torrent-market/save-export-configuration.webp"  />
 
 回到了刚才的界面 点击导出即可  
-<img loading="lazy" src="../../images/BC-torrent-market/export-2.webp" width="60%" />
+<img loading="lazy" src="../../images/BC-torrent-market/export-2.webp" />
 
 **注意 如果他人共享条数很多 软件很有可能会未响应或者卡死**  
 **如果长时间卡死或者未响应 请尝试后面的数据库法**  
@@ -143,7 +143,7 @@ e1c9ef19ba10bd3f47c9945176236440869e67a8
 
 选择 **导入** 选项卡 点击 … 选择要导入的配置文件  
 要导入的内容会 自动选择上 最后点击导入即可  
-<img loading="lazy" src="../../images/BC-torrent-market/import.webp" width="60%" />
+<img loading="lazy" src="../../images/BC-torrent-market/import.webp" />
 
 **注意 如果他人共享条数很多 软件很有可能会未响应或者卡死**  
 **如果长时间卡死或者未响应 请尝试后面的数据库法**  
@@ -181,7 +181,7 @@ e1c9ef19ba10bd3f47c9945176236440869e67a8
 <img loading="lazy" src="../../images/BC-torrent-market/sql-main-program.webp" width="60%" />
 
 首次运行时要选择语言  
-<img loading="lazy" src="../../images/BC-torrent-market/select-language.webp" width="60%" />
+<img loading="lazy" src="../../images/BC-torrent-market/select-language.webp" />
 
 **添加数据库**  
 <img loading="lazy" src="../../images/BC-torrent-market/add-database.webp" width="60%" />
@@ -194,10 +194,10 @@ e1c9ef19ba10bd3f47c9945176236440869e67a8
 他人共享数据库位于 比特彗星安装目录\share\  
 数据库名称为 peer_shares.db **最后点 OK**  
 
-<img loading="lazy" src="../../images/BC-torrent-market/add-database-2.webp" width="60%" />
+<img loading="lazy" src="../../images/BC-torrent-market/add-database-2.webp" />
 
 **查询数据库内容** 双击添加的数据库 连接并展开  
-<img loading="lazy" src="../../images/BC-torrent-market/expand-database.webp" width="60%" />
+<img loading="lazy" src="../../images/BC-torrent-market/expand-database.webp" />
 
 **展开 表** 并选择 **数据** 选项卡  
 
@@ -237,7 +237,7 @@ e1c9ef19ba10bd3f47c9945176236440869e67a8
 
 **答：** 可能是限制了最大条数   
 右键》他人共享》弹出菜单》调整最大条数 例如设置为无限  
-<img loading="lazy" src="../../images/BC-torrent-market/others-sharing-unrestricted.webp" width="60%" />
+<img loading="lazy" src="../../images/BC-torrent-market/others-sharing-unrestricted.webp" />
 
 ---
 
