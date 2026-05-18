@@ -46,7 +46,7 @@ Copyright (C) Ran Ningyu, All Rights Reserved.
 这个 Ran Ningyu 就是冉宁煜 而RnySmile 前面的Rny 其实就是  
 取的 冉宁煜 的首字母  
 
-<img loading="lazy" src="../../images/BC-rumor/rannigyu.jpg" width="60%" />
+<img loading="lazy" src="../../images/BC-rumor/rannigyu.jpg" />
 
 至于比特彗星早期的故事其实看这篇报道即可：[独家专访BitComet：无间道行走 快乐并BT着](https://web.archive.org/web/20060424005426/http://www.pconline.com.cn/news/yj/0604/784835.html)  
 
