@@ -432,5 +432,5 @@ pause
 ## 参考资料
 
 * https://www.bilibili.com/read/cv25389887/
-* https://dusays.com/383/
+* https://dusays.com/archives/383/
 

@@ -15,7 +15,7 @@ sidebar_label: 用户列表显示问题
 **答：** 应该是按到了键盘上的 **Scrll Lock 键** 即滚动锁定键  
 再按一次即可恢复刷新 其一般用于 暂停列表更新以方便查看用户信息  
 
-<img loading="lazy" src="../../images/BC-user-list-display-problem/BC-user-list-display-problem-3.jpg" width="60%" />
+<img loading="lazy" src="../../images/BC-user-list-display-problem/BC-user-list-display-problem-3.jpg" />
 
 
 ---

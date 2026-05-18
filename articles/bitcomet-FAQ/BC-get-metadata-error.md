@@ -56,7 +56,7 @@ BTSOW：https://btsow.bond/convert/magnet
 
 **答：** 先在BC中选择无法获取元数据的任务，右键弹出菜单 选择复制> 特征码v1  
 
-<img loading="lazy" src="../../images/BC-get-metadata-error/copy-infohash.webp" width="60%" />
+<img loading="lazy" src="../../images/BC-get-metadata-error/copy-infohash.webp" />
 
 粘贴特征码并点击下载  
 

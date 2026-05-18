@@ -32,6 +32,7 @@
 * [Feed RSS ATOM 以及 Feed JSON](./feed-rss-atom-json.md)
 * [Cloudflare 在指定域名下禁用SSL/TSL](./cloudflare-disable-ssl.md)
 * [XSLT 被移除后的RSS美化方案](./xml-xslt.md)
+* [Cloudflare Pages 不显示 .html 和 末尾斜杠问题](./cf-pages-feature.md)
 
 
 

@@ -69,7 +69,7 @@ WebView2 可以简单的理解为一个简易的 Edge 浏览器 API
 >1.99正式版开始windows10下如果启用始终显示选项卡会无法显示截图  
 >未选中BT任务的时候，点击了截图选项卡，灰屏无法加载出来，后续点击BT任务在点截图也没用，必须重启软件了  
 
-<img loading="lazy" src="../../images/BC-screenshots-and-comments/right-click-menu.webp" width="60%" />
+<img loading="lazy" src="../../images/BC-screenshots-and-comments/right-click-menu.webp" />
 
 v1.99 Beta1 [20230222]之前的版本的解决方法：  
 * https://www.cometbbs.com/t/83650
@@ -80,7 +80,7 @@ v1.99 Beta1 [20230222]之前的版本的解决方法：
 ## 网络问题部分
 
 **问：** 评论、截图区出现报错\白屏仍然存在  
-<img loading="lazy" src="../../images/BC-screenshots-and-comments/right-click-menu.webp" width="60%" />
+<img loading="lazy" src="../../images/BC-screenshots-and-comments/right-click-menu.webp" />
 
 **答：** 这应该是网络问题造成的  
 

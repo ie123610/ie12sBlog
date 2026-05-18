@@ -103,15 +103,15 @@ BT客户端对去多下载B文件开头的一小部分 以保证 边界分块可
 
 
 **无用文件在尾部：**  
-<img loading="lazy" src="../../images/BC-reseed-99/tail.jpg" width="60%" />
+<img loading="lazy" src="../../images/BC-reseed-99/tail.jpg" />
 
 
 **尾部多个文件：**  
-<img loading="lazy" src="../../images/BC-reseed-99/tail-multiple-files.jpg" width="60%" />
+<img loading="lazy" src="../../images/BC-reseed-99/tail-multiple-files.jpg" />
 
 
 **首部和尾部以及多个文件：**  
-<img loading="lazy" src="../../images/BC-reseed-99/head-tail-multiple-files.jpg" width="60%" />
+<img loading="lazy" src="../../images/BC-reseed-99/head-tail-multiple-files.jpg"/>
 
 
 根据实际情况选择选择额外的无用文件 同时进行补档  
@@ -169,7 +169,7 @@ BT客户端对去多下载B文件开头的一小部分 以保证 边界分块可
 填充文件本身没有任何实际内容 仅用于占位  
 
 **分块对齐后的文件序号：**  
-<img loading="lazy" src="../../images/BC-reseed-99/chunks-aligned.jpg" width="60%" />
+<img loading="lazy" src="../../images/BC-reseed-99/chunks-aligned.jpg" />
 
 不过分块填充的使用并不广泛  
 最早使用分块填充的客户端 应该就是比特彗星了  
