@@ -101,7 +101,7 @@ Homer项目地址：[链接](https://github.com/bastienwirtz/homer)
 （其实那个 config-demo.yml.dist 也可以 不过那个预设文件更复杂 此处我们用不到）
 
 <img loading="lazy" src="../../images/stun-home-page/homer-folder.jpg" width="60%" />
-<img loading="lazy" src="../../images/stun-home-page/homer-copy-configuration.jpg" width="60%" />
+<img loading="lazy" src="../../images/stun-home-page/homer-copy-configuration.jpg" />
 
 完成上述操作后 回到浏览器刷新页面应该可以看到 这些预设内容  
 
@@ -295,7 +295,7 @@ lucky的全局变量详见：[链接](https://lucky666.cn/docs/modules/globaldat
 
 ### 菜单栏
 
-<img loading="lazy" src="../../images/stun-home-page/homer-menu-display.jpg" width="60%" />
+<img loading="lazy" src="../../images/stun-home-page/homer-menu-display.jpg" />
 <img loading="lazy" src="../../images/stun-home-page/homer-menu-configuration.jpg" width="60%" />
 
 可添加一些常用的链接  
@@ -459,7 +459,7 @@ services:
 输出内容为之前的写好的配置  
 为防止冲突 要修改原有配置文件的文件名 使其失效  
 
-<img loading="lazy" src="../../images/stun-home-page/modify-configuration-file-extension.jpg" width="60%" />
+<img loading="lazy" src="../../images/stun-home-page/modify-configuration-file-extension.jpg" />
 
 完成这些设置后刷新页面 应该可以看到之前的变量已经起作用了  
 若刷新后无效 则需要在F12中禁用缓存再刷新 或在隐私/无痕 模式打开  
@@ -479,7 +479,7 @@ services:
 这样只有在登录后才能显示页面并读取配置文件  
 
 <img loading="lazy" src="../../images/stun-home-page/basic-authentication.jpg" width="60%" />
-<img loading="lazy" src="../../images/stun-home-page/authentication-popup.jpg" width="60%" />
+<img loading="lazy" src="../../images/stun-home-page/authentication-popup.jpg" />
 
 ---
 
