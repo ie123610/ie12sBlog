@@ -193,7 +193,7 @@ VNTS 文档：[链接](https://github.com/vnt-dev/vnts#vnts)
 
 VNT Github 项目地址：[链接](https://github.com/vnt-dev/vnt/releases)  
 
-<img loading="lazy" src="../../images/stun-VNT-networkin/vnt-file.webp" width="60%" />
+<img loading="lazy" src="../../images/stun-VNT-networkin/vnt-file.webp" />
 
 
 #### 设置基础组网信息
