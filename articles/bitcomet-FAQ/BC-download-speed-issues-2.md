@@ -61,8 +61,8 @@
 
 **答：** 选中任务查看 **种子/用户[总]这一列** 鼠标放在上面会有悬浮显示  
 
-<img loading="lazy" src="../../images/BC-download-speed-issues-2/peers-and-seeds.webp" width="60%" />
-<img loading="lazy" src="../../images/BC-download-speed-issues-2/peers-and-seeds-2.webp" width="60%" />
+<img loading="lazy" src="../../images/BC-download-speed-issues-2/peers-and-seeds.webp" />
+<img loading="lazy" src="../../images/BC-download-speed-issues-2/peers-and-seeds-2.webp" />
 
 也可以选择任务 后点开 **用户选项卡** 可以更直观的看到  
 连接上的用户及其详情  
@@ -71,7 +71,7 @@
 
 **问：** 全部用户数很少 用户选项卡里是空的  
 
-<img loading="lazy" src="../../images/BC-download-speed-issues-2/dead-torrent.webp" width="60%" />
+<img loading="lazy" src="../../images/BC-download-speed-issues-2/dead-torrent.webp" />
 
 **答：** 这样的话**说明这个种子可能已经 “凉了” 也就是死种了 没法下载了**  
 
