@@ -107,7 +107,7 @@ xyz.ie12test.dynv6.net
 
 
 **示例**  
-<img loading="lazy" src="../../images/lucky-tls-automation/example-dynv6.webp" width="60%" />
+<img loading="lazy" src="../../images/lucky-tls-automation/example-dynv6.webp" />
 
 
 ### 检视效果
@@ -180,7 +180,7 @@ mc.xyz.ie12.net
 
 
 **示例**  
-<img loading="lazy" src="../../images/lucky-tls-automation/example-cf.webp" width="60%" />
+<img loading="lazy" src="../../images/lucky-tls-automation/example-cf.webp" />
 
 
 
@@ -209,7 +209,7 @@ mc.xyz.ie12.net
 打开证书映射开关 并填写目录   
 申请到的证书和私钥将被映射到该目录中  
 
-<img loading="lazy" src="../../images/lucky-tls-automation/map-certificate.webp" width="60%" />
+<img loading="lazy" src="../../images/lucky-tls-automation/map-certificate.webp" />
 
 
 **检视效果**  
