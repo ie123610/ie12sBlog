@@ -103,7 +103,7 @@ IPv6拥有海量地址解决了在IPv4时期地址不足和NAT大量使用的问
 搜索栏搜索 防火墙  
 选择检查防火墙状态 打开  
 
-<img loading="lazy" src="../../images/win-firewall-block-IPv6/check-firewall-status.jpg" width="60%" />
+<img loading="lazy" src="../../images/win-firewall-block-IPv6/check-firewall-status.jpg" />
 
 检查防火墙是否启用  
 
@@ -115,7 +115,7 @@ IPv6拥有海量地址解决了在IPv4时期地址不足和NAT大量使用的问
 
 添加规则 选择**出站规则** 右键>新建规则  
 
-<img loading="lazy" src="../../images/win-firewall-block-IPv6/firewall-outbound-rules.jpg" width="60%" />
+<img loading="lazy" src="../../images/win-firewall-block-IPv6/firewall-outbound-rules.jpg" />
 
 选择 自定义规则  
 
@@ -145,12 +145,11 @@ Windows防火墙帮助手册中已说明了这种情况
 
 <img loading="lazy" src="../../images/win-firewall-block-IPv6/firewall-select-protocol.jpg" width="60%" />
 
-作用域
-在远程IP中选择下列IP地址 并点击添加  
+作用域 在远程IP中选择下列IP地址 并点击添加  
 
 <img loading="lazy" src="../../images/win-firewall-block-IPv6/firewall-scope-add-ip.jpg" width="60%" />
 
-<img loading="lazy" src="../../images/win-firewall-block-IPv6/firewall-scope-add-ipv6-global-unicast.jpg" width="60%" />
+<img loading="lazy" src="../../images/win-firewall-block-IPv6/firewall-scope-add-ipv6-global-unicast.jpg"  />
 
 填写 `2000::/3` 此为 IPv6全球单播地址的前缀 可以理解为匹配所有公网IPv6地址  
 曾经尝试使用 `::` 进行匹配 但并不成功 其表示所有IPv6地址  
