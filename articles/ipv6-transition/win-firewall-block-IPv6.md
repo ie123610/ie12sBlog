@@ -71,7 +71,7 @@ IPv6拥有海量地址解决了在IPv4时期地址不足和NAT大量使用的问
 这不会影响纯IPv6的访问  
 
 设置方法可以查看之前的教程  
-详见：[链接](https://www.bilibili.com/read/cv29101131/)
+详见：[链接](../bitcomet-port-forwarding/12-win-settings.md)
 
 不过较高版本的浏览器（如Chrome）似乎**已经不再遵从Windows的IPv6访问优先级了**
 其在IPv6可以的情况下**会强制使用IPv6访问**  

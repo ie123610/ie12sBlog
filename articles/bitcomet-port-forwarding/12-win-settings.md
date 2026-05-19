@@ -294,7 +294,7 @@ netsh advfirewall firewall add rule name="All ICMP V6-OUT" protocol=icmpv6:any,a
 [基于stun穿透工具LUCKY，使BT客户端绿灯、开放TCP端口的办法（进化版）](https://www.bilibili.com/read/cv21198136/?jump_opus=1)
 
 之后应该会出专门的教程 （已经完成）  
-[LUCKY STUN穿透在Windows上使用UPnP工具为BT客户端自动添加内外端口号不同的映射规则](https://www.bilibili.com/read/cv31006420/?jump_opus=1)
+[LUCKY STUN穿透在Windows上使用UPnP工具为BT客户端自动添加内外端口号不同的映射规则](../bitcomet-FAQ/BC-anti-leech.md)
 
 **问：** 必须是全锥形NAT才可以吗？  
 
