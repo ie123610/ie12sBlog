@@ -9,7 +9,6 @@
 
 * [qb匿名模式名称显示研究](./qb-anonymous-mode.md)
 * [已知bittorrent客户端生存调查](./已知bittorrent客户端生存调查/已知客户端调查-说明.md)
-* [比特彗星改进建议](./BC改进建议.md)
 * [eMule设置IP绑定](./emule-ip-binding.md)
 
 ### Windows类
@@ -40,6 +39,5 @@
 
 * [B站专栏文本复制问题](./B站专栏文本复制问题.md)
 * [「转」基于爱奇艺HCDN视频分发网络的开放缓存](./爱奇艺HCDN.md)
-* [博客园映射表](./cnblog-index.md)
 * [解决showLastUpdateTime总是显示相同日期问题](./Docusaurus-showLastUpdateTime.md)
 
