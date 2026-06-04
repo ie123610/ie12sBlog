@@ -101,4 +101,4 @@
 ## 研究记录系列
 
 * [研究记录索引](./articles/research-logs/research-index.md)
-* [笔记](./articles/notes/)
+* [笔记](./articles/notes/notes-index.md)
