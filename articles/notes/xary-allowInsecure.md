@@ -7,7 +7,7 @@ xray 正在移除 `allowInsecure` 参数
 若服务器不受自己控制即无法修改 则只能采用其他方法进行过渡  
 
 由于上游依然在下发含有 `allowInsecure` 参数的配置  
-此选项会导致 xray 核心报错无法启动 解决有二 分别是 **xary 降级和换用 sing_box**  
+此选项会导致 xray 核心报错无法启动 解决方法有二 分别是 **xary 降级和换用 sing_box**  
 
 ## Xary 核心降级
 
@@ -42,3 +42,14 @@ xray 正在移除 `allowInsecure` 参数
 <summary>截图</summary>
 <img loading="lazy" src="../../images/xary-allowInsecure/xary-allowInsecure-2.jpg" width="60%" />
 </details>
+
+---
+
+## 从新安装
+
+如果使用上述两种方法后 测试节点延迟依然为 -1 无法连接 可以尝试从新安装 v2rayN  
+备份 v2rayN 目录下的 binConfigs 和 guiConfigs 文件夹以保留配置文件  
+
+删除旧版本的 v2rayN 下载最新版的 v2rayN  
+粘贴 binConfigs 和 guiConfigs 文件夹 到新版本目录中  
+启动软件 从新订阅节点并重复前两个方法 应该可以解决问题  
