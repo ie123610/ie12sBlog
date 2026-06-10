@@ -7,9 +7,11 @@ xray 正在移除 `allowInsecure` 参数
 若服务器不受自己控制即无法修改 则只能采用其他方法进行过渡  
 
 由于上游依然在下发含有 `allowInsecure` 参数的配置  
-此选项会导致 xray 核心报错无法启动 解决方法有二 分别是 **xary 降级和换用 sing_box**  
+此选项会导致 xray 核心报错无法启动 解决方法有二 分别是 **xray 降级和换用 sing_box**  
 
-## Xary 核心降级
+---
+
+## Xray 核心降级
 
 将 xray 核心降级的到不会因为 `allowInsecure` 参数而报错的版本  
 可以使用 v26.1.23 版本 发布地址：[链接](https://github.com/XTLS/Xray-core/releases/tag/v26.1.23)  
@@ -27,7 +29,7 @@ xray 正在移除 `allowInsecure` 参数
 
 <details>
 <summary>截图</summary>
-<img loading="lazy" src="../../images/xary-allowInsecure/xary-allowInsecure-1.jpg" />
+<img loading="lazy" src="../../images/xray-allowInsecure/xray-allowInsecure-1.jpg" />
 </details>
 
 ---
@@ -40,7 +42,7 @@ xray 正在移除 `allowInsecure` 参数
 
 <details>
 <summary>截图</summary>
-<img loading="lazy" src="../../images/xary-allowInsecure/xary-allowInsecure-2.jpg" width="60%" />
+<img loading="lazy" src="../../images/xray-allowInsecure/xray-allowInsecure-2.jpg" width="60%" />
 </details>
 
 ---
