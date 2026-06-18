@@ -32,7 +32,7 @@
 * [Cloudflare 在指定域名下禁用SSL/TSL](./cloudflare-disable-ssl.md)
 * [XSLT 被移除后的RSS美化方案](./xml-xslt.md)
 * [Cloudflare Pages 不显示 .html 和 末尾斜杠问题](./cf-pages-feature.md)
-
+* [使用简单方法在 Markdown 中展示 PDF 文件](./markdown-pdf.md)
 
 
 ### 杂项
