@@ -101,6 +101,7 @@ object 原生支持显示替代文本显示 不过其应该只有在收到的媒
 示例：  
 
 ```
+
 <noscript>
 <strong><mark>警告 JavaScript 已经禁用 PDF 预览将不会加载</mark></strong>
 </noscript>
@@ -128,6 +129,7 @@ object 原生支持显示替代文本显示 不过其应该只有在收到的媒
 </iframe>
 
 </details>
+
 ```
 
 截图  

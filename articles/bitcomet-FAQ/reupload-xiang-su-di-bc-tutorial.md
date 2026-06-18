@@ -10,6 +10,27 @@
 
 ---
 
+<details>
+
+<summary>PDF 文件预览</summary>
+
+<p>如果预览无法加载请 <a href="/script/pdfjs-legacy/web/viewer.html?file=../../images/reupload-xiang-su-di-bc-tutorial/比特彗星-教程-[2023.09.08].pdf">点击此处下载文件</a>。</p>
+
+<noscript>
+<strong><mark>警告 JavaScript 已经禁用 PDF 预览将不会加载</mark></strong>
+</noscript>
+
+<iframe src="../../images/reupload-xiang-su-di-bc-tutorial/比特彗星-教程-[2023.09.08].pdf" loading="lazy" width="100%" height="600px">
+</iframe>
+
+</details>
+
+
+
+<details>
+
+<summary>教程内容-图片</summary>
+
 <img loading="lazy" src="../../images/reupload-xiang-su-di-bc-tutorial/bitcomet-tutorial-[2023.09.08]-Page1.webp" />
 <img loading="lazy" src="../../images/reupload-xiang-su-di-bc-tutorial/bitcomet-tutorial-[2023.09.08]-Page2.webp" />
 <img loading="lazy" src="../../images/reupload-xiang-su-di-bc-tutorial/bitcomet-tutorial-[2023.09.08]-Page3.webp" />
@@ -60,5 +81,6 @@
 <img loading="lazy" src="../../images/reupload-xiang-su-di-bc-tutorial/bitcomet-tutorial-[2023.09.08]-Page48.webp" />
 <img loading="lazy" src="../../images/reupload-xiang-su-di-bc-tutorial/bitcomet-tutorial-[2023.09.08]-Page49.webp" />
 
+<details>
 
 
