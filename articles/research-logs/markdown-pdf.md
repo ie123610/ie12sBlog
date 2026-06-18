@@ -89,7 +89,11 @@ object 原生支持显示替代文本显示 不过其应该只有在收到的媒
 
 示例： `/pdfjs-legacy/web/viewer.html?file=123.pdf`  
 可以先使用绝对路径在浏览器中打开 确定显示正常后再填入 iframe 中  
-实际使用时应采用相对路径 包括后面的 PDF 文件路径
+实际使用时应采用相对路径 包括后面的 PDF 文件路径  
+
+值得注意的是在写 PDF 文件的相对路径时应优先使用 `/` 而不是 `../`  
+因为此处是以 viewer.html 的路径为基础  
+使用 `../` 所得到的是 viewer.html 上级目录 用 `/` 从根目录开始会更简单  
 
 由于其依赖 js 脚本 当浏览器禁用 JavaScript 后无法正常显示 PDF文件内容  
 但能显示 viewer.html 上阅读器的基础内容 使得用户较难辨别目标内容是否正常加载  
@@ -125,7 +129,7 @@ object 原生支持显示替代文本显示 不过其应该只有在收到的媒
 <strong><mark>警告 JavaScript 已经禁用 PDF 预览将不会加载</mark></strong>
 </noscript>
 
-<iframe src="/pdfjs-legacy/web/viewer.html?file=/file.pdf" loading="lazy" width="100%" height="600px">
+<iframe width="100%" height="600px" loading="lazy" src="/pdfjs-legacy/web/viewer.html?file=/file.pdf" >
 </iframe>
 
 </details>

@@ -14,13 +14,13 @@
 
 <summary>PDF 文件预览</summary>
 
-<p>如果预览无法加载请 <a href="../../images/reupload-xiang-su-di-bc-tutorial/比特彗星-教程-[2023.09.08].pdf" loading="lazy" width="100%" height="600px">点击此处下载文件</a>。</p>
+<p>如果预览无法加载请 <a href="../../images/reupload-xiang-su-di-bc-tutorial/比特彗星-教程-[2023.09.08].pdf" >点击此处下载文件</a>。</p>
 
 <noscript>
 <strong><mark>警告 JavaScript 已经禁用 PDF 预览将不会加载</mark></strong>
 </noscript>
 
-<iframe src="/script/pdfjs-legacy/web/viewer.html?file=../../images/reupload-xiang-su-di-bc-tutorial/比特彗星-教程-[2023.09.08].pdf">
+<iframe loading="lazy" width="100%" height="600px" src="/script/pdfjs-legacy/web/viewer.html?file=/images/reupload-xiang-su-di-bc-tutorial/比特彗星-教程-[2023.09.08].pdf">
 </iframe>
 
 </details>
