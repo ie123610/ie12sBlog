@@ -125,7 +125,7 @@ object 原生支持显示替代文本显示 不过其应该只有在收到的媒
 <strong><mark>警告 JavaScript 已经禁用 PDF 预览将不会加载</mark></strong>
 </noscript>
 
-<iframe src="/files/example.pdf" loading="lazy" width="100%" height="600px">
+<iframe src="/pdfjs-legacy/web/viewer.html?file=/file.pdf" loading="lazy" width="100%" height="600px">
 </iframe>
 
 </details>
