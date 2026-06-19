@@ -36,7 +36,7 @@ Cloudflare 下文简称 CF
 其按照实际情况进行填写 这里使用 "test"和"1234"  
 
 
-<img loading="lazy" src="../../images/update-TXT-record-on-cf-and-dynv6/TXT_dynv6-create-new-txt-record-1.jpg" width="60%" />
+<img loading="lazy" src="../../images/update-TXT-record-on-cf-and-dynv6/TXT_dynv6-create-new-txt-record-1.jpg" />
 <img loading="lazy" src="../../images/update-TXT-record-on-cf-and-dynv6/TXT_dynv6-create-new-txt-record-2.jpg" width="60%" />
 <img loading="lazy" src="../../images/update-TXT-record-on-cf-and-dynv6/TXT_dynv6-create-new-txt-record-3.jpg" width="60%" />
 

@@ -14,10 +14,10 @@
 但是这些都是利用的HTTP重定向特性  
 对非HTTP服务 和不支持重定向的程序此方法不起作用  
 
-而像 MC Java 那样支持 srv记录的程序可谓少之又少 详见：[链接](https://www.bilibili.com/read/cv31482590/)  
+而像 MC Java 那样支持 srv记录的程序可谓少之又少 详见：[链接](../lucky-STUN/stun-mc-srv.md)  
 想让服务和程序本身去进行适配几乎是不可能的  
 
-虽然之前也写过使用邮件来通知端口变化的方案  详见：[链接](https://www.bilibili.com/read/cv34705222/)  
+虽然之前也写过使用邮件来通知端口变化的方案  详见：[链接](../lucky-STUN/email-notification-port.md)  
 但这和登录lucky后台查看穿透后的端口再手动进行修改 没有什么本质上的区别  
 只是在查看端口上略微方便一些而已  
 
@@ -47,7 +47,7 @@
 
 其相当于一个弱化版的NAT 部署起来会更加方便  
 在Windows上自然使用lucky的转发功能了  
-其实Win自己其实也有类似功能但只支持TCP 详见：[链接](https://www.bilibili.com/read/cv36203459/)  
+其实Win自己其实也有类似功能但只支持TCP 详见：[链接](../ipv6-transition/win-port-forwarding.md)  
 
 不过在安卓设备上用起来还是不方便  
 尽管在理论上也可以用终端模拟器在安卓上安装lucky  

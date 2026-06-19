@@ -56,7 +56,7 @@ qbittorrent webUI 接口定义：[链接](https://github.com/qbittorrent/qBittor
 或者直接弹出一个小的错误提示  
 
 <img loading="lazy" src="../../images/stun-qb-port-automation/7-webhook-test-result-connection-refused.png" width="60%" />
-<img loading="lazy" src="../../images/stun-qb-port-automation/8-webhook-test-result-call-error.png" width="60%" />
+<img loading="lazy" src="../../images/stun-qb-port-automation/8-webhook-test-result-call-error.png" />
 
 若是 请求主体 写错就可能会报 HTTP 400  
 <img loading="lazy" src="../../images/stun-qb-port-automation/9-webhook-test-result-400.png" width="60%" />
