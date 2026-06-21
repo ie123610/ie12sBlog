@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <title>STUN (RFC 3489) vs. STUN (RFC 5389/5780)</title>
+</head>
+
+<body>
+
+<div style="width: 50%; margin-left: auto; margin-right: auto;">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh" xml:lang="zh">
+
+<h1 style="margin-left:40px" >STUN (RFC 3489) vs. STUN (RFC 5389/5780)</h1>
+
+<p style="margin-left:40px" > 2013年10月21日 | 作者：Netmanias (tech@netmanias.com)</p>
+
+<p style="margin-left:40px">&nbsp;</p>
+
+<p style="margin-left:40px">&emsp;&emsp;RFC 3489 和 RFC 5780 中定义的 NAT 类型有什么区别？
+为了理解下文将要解释的差异，您必须熟悉我们上次所说的 NAT 映射行为（Mapping Behavior）和过滤行为（Filtering Behavior）</p>
+
+<p style="margin-left:40px">&nbsp;</p>
+
+<p style="margin-left:40px"><span style="font-size:18px"><span style="font-family:verdana"><span style="color:#6B9900"><strong>什么是 STUN？</strong></span></span></span><br>
+&nbsp;</p>
+
+<p style="margin-left:40px">&emsp;&emsp;STUN 是一种协议，它允许两个设备（P2P 设备）发现它们之间是否存在 NAT 及其类型，并找出经过 NAT 转换的外部 IP 地址和端口，以便在两个设备之间进行 P2P 通信。<br>
+&nbsp;<br>
+&emsp;&emsp;STUN 最初在 2003 年的 RFC 3489（标准）中定义，随后进行了两次修订：一次是 2008 年的 RFC 5389（标准），另一次是 2010 年的 RFC 5780（实验性）。 &nbsp;<br>
+&emsp;&emsp;根据 RFC 5389，“经典 STUN 用于分类 NAT 类型的算法（在 RFC 3489 中定义）被发现存在缺陷，因为市场上的许多 NAT（设备）无法完美归类到其中定义的（四种）类型中。”<br>
+&emsp;&emsp;为了解决这个问题，经典 STUN 在 RFC 5389 中进行了修改（即向 Binding 消息添加属性）。而在 RFC 5780 中，重新定义了 NAT 类型，并修改了 NAT 类型的分类算法（方法）。&nbsp;<br>
+&nbsp;<br>
+&emsp;&emsp;RFC 3489 和 5389 都使用相同的术语“STUN”，但其全称和含义截然不同，如下所示：</p>
+
+<ul style="margin-left:40px">
+	<li>STUN - 网络地址转换器（NAT）对用户数据报协议（UDP）的简单穿越 (Simple Traversal of User Datagram Protocol (UDP) Through Network Address Translators (NATs))</li>
+	<li>用于 NAT 的会话穿越实用程序 (Session Traversal Utilities for NAT (STUN))&nbsp;</li>
+</ul>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p style="margin-left:40px"><span style="font-size:18px"><span style="font-family:verdana"><span style="color:#6B9900"><strong>RFC 3489 和 5780 中定义的 NAT 类型</strong></span></span></span></p>
+
+<p style="margin-left:40px">&nbsp;</p>
+
+<p style="margin-left:40px"><span style="font-family:verdana"><span style="font-size:16px"><strong>1. 全锥型 (Full Cone)</strong></span></span></p>
+
+<div>&nbsp;</div>
+
+<div>
+<div>
+<table border="0" cellpadding="0" cellspacing="0" style="margin-left:40px; width:700px">
+	<tbody>
+		<tr>
+			<td style="background-color:rgb(224, 210, 190)">
+			<table border="0" cellpadding="0" cellspacing="0" style="font-family:verdana,tahoma,calibri,arial,calibri,helvetica,applegothic,sans-serif; margin:8px; width:684px">
+				<tbody>
+					<tr>
+						<td>
+						<p><strong>[映射行为]</strong> 全锥型 NAT 是指来自相同内部 IP 地址和端口的所有请求都被映射到相同的外部 IP 地址和端口。 <br><br> <strong>[过滤行为]</strong> 此外，任何外部主机都可以通过向映射的外部地址发送数据包，来向内部主机发送数据包。(RFC 3489)</p>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			</td>
+		</tr>
+	</tbody>
+</table>
+</div>
+</div>
+
+<p style="margin-left:40px">&nbsp;</p>
+
+<p style="margin-left:40px">&emsp;&emsp;RFC 3489 中的全锥型 NAT 对应于 RFC 5780 中使用端点无关映射（Endpoint-Independent Mapping, "EIM"）和端点无关过滤（Endpoint-Independent Filtering, "EIF"）的 NAT。&nbsp;</p>
+
+<ul style="margin-left:40px">
+	<li>映射行为：NAT 将具有相同 (1) 源 IP 和 (2) 源端口的所有出站数据包转换为相同的端口映射值（例如，在下图示例中，转换后的端口 = 1000），而不考虑数据包的目的地 IP 或目的地端口。</li>
+	<li>过滤行为：NAT 只检查传入数据包的 (1) 目的地 IP 和 (2) 目的地端口来决定是否传递数据包。因此，它不关心外部端点的源 IP 或源端口值。</li>
+</ul>
+
+<p style="margin-left:40px"><img alt="" src="Fig1.STUN.webp" style="height: 620px; width: 750px;"></p>
+
+<p style="margin-left:40px">&nbsp;</p>
+
+<p style="margin-left:40px"><span style="font-family:verdana"><span style="font-size:16px"><strong>2. IP限制锥型 (Restricted Cone)</strong></span></span></p>
+
+<div>&nbsp;</div>
+
+<div>
+<div>
+<table border="0" cellpadding="0" cellspacing="0" style="margin-left:40px; width:700px">
+	<tbody>
+		<tr>
+			<td style="background-color:rgb(224, 210, 190)">
+			<table border="0" cellpadding="0" cellspacing="0" style="font-family:verdana,tahoma,calibri,arial,calibri,helvetica,applegothic,sans-serif; margin:8px; width:684px">
+				<tbody>
+					<tr>
+						<td>
+						<p><strong>[映射行为]</strong> IP限制锥型 NAT 是指来自相同内部 IP 地址和端口的所有请求都被映射到相同的外部 IP 地址和端口。 <br><br> <strong>[过滤行为]</strong> 与全锥型 NAT 不同，只有当内部主机先前曾向外部主机（IP 地址为 X）发送过数据包时，该外部主机才能向内部主机发送数据包。(RFC 3489)</p>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			</td>
+		</tr>
+	</tbody>
+</table>
+</div>
+</div>
+
+<p style="margin-left:40px">&nbsp;</p>
+
+<p style="margin-left:40px">&emsp;&emsp; IP限制锥型 NAT 对应于 RFC 5780 中使用 EIM 和地址相关过滤（Address-Dependent Filtering, "ADF"）的 NAT。</p>
+
+<ul style="margin-left:40px">
+	<li>映射行为：与全锥型相同。&nbsp;</li>
+	<li>过滤行为：此 NAT 仅检查入站数据包的 (1) 目的地 IP、(2) 目的地端口和 (3) 源 IP，以决定是否放行该数据包。它不关心外部端点的源端口值。&nbsp;</li>
+</ul>
+
+<p style="margin-left:40px"><img alt="" src="Fig2.STUN.webp" style="height: 620px; width: 750px;"></p>
+
+<p style="margin-left:40px">&nbsp;</p>
+
+<p style="margin-left:40px"><span style="font-family:verdana"><span style="font-size:16px"><strong>3. IP和端口限制锥型 (Port Restricted Cone)</strong></span></span></p>
+
+<div>&nbsp;</div>
+
+<div>
+<div>
+<table border="0" cellpadding="0" cellspacing="0" style="margin-left:40px; width:700px">
+	<tbody>
+		<tr>
+			<td style="background-color:rgb(224, 210, 190)">
+			<table border="0" cellpadding="0" cellspacing="0" style="font-family:verdana,tahoma,calibri,arial,calibri,helvetica,applegothic,sans-serif; margin:8px; width:684px">
+				<tbody>
+					<tr>
+						<td>
+						<p><strong>[映射行为]</strong> IP和端口限制锥型 NAT 类似于 IP限制锥型 NAT。 <br><br> <strong>[过滤行为]</strong> 不过限制条件增加了端口号。具体来说，只有当内部主机先前曾向 IP 地址为 X、端口为 P 的外部主机发送过数据包时，该外部主机才能向内部主机发送源 IP 地址为 X、源端口为 P 的数据包。(RFC 3489)</p>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			</td>
+		</tr>
+	</tbody>
+</table>
+</div>
+</div>
+
+<p style="margin-left:40px">&nbsp;</p>
+
+<p style="margin-left:40px">&emsp;&emsp;IP和端口限制锥型 NAT 对应于 RFC 5780 中使用 EIM 和地址和端口相关过滤（Address and Port-Dependent Filtering, "APDF"）的 NAT。</p>
+
+<ul style="margin-left:40px">
+	<li>映射行为：与全锥型相同。&nbsp;</li>
+	<li>过滤行为：此 NAT 检查入站数据包的 (1) 目的地 IP、(2) 目的地端口、(3) 源 IP 以及 (4) 源端口，以决定是否放行该数据包。&nbsp;</li>
+</ul>
+
+<p style="margin-left:40px"><img alt="" src="Fig3.STUN.webp" style="height: 620px; width:750px;"></p>
+
+<p style="margin-left:40px">&nbsp;</p>
+
+<p style="margin-left:40px"><span style="font-family:verdana"><span style="font-size:16px"><strong>4. 对称型 (Symmetric)</strong></span></span></p>
+
+<div>&nbsp;</div>
+
+<div>
+<div>
+<table border="0" cellpadding="0" cellspacing="0" style="margin-left:40px; width:700px">
+	<tbody>
+		<tr>
+			<td style="background-color:rgb(224, 210, 190)">
+			<table border="0" cellpadding="0" cellspacing="0" style="font-family:verdana,tahoma,calibri,arial,calibri,helvetica,applegothic,sans-serif; margin:8px; width:684px">
+				<tbody>
+					<tr>
+						<td>
+						<p><strong>[映射行为]</strong> 对称型 NAT 是指从相同的内部 IP 地址和端口发送到特定目的地 IP 地址和端口的所有请求都被映射到相同的外部 IP 地址和端口。 如果相同的主机发送具有相同源地址和端口但发送到不同目的地的数据包，则会使用不同的映射。 <br><br> <strong>[过滤行为]</strong> 此外，只有接收到数据包的外部主机才能向内部主机发回 UDP 数据包。(RFC 3489)</p>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			</td>
+		</tr>
+	</tbody>
+</table>
+</div>
+</div>
+
+<p style="margin-left:40px">&nbsp;</p>
+
+<p style="margin-left:40px">&emsp;&emsp;对称型 NAT 对应 RFC 5780 中使用地址和端口相关映射（Address and Port-Dependent Mapping, "APDM"）和 APDF 的 NAT。</p>
+
+<ul style="margin-left:40px">
+	<li>映射行为：此 NAT 仅对具有相同 (1) 源 IP、(2) 源端口、(3) 目的地 IP 以及 (4) 目的地端口的数据包使用相同的端口映射值。&nbsp;</li>
+	<li>过滤行为：与端口限制锥型相同。</li>
+</ul>
+
+<p style="margin-left:40px"><img alt="" src="Fig4.STUN.webp" style="height: 620px; width:750px;"></p>
+
+<p style="text-align:right">&nbsp;</p>
+
+<p style="text-align:right">&nbsp;</p>
+
+<p style="margin-left:40px"><span style="font-size:18px"><span style="font-family:verdana"><span style="color:#6b9900"><strong>总结&nbsp;</strong></span></span></span></p>
+
+<p style="margin-left:40px">&nbsp;</p>
+
+<p style="margin-left:40px">&emsp;&emsp;下图展示了 RFC 5780 中定义的九种 NAT 类型和 RFC 3489 中定义的四种 NAT 类型，以及 RFC 3489 中的 NAT 类型如何与 RFC 5780 中的对应类型相匹配。</p>
+
+<p style="margin-left:40px">&nbsp;</p>
+
+<p style="margin-left:40px"><img alt="" src="Fig5.STUN.webp" style="height: 350px; width: 750px;"></p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p></div>
+
+</div>
+
+</body>
+
+</html>

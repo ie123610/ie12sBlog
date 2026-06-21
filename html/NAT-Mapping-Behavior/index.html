@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <title>NAT Behavioral Requirements, as Defined by the IETF (RFC 4787) - Part 1. Mapping Behavior</title>
+</head>
+
+<body>
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+
+<div style="width: 60%; margin-left: auto; margin-right: auto;">
+
+<h1 style="margin-left:40px" >NAT Behavioral Requirements, as Defined by the IETF (RFC 4787) - Part 1. Mapping Behavior</h1>
+
+<p style="margin-left:40px">September 12, 2013 | By Netmanias (tech@netmanias.com)</p>
+
+<table border="0" cellpadding="0" cellspacing="0" style="line-height:20.8px; margin-left:40px; width:700px">
+	<tbody>
+		<tr>
+			<td style="background-color:rgb(255, 204, 51)">
+			<table border="0" cellpadding="0" cellspacing="0" style="font-family:verdana,tahoma,calibri,arial,calibri,helvetica,applegothic,sans-serif; line-height:22px; margin:8px; width:684px">
+				<tbody>
+					<tr>
+						<td style="background-color:rgb(255, 255, 255)">
+						<p><span style="font-size:14px"><span style="font-family:arial">&nbsp;<strong><a href="https://www.netmanias.com/en/?m=search&amp;kw=nat"><span style="color:rgb(255, 102, 0)">NAT</span></a></strong> Behavioral Requirements, as Defined by the IETF (RFC 4787)</span></span></p>
+
+						<p><span style="font-size:14px"><span style="font-family:arial">&nbsp;&nbsp;<strong><a href="https://www.netmanias.com/en/?m=view&amp;id=techdocs&amp;no=6058"><span style="color:rgb(51, 102, 255)">Part 1. Mapping Behavior</span></a></strong></span></span></p>
+
+						<div><span style="font-size:14px"><span style="font-family:arial">&nbsp;&nbsp;<a href="https://www.netmanias.com/en/?m=view&amp;id=techdocs&amp;no=6062"><span style="color:rgb(51, 102, 255)">Part 2. Filtering Behavior</span></a></span></span></div>
+
+						<div><span style="font-size:14px"><span style="font-family:arial">&nbsp;&nbsp;<a href="https://www.netmanias.com/en/?m=view&amp;id=techdocs&amp;no=6063"><span style="color:#3366ff">Part 3. Deterministic Properties</span></a></span></span></div>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			</td>
+		</tr>
+	</tbody>
+</table>
+
+<p style="margin-left:40px">&nbsp;</p>
+
+<p style="margin-left:40px">Many applications like Skype, online games, etc. are all&nbsp;Peer-to-Peer (P2P) applications based on UDP. When running these applications, two devices communicate with each other without a server in between. We learned in our previous post that Korean telecom operators have already employed&nbsp;<span style="font-size:14px"><span style="font-family:arial"><strong><a href="https://www.netmanias.com/en/?m=search&amp;kw=nat"><span style="color:rgb(255, 102, 0)">NAT</span></a></strong></span></span>s&nbsp;in all&nbsp;of their access networks (Wi-Fi, 3G and LTE) except for wired networks. &nbsp;</p>
+
+<p style="margin-left:40px">&nbsp;</p>
+
+<p style="margin-left:40px">These P2P applications and&nbsp;NATs&nbsp;do not really get along with each other (usually P2P apps are victimized by NATs).</p>
+
+<p style="margin-left:40px">It is impossible for two user devices with different private IP addresses in different locations (one behind a NAT, the other on the other side of the NAT) to directly communicate with each other through a NAT. This is because an external host cannot connect (i.e. send a packet) to an internal host behind a NAT first. For example, if&nbsp;device 1 (e.g. host A in the figure below)&nbsp;sends a packet to device 2 (e.g. host B), a NAT ahead of device 2 will drop the packet. If device 2 sends one to device 1, this time the NAT ahead of device 1 will drop it. &nbsp;</p>
+
+<p style="margin-left:40px">&nbsp;</p>
+
+<p style="margin-left:40px">To address this issue,&nbsp;NAT Traversal&nbsp;techniques, such as&nbsp;Session Traversal Utilities for NAT (STUN), RFC 5389/RFC 5780,&nbsp;Traversal Using Relays around NAT&nbsp;(TURN), RFC 5766,&nbsp;Interactive Connectivity Establishment (ICE), RFC 5245, etc., have been standardized. These&nbsp;techniques&nbsp;can be summarized as follows:&nbsp;</p>
+
+<ul style="margin-left:40px">
+	<li><span style="font-size:14px"><span style="font-family:arial"><strong>STUN</strong></span></span>: This&nbsp;technique&nbsp;describes&nbsp;how a host (a STUN client) communicates with a STUN server (a server with public IP addresses) to find out i) if the host is within a private network (i.e. has a NAT), ii) if any, how the NAT behaves,&nbsp;and&nbsp;iii) what public IP addresses and source port values are translated by the NAT, etc. &nbsp;</li>
+	<li><span style="font-size:14px"><span style="font-family:arial"><strong>TURN</strong></span></span>: This describes how a host behind a NAT communicates with another host located on the opposing side of the NAT&nbsp;through&nbsp;a "Turn Server",&nbsp;a relay server with public IP addresses. One drawback of this method is that the communication has to be through the relay server. So, this will inevitably slow response.&nbsp;</li>
+	<li><span style="font-size:14px"><span style="font-family:arial"><strong>ICE</strong></span></span>: It describes how to find an optimal way of establishing sessions between hosts using STUN or TURN.</li>
+</ul>
+
+<p style="margin-left:40px">As such,&nbsp;decisions on which NAT Traversal&nbsp;technique&nbsp;to use are made based on the operational characteristics of a NAT.&nbsp;So, in 2007,&nbsp;"NAT&nbsp;Behavioral&nbsp;Requirements for Effective Nat Traversal" were standardized in&nbsp;RFC 4787.&nbsp;</p>
+
+<p style="margin-left:40px">&nbsp;</p>
+
+<p style="margin-left:40px">The three subsequent posts will present the ideal NAT behaviors for P2P applications described in the RFC 4787.</p>
+
+<p style="margin-left:40px">Before we continue, please see the following definitions of some important terms first.&nbsp;</p>
+
+<p style="margin-left:40px">&nbsp;</p>
+
+<p style="margin-left:40px; text-align:left"><img alt="" src="NAT Behavioral Requirements 1.gif" style="height:332px; opacity:0.9; text-align:right; width:725px"></p>
+
+<p style="margin-left:40px">&nbsp;</p>
+
+<div>
+<table border="0" cellpadding="0" cellspacing="0" style="margin-left:40px; width:700px">
+	<tbody>
+		<tr>
+			<td style="background-color:rgb(242, 242, 242)">
+			<table border="0" cellpadding="0" cellspacing="0" style="font-family:verdana,tahoma,calibri,arial,calibri,helvetica,applegothic,sans-serif; margin:8px; width:684px">
+				<tbody>
+					<tr>
+						<td style="background-color:rgb(242, 242, 242)">
+						<ul>
+							<li><span style="font-size:13px"><span style="font-family:arial"><strong>Internal Endpoint</strong>: a user device that has a private IP address and is located behind a NAT, e.g. Host A in the figure above&nbsp;(e.g. a user device that is located in the same operator network as a NAT)</span></span></li>
+							<li><span style="font-size:13px"><span style="font-family:arial"><strong>External Endpoint</strong>: a user device that has a public IP address and is located on the opposing side of the NAT, e.g. Host B in the figure above (e.g. a user device that is not located in the same operator network as a NAT)&nbsp;</span></span></li>
+							<li><span style="font-size:13px"><span style="font-family:arial"><strong>Outbound Packet (Traffic)</strong>: a packet (traffic) sent from an Internal Endpoint to an External Endpoint via a NAT</span></span></li>
+							<li><span style="font-size:13px"><span style="font-family:arial"><strong>Inbound Packet (Traffic)</strong>: a packet (traffic) sent from an External Endpoint to an Internal Endpoint via a NAT</span></span></li>
+							<li><span style="font-size:13px"><span style="font-family:arial"><strong>Internal Address and Internal Port</strong>:&nbsp;the source IP (10.1.1.1) and source Port (5000) of a packet sent by an Internal Endpoint (Host A)&nbsp;</span></span></li>
+							<li><span style="font-size:13px"><span style="font-family:arial"><strong>External Address and External Port</strong>: the source IP (5.5.5.1) and source Port (1000) of a packet translated by a NAT and then sent to an External Endpoint (Host B)</span></span></li>
+							<li><span style="font-size:13px"><span style="font-family:arial">In general, the destination information (i.e. destination IP (1.1.1.1) and destination Port (80)) of a packet sent by an Internal Endpoint (Host A) is forwarded to an External Endpoint (Host B) transparently without being translated by a NAT.</span></span></li>
+							<li><span style="font-size:13px"><span style="font-family:arial">When an External Endpoint (Host B) receives the packet, it returns a packet comprising of following information to the Internal Endpoint as a response:</span></span>
+							<ul>
+								<li><span style="font-size:13px"><span style="font-family:arial">Destination IP = the source IP address of the received packet, i.e. the External Address (5.5.5.1)&nbsp;</span></span></li>
+								<li><span style="font-size:13px"><span style="font-family:arial">Destination Port = the source Port of the received packet, i.e. the External Port (1000)&nbsp;&nbsp;</span></span></li>
+								<li><span style="font-size:13px"><span style="font-family:arial">Source IP = the destination IP address of the received packet (1.1.1.1), i.e. the IP address of the External Endpoint (Host B)</span></span></li>
+								<li><span style="font-size:13px"><span style="font-family:arial">Source Port = the destination port of the received packet (80)</span></span></li>
+							</ul>
+							</li>
+						</ul>
+						</td>
+						<td style="background-color:rgb(242, 242, 242); width:10px">&nbsp;</td>
+					</tr>
+				</tbody>
+			</table>
+			</td>
+		</tr>
+	</tbody>
+</table>
+</div>
+
+<p style="margin-left:40px">&nbsp;</p>
+
+<p style="margin-left:40px">&nbsp;</p>
+
+<p style="margin-left:40px"><span style="color:#000000"><span style="font-size:22px"><span style="font-family:arial">1. Network Address and Port Translation Behavior</span></span></span></p>
+
+<p style="margin-left:40px">&nbsp;</p>
+
+<p style="margin-left:40px"><span style="color:#000000"><span style="font-family:arial"><span style="font-size:16px"><strong>1.1 Address and Port Mapping</strong></span></span></span></p>
+
+<p style="margin-left:40px">&nbsp;</p>
+
+<p style="margin-left:40px"><span style="color:#000000"><strong><span style="font-size:14px"><span style="font-family:arial">Endpoint-Independent Mapping</span></span></strong></span></p>
+
+<p style="margin-left:40px">In "Endpoint-Independent Mapping", the Endpoint&nbsp;refers to an External Endpoint.&nbsp;</p>
+
+<p style="margin-left:40px">"Endpoint-Independent Mapping" assigns the same External Port Mapping value (translated port = 1000) to packets sent by an Internal Endpoint (Host A), as long as the packets have i) the same <span style="font-family:arial"><strong>source IP address</strong></span> (10.1.1.1) and ii) the same<span style="font-family:arial"> <strong>source port</strong></span> (5000), regardless of their destination IP address (1.1.1.1 or 2.2.2.2) or destination port (80 or 8080).&nbsp;</p>
+
+<p style="margin-left:40px">&nbsp;</p>
+
+<p style="margin-left:40px; text-align:left"><img alt="" src="NAT Behavioral Requirements 2.gif" style="height:236px; width:600px"></p>
+
+<p style="margin-left:40px">&nbsp;</p>
+
+<p style="margin-left:40px"><span style="color:#000000"><span style="font-size:14px"><span style="font-family:arial"><strong>Address-Dependent Mapping</strong></span></span></span></p>
+
+<p style="margin-left:40px">In "Address-Dependent Mapping",&nbsp;the Address&nbsp;refers to the&nbsp;destination IP address of a packet sent by an Internal Endpoint.&nbsp;</p>
+
+<p style="margin-left:40px">"Address-Dependent Mapping" assigns the same External Port Mapping value (translated port = 1000) to packets sent by an Internal Endpoint (Host A) if the packets have i) the same <span style="font-family:arial"><strong>source IP address</strong></span> (10.1.1.1), ii) the same <span style="font-family:arial"><strong>source port</strong></span> (5000) AND&nbsp;iii) the same <span style="font-family:arial"><strong>destination IP address</strong></span> (1.1.1.1), regardless of their destination port (80 or 8080).</p>
+
+<p style="margin-left:40px">&nbsp;</p>
+
+<p style="margin-left:40px; text-align:left"><img alt="" src="NAT Behavioral Requirements 3.gif" style="height:236px; width:600px"></p>
+
+<p style="margin-left:40px">&nbsp;</p>
+
+<p style="margin-left:40px">In the figure below, for the two packets with the same source IP address (10.1.1.1) and source port (5000), but with different destination IP addresses (1.1.1.1 and 2.2.2.2), different External Port Mapping values (translated port = 1000 and 1002) are used.&nbsp;</p>
+
+<p style="margin-left:40px">&nbsp;</p>
+
+<p style="margin-left:40px; text-align:left"><img alt="" src="NAT Behavioral Requirements 4.gif" style="height:236px; width:600px"></p>
+
+<p style="margin-left:40px">&nbsp;</p>
+
+<p style="margin-left:40px"><span style="color:#000000"><span style="font-size:14px"><span style="font-family:arial"><strong>Address and Port-Dependent Mapping</strong></span></span></span></p>
+
+<p style="margin-left:40px">In "Address and Port-Dependent Mapping", the Address and Port respectively refer to the&nbsp;destination IP address and destination port of the packet sent by an&nbsp;Internal Endpoint.&nbsp;</p>
+
+<p style="margin-left:40px">"Address and Port-Dependent Mapping" assigns the same External Port Mapping value to packets sent by an Internal Endpoint (Host A), only if the packets have i) the same <span style="font-family:arial"><strong>source IP address</strong></span>, ii) the same <span style="font-family:arial"><strong>source port</strong></span>, iii) the same <span style="font-family:arial"><strong>destination IP address</strong></span>, AND iv) the same <span style="font-family:arial"><strong>destination port</strong></span>.&nbsp;&nbsp;</p>
+
+<p style="margin-left:40px">&nbsp;</p>
+
+<p style="margin-left:40px">In the figure below, different External Port Mapping values (translated Port = 1000 and 1002) are used&nbsp;for the two packets&nbsp;because they have&nbsp;different destination IP addresses (1.1.1.1 and 2.2.2.2).</p>
+
+<p style="margin-left:40px">&nbsp;</p>
+
+<p style="margin-left:40px; text-align:left"><img alt="" src="NAT Behavioral Requirements 5.gif" style="height:236px; width:600px"></p>
+
+<p style="margin-left:40px">&nbsp;</p>
+
+<p style="margin-left:40px">In the figure below,&nbsp;different External Port Mapping values (translated port = 1000 and 1004) are used&nbsp;because the two packets have&nbsp;different destination ports (80 and 8080).&nbsp;</p>
+
+<p style="margin-left:40px">&nbsp;</p>
+
+<p style="margin-left:40px; text-align:left"><img alt="" src="NAT Behavioral Requirements 6.gif" style="height:236px; width:600px"></p>
+
+<p style="margin-left:40px">&nbsp;</p>
+
+<div>
+<table border="0" cellpadding="0" cellspacing="0" style="margin-left:40px; width:700px">
+	<tbody>
+		<tr>
+			<td style="background-color:rgb(242, 242, 242)">
+			<table border="0" cellpadding="0" cellspacing="0" style="font-family:verdana,tahoma,calibri,arial,calibri,helvetica,applegothic,sans-serif; margin:8px; width:684px">
+				<tbody>
+					<tr>
+						<td style="background-color:rgb(242, 242, 242)">
+						<p><span style="font-size:14px"><span style="font-family:arial"><strong>RFC 4787 Recommendation&nbsp;(REQ-1):&nbsp;</strong>A NAT MUST have an "Endpoint-Independent Mapping" behavior</span></span></p>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			</td>
+		</tr>
+	</tbody>
+</table>
+</div>
+
+<p style="margin-left:40px"><br>
+RFC 4787 states that "Failure to meet REQ-1 will force the use of a UDP relay, which is very often impractical".</p>
+
+<p style="margin-left:40px">&nbsp;</p>
+
+<p style="margin-left:40px">&nbsp;&nbsp;</p>
+
+<p style="margin-left:40px"><span style="font-family:arial"><span style="font-size:16px"><strong>1.2 IP Address Pooling</strong></span></span></p>
+
+<p style="margin-left:40px">&nbsp;</p>
+
+<p style="margin-left:40px">Home APs and Wi-Fi hotspot APs use one public IP address to perform NAPT (Network Address Port Translation). However,&nbsp;Large Scale NATs (LSNs, also called Carrier Glade NATs (CGNs)) employed in&nbsp;3G/LTE networks use multiple public IP addresses (a pool of IP addresses on the external side of the NAT).</p>
+
+<p style="margin-left:40px">&nbsp;</p>
+
+<p style="margin-left:40px"><span style="font-size:14px"><span style="font-family:arial"><strong>Arbitrary</strong></span></span></p>
+
+<p style="margin-left:40px">NATs use different&nbsp;External IP addresses even for packets sent by one Internal Endpoint (i.e. those with the same source IP addresses), if their sessions&nbsp;(tuple of {source IP, source port, destination IP, destination port})&nbsp;are different.&nbsp;</p>
+
+<p style="margin-left:40px">&nbsp;</p>
+
+<p style="margin-left:40px">As seen in the figure below, the NAT allocates two different&nbsp;External IP addresses (5.5.5.1 and 5.5.5.2) for two different sessions that the Internal Endpoint&nbsp;10.1.1.1 (Host A) has established to the External Endpoint 1.1.1.1 (Host B).&nbsp;</p>
+
+<ul style="margin-left:40px">
+	<li>Session 1: {10.1.1.1:5000 to 1.1.1.1:80} -&gt; {5.5.5.1:1000 to 1.1.1.1:80}</li>
+	<li>Session 2: {10.1.1.1:5001 to 1.1.1.1:8080} -&gt; {5.5.5.2:1001 to 1.1.1.1:8080}</li>
+</ul>
+
+<p style="margin-left:40px; text-align:left"><img alt="" src="NAT Behavioral Requirements 7.gif" style="height:247px; width:600px"></p>
+
+<p style="margin-left:40px">&nbsp;</p>
+
+<p style="margin-left:40px"><span style="color:#000000"><span style="font-size:14px"><span style="font-family:arial"><strong>Paired</strong></span></span></span></p>
+
+<p style="margin-left:40px">NATs use the same&nbsp;External IP address for packets sent by one Internal Endpoint (i.e. those with the same source IP addresses) even when their sessions&nbsp;(tuple of {source IP, source port, destination IP, destination port})&nbsp;are different.&nbsp;</p>
+
+<p style="margin-left:40px">&nbsp;</p>
+
+<p style="margin-left:40px">As seen in the figure below, the NAT allocates the same&nbsp;External IP addresses (5.5.5.1) for two different sessions that the Internal Endpoint&nbsp;10.1.1.1 (Host A) has established to the External Endpoint 1.1.1.1 (Host B).&nbsp;</p>
+
+<p style="margin-left:40px">&nbsp;</p>
+
+<p style="margin-left:40px; text-align:left"><img alt="" src="NAT Behavioral Requirements 8.gif" style="height:247px; width:600px"></p>
+
+<p style="margin-left:40px">&nbsp;</p>
+
+<div>
+<div>
+<table border="0" cellpadding="0" cellspacing="0" style="margin-left:40px; width:700px">
+	<tbody>
+		<tr>
+			<td style="background-color:rgb(242, 242, 242)">
+			<table border="0" cellpadding="0" cellspacing="0" style="font-family:verdana,tahoma,calibri,arial,calibri,helvetica,applegothic,sans-serif; margin:8px; width:684px">
+				<tbody>
+					<tr>
+						<td style="background-color:rgb(242, 242, 242)">
+						<p><span style="font-size:14px"><span style="font-family:arial"><strong>RFC 4787 Recommendation (REQ-2):&nbsp;</strong>It is RECOMMENDED that a NAT have an "IP address pooling" behavior of "Paired"</span></span></p>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			</td>
+		</tr>
+	</tbody>
+</table>
+</div>
+</div>
+
+<p style="margin-left:40px">&nbsp;</p>
+
+<p style="margin-left:40px">&nbsp;</p>
+
+<p style="margin-left:40px"><span style="font-family:arial"><span style="font-size:16px"><strong>1.3 Port Assignment</strong></span></span></p>
+
+<p style="margin-left:40px">&nbsp;</p>
+
+<p style="margin-left:40px"><span style="color:#000000"><span style="font-size:14px"><span style="font-family:arial"><strong>Port&nbsp;Preservation</strong></span></span></span></p>
+
+<p style="margin-left:40px">NATs preserve the source port (Internal/Local Port)&nbsp;value used by the&nbsp;Internal Endpoint which sent a packet, even after implementing NAT&nbsp;(External Port = Internal Port).&nbsp;</p>
+
+<p style="margin-left:40px">&nbsp;</p>
+
+<p style="margin-left:40px; text-align:left"><img alt="" src="NAT Behavioral Requirements 9.gif" style="height:236px; width:600px"></p>
+
+<p style="margin-left:40px">&nbsp;</p>
+
+<p style="margin-left:40px"><span style="color:#000000"><span style="font-size:14px"><span style="font-family:arial"><strong>No Port Preservation</strong></span></span></span></p>
+
+<p style="margin-left:40px">NATs do not preserve the source port (Internal Port) value used by the Internal Endpoint, and allocate a source port (External Port) value randomly (External Port&nbsp;!=&nbsp;Internal Port).</p>
+
+<p style="margin-left:40px">&nbsp;</p>
+
+<p style="margin-left:40px; text-align:left"><img alt="" src="NAT Behavioral Requirements 10.gif" style="height:236px; width:600px"></p>
+
+<p style="margin-left:40px">&nbsp;</p>
+
+<p style="margin-left:40px"><span style="color:#000000"><span style="font-size:14px"><span style="font-family:arial"><strong>Port Overloading (in Port Preservation)</strong></span></span></span></p>
+
+<p style="margin-left:40px">Let us suppose a NAT supporting port preservation runs out of External IP addresses (public IP addresses). What should the NAT do if an outbound packet with the same source port value arrives?&nbsp;</p>
+
+<p style="margin-left:40px">&nbsp;</p>
+
+<p style="margin-left:40px">Port overloading is a simple but reckless method. NATs simply&nbsp;overwrite&nbsp;an existing binding entry in case of port collisions. That is, they always use port preservation. Then, as seen in the figure below, the binding entry generated for Host B would be overwritten by Host A.</p>
+
+<p style="margin-left:40px">As a result, each packet that Host A and Host B sent to Host C through the NAT would have the same External Address (5.5.5.5) and External Port (5000). This will lead the NAT to forward all the inbound packets from Host C to Host A. Eventually, communication between Host B and Host C will be impossible. Of course,&nbsp;no vendor would actually manufacture products that support this method.&nbsp;</p>
+
+<p style="margin-left:40px">&nbsp;</p>
+
+<p style="margin-left:40px; text-align:left"><img alt="" src="NAT Behavioral Requirements 11.gif" style="height:391px; width:600px"></p>
+
+<p style="margin-left:40px">&nbsp;</p>
+
+<p style="margin-left:40px"><span style="color:#000000"><span style="font-size:14px"><span style="font-family:arial"><strong>No Port Overloading (in Port Preservation)</strong></span></span></span></p>
+
+<p style="margin-left:40px">In the event of port collisions, NATs do not use port preservation, and instead&nbsp;they&nbsp;allocate&nbsp;the External Port&nbsp;a value different from that of the Internal Port.</p>
+
+<p style="margin-left:40px">&nbsp;</p>
+
+<p style="margin-left:40px; text-align:left"><img alt="" src="NAT Behavioral Requirements 12.gif" style="height:391px; width:600px"></p>
+
+<p style="margin-left:40px">&nbsp;</p>
+
+<div>
+<div>
+<table border="0" cellpadding="0" cellspacing="0" style="margin-left:40px; width:700px">
+	<tbody>
+		<tr>
+			<td style="background-color:rgb(242, 242, 242)">
+			<table border="0" cellpadding="0" cellspacing="0" style="font-family:verdana,tahoma,calibri,arial,calibri,helvetica,applegothic,sans-serif; margin:8px; width:684px">
+				<tbody>
+					<tr>
+						<td style="background-color:rgb(242, 242, 242)">
+						<p><span style="font-size:14px"><span style="font-family:arial"><strong>RFC 4787 Recommendation (REQ-3):&nbsp;</strong>A NAT MUST NOT have a "Port assignment" behavior of "Port overloading"</span></span></p>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			</td>
+		</tr>
+	</tbody>
+</table>
+</div>
+</div>
+
+<p style="margin-left:40px">&nbsp;</p>
+
+<p style="margin-left:40px">&nbsp;</p>
+
+<p style="margin-left:40px"><span style="font-family:arial"><span style="font-size:16px"><strong>1.4 Port Assignment Rule</strong></span></span></p>
+
+<p style="margin-left:40px">&nbsp;</p>
+
+<p style="margin-left:40px">The RFC also includes "Export Port Assignment Rules" for NATs supporting "No Port Preservation".&nbsp;The&nbsp;Internet Assigned Numbers Authority (IANA) defines port ranges as follows:</p>
+
+<ul style="margin-left:40px">
+	<li>Well-Known: 0 ~ 1023 (as standardized by IANA. e.g. HTTP = 80)</li>
+	<li>Registered: 1024 ~ 49151 (not standardized by IANA, but widely used)</li>
+	<li>Dynamic/Private: 49192 ~ 65535</li>
+</ul>
+
+<p style="margin-left:40px">Depending on NAT implementation, the following External Port assignment rules can be applied:</p>
+
+<ul style="margin-left:40px">
+	<li>If a NAT uses values from dynamic/private port range (49192 ~ 65535) for External Ports, the maximum number of NAT sessions supportable by one public IP address is limited to 16,000.</li>
+	<li>If a NAT uses values from the ranges excluding well-known range (1024 ~ 65535) for External Ports, the NAT uses values from dynamic/private port range first, and then ones from registered range if needed.</li>
+</ul>
+
+<p style="margin-left:40px">&nbsp;</p>
+
+<p style="margin-left:40px"><span style="font-family:arial"><span style="font-size:16px"><strong>1.5 Mapping Timer (Binding Refresh Timer)</strong></span></span></p>
+
+<p style="margin-left:40px">&nbsp;</p>
+
+<p style="margin-left:40px">A binding entry generated&nbsp;in a NAT table&nbsp;by outbound traffic remains valid if there is traffic that is mapped&nbsp;using&nbsp;the same binding entry.&nbsp;However, if there is no&nbsp;traffic, the entry is deleted from the table when a mapping timer (also called binding refresh timer, or binding lifetime) expires.&nbsp;</p>
+
+<p style="margin-left:40px">&nbsp;</p>
+
+<p style="margin-left:40px">If a NAT has a short mapping timer, a device (NAT-friendly application) will have to send keep-alive packets quite often to keep NAT sessions active. This will not be problematic for subscribers using wired or Wi-Fi networks. But, for 3G/LTE network subscribers who pay for what they use, this can be problematic. &nbsp;</p>
+
+<p style="margin-left:40px">&nbsp;</p>
+
+<p style="margin-left:40px">In the figure below, the NAT mapping timer is set two minutes. At t=0, Host A sends its first packet and generates a binding entry for the packet. Then one minute later, when Host A sends another packet, the binding entry is refreshed (reset) to two minutes again. &nbsp;</p>
+
+<p style="margin-left:40px">&nbsp;</p>
+
+<p style="margin-left:40px; text-align:left"><img alt="" src="NAT Behavioral Requirements 13.gif" style="height:347px; width:600px"></p>
+
+<p style="margin-left:40px">&nbsp;</p>
+
+<p style="margin-left:40px">As opposed to that, the NAT binding entry&nbsp;in the figure below&nbsp;is deleted after two minutes without traffic.&nbsp;</p>
+
+<p style="margin-left:40px">&nbsp;</p>
+
+<p style="margin-left:40px; text-align:left"><img alt="" src="NAT Behavioral Requirements 14.gif" style="height:325px; width:600px"></p>
+
+<div>&nbsp;</div>
+
+<div>
+<table border="0" cellpadding="0" cellspacing="0" style="margin-left:40px; width:700px">
+	<tbody>
+		<tr>
+			<td style="background-color:rgb(242, 242, 242)">
+			<table border="0" cellpadding="0" cellspacing="0" style="font-family:verdana,tahoma,calibri,arial,calibri,helvetica,applegothic,sans-serif; margin:8px; width:684px">
+				<tbody>
+					<tr>
+						<td style="background-color:rgb(242, 242, 242)">
+						<p><span style="font-size:14px"><span style="font-family:arial"><strong>RFC 4787 Recommendation (REQ-5):&nbsp;</strong>A NAT UDP mapping timer MUST NOT expire in less than two minutes, unless REQ-5a applies</span></span></p>
+
+						<p><span style="font-size:14px"><span style="font-family:arial">a) For specific destination ports in the well-known port range (ports 0-1023), a NAT MAY have shorter UDP mapping timers that&nbsp;are specific to the IANA-registered application running over that specific destination port</span></span></p>
+
+						<p><span style="font-size:14px"><span style="font-family:arial">b) The value of the NAT UDP mapping timer MAY be configurable</span></span></p>
+
+						<p><span style="font-size:14px"><span style="font-family:arial">c) A default value of five minutes or more for the NAT UDP mapping timer is RECOMMENDED</span></span></p>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			</td>
+		</tr>
+	</tbody>
+</table>
+</div>
+
+<p style="margin-left:40px">&nbsp;</p>
+
+<p style="margin-left:40px"><br>
+<span style="color:#000000"><span style="font-family:arial"><span style="font-size:16px"><strong>1.6 Mapping Refresh Behavior</strong></span></span></span></p>
+
+<p style="margin-left:40px">&nbsp;</p>
+
+<p style="margin-left:40px"><span style="color:#000000"><span style="font-size:14px"><span style="font-family:arial"><strong>NAT Outbound refresh behavior of "True"</strong></span></span></span></p>
+
+<p style="margin-left:40px">When a mapping timer is refreshed by outbound traffic (a packet sent by an Internal Endpoint to an External Endpoint)</p>
+
+<p style="margin-left:40px">&nbsp;</p>
+
+<p style="margin-left:40px"><span style="color:#000000"><span style="font-size:14px"><span style="font-family:arial"><strong>NAT Inbound refresh behavior of "True"</strong></span></span></span></p>
+
+<p style="margin-left:40px">When a mapping timer is refreshed by inbound traffic (a packet sent by an External Endpoint to an Internal Endpoint)</p>
+
+<p style="margin-left:40px">&nbsp;</p>
+
+<div>
+<table border="0" cellpadding="0" cellspacing="0" style="margin-left:40px; width:700px">
+	<tbody>
+		<tr>
+			<td style="background-color:rgb(242, 242, 242)">
+			<table border="0" cellpadding="0" cellspacing="0" style="font-family:verdana,tahoma,calibri,arial,calibri,helvetica,applegothic,sans-serif; margin:8px; width:684px">
+				<tbody>
+					<tr>
+						<td style="background-color:rgb(242, 242, 242)">
+						<p><span style="font-size:14px"><span style="font-family:arial"><strong>RFC 4787 Recommendation (REQ-6): &nbsp;</strong>The NAT mapping Refresh Direction MUST have a "NAT Outbound refresh behavior" of "True"</span></span></p>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			</td>
+		</tr>
+	</tbody>
+</table>
+</div>
+
+<p>&nbsp;</p>
+
+</div>
+
+</body>
+
+</html>
