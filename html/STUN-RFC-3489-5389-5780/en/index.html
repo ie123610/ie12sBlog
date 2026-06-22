@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <title>STUN (RFC 3489) vs. STUN (RFC 5389/5780)</title>
+</head>
+
+<body>
+
+<div style="width: 60%; margin-left: auto; margin-right: auto;">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+
+<h1 style="margin-left:40px" >STUN (RFC 3489) vs. STUN (RFC 5389/5780)</h1>
+
+<p style="margin-left:40px">October 21, 2013 | By Netmanias (tech@netmanias.com)</p>
+
+<p style="margin-left:40px">&nbsp;</p>
+
+<p style="margin-left:40px">What are the differences between <span style="font-size:14px"><span style="font-family:arial"><strong><a href="https://www.netmanias.com/en/?m=search&amp;kw=nat"><span style="color:rgb(255, 102, 0)">NAT</span></a></strong></span></span> types defined in RFC 3489 and RFC 5780?<br>
+To understand the differences to be explained below, you must be familiar with the Mapping Behavior and Filtering Behavior of a NAT that we covered last time.</p>
+
+<p style="margin-left:40px">&nbsp;</p>
+
+<p style="margin-left:40px"><span style="font-size:18px"><span style="font-family:verdana"><span style="color:#6B9900"><strong>What is STUN?</strong></span></span></span><br>
+&nbsp;</p>
+
+<p style="margin-left:40px">STUN is a protocol that allows two devices (P2P devices) to discover the presence and types of a NAT between them, and to find out what External IP address and Port are to be replaced by the NAT, for P2P communication between the two devices.<br>
+&nbsp;<br>
+STUN was first defined in RFC 3489 (standards) back in 2003, and then revised two times once in RFC 5389 (standards) in 2008 and again in RFC 5780 (experimental) in 2010. &nbsp;<br>
+According to RFC 5389, "classic STUN's &nbsp;algorithm for classification of NAT types (defined in RFC 3489) was found to be faulty, as many NATs (available in the market) did not fit cleanly into the (four) types defined there."<br>
+To resolve this problem, classic STUN was modified in RFC 5389 (i.e. to add attributes to Binding messages). And in RFC 5780, NAT types were re-defined and the algorithm (method) for classification of NAT types was modified.&nbsp;<br>
+&nbsp;<br>
+Both RFC 3489 and 5389 use the same term "STUN", but in two different meanings as follows:</p>
+
+<ul style="margin-left:40px">
+	<li>RFC 3489: STUN - Simple Traversal of User Datagram Protocol (UDP) Through Network Address Translators (NATs)</li>
+	<li>RFC 5389: Session Traversal Utilities for NAT (STUN)&nbsp;</li>
+</ul>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p style="margin-left:40px"><span style="font-size:18px"><span style="font-family:verdana"><span style="color:#6B9900"><strong>NAT Types Defined in RFC 3489 and 5780</strong></span></span></span></p>
+
+<p style="margin-left:40px">&nbsp;</p>
+
+<p style="margin-left:40px"><span style="font-family:verdana"><span style="font-size:16px"><strong>1. Full Cone</strong></span></span></p>
+
+<div>&nbsp;</div>
+
+<div>
+<div>
+<table border="0" cellpadding="0" cellspacing="0" style="margin-left:40px; width:700px">
+	<tbody>
+		<tr>
+			<td style="background-color:rgb(224, 210, 190)">
+			<table border="0" cellpadding="0" cellspacing="0" style="font-family:verdana,tahoma,calibri,arial,calibri,helvetica,applegothic,sans-serif; margin:8px; width:684px">
+				<tbody>
+					<tr>
+						<td>
+						<p><strong>[Mapping Behavior]</strong> A full cone NAT is one where all requests from the same internal IP address and port are mapped to the same external IP address and port. &nbsp;[Filtering Behavior] Furthermore, any external host can send a packet to the internal host, by sending a packet to the mapped external address. (RFC 3489)</p>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			</td>
+		</tr>
+	</tbody>
+</table>
+</div>
+</div>
+
+<p style="margin-left:40px">&nbsp;</p>
+
+<p style="margin-left:40px">A full cone NAT in RFC 3489 corresponds to a NAT that uses Endpoint-Independent Mapping ("EIM") and Endpoint-Independent Filtering ("EIF") in RFC 5780.&nbsp;</p>
+
+<ul style="margin-left:40px">
+	<li>Mapping Behavior: The NAT translates any outbound packets with the same (1) source IP and (2) source port into the same Port Mapping value (e.g. translated Port = 1000 in the figure below), regardless of the destination IP or destination port of the packet.</li>
+	<li>Filtering Behavior: The NAT checks only the (1) destination IP and (2) destination port of an inbound packet to decide whether to pass the packet or not. Thus, it doesn't care about the source IP or source port values of the External Endpoint. &nbsp;</li>
+</ul>
+
+<p style="margin-left:40px"><img alt="" src="Fig1.STUN.gif" style="height:595px; width:727px"></p>
+
+<p style="margin-left:40px">&nbsp;</p>
+
+<p style="margin-left:40px"><span style="font-family:verdana"><span style="font-size:16px"><strong>2. Restricted Cone</strong></span></span></p>
+
+<div>&nbsp;</div>
+
+<div>
+<div>
+<table border="0" cellpadding="0" cellspacing="0" style="margin-left:40px; width:700px">
+	<tbody>
+		<tr>
+			<td style="background-color:rgb(224, 210, 190)">
+			<table border="0" cellpadding="0" cellspacing="0" style="font-family:verdana,tahoma,calibri,arial,calibri,helvetica,applegothic,sans-serif; margin:8px; width:684px">
+				<tbody>
+					<tr>
+						<td>
+						<p><strong>[Mapping Behavior]</strong> A restricted cone NAT is one where all requests from the same internal IP address and port are mapped to the same external IP address and port. &nbsp;[Filtering Behavior] Unlike a full cone NAT, an external host (with IP address X) can send a packet to the internal host only if the internal host had previously sent a packet to IP address X. (RFC 3489)</p>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			</td>
+		</tr>
+	</tbody>
+</table>
+</div>
+</div>
+
+<p style="margin-left:40px">&nbsp;</p>
+
+<p style="margin-left:40px">A restricted cone NAT corresponds to a NAT that uses EIM and Address-Dependent Filtering ("ADF") in RFC 5780.</p>
+
+<ul style="margin-left:40px">
+	<li>Mapping Behavior: Same as in a full cone type&nbsp;</li>
+	<li>Filtering Behavior: This NAT checks only the (1) destination IP, (2) destination port and (3) source IP of an inbound packet to decide whether to pass the packet or not. It doesn't care about the source port value of the External Endpoint.&nbsp;</li>
+</ul>
+
+<p style="margin-left:40px"><img alt="" src="Fig2.STUN.gif" style="height:594px; width:727px"></p>
+
+<p style="margin-left:40px">&nbsp;</p>
+
+<p style="margin-left:40px"><span style="font-family:verdana"><span style="font-size:16px"><strong>3. Port Restricted Cone</strong></span></span></p>
+
+<div>&nbsp;</div>
+
+<div>
+<div>
+<table border="0" cellpadding="0" cellspacing="0" style="margin-left:40px; width:700px">
+	<tbody>
+		<tr>
+			<td style="background-color:rgb(224, 210, 190)">
+			<table border="0" cellpadding="0" cellspacing="0" style="font-family:verdana,tahoma,calibri,arial,calibri,helvetica,applegothic,sans-serif; margin:8px; width:684px">
+				<tbody>
+					<tr>
+						<td>
+						<p><strong>[Mapping Behavior] </strong>A port restricted cone NAT is like a restricted cone NAT, [Filtering Behavior] but the restriction includes port numbers. Specifically, an external host can send a packet, with source IP address X and source port P, to the internal host only if the internal host had previously sent a packet to IP address X and port P. (RFC 3489)</p>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			</td>
+		</tr>
+	</tbody>
+</table>
+</div>
+</div>
+
+<p style="margin-left:40px">&nbsp;</p>
+
+<p style="margin-left:40px">A port restricted cone NAT corresponds to a NAT that uses EIM and Address and Port-Dependent Filtering ("APDF") in RFC 5780.</p>
+
+<ul style="margin-left:40px">
+	<li>Mapping Behavior: Same as in a full cone type&nbsp;</li>
+	<li>Filtering Behavior: This NAT checks the (1) destination IP, (2) destination port, (3) source IP AND (4) source port of an inbound packet to decide whether to pass the packet or not.&nbsp;</li>
+</ul>
+
+<p style="margin-left:40px"><img alt="" src="Fig3.STUN.gif" style="height:596px; width:726px"></p>
+
+<p style="margin-left:40px">&nbsp;</p>
+
+<p style="margin-left:40px"><span style="font-family:verdana"><span style="font-size:16px"><strong>4. Symmetric</strong></span></span></p>
+
+<div>&nbsp;</div>
+
+<div>
+<div>
+<table border="0" cellpadding="0" cellspacing="0" style="margin-left:40px; width:700px">
+	<tbody>
+		<tr>
+			<td style="background-color:rgb(224, 210, 190)">
+			<table border="0" cellpadding="0" cellspacing="0" style="font-family:verdana,tahoma,calibri,arial,calibri,helvetica,applegothic,sans-serif; margin:8px; width:684px">
+				<tbody>
+					<tr>
+						<td>
+						<p><strong>[Mapping Behavior] </strong>A symmetric NAT is one where all requests from the same internal IP address and port, to a specific destination IP address and port, are mapped to the same external IP address and port. &nbsp;If the same host sends a packet with the same source address and port, but to a different destination, a different mapping is used. &nbsp;[Filtering Behavior] Furthermore, only the external host that receives a packet can send a UDP packet back to the internal host. (RFC 3489)</p>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			</td>
+		</tr>
+	</tbody>
+</table>
+</div>
+</div>
+
+<p style="margin-left:40px">&nbsp;</p>
+
+<p style="margin-left:40px">A symmetric NAT corresponds to a NAT that uses Address and Port-Dependent Mapping ("APDM") and APDF in RFC 5780.</p>
+
+<ul style="margin-left:40px">
+	<li>Mapping Behavior: This NAT uses the same Port Mapping value for only the packets that have the same (1) source IP, (2) source port, (3) destination IP AND (4) destination port.&nbsp;</li>
+	<li>Filtering Behavior: Same as in a port restricted cone type</li>
+</ul>
+
+<p style="margin-left:40px"><img alt="" src="Fig4.STUN.gif" style="height:596px; width:726px"></p>
+
+<p style="text-align:right">&nbsp;</p>
+
+<p style="text-align:right">&nbsp;</p>
+
+<p style="margin-left:40px"><span style="font-size:18px"><span style="font-family:verdana"><span style="color:#6b9900"><strong>Summary&nbsp;</strong></span></span></span></p>
+
+<p style="margin-left:40px">&nbsp;</p>
+
+<p style="margin-left:40px">The figure below shows the nine NAT types defined in RFC 5780 and the four NAT types defined in RFC 3489, and how the NAT types in RFC 3489 match their counterparts in RFC 5780.</p>
+
+<p style="margin-left:40px">&nbsp;</p>
+
+<p style="margin-left:40px"><img alt="" src="Fig5.STUN.gif" style="height:347px; width:730px"></p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p></div>
+
+</div>
+
+</body>
+
+</html>
