@@ -4,37 +4,65 @@
 
 ## LUCKY 系列
 
-* [LUCKY STUN穿透在Windows上使用UPnP工具为BT客户端自动添加内外端口号不同的映射规则](articles/lucky-STUN/stun-bt.md)
+### STUN 穿透
+
+#### BT 下载
+
 * [「LUCKY STUN穿透」在Docker中使用MiniUPnP为BT客户端自动添加内外端口不同的映射规则](articles/lucky-STUN/stun-docker-upnp.md)
 * [「LUCKY STUN穿透」使用webhook自动修改 qbittorrent 的监听端口](articles/lucky-STUN/stun-qb-port-automation.md)
-* [「LUCKY」在Windows下使用STUN穿透实现Minecraft联机并设置SRV记录](articles/lucky-STUN/stun-mc-srv.md)
-* [「LUCKY STUN穿透」使用Cloudflare的页面规则固定和隐藏网页端口](articles/lucky-STUN/stun-web-serve-CF.md)
-* [「LUCKY STUN穿透」在Windows下使用VNT组网为非HTTP服务固定STUN穿透端口](articles/lucky-STUN/stun-VNT-networkin.md)
 * [「LUCKY STUN穿透」使用脚本自动修改比特彗星的监听端口](articles/lucky-STUN/stun-bc-port-automation.md)
 * [「LUCKY STUN穿透」使用 cURL 自动修改 Transmission 的监听端口](articles/lucky-STUN/stun-tr-modify-port.md)
-* [「LUCKY STUN穿透」使用UptimeRobot使UPnP映射的TCP规则保持活跃](articles/lucky-STUN/uptime-upnp-keep-alive.md)
-* [「LUCKY STUN穿透」IPv4和IPv6分离重定向](articles/lucky-STUN/stun-v4-v6-redirect.md)
+* [LUCKY STUN穿透在Windows上使用UPnP工具为BT客户端自动添加内外端口号不同的映射规则](articles/lucky-STUN/stun-bt.md)
+
+#### 网页服务
+
+* [「LUCKY STUN穿透」使用Cloudflare的页面规则固定和隐藏网页端口](articles/lucky-STUN/stun-web-serve-CF.md)
 * [「LUCKY STUN穿透」使用邮件通知端口变化情况](articles/lucky-STUN/email-notification-port.md)
 * [「LUCKY STUN穿透」使用Homer导航页指示stun穿透后的端口](articles/lucky-STUN/stun-home-page.md)
 * [「LUCKY STUN穿透」解决WebDAV重定向问题](articles/lucky-STUN/stun-webdav-redirect.md)
-* [「LUCKY STUN穿透」 使用邮件服务发送电子邮件](articles/lucky-STUN/web-email-service.md)
-* [「补充篇」在Cloudflare上设置并更新SRV记录](articles/lucky-STUN/cf-srv-record-settings.md)
+* [「LUCKY STUN穿透」IPv4和IPv6分离重定向](articles/lucky-STUN/stun-v4-v6-redirect.md)
 * [「扩展篇」使用Cloudflare的重定向规则传递资源路径和查询字符串](articles/lucky-STUN/stun-cf-redirection.md)
-* [「前置」在Dynv6和Cloudflare上更新TXT记录](articles/lucky-STUN/update-TXT-record-on-cf-and-dynv6.md)
-* [在Windows下使用lucky更新动态域名](articles/lucky-STUN/lucky-ddns.md)
-* [Lucky v2.15 版本后的DDNS配置方法](articles/lucky-STUN/lucky-ddns-2.15.md)
-* [在Windows下使用lucky配置反向代理以实现较为安全的WEB访问](articles/lucky-STUN/lucky-web.md)
-* [使用VxKex使高版本LCUKY可在Win7上运行](articles/lucky-STUN/lucky-vxkex-compatible.md)
-* [在Windows下使用lucky实现TLS/SSL证书自动化](articles/lucky-STUN/lucky-tls-automation.md)
 * [使用SVCB/HTTPS记录隐藏和固定Web服务端口](articles/lucky-STUN/svcb-records-hidden-ports.md)
 
+#### 其他
+
+* [「LUCKY STUN穿透」在Windows下使用VNT组网为非HTTP服务固定STUN穿透端口](articles/lucky-STUN/stun-VNT-networkin.md)
+* [「LUCKY」在Windows下使用STUN穿透实现Minecraft联机并设置SRV记录](articles/lucky-STUN/stun-mc-srv.md)
+* [「LUCKY STUN穿透」使用UptimeRobot使UPnP映射的TCP规则保持活跃](articles/lucky-STUN/uptime-upnp-keep-alive.md)
+* [「LUCKY STUN穿透」 使用邮件服务发送电子邮件](articles/lucky-STUN/web-email-service.md)
+
+### Web 服务
+
+* [在Windows下使用lucky配置反向代理以实现较为安全的WEB访问](articles/lucky-STUN/lucky-web.md)
+* [在Windows下使用lucky实现TLS/SSL证书自动化](articles/lucky-STUN/lucky-tls-automation.md)
+
+### DNS 记录
+
+* [在Windows下使用lucky更新动态域名](articles/lucky-STUN/lucky-ddns.md)
+* [Lucky v2.15 版本后的DDNS配置方法](articles/lucky-STUN/lucky-ddns-2.15.md)
+* [「补充篇」在Cloudflare上设置并更新SRV记录](articles/lucky-STUN/cf-srv-record-settings.md)
+* [「前置」在Dynv6和Cloudflare上更新TXT记录](articles/lucky-STUN/update-TXT-record-on-cf-and-dynv6.md)
+
+
+### 其他
+
+* [使用VxKex使高版本LCUKY可在Win7上运行](articles/lucky-STUN/lucky-vxkex-compatible.md)
 
 ---
 
 ## 比特彗星-常见问题解决
-* [有关比特彗星若干历史遗留问题的整理](articles/bitcomet-FAQ/BC-historical-issues.md)
-* [有关比特彗星的奇谈怪论](articles/bitcomet-FAQ/BC-rumor.md)
-* [断网问题](articles/bitcomet-FAQ/BC-poor-internet.md)
+
+
+### 反吸血
+
+* [屏蔽吸血客户端和设置自动反吸血](articles/bitcomet-FAQ/BC-anti-leech.md)
+* [反吸血 设置IP过滤和客户端过滤](articles/bitcomet-FAQ/BC-anti-leech-2.md)
+* [「反吸血」在Windows下使用Fort Firewall全自动批量屏蔽IP](articles/bitcomet-FAQ/fort-firewall-anti-leech.md)
+* [「反吸血」使用命令操作Windows防火墙以实现全自动/半自动的批量IP屏蔽](articles/bitcomet-FAQ/win-firewall-anti-leech.md)
+
+
+### 软件操作
+
 * [元数据获取问题](articles/bitcomet-FAQ/BC-get-metadata-error.md)
 * [磁力链接格式问题](articles/bitcomet-FAQ/BC-magnet-link-form.md)
 * [磁力链接长度问题](articles/bitcomet-FAQ/BC-magnet-link-length.md)
@@ -43,20 +71,26 @@
 * [专家模式及其作用](articles/bitcomet-FAQ/BC-expert-mode.md)
 * [磁盘提速服务问题](articles/bitcomet-FAQ/BC-disk-boost-service.md)
 * [种子市场使用教程](articles/bitcomet-FAQ/BC-torrent-market.md)
+* [意外退出程序后下载列表清空的解决方法](articles/bitcomet-FAQ/BC-config-recovery.md)
 * [内存占用过高问题](articles/bitcomet-FAQ/BC-OOM.md)
 * [截图和评论显示问题](articles/bitcomet-FAQ/BC-screenshots-and-comments.md)
 * [设置视频预览播放器](articles/bitcomet-FAQ/BC-player-path.md)
-* [有关绿灯的常见误区](articles/bitcomet-FAQ/BC-port-forwarding-FAQ.md)
+
+### 下载问题
+
+* [断网问题](articles/bitcomet-FAQ/BC-poor-internet.md)
 * [资源补档卡进度99%问题](articles/bitcomet-FAQ/BC-reseed-99.md)
 * [下载进度卡在 99.9% 问题](articles/bitcomet-FAQ/BC-download-99.md)
 * [下载缓慢和无法下载问题[重置]](articles/bitcomet-FAQ/BC-download-speed-issues-2.md)
-* [「补档」 像素帝的比特彗星教程](articles/bitcomet-FAQ/reupload-xiang-su-di-bc-tutorial.md)
-* [屏蔽吸血客户端和设置自动反吸血](articles/bitcomet-FAQ/BC-anti-leech.md)
-* [反吸血 设置IP过滤和客户端过滤](articles/bitcomet-FAQ/BC-anti-leech-2.md)
-* [意外退出程序后下载列表清空的解决方法](articles/bitcomet-FAQ/BC-config-recovery.md)
 * [测试BT下载速度的方法和测速种子的选择](articles/bitcomet-FAQ/BC-download-speed-test.md)
-* [「反吸血」在Windows下使用Fort Firewall全自动批量屏蔽IP](articles/bitcomet-FAQ/fort-firewall-anti-leech.md)
-* [「反吸血」使用命令操作Windows防火墙以实现全自动/半自动的批量IP屏蔽](articles/bitcomet-FAQ/win-firewall-anti-leech.md)
+* [有关绿灯的常见误区](articles/bitcomet-FAQ/BC-port-forwarding-FAQ.md)
+
+### 其他
+
+* [有关比特彗星若干历史遗留问题的整理](articles/bitcomet-FAQ/BC-historical-issues.md)
+* [有关比特彗星的奇谈怪论](articles/bitcomet-FAQ/BC-rumor.md)
+* [「补档」 像素帝的比特彗星教程](articles/bitcomet-FAQ/reupload-xiang-su-di-bc-tutorial.md)
+
 
 ---
 
