@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <title>NAT Behavioral Requirements, as Defined by the IETF (RFC 4787) - Part 2. Filtering Behavior</title>
+</head>
+
+<body>
+
+<div style="width: 60%; margin-left: auto; margin-right: auto;">
+
+<h1 style="margin-left:40px" >NAT Behavioral Requirements, as Defined by the IETF (RFC 4787) - Part 2. Filtering Behavior</h1>
+
+<p style="margin-left:40px">September 23, 2013 | By Netmanias (tech@netmanias.com)</p>
+
+	<table border="0" cellpadding="0" cellspacing="0" style="line-height:20.8px; margin-left:40px; width:700px">
+	<tbody>
+		<tr>
+			<td style="background-color:rgb(255, 204, 51)">
+			<table border="0" cellpadding="0" cellspacing="0" style="font-family:verdana,tahoma,calibri,arial,calibri,helvetica,applegothic,sans-serif; line-height:22px; margin:8px; width:684px">
+				<tbody>
+					<tr>
+						<td style="background-color:rgb(255, 255, 255)">
+						<div><span style="font-size:14px"><span style="font-family:arial">&nbsp;NAT Behavioral Requirements, as Defined by the IETF (RFC 4787)</span></span></div>
+
+						<div><span style="font-size:14px;"><span style="font-family:arial">&nbsp;&nbsp;<a href="https://www.netmanias.com/en/?m=view&amp;id=techdocs&amp;no=6058"><span style="color:rgb(51, 102, 255)">Part 1. Mapping Behavior</span></a></span></span></div>
+
+						<div><span style="font-size:14px"><span style="font-family:arial">&nbsp;&nbsp;<strong><a href="https://www.netmanias.com/en/?m=view&amp;id=techdocs&amp;no=6062"><span style="color:rgb(51, 102, 255)">Part 2. Filtering Behavior</span></a></strong></span></span></div>
+
+						<div><span style="font-size:14px"><span style="font-family:arial">&nbsp;&nbsp;<a href="https://www.netmanias.com/en/?m=view&amp;id=techdocs&amp;no=6063"><span style="color:#3366ff">Part 3. Deterministic Properties</span></a></span></span></div>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			</td>
+		</tr>
+	</tbody>
+</table>
+
+<p style="margin-left:40px">&nbsp;</p>
+
+<p style="margin-left:40px">Now that we learned a <span style="font-size:14px"><span style="font-family:arial"><strong><a href="https://www.netmanias.com/en/?m=search&amp;kw=nat"><span style="color:rgb(255, 102, 0)">NAT</span></a></strong></span></span>'s mapping behaviors last time, below we will study its filtering behaviors as defined in RFC 4787.&nbsp;</p>
+
+<p style="margin-left:40px">For information about the terms used below (Internal Endpoint, External Endpoint, Outbound Traffic, Inbound Traffic, and so on), please see their definitions presented in the previous post. &nbsp;&nbsp;<br>
+&nbsp;</p>
+
+<p style="margin-left:40px; text-align:left"><img alt="" src="./Netmanias.2012.07.19-Filtering_Behavior725.gif"></p>
+
+<p style="margin-left:40px"><br>
+<span style="color:#000000"><span style="font-size:22px"><span style="font-family:arial">2. Filtering Behavior</span></span></span><br>
+&nbsp;<br>
+If the previous post was about mapping outbound packets, this one is about filtering inbound packets. That is, last time we discussed how a NAT maps/translates the external port of an outbound packet based on the destination IP and destination port values of the packet. This time, we focus on how a NAT, when receiving an inbound packet, filters the packet based on the Source IP and Source Port values (in the blue-lined box above) of the packet and determines whether to PASS it on to the Internal Endpoint or to DROP it.&nbsp;<br>
+&nbsp;<br>
+<span style="font-size:16px"><span style="font-family:arial"><strong>Endpoint-Independent Filtering</strong></span></span><br>
+In "Endpoint-Independent Filtering", the Endpoint refers to an External Endpoint.&nbsp;<br>
+"Endpoint-Independent Filtering" checks only the i) <span style="font-family:arial"><span style="font-size:14px"><strong>destination IP</strong></span> </span>and ii) <span style="font-size:14px"><span style="font-family:arial"><strong>destination port</strong></span></span> of an inbound packet sent by an External Endpoint to decide whether to pass the packet or not. Thus, it doesn't care about the values of the source IP or source port of the External Endpoint (i.e. any IPs and ports are OK). That is, External Endpoint information (source IP &amp; source port) of packets are not considered if they are inbound.&nbsp;<br>
+&nbsp;<br>
+In the figure below, the following binding and filtering entries are generated when a packet is sent by Host A to Host B:</p>
+
+<ul style="margin-left:40px">
+	<li>Binding Entry: {Internal IP : Internal Port} &lt;-&gt; {External IP : External Port} = {10.1.1.1:5000} &lt;-&gt; {5.5.5.1 : 1000}</li>
+	<li>Filtering Entry: Allow if Inbound Packet {<span style="font-size:14px"><span style="font-family:arial"><strong>Any IP : Any Port</strong></span></span>} to {5.5.5.1 : 1000}</li>
+</ul>
+
+<p style="margin-left:40px">The NAT passes any inbound packets sent by Host B or Host C to Host A as long as their destination IP and destination Port are 5.5.5.1 and 1000, regardless of their source IP (1.1.1.1 or 2.2.2.2) or source Port (80 or 8080).</p>
+
+<p style="margin-left:40px; text-align:left"><br>
+<img alt="" src="./NAT Behavioral Requirements 2.gif" style="height:322px; width:740px"></p>
+
+<p style="margin-left:40px">&nbsp;</p>
+
+<p style="margin-left:40px"><span style="font-size:16px"><span style="font-family:arial"><strong>Address-Dependent Filtering</strong></span></span><br>
+In "Address-Dependent Filtering", the Address refers to the source IP address of the External Endpoint.&nbsp;<br>
+"Address-Dependent Filtering" checks only the i) <span style="font-size:14px"><span style="font-family:arial"><strong>destination IP</strong></span></span>, ii) <strong><span style="font-size:14px"><span style="font-family:arial">destination port</span></span> </strong>and iii) <span style="font-size:14px"><span style="font-family:arial"><strong>source IP</strong></span></span> of an inbound packet sent by an External Endpoint to decide whether to pass the packet or not. It doesn't care about the values of the source port of the External Endpoint (i.e. any ports are OK). Thus, only those from the External Endpoint, which was the destination of a previous outbound packet sent by an Internal Endpoint, are passed.&nbsp;</p>
+
+<p style="margin-left:40px">In the figure below, the following binding and filtering entries are generated when a packet is sent by Host A to Host B:&nbsp;</p>
+
+<ul style="margin-left:40px">
+	<li>Binding Entry: {Internal IP : Internal Port} &lt;-&gt; {External IP : External Port} = {10.1.1.1:5000} &lt;-&gt; {5.5.5.1 : 1000}</li>
+	<li>Filtering Entry: Allow if Inbound Packet {<span style="font-size:14px"><span style="font-family:arial"><strong>1.1.1.1 : Any Port</strong></span></span>} to {5.5.5.1 : 1000}</li>
+</ul>
+
+<p style="margin-left:40px">The NAT passes the inbound packet (i.e. the one with destination IP/destination port = 5.5.5.1/1000) sent by Host B (source IP = 1.1.1.1), and drops the one sent by Host C (source IP = 2.2.2.2). At this time, the source port values are not considered. &nbsp;<br>
+&nbsp;</p>
+
+<p style="margin-left:40px; text-align:left"><img alt="" src="./NAT Behavioral Requirements 3.gif" style="height:321px; width:739px"></p>
+
+<p style="text-align:right">&nbsp;</p>
+
+<p style="margin-left:40px"><span style="font-size:16px"><span style="color:#000000"><span style="font-family:arial"><strong>Address and Port-Dependent Filtering</strong></span></span></span><br>
+In "Address and Port-Dependent Filtering", the Address and Port refer to the address and port of an External Endpoint (source IP &amp; source port).&nbsp;<br>
+"Address and Port-Dependent Filtering" checks the i) <span style="font-size:14px"><span style="font-family:arial"><strong>destination IP</strong></span></span>, ii) <span style="font-size:14px"><span style="font-family:arial"><strong>destination port</strong></span></span>, iii) <span style="font-size:14px"><span style="font-family:arial"><strong>source IP</strong></span></span> and iv) <span style="font-size:14px"><span style="font-family:arial"><strong>source port</strong></span></span> of an inbound packet sent by an External Endpoint to decide whether to pass the packet or not. Only those sent as a response to the outbound packet that an Internal Endpoint previously sent (i.e. ones with all four matching values) are passed.<br>
+In the figure below, the following binding and filtering entries are generated when a packet is sent by Host A to Host B:&nbsp;</p>
+
+<ul style="margin-left:40px">
+	<li>Binding Entry: {Internal IP : Internal Port} &lt;-&gt; {External IP : External Port} = {10.1.1.1:5000} &lt;-&gt; {5.5.5.1 : 1000}</li>
+	<li>Filtering Entry: Allow if Inbound Packet {<span style="font-size:14px"><span style="font-family:arial"><strong>1.1.1.1 : 80</strong></span></span>} to {5.5.5.1 : 1000}</li>
+</ul>
+
+<p style="margin-left:40px">The NAT passes only the packet sent as a response {i.e. 1.1.1.1:80 to 5.5.5.1:1000} to the outbound packet that Host A sent to Host B earlier {i.e. 5.5.5.1:1000 to 1.1.1.1:80}, and drops all other packets. &nbsp;</p>
+
+<p style="margin-left:80px">&nbsp;</p>
+
+<p style="margin-left:40px; text-align:left"><img alt="" src="./NAT Behavioral Requirements 4.gif" style="height:322px; width:739px"></p>
+
+<p style="margin-left:40px">&nbsp;</p>
+
+<div>
+<div>
+<table border="0" cellpadding="0" cellspacing="0" style="margin-left:40px; width:700px">
+	<tbody>
+		<tr>
+			<td style="background-color:rgb(242, 242, 242)">
+			<table border="0" cellpadding="0" cellspacing="0" style="font-family:verdana,tahoma,calibri,arial,calibri,helvetica,applegothic,sans-serif; margin:8px; width:684px">
+				<tbody>
+					<tr>
+						<td style="background-color:rgb(242, 242, 242)">
+						<p><span style="font-family:arial"><strong>RFC 4787 Recommendation (REQ-8)</strong>: If application transparency is most important, it is RECOMMENDED that a NAT have an "Endpoint-Independent Filtering" behavior. If a more stringent filtering behavior is most important, it is RECOMMENDED that a NAT have an "Address-Dependent Filtering" behavior</span></p>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			</td>
+		</tr>
+	</tbody>
+</table>
+</div>
+</div>
+
+<p style="margin-left:40px">&nbsp;<br>
+According to RFC 4787, NATs using Endpoint-Independent Filtering or Address-Dependent Filtering can do peer-to-peer communication through Interactive Connectivity Establishment (ICE, RFC 5245). However, for ones using Address and Port Dependent Mapping AND Address and Port-Dependent Filtering, peer-to-peer communication is not possible. Hence it is inevitable for all traffic to pass through a relay server (TURN server).&nbsp;</p>
+
+<p style="margin-left:40px">&nbsp;</p>
+
+<p style="margin-left:40px">&nbsp;</p>
+
+<p style="margin-left:40px"><span style="color:#000000"><span style="font-size:22px"><span style="font-family:arial">3. Hairpinning Behavior</span></span></span></p>
+
+<p style="margin-left:40px">&nbsp;</p>
+
+<p style="margin-left:40px">Hairpinning allows two Internal Endpoints located behind the same NAT to communicate with each other through the NAT. Most common examples will be Skype. When using these applications, two mobile devices can communicate with each other through an Large Scale NAT (LSN, also called Carrier Grade NAT (CGN)) employed on a 3G/LTE network.&nbsp;</p>
+
+<p style="margin-left:40px"><br>
+There are two types of Hairpinning behavior as follows:</p>
+
+<p style="margin-left:40px">&nbsp;</p>
+
+<p style="margin-left:40px"><span style="font-size:16px"><span style="color:#000000"><span style="font-family:arial"><strong>External Source IP Address and Port</strong></span></span></span><br>
+Consider the following packet sent by Host A to Host B (and received by a NAT):</p>
+
+<ul style="margin-left:40px">
+	<li>Destination IP = the External Address of Host B (5.5.5.2)</li>
+	<li>Destination Port = the External Port of Host B (1001)</li>
+	<li>Source IP = the Internal Address of Host A (10.1.1.1)</li>
+	<li>Source Port = the Internal Port of Host A (5000)</li>
+</ul>
+
+<p style="margin-left:40px">When the NAT receives the packet, it passes the packet on to Host B after modifying it as follows by referring to the binding table. What should be noted here is that now the External Address and Port of Host A are used as the source IP and source port.</p>
+
+<ul style="margin-left:40px">
+	<li>Destination IP = the Internal Address of Host B (10.1.1.2)</li>
+	<li>Destination Port = the Internal Port of Host B (5001)</li>
+	<li>Source IP = <u>the External Address of Host A (5.5.5.1)</u></li>
+	<li>Source Port = <u>the External Port of Host A (1000)</u></li>
+</ul>
+
+<p style="margin-left:40px">The foregoing case can be considered as an ideal NAT behavior in that Host A (sender) receives a response packet (source IP/port=5.5.5.2/1001) from the destination IP/port (5.5.5.2/1001) of the packet that it sent earlier. Thus, no problem in communicating between the two.&nbsp;</p>
+
+<p style="margin-left:40px">&nbsp;</p>
+
+<p style="margin-left:40px">Although Host A and Host B have different External Addresses (5.5.5.1 and 5.5.5.2) in the figure below, they may have the same value depending on how the NAT behaves.</p>
+
+<p style="margin-left:40px">&nbsp;</p>
+
+<p style="margin-left:40px; text-align:left"><img alt="" src="./NAT Behavioral Requirements 5.gif" style="height:256px; width:702px"></p>
+
+<p style="margin-left:40px">&nbsp;<br>
+<span style="font-size:16px"><span style="color:#000000"><span style="font-family:arial"><strong>Internal Source IP Address and Port</strong></span></span></span><br>
+Again, consider the same packet sent by Host A to Host B (and received by a NAT).<br>
+&nbsp;<br>
+When the NAT receives the packet, it passes the packet on to Host B after modifying it as follows by referring to the binding table. What is different from the previous packet is that now the Internal Address and Port of Host A are used as the source IP and source port.</p>
+
+<ul style="margin-left:40px">
+	<li>Destination IP = the Internal Address of Host B (10.1.1.2)</li>
+	<li>Destination Port = the Internal Port of Host B (5001)&nbsp;</li>
+	<li>Source IP = <u>the Internal Address of Host A (10.1.1.1)</u></li>
+	<li>Source Port = <u>the Internal Port of Host A (5000)</u>&nbsp;</li>
+</ul>
+
+<p style="margin-left:40px">In this case, Host A (sender) receives a response packet (source IP/port=10.1.1.2/5001), which is not from the destination IP/port (5.5.5.2/1001) of the packet that it sent earlier. Therefore, the packet is dropped in the kernel's TCP/IP stack.</p>
+
+<p style="margin-left:40px">&nbsp;</p>
+
+<p style="margin-left:40px; text-align:left">&nbsp;<img alt="" src="./NAT Behavioral Requirements 6.gif" style="height:257px; width:705px"></p>
+
+<p style="margin-left:40px">&nbsp;</p>
+
+<div>
+<table border="0" cellpadding="0" cellspacing="0" style="margin-left:40px; width:700px">
+	<tbody>
+		<tr>
+			<td style="background-color:rgb(242, 242, 242)">
+			<table border="0" cellpadding="0" cellspacing="0" style="font-family:verdana,tahoma,calibri,arial,calibri,helvetica,applegothic,sans-serif; margin:8px; width:684px">
+				<tbody>
+					<tr>
+						<td style="background-color:rgb(242, 242, 242)">
+						<p><span style="font-family:arial"><strong>RFC 4787 Recommendation (REQ-9)</strong>: A NAT MUST support "Hairpinning"<br>
+						a) A NAT Hairpinning behavior MUST be "External source IP address and port"</span></p>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			</td>
+		</tr>
+	</tbody>
+</table>
+</div>
+
+<p style="margin-left:40px">&nbsp;</p>
+
+<p style="margin-left:40px">&nbsp;</p>
+
+</div>
+
+</body>
+
+</html>
