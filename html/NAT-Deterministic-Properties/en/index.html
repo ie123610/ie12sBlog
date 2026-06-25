@@ -1,0 +1,244 @@
+
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <title>NAT Behavioral Requirements, as Defined by the IETF (RFC 4787) - Part 3. Deterministic Properties</title>
+</head>
+
+<body>
+
+<div style="width: 60%; margin-left: auto; margin-right: auto;">
+
+<h1 style="margin-left:40px" >NAT Behavioral Requirements, as Defined by the IETF (RFC 4787) - Part 3. Deterministic Properties</h1>
+
+<p style="margin-left:40px">October 10, 2013 | By Netmanias (tech@netmanias.com)</p>
+
+<table border="0" cellpadding="0" cellspacing="0" style="margin-left:40px; width:700px">
+	<tbody>
+		<tr>
+			<td style="background-color:rgb(255, 204, 51)">
+			<table border="0" cellpadding="0" cellspacing="0" style="font-family:verdana,tahoma,calibri,arial,calibri,helvetica,applegothic,sans-serif; line-height:22px; margin:8px; width:684px">
+				<tbody>
+					<tr>
+						<td style="background-color:rgb(255, 255, 255)">
+						<div><span style="font-size:14px"><span style="font-family:arial">&nbsp;NAT Behavioral Requirements, as Defined by the IETF (RFC 4787)</span></span></div>
+
+						<div><span style="font-size:14px"><span style="font-family:arial">&nbsp; <a href="https://www.netmanias.com/en/?m=view&amp;id=techdocs&amp;no=6058"><span style="color:#3366ff">Part 1. Mapping Behavior</span></a></span></span></div>
+
+						<div><span style="font-size:14px"><span style="font-family:arial">&nbsp; <a href="https://www.netmanias.com/en/?m=view&amp;id=techdocs&amp;no=6062"><span style="color:#3366ff">Part 2. Filtering Behavior</span></a></span></span></div>
+
+						<div><span style="font-size:14px"><span style="font-family:arial">&nbsp; <strong><a href="https://www.netmanias.com/en/?m=view&amp;id=techdocs&amp;no=6063"><span style="color:#3366ff">Part 3. Deterministic Properties</span></a></strong></span></span></div>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			</td>
+		</tr>
+	</tbody>
+</table>
+
+<p style="margin-left:40px">&nbsp;</p>
+
+<p style="margin-left:40px">This is the last post on RFC 4787.&nbsp;</p>
+
+<p style="margin-left:40px">&nbsp;<br>
+<span style="color:#000000"><span style="font-size:22px"><span style="font-family:arial">4. Application Level Gateway</span></span></span></p>
+
+<p style="margin-left:40px">&nbsp;</p>
+
+<p style="margin-left:40px">For information about Application Level Gateways (ALGs), please click <a href="/en/?m=view&amp;id=techdocs&amp;tag=248&amp;no=6061" target="_blank"><span style="color:#0000FF">here</span></a>.</p>
+
+<div>&nbsp;</div>
+
+<div>
+<table border="0" cellpadding="0" cellspacing="0" style="margin-left:40px; width:700px">
+	<tbody>
+		<tr>
+			<td style="background-color:rgb(242, 242, 242)">
+			<table border="0" cellpadding="0" cellspacing="0" style="font-family:verdana,tahoma,calibri,arial,calibri,helvetica,applegothic,sans-serif; margin:8px; width:684px">
+				<tbody>
+					<tr>
+						<td style="background-color:rgb(242, 242, 242)">
+						<div>
+						<p><span style="font-size:14px"><span style="font-family:arial"><strong>RFC 4787 Recommendation (REQ-10)</strong>: To eliminate interference with UNSAF NAT traversal mechanisms and allow integrity protection of UDP communications, NAT ALGs for UDP-based protocols SHOULD be turned off</span></span></p>
+						</div>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			</td>
+		</tr>
+	</tbody>
+</table>
+</div>
+
+<p style="margin-left:40px">&nbsp;</p>
+
+<p style="margin-left:40px">What does this recommendation mean? ALGs, if not fully supported, may only interfere with <span style="font-size:14px"><span style="font-family:arial"><strong><a href="https://www.netmanias.com/en/?m=search&amp;kw=nat"><span style="color:rgb(255, 102, 0)">NAT</span></a></strong></span></span> traversal. So turn it off!!&nbsp;</p>
+
+<p style="margin-left:40px">&nbsp;</p>
+
+<p style="margin-left:40px">&nbsp;</p>
+
+<p style="margin-left:40px"><span style="color:#000000"><span style="font-size:22px"><span style="font-family:arial">5. Deterministic Properties</span></span></span></p>
+
+<p style="margin-left:40px">&nbsp;</p>
+
+<p style="margin-left:40px"><span style="color:#000000"><span style="font-size:16px"><span style="font-family:arial"><strong>Non-Deterministic NAT</strong></span></span></span><br>
+A <span style="font-size:14px"><span style="font-family:arial"><strong><a href="https://www.netmanias.com/en/?m=search&amp;kw=nat"><span style="color:rgb(255, 102, 0)">NAT</span></a></strong></span></span> that changes its Mapping or Filtering Behavior in particular circumstances (see the example below) is called a "Non-Deterministic NAT". One example of these NATs presented in RFC 4787 is described below.&nbsp;<br>
+&nbsp;<br>
+NATs usually implement "Endpoint-Independent Mapping with Port Preservation".&nbsp;<br>
+So, in the figure below, the NAT allocates the same External Port (5000) to both packets [1] and [2] that Host A is sending to Host X and Host Y (Endpoint-Independent Mapping). It also allocates 5000, the Internal Port number, to the External Port (Port Preservation).<br>
+Next, Host A and Host B send Host Y a packet ([3] and [4], respectively). At this time both packets use 6000 for their Internal Port number. Since the NAT has sufficient IP addresses available in its External Address Pool, it can stick with Port Preservation.&nbsp;<br>
+&nbsp;<br>
+Later when Host C sends Host Y a packet [5] which has 6000 as its Internal Port number as Host B did, the NAT realizes that i) the Internal Port of 6000 has already been allocated to the previous packet destined to the same External Endpoint, and ii) there is no more external address available, and thus it cannot stick with Port Preservation any more. So, it switches to "Address and Port-Dependent Mapping without Port Preservation". &nbsp;<br>
+Then the packet that Host C sends to Host Y (i.e. packet [5]) will inevitably have an External Port (7000) that is different from its Internal Port (6000). Thus, No Port Preservation here! Furthermore, it also becomes inevitable for the packet [6] that Host C sends to Host X to have an External Port (7002) that is different from the External Port (7000) of the packet [5] that Host C sent to Host Y (Address and Port-Dependent Mapping).&nbsp;</p>
+
+<p style="margin-left:40px">&nbsp;</p>
+
+<p style="margin-left:40px"><img alt="" src="./Fig1. NAT.Part 3.gif" style="height:384px; width:700px"></p>
+
+<p style="margin-left:40px">&nbsp;</p>
+
+<p style="margin-left:40px"><span style="color:#000000"><span style="font-size:16px"><span style="font-family:arial"><strong>Deterministic NAT&nbsp;</strong></span></span></span><br>
+A NAT that never changes its Mapping or Filtering Behavior in any circumstances is called a "Deterministic NAT".&nbsp;</p>
+
+<div>&nbsp;</div>
+
+<div>
+<div>
+<table border="0" cellpadding="0" cellspacing="0" style="margin-left:40px; width:700px">
+	<tbody>
+		<tr>
+			<td style="background-color:rgb(242, 242, 242)">
+			<table border="0" cellpadding="0" cellspacing="0" style="font-family:verdana,tahoma,calibri,arial,calibri,helvetica,applegothic,sans-serif; margin:8px; width:684px">
+				<tbody>
+					<tr>
+						<td style="background-color:rgb(242, 242, 242)">
+						<p><span style="font-size:14px"><span style="font-family:arial"><strong>RFC 4787 Recommendation (REQ-11)</strong>: A NAT MUST have deterministic behavior, i.e., it MUST NOT change the NAT translation or the Filtering Behavior at any point in time, or under any particular conditions</span></span></p>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			</td>
+		</tr>
+	</tbody>
+</table>
+</div>
+</div>
+
+<p style="margin-left:40px">&nbsp;</p>
+
+<p style="margin-left:40px">&nbsp;</p>
+
+<p style="margin-left:40px"><span style="color:#000000"><span style="font-size:22px"><span style="font-family:arial">6. Fragmentation of Outgoing Packets</span></span></span></p>
+
+<p style="margin-left:40px">&nbsp;</p>
+
+<p style="margin-left:40px">The maximum transmission size of an outbound packet sent by a TCP/UDP application in a host is limited based on the size of &nbsp;the specified IP Maximum Transmission Unit (MTU). In case the lower layer of IP (L2 layer) is Ethernet, the IP MTU is 1500 byte (except for Jumbo Frame). So, if, as in the figure below, a UDP application sends a 2,000&nbsp;byte packet, the NAT fragments the packet into two smaller ones - the first one with both IP and UDP headers, and the second one with an IP header only.&nbsp;<br>
+&nbsp;<br>
+For this reason, it is important at this time for the NAT to be able to identify fragmented packets by referring to MF (More Fragment) and Fragmentation Offset fields in the IP header of the packets. For the second packet with no UDP header, the NAT should be able to identify sessions by referring the Identification field (0x1234) of the IP header, and replace the Internal Address (10.1.1.1) with the External Address (5.5.5.1) for the packet. If the NAT can't do these, no communication will be allowed (Obviously, these seem too basic. The IETF didn't even bother to include them in its RFC 4787).&nbsp;</p>
+
+<p style="margin-left:40px">&nbsp;</p>
+
+<p style="margin-left:40px"><img alt="" src="./Fig2. NAT.Part 3.gif" style="height:373px; width:700px"></p>
+
+<p style="margin-left:40px">&nbsp;<br>
+Packet fragmentation occurs not only in hosts (devices or servers), but also in generic routers and NATs (NATs can be considered as routers&nbsp;in that their packet delivery is also based on the destination IP address of packets). &nbsp;<br>
+Today, almost all link layers are Ethernet, and besides the MTU size on a Wi-Fi network is 1,500 bytes (with Windows). Therefore, NATs rarely perform packet fragmentation in deed. However, RFC 4787 still recommends NATs send an ICMP message as follows in case needed:</p>
+
+<p style="margin-left:40px">&nbsp;</p>
+
+<div>
+<div>
+<table border="0" cellpadding="0" cellspacing="0" style="margin-left:40px; width:700px">
+	<tbody>
+		<tr>
+			<td style="background-color:rgb(242, 242, 242)">
+			<table border="0" cellpadding="0" cellspacing="0" style="font-family:verdana,tahoma,calibri,arial,calibri,helvetica,applegothic,sans-serif; margin:8px; width:684px">
+				<tbody>
+					<tr>
+						<td style="background-color:rgb(242, 242, 242)">
+						<p><span style="font-size:14px"><span style="font-family:arial"><strong>RFC 4787 Recommendation (REQ-13)</strong>: If the packet received on an internal IP address has DF=1, the NAT MUST send back an ICMP message "Fragmentation needed and DF set" to the host, as described in [RFC0792]</span></span></p>
+
+						<p style="margin-left:40px"><span style="font-size:14px"><span style="font-family:arial">a) If the packet has DF=0, the NAT MUST fragment the packet and SHOULD send the fragments in order</span></span></p>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			</td>
+		</tr>
+	</tbody>
+</table>
+</div>
+
+<p style="margin-left:40px">&nbsp;</p>
+
+<p style="margin-left:40px">&nbsp;</p>
+</div>
+
+<p style="margin-left:40px"><span style="color:#000000"><span style="font-size:22px"><span style="font-family:arial">7. Receiving Fragmented Packets</span></span></span></p>
+
+<p style="margin-left:40px">&nbsp;</p>
+
+<p style="margin-left:40px">Packet fragmentation is triggered not only by an Internal Endpoint as described above, but also by an External Host (e.g. Host B in the figure below). In case of external host-triggered fragmentation, the same requirements in Section 6 must be met as well. For the fragmented packet with no UDP header, the NAT should be able to identify sessions by referring the Identification field of the IP header, and replace the received External Address with the Internal Address for the packet.<br>
+&nbsp;<br>
+<img alt="" src="./Fig3. NAT.Part 3.gif" style="height:373px; width:700px"></p>
+
+<p style="margin-left:40px">&nbsp;</p>
+
+<p style="margin-left:40px">The following two types of NAT behavior are mentioned in RFC 4787 for such case:&nbsp;</p>
+
+<p style="margin-left:40px">&nbsp;</p>
+
+<p style="margin-left:40px"><span style="color:#000000"><span style="font-size:16px"><span style="font-family:arial"><strong>Received Fragments Ordered</strong></span></span></span><br>
+A NAT can translate the address/port of fragmented packets and forward them to Internal Endpoints only when the packets are received in an order that they are fragmented.</p>
+
+<p style="margin-left:40px">&nbsp;</p>
+
+<p style="margin-left:40px"><span style="color:#000000"><span style="font-size:16px"><span style="font-family:arial"><strong>Received Fragment Out of Order&nbsp;</strong></span></span></span><br>
+A NAT can translate the address/port of fragmented packets and forward them to Internal Endpoints even when the packets are not received in an order that they are fragmented (e.g. in case an External Endpoint sent packets in order of fragment packet 1, 2 and 3, but the NAT receives them in order of fragment packet 1, 3 and 2).</p>
+
+<p style="margin-left:40px">&nbsp;</p>
+
+<div>
+<div>
+<table border="0" cellpadding="0" cellspacing="0" style="margin-left:40px; width:700px">
+	<tbody>
+		<tr>
+			<td style="background-color:rgb(242, 242, 242)">
+			<table border="0" cellpadding="0" cellspacing="0" style="font-family:verdana,tahoma,calibri,arial,calibri,helvetica,applegothic,sans-serif; margin:8px; width:684px">
+				<tbody>
+					<tr>
+						<td style="background-color:rgb(242, 242, 242)">
+						<p><span style="font-size:14px"><span style="font-family:arial"><strong>RFC 4787 Recommendation (REQ-14)</strong>: A NAT MUST support receiving in-order and out-of-order fragments, so it MUST have "Received Fragment Out of Order" behavior</span></span></p>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			</td>
+		</tr>
+	</tbody>
+</table>
+</div>
+
+<p style="margin-left:40px">&nbsp;</p>
+
+<p style="margin-left:40px">&nbsp;</p>
+
+<p style="margin-left:40px"><span style="color:#000000"><span style="font-size:22px"><span style="font-family:arial">8. Closing</span></span></span></p>
+</div>
+
+<p style="margin-left:40px">&nbsp;</p>
+
+<p style="margin-left:40px">We have reviewed the "NAT Behavioral Requirements for Unicast UDP" as presented in RFC 4787 through three of our posts so far.&nbsp;After close examination of the document, you may agree with me in that:<br>
+&nbsp;<br>
+i) it could have been much easier and simpler to establish standards for different types of NATs only if NAT behavior had been standardized by the IETF earlier, i.e. before NATs were actually introduced in the market. &nbsp;&nbsp;<br>
+&nbsp;<br>
+ii) it is unfortunate that APs provided by telecom operators or in open markets are not compliant with the foregoing standards because the standards are originally designed for NAT traversal (i.e. for P2P applications of which packets must pass through a NAT). According to our test on APs from Cisco-Linksys, ipTIME and a telecom operator, all APs used Endpoint-Independent Mapping + Address and Port-Dependent Filtering Behavior. &nbsp;</p>
+
+</div>
+
+</body>
+
+</html>
