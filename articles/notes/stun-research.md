@@ -64,3 +64,42 @@ STUN 在 RFC 3489 和 RFC 5389/5780 中的区别
     原版存档（html）：
   <a href="/html/NAT-Deterministic-Properties/en/index.html">链接</a>
 </p>
+
+---
+
+## NAT Behavior Discovery Using Classic STUN (RFC 3489)
+
+原文地址：[链接](https://www.netmanias.com/en/post/techdocs/6066/nat-network-protocol/nat-behavior-discovery-using-classic-stun-rfc-3489)  
+
+<p>
+  原版存档（PDF）：
+  <a href="/script/pdfjs-legacy/web/viewer.html?file=/html/NAT-Discovery-RFC-3489/en/2013.11.04-NAT%20Behavior%20Discovery%20Using%20Classic%20STUN%20(RFC%203489).pdf">在线预览</a> 
+  | 
+  <a href="/html/NAT-Discovery-RFC-3489/en/2013.11.04-NAT%20Behavior%20Discovery%20Using%20Classic%20STUN%20(RFC%203489).pdf" download>下载</a> <br />
+    原版存档（html）：
+  <a href="/html/NAT-Discovery-RFC-3489/en/index.html">链接</a>
+</p>
+
+---
+
+## NAT Behavior Discovery Using STUN (RFC 5780)
+
+
+
+
+
+---
+
+## Network Address Translation (NAT) Overview (RFC 3022/2663)
+
+原文地址：[链接](https://netmanias.com/en/post/techdocs/6061/nat-network-protocol/network-address-translation-nat-overview-rfc-3022-2663)  
+
+<p>
+  原版存档（PDF）：
+  <a href="/script/pdfjs-legacy/web/viewer.html?file=/html/NAT-Overview-RFC-3022-2663/en/Netmanias.2013.09.03.NAT%20Overview%20(en).pdf">在线预览</a> 
+  | 
+  <a href="" download>下载</a> <br />
+    原版存档（html）：
+  <a href="/html/NAT-Overview-RFC-3022-2663/en/index.html">链接</a>
+</p>
+

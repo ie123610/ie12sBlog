@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>NAT Behavior Discovery Using Classic STUN (RFC 3489)</title>
+</head>
+
+<body>
+
+<div style="width: 60%; margin-left: auto; margin-right: auto;">
+
+<h1 style="margin-left:40px" >NAT Behavior Discovery Using Classic STUN (RFC 3489)</h1>
+
+<p style="margin-left:40px">November 04, 2013 | By Netmanias (tech@netmanias.com)</p>
+
+<p style="margin-left:40px">&nbsp;</p>
+
+<p style="margin-left:40px">Let us introduce the <span style="font-size:14px"><span style="font-family:arial"><strong><a
+                    href="https://www.netmanias.com/en/?m=search&amp;kw=nat"><span
+                        style="color:rgb(255, 102, 0)">NAT</span></a></strong></span></span> behavior discovery
+    algorithms defined in RFC 3489. &nbsp;<br>
+    To fully understand what's discussed below, we recommend you read the following posts first:</p>
+
+<p style="margin-left:40px">&nbsp;</p>
+
+<p style="margin-left:40px">1.&nbsp;<a href="/en/?m=view&amp;id=techdocs&amp;tag=248&amp;no=6058" target="_blank"><span style="color:rgb(0, 0, 205)">NAT Behavioral Requirements, as Defined by the IETF (RFC 4787) - Part 1. Mapping Behavior</span></a><br>
+2.&nbsp;<a href="/en/?m=view&amp;id=techdocs&amp;tag=248&amp;no=6062" target="_blank"><span style="color:rgb(0, 0, 205)">NAT Behavioral Requirements, as Defined by the IETF (RFC 4787) - Part 2. Filtering Behavior</span></a><br>
+3.&nbsp;<a href="/en/?m=view&amp;id=techdocs&amp;tag=248&amp;no=6065" target="_blank"><span style="color:rgb(0, 0, 205)">STUN (RFC 3489) vs. STUN (RFC 5389/5780)</span></a></p>
+
+<p style="margin-left:40px">&nbsp;</p>
+
+<p style="margin-left:40px"><br>
+<span style="color:#000000"><span style="font-size:22px"><span style="font-family:arial">1. NAT Type Discovery</span></span></span></p>
+
+<p style="margin-left:40px">&nbsp;</p>
+
+<p style="margin-left:40px">The NAT behavior discovery algorithms defined in RFC 3489 are as follows:</p>
+
+<div style="margin-left:40px">&nbsp;</div>
+
+<div style="margin-left:40px">
+<table border="0" cellpadding="0" cellspacing="0">
+	<tbody>
+		<tr>
+			<td style="background-color:rgb(224, 210, 190)">
+			<table border="0" cellpadding="0" cellspacing="0" style="font-family:verdana,tahoma,calibri,arial,calibri,helvetica,applegothic,sans-serif; margin:8px">
+				<tbody>
+					<tr>
+						<td>
+						<p style="margin-left:40px"><span style="font-family:arial">10.1 &nbsp;Discovery Process</span></p>
+
+						<p style="margin-left:40px"><span style="font-family:arial">The flow makes use of three tests. In test I, the client sends a STUN Binding Request to a server, without any flags set in the CHANGE-REQUEST attribute, and without the RESPONSE-ADDRESS attribute. This causes the server to send the response back to the address and port that the request came from. In test II, the client sends a Binding Request with both the "change IP" and "change port" flags from the CHANGE-REQUEST attribute set. In test III, the client sends a Binding Request with only the "change port" flag set.</span></p>
+
+						<p style="margin-left:40px"><span style="font-family:arial">The client begins by initiating test I. If this test yields no response, the client knows right away that it is not capable of UDP connectivity. If the test produces a response, the client examines the MAPPED-ADDRESS attribute. If this address and port are the same as the local IP address and port of the socket used to send the request, the client knows that it is not natted. It executes test II.</span></p>
+
+						<p style="margin-left:40px"><span style="font-family:arial">If a response is received, the client knows that it has open access to the Internet (or, at least, its behind a firewall that behaves like a full-cone NAT, but without the translation). If no response is received, the client knows its behind a symmetric UDP firewall.</span></p>
+
+						<p style="margin-left:40px"><span style="font-family:arial">In the event that the IP address and port of the socket did not match the MAPPED-ADDRESS attribute in the response to test I, the client knows that it is behind a NAT. It performs test II. If a response is received, the client knows that it is behind a full-cone NAT. If no response is received, it performs test I (<strong>test I' in this post</strong>) again, but this time, does so to the address and port from the CHANGED-ADDRESS attribute from the response to test I. If the IP address and port returned in the MAPPED-ADDRESS attribute are not the same as the ones from the first test I, the client knows its behind a symmetric NAT. If the address and port are the same, the client is either behind a restricted or port restricted NAT. To make a determination about which one it is behind, the client initiates test III. If a response is received, its behind a restricted NAT, and if no response is received, its behind a port restricted NAT.</span></p>
+
+						<p style="margin-left:40px">&nbsp;</p>
+
+						<div style="margin-left:40px; text-align:center"><img alt="" src="./RFC_3489_Flow.gif" style="height:494px; width:400px"></div>
+
+						<div style="margin-left:40px; text-align:center">&nbsp;</div>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			</td>
+		</tr>
+	</tbody>
+</table>
+</div>
+
+<p style="margin-left:40px">&nbsp;</p>
+
+<p style="margin-left:40px"><br>
+<span style="font-size:16px"><span style="color:#000000"><span style="font-family:arial"><strong>1.1 Test (Discovery) Procedure</strong></span></span></span></p>
+
+<p style="margin-left:40px"><img alt="" src="./STUN 3489.1.gif" style="height:369px; width:464px"></p>
+
+<ul style="margin-left:40px">
+	<li>Test II checks the presence of a NAT or symmetric UDP firewall, and discovers a full cone NAT&nbsp;</li>
+	<li>Test I' discovers a symmetric NAT&nbsp;</li>
+	<li>Test III discovers a restricted con NAT or port restricted cone NAT&nbsp;</li>
+</ul>
+
+<p style="margin-left:40px">&nbsp;</p>
+
+<p style="margin-left:40px"><span style="font-size:16px"><span style="font-family:arial"><strong>1.2&nbsp;No NAT/Firewall (Open Internet)</strong></span></span></p>
+
+
+
+<p style="margin-left:40px"><img alt="" src="./STUN%203489.2.gif" style="height:602px; opacity:0.9; width:720px"></p>
+
+<p style="margin-left:40px"><br>
+<span style="font-size:14px"><span style="font-family:arial"><strong>Test I</strong></span></span></p>
+
+<ul style="margin-left:40px">
+	<li>The client sends a Binding Request message to a server (at Primary IP:Primary Port (1.1.1.1:3478)), and receives a Binding Response message back from the server.&nbsp;</li>
+	<li>The client then compares the following two fields. If they match, the client knows that there is no NAT between the Internet and itself.&nbsp;
+	<ul>
+		<li>[a] Binding Request message: IP header source information = 10.1.1.1:40000</li>
+		<li>[b] Binding Response message: MAPPED-ADDRESS attribute = 10.1.1.1:40000</li>
+	</ul>
+	</li>
+	<li>When the server sends a Binding Response message back to the client, it includes the source information of the Binding Request message ([a]) in the MAPPED-ADDRESS field of the Binding Response message ([b]). So, if the two values match, that indicates there is no NAT, and thus no address/port has been translated.&nbsp;</li>
+</ul>
+
+<p style="margin-left:40px"><span style="font-size:14px"><span style="font-family:arial"><strong>Test II</strong></span></span></p>
+
+<ul style="margin-left:40px">
+	<li>Next, the client sends the server a Binding Request message with both the Change IP and Change Port flags from the CHANGE-REQUEST attribute set as 1.&nbsp;</li>
+	<li>When the server receives the message, it uses a set of Alternate IP:Alternate Port (2.2.2.2:3479), instead of the Primary IP:Primary Port (1.1.1.1:3478) of the received packet, as its source information for a Binding Response message, then sends the message back to the client. &nbsp;&nbsp;</li>
+	<li>If this response is received, the client knows it's not behind a UDP firewall.</li>
+	<li>That is, i) the Internal Address/Port (prior to NAT translation) and the External Address/Port (after NAT translation) values were matched, and ii) the inbound packet with the source information (2.2.2.2:3479), which is different from the destination information (1.1.1.1:3478) of the outbound packet, was ALLOWED. This means there is neither&nbsp;NAT nor firewall.</li>
+</ul>
+
+<p style="margin-left:40px">&nbsp;</p>
+
+<p style="margin-left:40px"><span style="font-family:arial"><span style="font-size:16px"><strong>1.3&nbsp;Symmetric UDP Firewall</strong></span></span></p>
+
+
+<p style="margin-left:40px"><br>
+<img alt="" src="./Netmanias.2012.07.28-RFC3489_Symmetric_UDP_Firewall.gif" style="height:602px; width:720px">&nbsp;</p>
+
+<p style="margin-left:40px"><br>
+<span style="font-size:14px"><span style="font-family:arial"><strong>Test I</strong></span></span></p>
+
+<ul style="margin-left:40px">
+	<li>Same as in the test for Open Internet above&nbsp;</li>
+</ul>
+
+<p style="margin-left:40px"><strong>Test II</strong></p>
+
+<ul style="margin-left:40px">
+	<li>The client sends the same Binding Request message as in Open Internet test, but no Binding Response is received.&nbsp;</li>
+	<li>Thus, the client knows that there is a UDP symmetric firewall.</li>
+	<li>That is, i) the Internal Address/Port and the External Address/Port were matched, and ii) the inbound packet with the source information (2.2.2.2:3479), which is different from the destination information of the outbound packet (1.1.1.1:3478), was DROPPED. This indicates there is a firewall, not a NAT.</li>
+</ul>
+
+<p style="margin-left:40px">&nbsp;</p>
+
+<p style="margin-left:40px"><span style="font-family:arial"><span style="font-size:16px"><strong>1.4&nbsp;Full Cone NAT</strong></span></span></p>
+
+
+<p style="margin-left:40px"><br>
+<img alt="" src="./Netmanias.2012.07.28-RFC3489_Full_Cone.gif" style="height:602px; width:720px"></p>
+
+<p style="margin-left:40px">&nbsp;<br>
+<span style="font-size:14px"><span style="font-family:arial"><strong>Test I</strong></span></span></p>
+
+<ul style="margin-left:40px">
+	<li>The client sends a Binding Request message to a server (at Primary IP:Primary Port (1.1.1.1:3478)), and receives a Binding Response message back from the server.&nbsp;</li>
+	<li>The client then compares the following two fields. If they don't match, the client knows that there is a NAT.&nbsp;
+	<ul>
+		<li>[a] Binding Request message: IP header source information = 10.1.1.1:40000</li>
+		<li>[b] Binding Response message: MAPPED-ADDRESS attribute = 5.5.5.1:40000</li>
+	</ul>
+	</li>
+</ul>
+
+<p style="margin-left:40px"><span style="font-size:14px"><span style="font-family:arial"><strong>Test II</strong></span></span></p>
+
+<ul style="margin-left:40px">
+	<li>Next, the client sends the server a Binding Request message with both the Change IP and Change Port flags from the CHANGE-REQUEST attribute set as 1.&nbsp;</li>
+	<li>When the server receives the message, it uses a set of Alternate IP:Alternate Port (2.2.2.2:3479), instead of the Primary IP:Primary Port (1.1.1.1:3478) of the received packet, as its source information for a Binding Response message. Next, it sends the message back to the client.&nbsp;</li>
+	<li>If this response is received, the client knows it's behind a full cone NAT.</li>
+	<li>That is, i) the Internal Address/Port (10.1.1.1:40000) and the External Address/Port (5.5.5.1:40000) values were not matched, and ii) the inbound packet with the source information (2.2.2.2:3479), which is different from the destination information of the outbound packet (1.1.1.1:3478), was ALLOWED. This means the client is behind a full cone NAT. Note that symmetric, restricted cone and port restricted cone NATs all DROP inbound packets if their source information (source IP (2.2.2.2) &amp; source Port (3479)) is different from the destination information of the outbound packet (1.1.1.1:3478), as to be explained below. &nbsp;</li>
+</ul>
+
+<p style="margin-left:40px">&nbsp;</p>
+
+<p style="margin-left:40px"><span style="font-family:arial"><span style="font-size:16px"><strong>1.5&nbsp;Symmetric NAT</strong></span></span></p>
+
+<p style="margin-left:40px"><br>
+<img alt="" src="./Netmanias.2015.05.28-RFC3489_Symmetric.gif">&nbsp;</p>
+
+<p style="margin-left:40px">&nbsp;</p>
+
+<p style="margin-left:40px"><span style="font-size:14px"><span style="font-family:arial"><strong>Test I</strong></span></span></p>
+
+<ul style="margin-left:40px">
+	<li>Same as in the test for a full cone NAT</li>
+</ul>
+
+<p style="margin-left:40px"><span style="font-size:14px"><span style="font-family:arial"><strong>Test II</strong></span></span></p>
+
+<ul style="margin-left:40px">
+	<li>The client sends the same Binding Request message as in the full cone NAT test, but no Binding Response is received.&nbsp;</li>
+	<li>Thus, the client knows that there is no full cone NAT, and thus performs Test I'.</li>
+</ul>
+
+<p style="margin-left:40px"><span style="font-size:14px"><span style="font-family:arial"><strong>Test I'</strong></span></span></p>
+
+<ul style="margin-left:40px">
+	<li>The client sends a Binding Request message to a server (at Alternate IP:Alternate Port (2.2.2.2:3479)), and receives a Binding Response message back from the server.&nbsp;</li>
+	<li>The client then compares the following two fields. If they don't match, the client knows that there is a symmetric NAT.
+	<ul>
+		<li>[b] Binding Response message: MAPPED-ADDRESS attribute = 5.5.5.1:40000</li>
+		<li>[c] Binding Response message: MAPPED-ADDRESS attribute = 5.5.5.1:50000</li>
+	</ul>
+	</li>
+	<li>Through the comparison of RFC 3489 and RFC 5780 in the last post, we found that, in terms of NAT mapping behavior, full cone, restricted cone and port restricted cone NATs all use Endpoint-Independent Mapping, whereas a symmetric NAT uses Address and Port-Dependent Mapping. Here in this test, two different packets with different destination information (1.1.1.1:3478 and 2.2.2.2:3470) were mapped to two different External Ports (40000 and 50000). Therefore, the client is behind a symmetric NAT.</li>
+</ul>
+
+<p style="margin-left:40px">&nbsp;</p>
+
+<p style="margin-left:40px"><span style="font-family:arial"><span style="font-size:16px"><strong>1.6&nbsp;Restricted Cone NAT</strong></span></span></p>
+
+<p style="margin-left:40px">&nbsp;<br>
+<img alt="" src="./Netmanias.2015.05.28-RFC3489_Restricted_Cone.gif">&nbsp;</p>
+
+<p style="margin-left:40px">&nbsp;</p>
+
+<p style="margin-left:40px"><span style="font-size:14px"><span style="font-family:arial"><strong>Test I</strong></span></span></p>
+
+<ul style="margin-left:40px">
+	<li>Same as in the test for a symmetric NAT</li>
+</ul>
+
+<p style="margin-left:40px"><span style="font-size:14px"><span style="font-family:arial"><strong>Test II</strong></span></span></p>
+
+<ul style="margin-left:40px">
+	<li>Same as in the test for a symmetric NAT</li>
+</ul>
+
+<p style="margin-left:40px"><span style="font-size:14px"><span style="font-family:arial"><strong>Test I'</strong></span></span></p>
+
+<ul style="margin-left:40px">
+	<li>The client sends the same Binding Request message as in the symmetric NAT test, and a Binding Response is received.</li>
+	<li>The client then compares the following two fields. If they match, the client knows that there is no symmetric NAT. So, it performs Test III.&nbsp;
+	<ul>
+		<li>[b] Binding Response message: MAPPED-ADDRESS attribute = 5.5.5.1:40000</li>
+		<li>[c] Binding Response message: MAPPED-ADDRESS attribute = 5.5.5.1:40000</li>
+	</ul>
+	</li>
+</ul>
+
+<p style="margin-left:40px"><span style="font-size:14px"><span style="font-family:arial"><strong>Test III</strong></span></span></p>
+
+<ul style="margin-left:40px">
+	<li>The client sends a server (at Primary IP:Primary Port (1.1.1.1:3478)) a Binding Request message with the Change Port flags from the CHANGE-REQUEST attribute set as 1.&nbsp;</li>
+	<li>Then, the server sends the client a Binding Response message after including Primary IP:Alternate Port (1.1.1.1:3479) as its source information. If this message is received, the client knows that it's behind a restricted cone NAT.</li>
+	<li>That is, the inbound packet with the source information (1.1.1.1:3479), which has the same destination IP as in the outbound packet, but a different destination port, was ALLOWED. Therefore, the client is behind a restricted cone NAT.</li>
+</ul>
+
+<p style="margin-left:40px">&nbsp;</p>
+
+<p style="margin-left:40px"><span style="font-family:arial"><span style="font-size:16px"><strong>1.7&nbsp;Port Restricted Cone NAT</strong></span></span></p>
+
+<p style="margin-left:40px"><br>
+<img alt="" src="./Netmanias.2015.05.28-RFC3489_Port_Restricted_Cone.gif">&nbsp;</p>
+
+<p style="margin-left:40px">&nbsp;<br>
+<span style="font-size:14px"><span style="font-family:arial"><strong>Test I</strong></span></span></p>
+
+<ul style="margin-left:40px">
+	<li>Same as in the test for a restricted cone NAT</li>
+</ul>
+
+<p style="margin-left:40px"><span style="font-size:14px"><span style="font-family:arial"><strong>Test II</strong></span></span></p>
+
+<ul style="margin-left:40px">
+	<li>Same as in the test for a restricted cone NAT</li>
+</ul>
+
+<p style="margin-left:40px"><span style="font-size:14px"><span style="font-family:arial"><strong>Test I'</strong></span></span></p>
+
+<ul style="margin-left:40px">
+	<li>Same as in the test for a restricted cone NAT</li>
+</ul>
+
+<p style="margin-left:40px"><span style="font-size:14px"><span style="font-family:arial"><strong>Test III</strong></span></span></p>
+
+<ul style="margin-left:40px">
+	<li>The client sends the same Binding Request message as in a restricted cone NAT test, but no Binding Response is received. So, the client knows it's behind a port restricted cone NAT.&nbsp;</li>
+	<li>That is, the inbound packet with the source information (1.1.1.1:3479), which has the same destination IP as in the outbound packet, but a different destination Port, was DROPPED. Therefore, the client is behind a restricted cone NAT.&nbsp;</li>
+</ul>
+
+<p style="margin-left:40px">&nbsp;</p>
+
+<p style="margin-left:40px"><br>
+<span style="font-family:arial"><span style="font-size:18px"><span style="color:#6b9900"><strong>RFC 3489 NAT Behavior Discovery Tools Used in Our Test</strong></span></span></span></p>
+
+<ul style="margin-left:40px">
+	<li>STUN Server: STUNTMAN (RFC 3489/5780 supported), http://www.stunprotocol.org/</li>
+	<li>STUN Client: JSTUN, http://jstun.javawi.de/</li>
+	<li>Test: STUNTMAN, JSTUN and ipTIME N2E used in classifying NAT types</li>
+	<li>Test Result: A port restricted cone NAT discovered</li>
+</ul>
+
+<p style="margin-left:40px">&nbsp;</p>
+
+<p style="margin-left:40px"><img alt="" src="./Netmanias.2012.07.28-RFC3489_JSTUN_Test_Result.gif" style="height:291px; width:740px"></p>
+
+</div>
+
+</body>
+
+</html>
