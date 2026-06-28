@@ -84,7 +84,16 @@ STUN 在 RFC 3489 和 RFC 5389/5780 中的区别
 
 ## NAT Behavior Discovery Using STUN (RFC 5780)
 
+原文地址：[链接](https://www.netmanias.com/en/post/techdocs/6067/nat-network-protocol/nat-behavior-discovery-using-stun-rfc-5780)  
 
+<p>
+  原版存档（PDF）：
+  <a href="/script/pdfjs-legacy/web/viewer.html?file=/html/NAT-Discovery-RFC-5780/en/2013.11.18-NAT%20Behavior%20Discovery%20Using%20STUN%20(RFC%205780).pdf">在线预览</a> 
+  | 
+  <a href="/html/NAT-Discovery-RFC-5780/en/2013.11.18-NAT%20Behavior%20Discovery%20Using%20STUN%20(RFC%205780).pdf" download>下载</a> <br />
+    原版存档（html）：
+  <a href="/html/NAT-Discovery-RFC-5780/en/index.html">链接</a>
+</p>
 
 
 
@@ -96,9 +105,9 @@ STUN 在 RFC 3489 和 RFC 5389/5780 中的区别
 
 <p>
   原版存档（PDF）：
-  <a href="/script/pdfjs-legacy/web/viewer.html?file=/html/NAT-Overview-RFC-3022-2663/en/Netmanias.2013.09.03.NAT%20Overview%20(en).pdf">在线预览</a> 
+  <a href="/script/pdfjs-legacy/web/viewer.html?file=/html/NAT-Overview-RFC-3022-2663/en/Netmanais.2013.09.03.NAT%20overview%20(en).pdf">在线预览</a> 
   | 
-  <a href="" download>下载</a> <br />
+  <a href="/html/NAT-Overview-RFC-3022-2663/en/Netmanais.2013.09.03.NAT%20overview%20(en).pdf" download>下载</a> <br />
     原版存档（html）：
   <a href="/html/NAT-Overview-RFC-3022-2663/en/index.html">链接</a>
 </p>
