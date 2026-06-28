@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Network Address Translation (NAT) Overview (RFC 3022/2663)</title>
+</head>
+
+<body>
+
+    <div style="width: 737px; margin-left: auto; margin-right: auto;">
+
+        <h1 style="margin-left:40px">Network Address Translation (NAT) Overview (RFC 3022/2663)</h1>
+
+        <p style="margin-left:40px">September 03, 2013 | By Netmanias (tech@netmanias.com)</p>
+
+        <p style="margin-left:40px">&nbsp;</p>
+
+
+        <p style="margin-left:40px">Today,&nbsp;<span style="font-size:14px"><span style="font-family:arial"><strong><a
+                            href="https://www.netmanias.com/en/?m=search&amp;kw=nat"><span
+                                style="color:rgb(255, 102, 0)">NAT</span></a></strong></span></span>s&nbsp;are
+            employed by Korean telecom operators in almost all of their access networks except for wired access
+            networks (FTTH, Ethernet, DSL, etc.).&nbsp;&nbsp;</p>
+
+        <ul style="margin-left:40px">
+            <li>3G/LTE network:&nbsp;Large Scale NAT (LSN) installed beyond&nbsp;GGSN/P-GW in&nbsp;the 3G/LTE
+                core networks. Also called "Carrier Grade NAT (CGN)".</li>
+            <li>Wi-Fi Hotspot network:&nbsp;NAT implemented in&nbsp;Wi-Fi hotspot AP.&nbsp;</li>
+            <li>Residential&nbsp;network:&nbsp;NAT implemented in subscribers' APs provided by (leased from)
+                telecom operators, or in APs purchased from open markets (e.g. D-Link's DIR). &nbsp;&nbsp;</li>
+        </ul>
+
+        <p style="margin-left:40px">All users, including 3G/LTE users, Wi-Fi hotspot users and&nbsp;home&nbsp;AP
+            users, are assigned&nbsp;a&nbsp;private&nbsp;IP address.&nbsp;Then later when they&nbsp;access the
+            Internet,&nbsp;this&nbsp;address is converted&nbsp;into a&nbsp;public&nbsp;IP
+            address&nbsp;through&nbsp;a NAT.&nbsp;&nbsp;</p>
+
+        <p style="margin-left:40px">&nbsp;</p>
+
+        <p style="margin-left:40px">Using&nbsp;a&nbsp;NAT&nbsp;allows&nbsp;telecom operators to:&nbsp;</p>
+
+        <p style="margin-left:40px">(1)&nbsp;save public IP addresses because the NAT converts the private IP
+            addresses assigned to multiple devices into a public address. This allows the devices to use only
+            one public IP address instead of their private IP addresses when accessing the Internet.</p>
+
+        <p style="margin-left:40px">(2) prevent any external attack on mobile devices or mobile networks by
+            introducing&nbsp;LSNs&nbsp;on&nbsp;the&nbsp;3G/LTE network. Enterprises can also protect their
+            internal network from external intrusion/attack by making their addresses private (similar to using
+            firewalls).&nbsp;</p>
+
+        <p style="margin-left:40px">&nbsp;</p>
+
+        <p style="margin-left:40px">Below, NAT-related terms defined in&nbsp;<a
+                href="http://www.ietf.org/rfc/rfc3022.txt" target="_blank"><span style="color:#0000CD">RFC 3022
+                    (Traditional NAT)</span></a>&nbsp;and&nbsp;<a href="http://www.ietf.org/rfc/rfc2663.txt"
+                target="_blank"><span style="color:#0000CD">RFC 2663 (IP NAT Terminology and
+                    Considerations)</span></a>&nbsp;will be explained.&nbsp;</p>
+
+        <p style="margin-left:40px">&nbsp;</p>
+
+        <p style="margin-left:40px">&nbsp;&nbsp;</p>
+
+        <p style="margin-left:40px"><span style="font-size:22px"><span style="font-family:arial"><span
+                        style="color:#6B9900"><strong>Terminology</strong></span></span></span></p>
+
+        <p style="margin-left:40px">&nbsp;</p>
+
+        <p style="margin-left:40px"><span style="font-size:16px"><span style="font-family:arial"><strong>1. TU
+                        Ports</strong></span></span></p>
+
+        <p style="margin-left:40px">Both TCP and UDP header have source and destination port fields.&nbsp;And
+            these ports are collectively called&nbsp;"TU Ports", or "Transport Identifiers". When a device
+            (client) communicates with a server&nbsp;using TCP or UDP,&nbsp;a value&nbsp;from&nbsp;0 to 1,023
+            (well-known ports defined by IANA) or from 1,024 to 49,191 (registered ports defined by
+            IANA)&nbsp;is generally used as a value for&nbsp;a TU destination port,&nbsp;as set in RFC 1700. For
+            example,&nbsp;HTTP's&nbsp;TCP destination port is 80. For a TU source port, however, each OS uses a
+            value randomly selected from different ranges defined for each OS (approximately 30,000 ~ 60,000).
+            This type of port is called an "ephemeral port"&nbsp;(see&nbsp;<a
+                href="https://en.wikipedia.org/wiki/Ephemeral_port" target="_blank"><span
+                    style="color:#0000CD">http://en.wikipedia.org/wiki/Ephemeral_port</span></a>&nbsp;for more
+            information).</p>
+
+        <p style="margin-left:40px">&nbsp;</p>
+
+        <p style="margin-left:40px"><span style="font-size:16px"><span style="font-family:arial"><strong>2.
+                        Public/Global/External Network</strong></span></span></p>
+
+        <p style="margin-left:40px">Refers to a network which has globally unique IP addresses assigned
+            by&nbsp;the&nbsp;Internet Assigned Numbers Authority (IANA). Therefore, this type of network can
+            route (communicate) across telecom operators' networks around the world. It is commonly called a
+            "public IP network". &nbsp;&nbsp;</p>
+
+        <p style="margin-left:40px">&nbsp;</p>
+
+        <p style="margin-left:40px"><span style="font-size:16px"><span style="font-family:arial"><strong>3.
+                        Private/Local Network</strong></span></span></p>
+
+        <p style="margin-left:40px">Refers to a network which has IP addresses that are not assigned by IANA.
+            This type of network cannot route through the Internet. It is commonly called a "private IP
+            network".</p>
+
+        <p style="margin-left:40px">IANA defines the following three IP blocks for this purpose:</p>
+
+        <ul style="margin-left:40px">
+            <li>10/8, 172.16/12, 192.168/16</li>
+        </ul>
+
+        <p style="margin-left:40px"><span style="font-size:16px"><span style="font-family:arial"><strong>4.
+                        Session</strong></span></span></p>
+
+        <p style="margin-left:40px">A session is defined as the set of traffic that is managed as a unit for
+            translation.&nbsp;Each TCP/UDP session is identified by the values of a source IP address, source TU
+            port, destination IP address and destination TU port.</p>
+
+        <p style="margin-left:40px">&nbsp;</p>
+
+        <p style="margin-left:40px"><span style="font-size:16px"><span style="font-family:arial"><strong>5.
+                        Application Level Gateway (ALG)</strong></span></span></p>
+
+        <p style="margin-left:40px">Some applications have&nbsp;IP address and/or TU port&nbsp;information in
+            their payload (application-specific data that follows TCP/UDP headers). For this reason, some NAT
+            devices have Application Level Gateways (ALGs), which feature an agent that can translate
+            the&nbsp;IP address and/or TU port&nbsp;information stored in payloads (Application awareness inside
+            the NAT). In general, these NATs&nbsp;come with a list of applications supported (e.g.&nbsp;FTP,
+            SIP, RTSP, etc.). Since it is practically impossible for a NAT to support&nbsp;ALGs for all
+            the&nbsp;applications&nbsp;that are being&nbsp;released every day in the market, not many
+            NATs&nbsp;seem to support&nbsp;ALGs.&nbsp;&nbsp;</p>
+
+        <p style="margin-left:40px">&nbsp;</p>
+
+        <p style="margin-left:40px">&nbsp;</p>
+
+        <p style="margin-left:40px"><span style="font-size:22px"><span style="font-family:arial"><span
+                        style="color:#6B9900"><strong>What is NAT?</strong></span></span></span></p>
+
+        <p style="margin-left:40px">&nbsp;</p>
+
+        <p style="margin-left:40px">Network Address Translation (NAT) is the process of converting a private IP
+            address into a public IP address, and vice versa, to allow a device on a private network to
+            communicate with a public network (Internet).</p>
+
+        <p style="margin-left:40px">&nbsp;</p>
+
+        <table border="0" cellpadding="0" cellspacing="0" style="margin-left:40px; width:700px">
+            <tbody>
+                <tr>
+                    <td style="background-color:rgb(242, 242, 242)">
+                        <table border="0" cellpadding="0" cellspacing="0"
+                            style="font-family:verdana,tahoma,calibri,arial,calibri,helvetica,applegothic,sans-serif; margin:8px; width:684px">
+                            <tbody>
+                                <tr>
+                                    <td style="background-color:rgb(242, 242, 242)">
+                                        <p><span style="font-family:arial"><strong>Traditional
+                                                    NAT</strong>&nbsp;would allow hosts within a&nbsp;<u>private
+                                                    network</u>&nbsp;to transparently access hosts in
+                                                the&nbsp;<u>external network</u>, in most cases. &nbsp;In a
+                                                traditional NAT, sessions are uni-directional, outbound from the
+                                                private network. &nbsp;Sessions in the opposite direction may be
+                                                allowed on an exceptional basis using static address maps for
+                                                pre-selected hosts. (RFC 3022)</span></p>
+
+                                        <p style="margin-left:40px">&nbsp;</p>
+
+                                        <p><span style="font-family:arial">Traditionally,&nbsp;<strong>NAT
+                                                    devices</strong>&nbsp;are used to connect
+                                                an&nbsp;<u>isolated address realm with private unregistered
+                                                    addresses</u>&nbsp;to an&nbsp;<u>external realm with
+                                                    globally unique registered addresses</u>. (RFC 2663)</span>
+                                        </p>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <p style="margin-left:40px">&nbsp;</p>
+
+        <p style="margin-left:40px">&nbsp;</p>
+
+        <p style="margin-left:40px"><span style="font-size:22px"><span style="font-family:arial"><span
+                        style="color:#6B9900"><strong>Types of NAT</strong></span></span></span></p>
+
+        <p style="margin-left:40px">&nbsp;</p>
+
+        <p style="margin-left:40px">There are two types of NAT defined in RFC 3022/2663: Basic NAT
+            and&nbsp;Network Address Port Translation (NAPT). They both are collectively called "Traditional
+            NAT" although NAPT, aimed at "saving IPv4 addresses", is the most common type of NAT these days. So,
+            when we say NAT, we refer to NAPT in most cases. The NAPT-type operation is now supported by all
+            APs. &nbsp;</p>
+
+        <p style="margin-left:40px">&nbsp;</p>
+
+        <table border="0" cellpadding="0" cellspacing="0" style="margin-left:40px; width:700px">
+            <tbody>
+                <tr>
+                    <td style="background-color:rgb(242, 242, 242)">
+                        <table border="0" cellpadding="0" cellspacing="0"
+                            style="font-family:verdana,tahoma,calibri,arial,calibri,helvetica,applegothic,sans-serif; margin:8px; width:684px">
+                            <tbody>
+                                <tr>
+                                    <td style="background-color:rgb(242, 242, 242)">
+                                        <p><span style="font-family:arial">Basic Network Address Translation
+                                                or&nbsp;<strong>Basic NAT</strong>&nbsp;is a method by
+                                                which&nbsp;<u>IP addresses</u>&nbsp;are mapped from one group to
+                                                another, transparent to end users. &nbsp;Network Address Port
+                                                Translation, or&nbsp;<strong>NAPT</strong>&nbsp;is a method by
+                                                which&nbsp;<u>many network addresses and their TCP/UDP
+                                                    (Transmission Control Protocol/User Datagram Protocol)
+                                                    ports</u>&nbsp;are translated into a&nbsp;<u>single network
+                                                    address and its TCP/UDP ports</u>. &nbsp;</span></p>
+
+                                        <p><span style="font-family:arial">Together,&nbsp;<strong>these two
+                                                    operations</strong>, referred to as&nbsp;<strong>traditional
+                                                    NAT</strong>, provide a mechanism to connect a realm with
+                                                private addresses to an external realm with globally unique
+                                                registered addresses. (RFC 3022)</span></p>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <p style="margin-left:40px">&nbsp;</p>
+
+        <p style="margin-left:40px">&nbsp;</p>
+
+        <p style="margin-left:40px"><span style="font-size:16px"><span style="font-family:arial"><span
+                        style="color:#3366ff"><strong>1. Basic NAT</strong></span></span></span></p>
+
+        <p style="margin-left:40px">&nbsp;</p>
+
+        <p style="text-align:left"><img alt="" src="./Fig1.Network Address Translation (NAT) Overview.gif"
+                style="height:816px; width:737px"></p>
+
+        <p style="margin-left:40px">&nbsp;</p>
+
+        <p style="margin-left:40px"><span style="font-size:14px"><span
+                    style="font-family:arial"><strong>Definition&nbsp;and Purpose</strong>&nbsp;</span></span>
+        </p>
+
+        <p style="margin-left:80px">Basic NAT is employed in enterprise networks for security purposes (like
+            firewall). It provides a one-to-one translation of IP addresses.&nbsp;This means the same number of
+            public IP addresses as the devices with a private IP address are needed to access the
+            Internet.&nbsp;</p>
+
+        <p style="margin-left:80px">&nbsp;</p>
+
+        <table border="0" cellpadding="0" cellspacing="0" style="margin-left:40px; width:700px">
+            <tbody>
+                <tr>
+                    <td style="background-color:rgb(242, 242, 242)">
+                        <table border="0" cellpadding="0" cellspacing="0"
+                            style="font-family:verdana,tahoma,calibri,arial,calibri,helvetica,applegothic,sans-serif; margin:8px; width:684px">
+                            <tbody>
+                                <tr>
+                                    <td style="background-color:rgb(242, 242, 242)">
+                                        <p><span style="font-size:13px"><span style="font-family:arial">Nodes on
+                                                    private network could be enabled to communicate with
+                                                    external network by dynamically mapping the&nbsp;<u>set of
+                                                        private addresses</u>&nbsp;to a&nbsp;<u>set of globally
+                                                        valid network addresses</u>. (RFC 3022)</span></span>
+                                        </p>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <p style="margin-left:40px">&nbsp; &nbsp;</p>
+
+        <p style="margin-left:40px"><span style="font-size:14px"><span style="font-family:arial"><span
+                        style="color:#000000"><strong>Translation Rule</strong>&nbsp;</span></span></span>&nbsp;
+        </p>
+
+        <p style="margin-left:80px">1:1 translation&nbsp;(1 = Public IP, 1 = Private IP)</p>
+
+        <p style="margin-left:80px">&nbsp;</p>
+
+        <p style="margin-left:40px"><span style="font-size:14px"><span
+                    style="font-family:arial"><strong>Mapping</strong>&nbsp;</span></span></p>
+
+        <p style="margin-left:80px"><span style="color:#A9A9A9"><strong>■</strong></span> Outbound Traffic:
+            Translating a private source IP address to a&nbsp;public&nbsp;source IP address</p>
+
+        <p style="margin-left:80px"><span style="color:#A9A9A9"><strong>■</strong></span> Inbound Traffic:
+            Translating a public destination IP address to a private destination IP address</p>
+
+        <p style="margin-left:80px">&nbsp;</p>
+
+        <p style="margin-left:40px"><span style="font-size:14px"><span style="font-family:arial"><strong>Packet
+                        Modification</strong>&nbsp;</span></span></p>
+
+        <p style="margin-left:80px">Following packet information is replaced during translation:&nbsp;</p>
+
+        <p style="margin-left:80px"><span style="color:#A9A9A9"><strong>■</strong></span> Outbound Traffic:
+            Source IP address, IP header checksum</p>
+
+        <p style="margin-left:80px"><span style="color:#A9A9A9"><strong>■</strong></span> Inbound
+            Traffic:&nbsp;Destination IP address, IP header checksum</p>
+
+        <p style="margin-left:40px">&nbsp;</p>
+
+        <p style="margin-left:40px"><span style="font-size:14px"><span
+                    style="font-family:arial"><strong>Three&nbsp;Translation Phases in a
+                        Session&nbsp;</strong></span></span></p>
+
+        <p style="margin-left:80px">&nbsp;</p>
+
+        <p style="margin-left:80px"><span style="font-size:14px"><span style="font-family:arial"><span
+                        style="color:#696969"><strong>1. Address Binding</strong></span></span></span></p>
+
+        <p style="margin-left:80px">A basic NAT&nbsp;binds a public IP address to each&nbsp;outbound traffic
+            sent by a device with a private IP address&nbsp;(1:1 mapping), and generates a session entry in the
+            NAT binding table.&nbsp;</p>
+
+        <p style="margin-left:80px">&nbsp;</p>
+
+        <p style="margin-left:80px"><span style="font-size:14px"><span style="font-family:arial"><span
+                        style="color:#696969"><strong>2. Address Lookup and
+                            Translation</strong></span></span></span></p>
+
+        <p style="margin-left:80px"><span style="color:#A9A9A9"><strong>■</strong></span> Later when the NAT
+            receives an outbound traffic packet (from a user device to NAT), it translates the&nbsp;private
+            source IP address of the packet to a&nbsp;public source IP address&nbsp;by referring to the binding
+            table, and delivers it on to the Internet.&nbsp;</p>
+
+        <p style="margin-left:80px"><span style="color:#A9A9A9"><strong>■</strong></span> When it receives an
+            inbound traffic packet (from the Internet to NAT), it translates the&nbsp;public destination IP
+            address of the packet to the IP address of the user device, i.e. a&nbsp;private destination IP
+            address,&nbsp;by referring to the binding table, and delivers it on to the user device.&nbsp;</p>
+
+        <p style="margin-left:80px">&nbsp;</p>
+
+        <p style="margin-left:80px"><span style="font-size:14px"><span style="font-family:arial"><span
+                        style="color:#696969"><strong>3. Address Unbinding</strong></span></span></span></p>
+
+        <p style="margin-left:80px">If there is no incoming packet that corresponds to a session entry
+            generated, the NAT deletes the entry from the NAT binding table. &nbsp;</p>
+
+        <p style="margin-left:80px">&nbsp;</p>
+
+        <p style="margin-left:40px"><span style="font-size:14px"><span style="font-family:arial"><strong>Deployment
+                        Example</strong></span></span></p>
+
+        <p style="margin-left:80px">Enterprise network</p>
+
+        <p style="margin-left:40px">&nbsp;</p>
+
+        <p style="margin-left:40px">&nbsp;</p>
+
+        <p style="margin-left:40px"><span style="font-size:16px"><span style="font-family:arial"><span
+                        style="color:#3366ff"><strong>2. Network Address Port Translation
+                            (NAPT)</strong></span></span></span></p>
+
+        <p style="margin-left:40px">&nbsp;</p>
+
+        <p style="text-align:left"><img alt="" src="./Fig2.Network Address Translation (NAT) Overview.gif"
+                style="height:819px; width:737px"></p>
+
+        <p style="text-align:right">&nbsp;</p>
+
+        <p style="margin-left:40px"><span style="font-size:14px"><span style="font-family:arial"><strong>Definition and
+                        Purpose</strong></span></span></p>
+
+        <p style="margin-left:80px">NAPT is employed for saving public IP addresses. It provides a many-to-one
+            translation of IP addresses. That means one public IP address is used when multiple user devices
+            with&nbsp;a private IP address&nbsp;access the Internet.&nbsp;</p>
+
+        <div>&nbsp;</div>
+
+        <div>
+            <table border="0" cellpadding="0" cellspacing="0" style="margin-left:40px; width:700px">
+                <tbody>
+                    <tr>
+                        <td style="background-color:rgb(242, 242, 242)">
+                            <table border="0" cellpadding="0" cellspacing="0"
+                                style="font-family:verdana,tahoma,calibri,arial,calibri,helvetica,applegothic,sans-serif; margin:8px; width:684px">
+                                <tbody>
+                                    <tr>
+                                        <td style="background-color:rgb(242, 242, 242)">
+                                            <p><span style="font-family:arial">Nodes on the private network
+                                                    could be allowed simultaneous access to the external
+                                                    network, using the&nbsp;<u>single registered IP
+                                                        address</u>&nbsp;with the aid of NAPT.&nbsp;(RFC
+                                                    3022)</span></p>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <p style="margin-left:40px">&nbsp;</p>
+        </div>
+
+        <p style="margin-left:40px"><span style="font-size:14px"><span style="font-family:arial"><strong>Translation
+                        Rule&nbsp;</strong>&nbsp;</span></span></p>
+
+        <p style="margin-left:80px">1:N translation (1 = Public IP, N = Private IP)</p>
+
+        <p style="margin-left:80px">&nbsp;</p>
+
+        <p style="margin-left:40px"><span style="font-size:14px"><span
+                    style="font-family:arial">&nbsp;<strong>Mapping</strong></span></span></p>
+
+        <p style="margin-left:80px"><span style="color:#A9A9A9"><strong>■</strong></span> Outbound Traffic:
+            Translating {Private source IP address, Local TU source port} tuple to {Public source IP address,
+            Registered TU source port} tuple</p>
+
+        <p style="margin-left:80px"><span style="color:#A9A9A9"><strong>■</strong></span> Inbound Traffic:
+            Translating {Public destination IP address, Registered TU destination port} tuple to {Private
+            destination IP address, Local TU destination port}&nbsp;</p>
+
+        <p style="margin-left:80px">&nbsp;</p>
+
+        <p style="margin-left:40px"><span style="font-size:14px"><span style="font-family:arial">&nbsp;<strong>Packet
+                        Modification&nbsp;</strong></span></span></p>
+
+        <p style="margin-left:80px">Following packet information is replaced during translation:&nbsp;</p>
+
+        <p style="margin-left:80px"><span style="color:#A9A9A9"><strong>■</strong></span> Outbound Traffic:
+            Source IP address, IP deader checksum,&nbsp;TU source port, TCP/UDP header checksum</p>
+
+        <p style="margin-left:80px"><span style="color:#A9A9A9"><strong>■</strong></span> Inbound
+            Traffic:&nbsp;Destination IP address, IP header checksum,&nbsp;TU destination port, TCP/UDP header
+            checksum</p>
+
+        <p style="margin-left:40px">&nbsp;</p>
+
+        <p style="margin-left:40px">&nbsp;<span style="font-size:14px"><strong><span
+                        style="font-family:arial">Three&nbsp;Translation Phases in a
+                        Session</span>&nbsp;</strong></span></p>
+
+        <p style="margin-left:80px">&nbsp;</p>
+
+        <p style="margin-left:80px"><span style="font-size:14px"><span style="font-family:arial"><span
+                        style="color:#696969"><strong>1. Address Binding</strong></span></span></span></p>
+
+        <p style="margin-left:80px">When a device with a&nbsp;private IP address sends an outbound traffic,
+            a&nbsp;NAPT&nbsp;binds a public IP address and TU source port to the private IP address and TU
+            source port of the device&nbsp;(1:N mapping). Then the NAPT generates a session entry for the
+            traffic in the NAT binding table.&nbsp;</p>
+
+        <p style="margin-left:80px">&nbsp;</p>
+
+        <p style="margin-left:80px"><span style="font-size:14px"><span style="font-family:arial"><span
+                        style="color:#696969"><strong>2. Address Lookup and
+                            Translation</strong></span></span></span></p>
+
+        <p style="margin-left:80px"><span style="color:#A9A9A9">■</span>&nbsp;Later when the NAPT receives an
+            outbound traffic packet (from a user device to NAT), it translates the&nbsp;private source IP
+            address and local TU source port of the packet into a&nbsp;public source IP
+            address&nbsp;and&nbsp;registered&nbsp;TU source port by referring to the binding table, and delivers
+            it on to the Internet (Registered ports refer to the ones assigned by a NAT. A local TU source port
+            is also called an "Internal Port", and a registered TU source port is called an "External
+            Port".).&nbsp;</p>
+
+        <p style="margin-left:80px"><span style="color:#A9A9A9"><strong>■</strong></span>&nbsp;When it receives
+            an inbound traffic packet (from the Internet to NAT), it translates the&nbsp;public destination IP
+            address and registered TU destination port of the packet to the IP address and port values of the
+            user device, i.e. a&nbsp;private destination IP address and local TU destination port,&nbsp;by
+            referring to the binding table, and delivers it on to the user device.&nbsp;</p>
+
+        <p style="margin-left:80px">&nbsp;</p>
+
+        <p style="margin-left:80px"><span style="font-size:14px"><span style="font-family:arial"><span
+                        style="color:#696969"><strong>3. Address Unbinding</strong></span></span></span></p>
+
+        <p style="margin-left:80px">If there is no incoming packet that corresponds to a session entry
+            generated, the NAPT deletes the entry from the NAT binding table. &nbsp;</p>
+
+        <p style="margin-left:80px">&nbsp;</p>
+
+        <p style="margin-left:40px"><span style="font-size:14px"><span style="font-family:arial"><strong>Deployment
+                        Example&nbsp;</strong></span></span></p>
+
+        <p style="margin-left:80px">Wi-Fi hotspot, SOHO, Home and 3G/LTE LSN</p>
+
+        <p style="margin-left:80px">&nbsp;</p>
+    </div>
+
+
+</body>
+
+</html>
