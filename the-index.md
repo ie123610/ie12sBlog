@@ -1,12 +1,8 @@
 # 文章索引
 
-已固定的文章：  
-
 ## LUCKY 系列
 
-### STUN 穿透
-
-#### BT 下载
+### BT 下载
 
 * [「LUCKY STUN穿透」在Docker中使用MiniUPnP为BT客户端自动添加内外端口不同的映射规则](articles/lucky-STUN/stun-docker-upnp.md)
 * [「LUCKY STUN穿透」使用webhook自动修改 qbittorrent 的监听端口](articles/lucky-STUN/stun-qb-port-automation.md)
@@ -14,27 +10,24 @@
 * [「LUCKY STUN穿透」使用 cURL 自动修改 Transmission 的监听端口](articles/lucky-STUN/stun-tr-modify-port.md)
 * [LUCKY STUN穿透在Windows上使用UPnP工具为BT客户端自动添加内外端口号不同的映射规则](articles/lucky-STUN/stun-bt.md)
 
-#### 网页服务
+### 固定STUN端口
 
 * [「LUCKY STUN穿透」使用Cloudflare的页面规则固定和隐藏网页端口](articles/lucky-STUN/stun-web-serve-CF.md)
 * [「LUCKY STUN穿透」使用邮件通知端口变化情况](articles/lucky-STUN/email-notification-port.md)
 * [「LUCKY STUN穿透」使用Homer导航页指示stun穿透后的端口](articles/lucky-STUN/stun-home-page.md)
 * [「LUCKY STUN穿透」解决WebDAV重定向问题](articles/lucky-STUN/stun-webdav-redirect.md)
 * [「LUCKY STUN穿透」IPv4和IPv6分离重定向](articles/lucky-STUN/stun-v4-v6-redirect.md)
+* [「LUCKY STUN穿透」在Windows下使用VNT组网为非HTTP服务固定STUN穿透端口](articles/lucky-STUN/stun-VNT-networkin.md)
+* [「LUCKY STUN穿透」使用UptimeRobot使UPnP映射的TCP规则保持活跃](articles/lucky-STUN/uptime-upnp-keep-alive.md)
+* [「LUCKY」在Windows下使用STUN穿透实现Minecraft联机并设置SRV记录](articles/lucky-STUN/stun-mc-srv.md)
 * [「扩展篇」使用Cloudflare的重定向规则传递资源路径和查询字符串](articles/lucky-STUN/stun-cf-redirection.md)
 * [使用SVCB/HTTPS记录隐藏和固定Web服务端口](articles/lucky-STUN/svcb-records-hidden-ports.md)
 
-#### 其他
-
-* [「LUCKY STUN穿透」在Windows下使用VNT组网为非HTTP服务固定STUN穿透端口](articles/lucky-STUN/stun-VNT-networkin.md)
-* [「LUCKY」在Windows下使用STUN穿透实现Minecraft联机并设置SRV记录](articles/lucky-STUN/stun-mc-srv.md)
-* [「LUCKY STUN穿透」使用UptimeRobot使UPnP映射的TCP规则保持活跃](articles/lucky-STUN/uptime-upnp-keep-alive.md)
-* [「LUCKY STUN穿透」 使用邮件服务发送电子邮件](articles/lucky-STUN/web-email-service.md)
-
-### Web 服务
+### 常规 Web 服务
 
 * [在Windows下使用lucky配置反向代理以实现较为安全的WEB访问](articles/lucky-STUN/lucky-web.md)
 * [在Windows下使用lucky实现TLS/SSL证书自动化](articles/lucky-STUN/lucky-tls-automation.md)
+
 
 ### DNS 记录
 
@@ -46,7 +39,10 @@
 
 ### 其他
 
+
+* [「LUCKY STUN穿透」 使用邮件服务发送电子邮件](articles/lucky-STUN/web-email-service.md)
 * [使用VxKex使高版本LCUKY可在Win7上运行](articles/lucky-STUN/lucky-vxkex-compatible.md)
+
 
 ---
 
@@ -132,7 +128,7 @@
 
 ---
 
-## 研究记录系列
+## 非系列文章
 
-* [研究记录索引](./articles/research-logs/research-index.md)
+* [独立文章索引](./articles/research-logs/research-index.md)
 * [笔记](./articles/notes/notes-index.md)
