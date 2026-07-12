@@ -1,5 +1,7 @@
 # Xray allowInsecure 参数移除过渡
 
+2026.6.10  
+
 xray 正在移除 `allowInsecure` 参数  
 现在携带此参数会导致核心拒绝启动 详见：[链接](https://github.com/2dust/v2rayN/discussions/9460)  
 

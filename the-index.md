@@ -42,6 +42,8 @@
 
 * [「LUCKY STUN穿透」 使用邮件服务发送电子邮件](articles/lucky-STUN/web-email-service.md)
 * [使用VxKex使高版本LCUKY可在Win7上运行](articles/lucky-STUN/lucky-vxkex-compatible.md)
+* [Lucky 执行批处理报错和乱码问题](articles/research-logs/lucky-cmd-error.md)
+
 
 
 ---
@@ -119,16 +121,59 @@
 
 ---
 
-## 虚拟专用网络系列
+## 虚拟专用网络和代理系列
 
 * [解决Softether开源版本中“不支持此功能。它尚未在开源版本上实施”的问题](articles/virtual-private-network/softether-enterprise-functions-unlock.md)
 * [在Windows上搭建 EasyTier 公共服务器](articles/virtual-private-network/setup-easytier-server-on-win.md)
 * [「EasyTier」使用SRV TXT HTTP重定向获取对端IP端口](articles/virtual-private-network/easytier-get-port-form-dns-record.md)
 * [使用Gost替换Frp实现内网穿透为BT下载开放端口](articles/virtual-private-network/gost-bt-NAT-Penetration.md)
+* [使用Gost将SoftEther转换为socks5代理](articles/research-logs/gost-softether-vpn-to-proxy.md)
+* [Xray allowInsecure 参数移除过渡](articles/research-logs/xray-allowInsecure.md)
 
 ---
 
-## 非系列文章
+## 站点建设
 
-* [独立文章索引](./articles/research-logs/research-index.md)
-* [笔记](./articles/notes/notes-index.md)
+* [使用简单方法在 Markdown 中展示 PDF 文件](articles/research-logs/markdown-pdf.md)
+* [XSLT 被移除后的RSS美化方案](articles/research-logs/xml-xslt.md)
+* [Cloudflare Pages 不显示 .html 和 末尾斜杠问题](articles/research-logs/cf-pages-feature.md)
+* [Cloudflare 在指定域名下禁用SSL/TSL](articles/research-logs/cloudflare-disable-ssl.md)
+* [解决showLastUpdateTime总是显示相同日期问题](articles/research-logs/Docusaurus-showLastUpdateTime.md)
+
+## 网络
+
+* [Feed RSS ATOM 以及 Feed JSON](articles/research-logs/feed-rss-atom-json.md)
+* [在Windows上使用ncat测试UDP端口](articles/research-logs/ncat-udp-port-check.md)
+* [「转」基于爱奇艺HCDN视频分发网络的开放缓存](articles/research-logs/爱奇艺HCDN.md)
+* [STUN 研究](articles/research-logs/stun-research.md)
+
+
+## HTTPS与SVCB记录
+
+* [HTTPS/SVCB记录和HTTP3/QUIC排障](articles/research-logs/https-record-http3-test.md)
+* [SVCB/HTTPS记录与免费FRP穿透配合使用](articles/research-logs/svcb-frp.md)
+* [cURL SVCB/HTTPS 记录测试](articles/research-logs/curl-test.md)
+
+
+## P2P 下载
+
+* [qb匿名模式名称显示研究](articles/research-logs/qb-anonymous-mode.md)
+* [已知bittorrent客户端生存调查](articles/research-logs/已知bittorrent客户端生存调查/已知客户端调查-说明.md)
+* [eMule设置IP绑定](articles/research-logs/emule-ip-binding.md)
+
+
+## Windows
+
+* [Windows 无法启用休眠问题](articles/research-logs/win-sleep-mode-issue.md)
+* [Windows 传输动画提取](articles/research-logs/win-animation.md)
+
+
+## 游戏
+
+* [战地1 EA反作弊无法启动问题 ExitType: 115 (0)](articles/research-logs/ea-anti-cheat-115-0.md)
+
+---
+
+## 笔记
+
+* [笔记索引](articles/notes/notes-index.md)
