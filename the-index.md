@@ -121,7 +121,7 @@
 
 ---
 
-## 虚拟专用网络和代理系列
+## 虚拟专用网络和代理
 
 * [解决Softether开源版本中“不支持此功能。它尚未在开源版本上实施”的问题](articles/virtual-private-network/softether-enterprise-functions-unlock.md)
 * [在Windows上搭建 EasyTier 公共服务器](articles/virtual-private-network/setup-easytier-server-on-win.md)
