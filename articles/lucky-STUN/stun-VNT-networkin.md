@@ -55,8 +55,7 @@ STUN穿透无法固定端口的问题
   
    虽然普通的Windows本身可以进行转发端口 但这仅限于TCP  
    若要转发UDP端口则需要使用winsever 相比之下使用lucky反而可能会更加简单  
-   [旧方案链接](../research-logs/废弃方案-使用lucky端口转发固定STUN穿透端口.md)  
-
+   [旧方案链接](../notes/废弃方案-使用lucky端口转发固定STUN穿透端口.md)  
 
 ---
 
