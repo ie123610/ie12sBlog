@@ -1,5 +1,7 @@
 # STUN 研究
 
+2026.6.24  
+
 ## STUN (RFC 3489) vs. STUN (RFC 5780)
 
 STUN 在 RFC 3489 和 RFC 5389/5780 中的区别

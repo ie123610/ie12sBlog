@@ -1,12 +1,8 @@
 # 文章索引
 
-已固定的文章：  
-
 ## LUCKY 系列
 
-### STUN 穿透
-
-#### BT 下载
+### BT 下载
 
 * [「LUCKY STUN穿透」在Docker中使用MiniUPnP为BT客户端自动添加内外端口不同的映射规则](articles/lucky-STUN/stun-docker-upnp.md)
 * [「LUCKY STUN穿透」使用webhook自动修改 qbittorrent 的监听端口](articles/lucky-STUN/stun-qb-port-automation.md)
@@ -14,27 +10,24 @@
 * [「LUCKY STUN穿透」使用 cURL 自动修改 Transmission 的监听端口](articles/lucky-STUN/stun-tr-modify-port.md)
 * [LUCKY STUN穿透在Windows上使用UPnP工具为BT客户端自动添加内外端口号不同的映射规则](articles/lucky-STUN/stun-bt.md)
 
-#### 网页服务
+### 固定STUN端口
 
 * [「LUCKY STUN穿透」使用Cloudflare的页面规则固定和隐藏网页端口](articles/lucky-STUN/stun-web-serve-CF.md)
 * [「LUCKY STUN穿透」使用邮件通知端口变化情况](articles/lucky-STUN/email-notification-port.md)
 * [「LUCKY STUN穿透」使用Homer导航页指示stun穿透后的端口](articles/lucky-STUN/stun-home-page.md)
 * [「LUCKY STUN穿透」解决WebDAV重定向问题](articles/lucky-STUN/stun-webdav-redirect.md)
 * [「LUCKY STUN穿透」IPv4和IPv6分离重定向](articles/lucky-STUN/stun-v4-v6-redirect.md)
+* [「LUCKY STUN穿透」在Windows下使用VNT组网为非HTTP服务固定STUN穿透端口](articles/lucky-STUN/stun-VNT-networkin.md)
+* [「LUCKY STUN穿透」使用UptimeRobot使UPnP映射的TCP规则保持活跃](articles/lucky-STUN/uptime-upnp-keep-alive.md)
+* [「LUCKY」在Windows下使用STUN穿透实现Minecraft联机并设置SRV记录](articles/lucky-STUN/stun-mc-srv.md)
 * [「扩展篇」使用Cloudflare的重定向规则传递资源路径和查询字符串](articles/lucky-STUN/stun-cf-redirection.md)
 * [使用SVCB/HTTPS记录隐藏和固定Web服务端口](articles/lucky-STUN/svcb-records-hidden-ports.md)
 
-#### 其他
-
-* [「LUCKY STUN穿透」在Windows下使用VNT组网为非HTTP服务固定STUN穿透端口](articles/lucky-STUN/stun-VNT-networkin.md)
-* [「LUCKY」在Windows下使用STUN穿透实现Minecraft联机并设置SRV记录](articles/lucky-STUN/stun-mc-srv.md)
-* [「LUCKY STUN穿透」使用UptimeRobot使UPnP映射的TCP规则保持活跃](articles/lucky-STUN/uptime-upnp-keep-alive.md)
-* [「LUCKY STUN穿透」 使用邮件服务发送电子邮件](articles/lucky-STUN/web-email-service.md)
-
-### Web 服务
+### 常规 Web 服务
 
 * [在Windows下使用lucky配置反向代理以实现较为安全的WEB访问](articles/lucky-STUN/lucky-web.md)
 * [在Windows下使用lucky实现TLS/SSL证书自动化](articles/lucky-STUN/lucky-tls-automation.md)
+
 
 ### DNS 记录
 
@@ -46,7 +39,12 @@
 
 ### 其他
 
+
+* [「LUCKY STUN穿透」 使用邮件服务发送电子邮件](articles/lucky-STUN/web-email-service.md)
 * [使用VxKex使高版本LCUKY可在Win7上运行](articles/lucky-STUN/lucky-vxkex-compatible.md)
+* [Lucky 执行批处理报错和乱码问题](articles/research-logs/lucky-cmd-error.md)
+
+
 
 ---
 
@@ -123,16 +121,59 @@
 
 ---
 
-## 虚拟专用网络系列
+## 虚拟专用网络和代理
 
 * [解决Softether开源版本中“不支持此功能。它尚未在开源版本上实施”的问题](articles/virtual-private-network/softether-enterprise-functions-unlock.md)
 * [在Windows上搭建 EasyTier 公共服务器](articles/virtual-private-network/setup-easytier-server-on-win.md)
 * [「EasyTier」使用SRV TXT HTTP重定向获取对端IP端口](articles/virtual-private-network/easytier-get-port-form-dns-record.md)
 * [使用Gost替换Frp实现内网穿透为BT下载开放端口](articles/virtual-private-network/gost-bt-NAT-Penetration.md)
+* [使用Gost将SoftEther转换为socks5代理](articles/research-logs/gost-softether-vpn-to-proxy.md)
+* [Xray allowInsecure 参数移除过渡](articles/research-logs/xray-allowInsecure.md)
 
 ---
 
-## 研究记录系列
+## 站点建设
 
-* [研究记录索引](./articles/research-logs/research-index.md)
-* [笔记](./articles/notes/notes-index.md)
+* [使用简单方法在 Markdown 中展示 PDF 文件](articles/research-logs/markdown-pdf.md)
+* [XSLT 被移除后的RSS美化方案](articles/research-logs/xml-xslt.md)
+* [Cloudflare Pages 不显示 .html 和 末尾斜杠问题](articles/research-logs/cf-pages-feature.md)
+* [Cloudflare 在指定域名下禁用SSL/TSL](articles/research-logs/cloudflare-disable-ssl.md)
+* [解决showLastUpdateTime总是显示相同日期问题](articles/research-logs/Docusaurus-showLastUpdateTime.md)
+
+## 网络
+
+* [Feed RSS ATOM 以及 Feed JSON](articles/research-logs/feed-rss-atom-json.md)
+* [在Windows上使用ncat测试UDP端口](articles/research-logs/ncat-udp-port-check.md)
+* [「转」基于爱奇艺HCDN视频分发网络的开放缓存](articles/research-logs/爱奇艺HCDN.md)
+* [STUN 研究](articles/research-logs/stun-research.md)
+
+
+## HTTPS与SVCB记录
+
+* [HTTPS/SVCB记录和HTTP3/QUIC排障](articles/research-logs/https-record-http3-test.md)
+* [SVCB/HTTPS记录与免费FRP穿透配合使用](articles/research-logs/svcb-frp.md)
+* [cURL SVCB/HTTPS 记录测试](articles/research-logs/curl-test.md)
+
+
+## P2P 下载
+
+* [qb匿名模式名称显示研究](articles/research-logs/qb-anonymous-mode.md)
+* [已知bittorrent客户端生存调查](articles/research-logs/已知bittorrent客户端生存调查/已知客户端调查-说明.md)
+* [eMule设置IP绑定](articles/research-logs/emule-ip-binding.md)
+
+
+## Windows
+
+* [Windows 无法启用休眠问题](articles/research-logs/win-sleep-mode-issue.md)
+* [Windows 传输动画提取](articles/research-logs/win-animation.md)
+
+
+## 游戏
+
+* [战地1 EA反作弊无法启动问题 ExitType: 115 (0)](articles/research-logs/ea-anti-cheat-115-0.md)
+
+---
+
+## 笔记
+
+* [笔记索引](articles/notes/notes-index.md)

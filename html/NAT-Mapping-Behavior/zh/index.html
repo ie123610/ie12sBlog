@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+	<meta charset="UTF-8">
+	<title>IETF 定义的 NAT 行为要求 (RFC 4787) —— 第一部分：映射行为</title>
+</head>
+
+<body>
+
+	<div style="width: 60%; margin-left: auto; margin-right: auto;">
+
+		<h1 style="margin-left:40px">IETF 定义的 NAT 行为要求 (RFC 4787) —— 第一部分：映射行为</h1>
+
+		<p style="margin-left:40px">2013年9月12日 | 作者：Netmanias (tech@netmanias.com)</p>
+
+		<table border="0" cellpadding="0" cellspacing="0" style="line-height:20.8px; margin-left:40px; width:700px">
+			<tbody>
+				<tr>
+					<td style="background-color:rgb(255, 204, 51)">
+						<table border="0" cellpadding="0" cellspacing="0"
+							style="font-family:verdana,tahoma,calibri,arial,calibri,helvetica,applegothic,sans-serif; line-height:22px; margin:8px; width:684px">
+							<tbody>
+								<tr>
+									<td style="background-color:rgb(255, 255, 255)">
+										<div><span style="font-size:14px"><span style="font-family:arial">&nbsp;
+													由 IETF 定义的 NAT 行为要求 (RFC 4787)</span></span></div>
+
+										<div><span style="font-size:14px"><span
+													style="font-family:arial">&nbsp;&nbsp;<strong><a href=""><span
+																style="color:rgb(51, 102, 255)">第一部分：映射行为</span></a></strong></span></span>
+										</div>
+
+										<div><span style="font-size:14px"><span style="font-family:arial">&nbsp;&nbsp;<a
+														href=""><span
+															style="color:rgb(51, 102, 255)">第二部分：过滤行为</span></a></span></span>
+										</div>
+
+										<div><span style="font-size:14px"><span style="font-family:arial">&nbsp;&nbsp;<a
+														href=""><span
+															style="color:#3366ff">第三部分：确定性质</span></a></span></span>
+										</div>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+
+		<p style="margin-left:40px">&nbsp;</p>
+
+		<p style="margin-left:40px">&emsp;&emsp;许多诸如 Skype、网络游戏等应用，都是基于 UDP
+			协议的点对点（P2P）应用。在运行这些应用时，两个设备之间可以直接进行通信，而无需通过中转服务器。在之前的文章中我们了解到，除了有线网络外，电信运营商已经在其所有的接入网络（Wi-Fi、3G 和 LTE）中全面部署了
+			NAT。</p>
+
+		<p style="margin-left:40px">&nbsp;</p>
+
+		<p style="margin-left:40px">&emsp;&emsp;然而，这些 P2P 应用与 NAT 之间存在着天然的冲突（通常 P2P 应用会成为 NAT 的“受害者”）。</p>
+
+		<p style="margin-left:40px">&emsp;&emsp;对于位于不同地点、拥有不同私网 IP 地址的两个用户设备（位于两个不同的 NAT 之后）而言，它们是无法直接跨越 NAT
+			进行通信的。这是因为外部主机无法主动向 NAT 后的内部主机发起连接（即发送数据包）。例如，设备 1（如左图中的主机 A）向设备 2（主机 B）发送数据包，设备 2 前方的 NAT 会将其直接丢弃；反之，若设备 2
+			向设备 1 发送数据包，设备 1 前方的 NAT 同样会予以丢弃。</p>
+
+		<p style="margin-left:40px">&nbsp;</p>
+
+		<p style="margin-left:40px">&emsp;&emsp;为了解决这个问题，业界制定了一系列 NAT 穿透（NAT Traversal）技术标准，如：STUN（NAT 会话传输工具，RFC 5389 /
+			RFC 5780）、TURN（使用中继穿透 NAT，RFC 5766）、ICE（互动式连接建立，RFC 5245）这些技术可以简要概述如下：</p>
+
+		<ul style="margin-left:40px">
+			<li><span style="font-size:14px"><span style="font-family:arial"><strong>STUN</strong></span></span>:
+				该技术描述了主机（STUN 客户端）如何与 STUN 服务器（具有公网 IP 地址的服务器）通信，以确定 1) 自己是否处于私网之中（即是否存在 NAT）、2) 如果存在，该 NAT 的行为特性是什么，以及
+				3) 经 NAT 转换后的公网 IP 地址和源端口号等信息。</li>
+			<li><span style="font-size:14px"><span style="font-family:arial"><strong>TURN</strong></span></span>: 该技术描述了
+				NAT 后面的主机如何通过一个具有公网 IP 的中继服务器（“TURN 服务器”）与位于 NAT 另一侧的主机进行通信。该方法的一个缺点是所有通信都必须通过该中继服务器，这会不可避免地增加延迟。</li>
+			<li><span style="font-size:14px"><span style="font-family:arial"><strong>ICE</strong></span></span>:
+				它描述了如何基于 STUN 或 TURN，在主机之间找到建立会话的最优方式</li>
+		</ul>
+
+		<p style="margin-left:40px">&emsp;&emsp;因此，NAT 穿透技术的选择取决于 NAT 本身的行为特性。为此，2007 年，业界通过 RFC 4787 对“实现高效 NAT 穿透的 NAT
+			行为要求”进行了标准化。</p>
+
+		<p style="margin-left:40px">&nbsp;</p>
+
+		<p style="margin-left:40px">&emsp;&emsp;接下来的三篇文章将介绍 RFC 4787 中定义的、面向 P2P 应用的理想 NAT 行为。在继续阅读前，请先熟悉以下重要术语的定义：</p>
+
+		<p style="margin-left:40px">&nbsp;</p>
+
+		<p style="margin-left:40px; text-align:left"><img alt="" src="NAT%20Behavioral%20Requirements%201.gif"
+				style="height:332px; opacity:0.9; text-align:right; width:725px"></p>
+
+		<p style="margin-left:40px">&nbsp;</p>
+
+		<div>
+			<table border="0" cellpadding="0" cellspacing="0" style="margin-left:40px; width:700px">
+				<tbody>
+					<tr>
+						<td style="background-color:rgb(242, 242, 242)">
+							<table border="0" cellpadding="0" cellspacing="0"
+								style="font-family:verdana,tahoma,calibri,arial,calibri,helvetica,applegothic,sans-serif; margin:8px; width:684px">
+								<tbody>
+									<tr>
+										<td style="background-color:rgb(242, 242, 242)">
+											<ul>
+												<li><span style="font-size:13px"><span
+															style="font-family:arial"><strong>内部端点</strong>：拥有私网 IP
+															地址且位于 NAT 后方的用户设备，例如上图中的主机 A（例如：与 NAT
+															处于同一运营商网络内的用户设备）。</span></span></li>
+												<li><span style="font-size:13px"><span
+															style="font-family:arial"><strong>外部端点</strong>：拥有公网 IP
+															地址且位于 NAT 另一侧的用户设备，例如上图中的主机 B（例如：与 NAT
+															不在同一运营商网络内的用户设备）。</span></span></li>
+												<li><span style="font-size:13px"><span
+															style="font-family:arial"><strong>出站数据包（流量）</strong>：通过 NAT
+															从内部端点发送至外部端点的数据包（流量）。</span></span></li>
+												<li><span style="font-size:13px"><span
+															style="font-family:arial"><strong>入站数据包（流量）</strong>：通过 NAT
+															从外部端点发送至内部端点的数据包（流量）。</span></span></li>
+												<li><span style="font-size:13px"><span
+															style="font-family:arial"><strong>内部地址与内部端口</strong>：内部端点（主机
+															A）所发送数据包的源 IP (10.1.1.1) 和源端口 (5000)。</span></span></li>
+												<li><span style="font-size:13px"><span
+															style="font-family:arial"><strong>外部地址与外部端口</strong>：经 NAT
+															转换后、发送至外部端点（主机 B）的数据包的源 IP (5.5.5.1) 和源端口
+															(1000)。</span></span></li>
+												<li><span style="font-size:13px"><span
+															style="font-family:arial">通常，内部端点（主机 A）所发送数据包的目标信息（即目标 IP
+															(1.1.1.1) 和目标端口 (80)）会被 NAT 透明地传递给外部端点（主机
+															B），在此过程中不进行转换。</span></span></li>
+												<li><span style="font-size:13px"><span
+															style="font-family:arial">当外部端点（主机
+															B）收到该数据包后，它会向内部端点返回一个包含下列信息的数据包作为响应：</span></span>
+													<ul>
+														<li><span style="font-size:13px"><span
+																	style="font-family:arial">目标 IP = 所接收数据包的源 IP，即外部地址
+																	(5.5.5.1)</span></span></li>
+														<li><span style="font-size:13px"><span
+																	style="font-family:arial">目标端口 = 所接收数据包的源端口，即外部端口
+																	(1000)</span></span></li>
+														<li><span style="font-size:13px"><span
+																	style="font-family:arial">源 IP = 所接收数据包的目标 IP
+																	(1.1.1.1)，即外部终点（主机 B）的 IP 地址</span></span></li>
+														<li><span style="font-size:13px"><span
+																	style="font-family:arial">源端口 = 所接收数据包的目标端口
+																	(80)</span></span></li>
+													</ul>
+												</li>
+											</ul>
+										</td>
+										<td style="background-color:rgb(242, 242, 242); width:10px">&nbsp;</td>
+									</tr>
+								</tbody>
+							</table>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+
+		<p style="margin-left:40px">&nbsp;</p>
+
+		<p style="margin-left:40px">&nbsp;</p>
+
+		<p style="margin-left:40px"><span style="color:#000000"><span style="font-size:22px"><span
+						style="font-family:arial">1. 网络地址和端口转换行为</span></span></span>
+		</p>
+
+		<p style="margin-left:40px">&nbsp;</p>
+
+		<p style="margin-left:40px"><span style="color:#000000"><span style="font-family:arial"><span
+						style="font-size:16px"><strong>1.1 地址和端口映射</strong></span></span></span></p>
+
+		<p style="margin-left:40px">&nbsp;</p>
+
+		<p style="margin-left:40px"><span style="color:#000000"><strong><span style="font-size:14px"><span
+							style="font-family:arial">端点无关映射 (Endpoint-Independent Mapping)</span></span></strong></span></p>
+
+
+		<p style="margin-left:40px">&emsp;&emsp;在“端点无关映射”中，所谓的“端点”是指外部端点。在该机制下，只要内部端点（主机 A）发送的数据包具有 1) 相同的<strong>源 IP 地址</strong> (10.1.1.1) 和 2) 相同的<strong>源端口</strong> (5000)，那么无论其目标 IP 地址（1.1.1.1 或 2.2.2.2）或目标端口（80 或 8080）是什么，NAT 都会将其映射到相同的外部端口（转换后的端口 = 1000）。</p>
+
+		<p style="margin-left:40px">&nbsp;</p>
+
+		<p style="margin-left:40px; text-align:left"><img alt="" src="NAT%20Behavioral%20Requirements%202.gif"
+				style="height:236px; width:600px"></p>
+
+		<p style="margin-left:40px">&nbsp;</p>
+
+		<p style="margin-left:40px"><span style="color:#000000"><span style="font-size:14px"><span
+						style="font-family:arial"><strong>地址相关映射 (Address-Dependent Mapping)</strong></span></span></span></p>
+
+		<p style="margin-left:40px">&emsp;&emsp;在“地址相关映射”中，所谓的“地址”是指内部端点所发送数据包的目标 IP 地址。在该机制下，如果内部端点（主机 A）发送的数据包具有 1) 相同的<strong>源 IP 地址</strong> (10.1.1.1)、2) 相同的<strong>源端口</strong> (5000) 以及 3) 相同的<strong>目标 IP 地址</strong> (1.1.1.1)，那么无论其目标端口是什么（80 或 8080），NAT 都会将其映射到相同的外部端口（转换后的端口 = 1000）。</p>
+
+		<p style="margin-left:40px">&nbsp;</p>
+
+		<p style="margin-left:40px; text-align:left"><img alt="" src="NAT%20Behavioral%20Requirements%203.gif"
+				style="height:236px; width:600px"></p>
+
+		<p style="margin-left:40px">&nbsp;</p>
+
+		<p style="margin-left:40px">&emsp;&emsp;如下图所示，对于两个源 IP 地址 (10.1.1.1) 和源端口 (5000) 相同、但目标 IP 地址不同（1.1.1.1 和 2.2.2.2）的数据包，NAT 会将它们映射到不同的外部端口（转换后的端口分别为 1000 和 1002）。.&nbsp;</p>
+
+		<p style="margin-left:40px">&nbsp;</p>
+
+		<p style="margin-left:40px; text-align:left"><img alt="" src="NAT%20Behavioral%20Requirements%204.gif"
+				style="height:236px; width:600px"></p>
+
+		<p style="margin-left:40px">&nbsp;</p>
+
+		<p style="margin-left:40px"><span style="color:#000000"><span style="font-size:14px"><span
+						style="font-family:arial"><strong>地址与端口相关映射 (Address and Port-Dependent Mapping)</strong></span></span></span></p>
+
+		<p style="margin-left:40px">&emsp;&emsp;在“地址与端口相关映射”中，“地址”和“端口”分别指的是内部端点所发送数据包的目标 IP 地址和目标端口。只有当内部端点（主机 A）发送的数据包同时具有 1) 相同的<strong>源 IP 地址</strong>、2) 相同的<strong>源端口</strong>、3) 相同的<strong>目标 IP 地址</strong> 以及 4) 相同的<strong>目标端口</strong>时，NAT 才会将其映射到相同的外部端口。如果目标 IP 或目标端口发生任何变化（例如端口从 80 变更为 8080），都会导致其被映射到不同的外部端口。</p>
+
+		<p style="margin-left:40px">&nbsp;</p>
+
+		<p style="margin-left:40px">&emsp;&emsp;如下图所示，由于这两个数据包的目标 IP 地址不同（1.1.1.1 和 2.2.2.2），NAT 会将它们映射到不同的外部端口（转换后的端口分别为 1000 和 1002）。</p>
+
+		<p style="margin-left:40px">&nbsp;</p>
+
+		<p style="margin-left:40px; text-align:left"><img alt="" src="NAT%20Behavioral%20Requirements%205.gif"
+				style="height:236px; width:600px"></p>
+
+		<p style="margin-left:40px">&nbsp;</p>
+
+		<p style="margin-left:40px">&emsp;&emsp;如下图所示，由于这两个数据包的目标端口不同（80 和 8080），NAT 会将它们映射到不同的外部端口（转换后的端口分别为 1000 和 1004）。</p>
+
+		<p style="margin-left:40px">&nbsp;</p>
+
+		<p style="margin-left:40px; text-align:left"><img alt="" src="NAT%20Behavioral%20Requirements%206.gif"
+				style="height:236px; width:600px"></p>
+
+		<p style="margin-left:40px">&nbsp;</p>
+
+		<div>
+			<table border="0" cellpadding="0" cellspacing="0" style="margin-left:40px; width:700px">
+				<tbody>
+					<tr>
+						<td style="background-color:rgb(242, 242, 242)">
+							<table border="0" cellpadding="0" cellspacing="0"
+								style="font-family:verdana,tahoma,calibri,arial,calibri,helvetica,applegothic,sans-serif; margin:8px; width:684px">
+								<tbody>
+									<tr>
+										<td style="background-color:rgb(242, 242, 242)">
+											<p><span style="font-size:14px"><span style="font-family:arial"><strong>RFC 4787 规范要求 (REQ-1)：</strong>NAT 必须（MUST）具备“端点无关映射”行为。</span></span>
+											</p>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+
+		<p style="margin-left:40px"><br>
+			RFC 4787 明确指出：“如果不符合 REQ-1 要求，将迫使应用不得不使用 UDP 中继（如 TURN），这在很多情况下是非常不切实际的。”</p>
+
+		<p style="margin-left:40px">&nbsp;</p>
+
+		<p style="margin-left:40px">&nbsp;&nbsp;</p>
+
+		<p style="margin-left:40px"><span style="font-family:arial"><span style="font-size:16px"><strong>1.2 IP 地址池行为</strong></span></span></p>
+
+		<p style="margin-left:40px">&nbsp;</p>
+
+		<p style="margin-left:40px">&emsp;&emsp;家用路由器和 Wi-Fi 热点通常仅使用单个公网 IP 地址来进行 NAPT（网络地址端口转换）。然而，部署在 3G/LTE 网络中的大规模 NAT（LSN，也称为运营商级 NAT (CGN)）在 NAT 的外部网络侧会使用多个公网 IP 地址（即拥有一个公网 IP 地址池）。</p>
+
+		<p style="margin-left:40px">&nbsp;</p>
+
+		<p style="margin-left:40px"><span style="font-size:14px"><span
+					style="font-family:arial"><strong>任意型 (Arbitrary)</strong></span></span></p>
+
+		<p style="margin-left:40px">&emsp;&emsp;即使是由同一个内部端点发送的数据包（即源 IP 地址相同），如果它们的会话（即由 {源 IP、源端口、目标 IP、目标端口} 组成的四元组）不同，NAT 也会将其映射不同的外部 IP 地址。</p>
+
+		<p style="margin-left:40px">&nbsp;</p>
+
+		<p style="margin-left:40px">&emsp;&emsp;如下图所示，内部端点 10.1.1.1（主机 A）与外部端点 1.1.1.1（主机 B）建立了两个不同的会话，NAT 为这两个会话分配了两个不同的外部 IP 地址（5.5.5.1 和 5.5.5.2）。</p>
+
+		<ul style="margin-left:40px">
+			<li>会话 1: {10.1.1.1:5000 发往 1.1.1.1:80} -&gt;映射为 {5.5.5.1:1000 发往 1.1.1.1:80}</li>
+			<li>会话 2: {10.1.1.1:5001 发往 1.1.1.1:8080} -&gt;映射为 {5.5.5.2:1001 发往 1.1.1.1:8080}</li>
+		</ul>
+
+		<p style="margin-left:40px; text-align:left"><img alt="" src="NAT%20Behavioral%20Requirements%207.gif"
+				style="height:247px; width:600px"></p>
+
+		<p style="margin-left:40px">&nbsp;</p>
+
+		<p style="margin-left:40px"><span style="color:#000000"><span style="font-size:14px"><span
+						style="font-family:arial"><strong>配对型 (Paired)</strong></span></span></span></p>
+
+		<p style="margin-left:40px">&emsp;&emsp;对于同一个内部端点发送的数据包（即源 IP 地址相同），即使它们的会话（即由 {源 IP、源端口、目标 IP、目标端口} 组成的四元组）不同，NAT 也会将其映射到相同的外部 IP 地址。</p>
+
+		<p style="margin-left:40px">&nbsp;</p>
+
+		<p style="margin-left:40px">&emsp;&emsp;如下图所示，内部端点 10.1.1.1（主机 A）与外部端点 1.1.1.1（主机 B）建立了两个不同的会话，NAT 为这两个会话分配了相同的外部 IP 地址（5.5.5.1）。</p>
+
+		<p style="margin-left:40px">&nbsp;</p>
+
+		<p style="margin-left:40px; text-align:left"><img alt="" src="NAT%20Behavioral%20Requirements%208.gif"
+				style="height:247px; width:600px"></p>
+
+		<p style="margin-left:40px">&nbsp;</p>
+
+		<div>
+			<div>
+				<table border="0" cellpadding="0" cellspacing="0" style="margin-left:40px; width:700px">
+					<tbody>
+						<tr>
+							<td style="background-color:rgb(242, 242, 242)">
+								<table border="0" cellpadding="0" cellspacing="0"
+									style="font-family:verdana,tahoma,calibri,arial,calibri,helvetica,applegothic,sans-serif; margin:8px; width:684px">
+									<tbody>
+										<tr>
+											<td style="background-color:rgb(242, 242, 242)">
+												<p><span style="font-size:14px"><span
+															style="font-family:arial"><strong>RFC 4787 规范要求 (REQ-2)：</strong>推荐（RECOMMENDED）NAT 的“IP 地址池分配行为”采用“配对（Paired）”模式。</span></span>
+												</p>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+
+		<p style="margin-left:40px">&nbsp;</p>
+
+		<p style="margin-left:40px">&nbsp;</p>
+
+		<p style="margin-left:40px"><span style="font-family:arial"><span style="font-size:16px"><strong>1.3 端口分配 (Port Assignment)</strong></span></span></p>
+
+		<p style="margin-left:40px">&nbsp;</p>
+
+		<p style="margin-left:40px"><span style="color:#000000"><span style="font-size:14px"><span
+						style="font-family:arial"><strong>端口保持（Port Preservation）</strong></span></span></span></p>
+
+		<p style="margin-left:40px">&emsp;&emsp;在进行 NAT 转换之后，仍会保持内部端点发送数据包时所使用的源端口（内部/本地端口）号不变（即：外部端口 = 内部端口）。</p>
+
+		<p style="margin-left:40px">&nbsp;</p>
+
+		<p style="margin-left:40px; text-align:left"><img alt="" src="NAT%20Behavioral%20Requirements%209.gif"
+				style="height:236px; width:600px"></p>
+
+		<p style="margin-left:40px">&nbsp;</p>
+
+		<p style="margin-left:40px"><span style="color:#000000"><span style="font-size:14px"><span
+						style="font-family:arial"><strong>无端口保持（No Port Preservation）</strong></span></span></span></p>
+
+		<p style="margin-left:40px">&emsp;&emsp;在进行 NAT 转换之后，NAT 不会保持内部端点所使用的源端口（内部端口）号，而是随机分配一个外部源端口号（即：外部端口 != 内部端口）。</p>
+
+		<p style="margin-left:40px">&nbsp;</p>
+
+		<p style="margin-left:40px; text-align:left"><img alt="" src="NAT%20Behavioral%20Requirements%2010.gif"
+				style="height:236px; width:600px"></p>
+
+		<p style="margin-left:40px">&nbsp;</p>
+
+		<p style="margin-left:40px"><span style="color:#000000"><span style="font-size:14px"><span
+						style="font-family:arial"><strong>端口过载（在端口保持模式下）</strong></span></span></span></p>
+
+		<p style="margin-left:40px">&emsp;&emsp;假设一个支持“端口保持”的 NAT 用尽了所有的外部 IP 地址（公网 IP 地址）。此时，如果又有一个具有相同源端口号的出站数据包到达，该 NAT 该如何处理？</p>
+
+		<p style="margin-left:40px">&nbsp;</p>
+
+		<p style="margin-left:40px">&emsp;&emsp;“端口过载”是一种简单但极为粗暴（甚至可以说不计后果）的方法。一旦发生端口冲突，NAT 会直接覆盖现有的绑定表项。也就是说，它们会盲目执行端口保持。此时如底图（或：下图）所示，为主机 B 建立的绑定表项会被主机 A 直接覆盖。</p>
+
+		<p style="margin-left:40px">&emsp;&emsp;其结果是，主机 A 和主机 B 通过该 NAT 发往主机 C 的数据包，都将拥有相同的外部 IP 地址（5.5.5.5）和外部端口号（5000）。这将导致 NAT 将所有来自主机 C 的入站数据包全部转发给主机 A。最终，主机 B 与主机 C 之间的通信将完全中断。当然，没有任何厂商会制造支持这种过载模式的产品。</p>
+
+		<p style="margin-left:40px">&nbsp;</p>
+
+		<p style="margin-left:40px; text-align:left"><img alt="" src="NAT%20Behavioral%20Requirements%2011.gif"
+				style="height:391px; width:600px"></p>
+
+		<p style="margin-left:40px">&nbsp;</p>
+
+		<p style="margin-left:40px"><span style="color:#000000"><span style="font-size:14px"><span
+						style="font-family:arial"><strong>无端口过载（在端口保持模式下）(No Port Overloading)</strong></span></span></span></p>
+
+		<p style="margin-left:40px">&emsp;&emsp;在发生端口冲突时，NAT 会放弃“端口保持”策略，转而分配一个与内部端口号不同的外部端口号，以确保会话互不干扰。</p>
+
+		<p style="margin-left:40px">&nbsp;</p>
+
+		<p style="margin-left:40px; text-align:left"><img alt="" src="NAT%20Behavioral%20Requirements%2012.gif"
+				style="height:391px; width:600px"></p>
+
+		<p style="margin-left:40px">&nbsp;</p>
+
+		<div>
+			<div>
+				<table border="0" cellpadding="0" cellspacing="0" style="margin-left:40px; width:700px">
+					<tbody>
+						<tr>
+							<td style="background-color:rgb(242, 242, 242)">
+								<table border="0" cellpadding="0" cellspacing="0"
+									style="font-family:verdana,tahoma,calibri,arial,calibri,helvetica,applegothic,sans-serif; margin:8px; width:684px">
+									<tbody>
+										<tr>
+											<td style="background-color:rgb(242, 242, 242)">
+												<p><span style="font-size:14px"><span
+															style="font-family:arial"><strong>RFC 4787 规范要求 (REQ-3)：</strong>NAT 的“端口分配行为”绝不能（MUST NOT）采用“端口过载”模式。</span></span></p>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+
+		<p style="margin-left:40px">&nbsp;</p>
+
+		<p style="margin-left:40px">&nbsp;</p>
+
+		<p style="margin-left:40px"><span style="font-family:arial"><span style="font-size:16px"><strong>1.4 端口分配规则（Port Assignment Rule）</strong></span></span></p>
+
+		<p style="margin-left:40px">&nbsp;</p>
+
+		<p style="margin-left:40px">&emsp;&emsp;RFC 同时也为支持“无端口保持”的 NAT 制定了“外部端口分配规则”。互联网号码分配局（IANA）将端口范围定义如下：</p>
+
+		<ul style="margin-left:40px">
+			<li>熟知端口（Well-Known）：0 ~ 1023（由 IANA 统一标准化，例如 HTTP = 80）</li>
+			<li>注册端口（Registered）：1024 ~ 49151（未由 IANA 强制标准化，但被广泛使用）</li>
+			<li>动态/私有端口（Dynamic/Private）：49152 ~ 65535</li>
+		</ul>
+
+		<p style="margin-left:40px">根据 NAT 的具体实现，可适用以下外部端口分配规则：</p>
+
+		<ul style="margin-left:40px">
+			<li>如果 NAT 仅使用动态/私有端口范围（49152 ~ 65535）作为外部端口，则单个公网 IP 地址所能支持的最大 NAT 会话数将被限制在 16,000 个以内。</li>
+			<li>如果 NAT 使用除熟知端口以外的范围（1024 ~ 65535）作为外部端口，则 NAT 会优先分配动态/私有端口范围内的端口号，在需要时再分配注册端口范围内的端口号。
+			</li>
+		</ul>
+
+		<p style="margin-left:40px">&nbsp;</p>
+
+		<p style="margin-left:40px"><span style="font-family:arial"><span style="font-size:16px"><strong>1.5 映射定时器（绑定刷新定时器 / Mapping Timer）</strong></span></span></p>
+
+		<p style="margin-left:40px">&nbsp;</p>
+
+		<p style="margin-left:40px">&emsp;&emsp;由出站流量在 NAT 表中生成的绑定表项，只要持续有使用该表项的流量通过，就会一直保持有效。然而，在没有流量的情况下，一旦映射定时器（也称为绑定刷新定时器，或绑定生存时间）超时，该表项就会从 NAT 表中被删除。</p>
+
+		<p style="margin-left:40px">&nbsp;</p>
+
+		<p style="margin-left:40px">&emsp;&emsp;如果 NAT 的映射定时器设置过短，设备（或 NAT 友好型应用）就必须非常频繁地发送心跳维持包（Keep-alive packets）来保持 NAT 会话的激活状态。这对于使用有线网或 Wi-Fi 的用户来说并无大碍，但对于按量计费的 3G/LTE 移动网络用户来说，则会带来不小的困扰（会增加资费与电量消耗）。</p>
+
+		<p style="margin-left:40px">&nbsp;</p>
+
+		<p style="margin-left:40px">&emsp;&emsp;如下图所示，该 NAT 映射定时器被设置为 2 分钟。在 t=0 时，主机 A 发送了第一个数据包并生成了对应的绑定表项。1 分钟后，当主机 A 发送另一个数据包时，该绑定表项的倒计时会被重新刷新（重置）为 2 分钟。</p>
+
+		<p style="margin-left:40px">&nbsp;</p>
+
+		<p style="margin-left:40px; text-align:left"><img alt="" src="NAT%20Behavioral%20Requirements%2013.gif"
+				style="height:347px; width:600px"></p>
+
+		<p style="margin-left:40px">&nbsp;</p>
+
+		<p style="margin-left:40px">&emsp;&emsp;与之相反，下图所示，若连续两分钟没有流量通过，该 NAT 绑定表项就会被删除。</p>
+
+		<p style="margin-left:40px">&nbsp;</p>
+
+		<p style="margin-left:40px; text-align:left"><img alt="" src="NAT%20Behavioral%20Requirements%2014.gif"
+				style="height:325px; width:600px"></p>
+
+		<div>&nbsp;</div>
+
+		<div>
+			<table border="0" cellpadding="0" cellspacing="0" style="margin-left:40px; width:700px">
+				<tbody>
+					<tr>
+						<td style="background-color:rgb(242, 242, 242)">
+							<table border="0" cellpadding="0" cellspacing="0"
+								style="font-family:verdana,tahoma,calibri,arial,calibri,helvetica,applegothic,sans-serif; margin:8px; width:684px">
+								<tbody>
+									<tr>
+										<td style="background-color:rgb(242, 242, 242)">
+											<p><span style="font-size:14px"><span style="font-family:arial"><strong>RFC 4787 规范要求 (REQ-5)：</strong>NAT UDP 映射定时器的超时时间绝不能（MUST NOT）少于 2 分钟，除非适用 REQ-5a 条款：</span></span></p>
+
+											<p><span style="font-size:14px"><span style="font-family:arial">a) 对于熟知端口范围（0-1023）内的特定目的端口，NAT 可以（MAY）针对在该特定目的端口上运行的 IANA 注册应用，设置更短的 UDP 映射定时器。</span></span></p>
+
+											<p><span style="font-size:14px"><span style="font-family:arial">b) NAT UDP 映射定时器的时长可以支持自主配置（MAY）。</span></span>
+											</p>
+
+											<p><span style="font-size:14px"><span style="font-family:arial">c) NAT UDP 映射定时器的默认值建议（RECOMMENDED）设置为 5 分钟或更长。</span></span></p>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+
+		<p style="margin-left:40px">&nbsp;</p>
+
+		<p style="margin-left:40px"><br>
+			<span style="color:#000000"><span style="font-family:arial"><span style="font-size:16px"><strong>1.6 映射刷新行为</strong></span></span></span>
+		</p>
+
+		<p style="margin-left:40px">&nbsp;</p>
+
+		<p style="margin-left:40px"><span style="color:#000000"><span style="font-size:14px"><span
+						style="font-family:arial"><strong>NAT 出站刷新行为设为“True”</strong></span></span></span></p>
+
+		<p style="margin-left:40px">&emsp;&emsp;映射定时器可通过出站流量（即由内部端点发往外部端点的数据包）进行刷新。</p>
+
+		<p style="margin-left:40px">&nbsp;</p>
+
+		<p style="margin-left:40px"><span style="color:#000000"><span style="font-size:14px"><span
+						style="font-family:arial"><strong>NAT 入站刷新行为设为“True”</strong></span></span></span></p>
+
+		<p style="margin-left:40px">&emsp;&emsp;映射定时器可通过入站流量（即由外部端点发往内部端点的数据包）进行刷新。</p>
+
+		<p style="margin-left:40px">&nbsp;</p>
+
+		<div>
+			<table border="0" cellpadding="0" cellspacing="0" style="margin-left:40px; width:700px">
+				<tbody>
+					<tr>
+						<td style="background-color:rgb(242, 242, 242)">
+							<table border="0" cellpadding="0" cellspacing="0"
+								style="font-family:verdana,tahoma,calibri,arial,calibri,helvetica,applegothic,sans-serif; margin:8px; width:684px">
+								<tbody>
+									<tr>
+										<td style="background-color:rgb(242, 242, 242)">
+											<p><span style="font-size:14px"><span style="font-family:arial"><strong>RFC 4787 规范要求 (REQ-6)：</strong>NAT 的出站刷新行为必须（MUST）为“True”。</span></span></p>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+
+		<p>&nbsp;</p>
+
+	</div>
+
+</body>
+
+</html>
