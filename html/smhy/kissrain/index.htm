@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>特效演示</title>
+    <style>
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: flex-start;
+
+    background-image: url('kissrainbk.jpg');
+    background-color: #8E236B;
+    background-repeat: repeat;
+    
+}
+
+.alc-nature-canvas {
+    width: 480px;
+    height: 270px;
+    display: block;
+}
+    </style>
+</head>
+<body>
+
+
+        <canvas class="alc-nature-canvas" 
+                width="480" 
+                height="270"
+                data-graphic="kissrain.jpg"
+                data-season="summer"
+                data-fallcount="500"
+                data-speed="75"
+                data-randomdir="no"
+                data-raincolor="C0C5C8"
+        ></canvas>
+
+
+    <audio id="p-music" autoplay="autoplay" loop="loop" style="display: none;">
+        <source src="./bldtz.ogg" type="audio/ogg">
+        <source src="./bldtz.mp3" type="audio/mpeg">
+    </audio>
+
+
+<script>
+    document.onclick = function(){
+        var audio = document.getElementById('p-music');
+        if (audio) {
+            audio.play().catch(function(err) {
+                console.log("播放被拦截或尚未加载完成:", err);
+            });
+            audio.muted = false;
+        }
+        document.onclick = null;
+    }
+</script>
+
+
+    <script src="nature.js"></script>
+
+</body>
+</html>

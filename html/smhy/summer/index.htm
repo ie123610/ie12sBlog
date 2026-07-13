@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>特效演示</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start; /* 贴顶 */
+
+            background-image: url('irisback.jpg');
+            background-color: #DA7DD6;
+            background-repeat: repeat;
+        }
+
+        
+        .lake-canvas {
+            margin-top: 0;
+            display: inline-block;
+            width: 400px;
+            height: 235px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <canvas class="lake-canvas" 
+            width="400" 
+            height="235"
+            data-image="./irisa.jpg"
+            data-overlay="./irisb.gif"
+            data-rocking="false"
+    ></canvas>
+
+
+    <audio id="p-music" autoplay="autoplay" loop="loop" style="display: none;">
+        <source src="./fzydyzdy.ogg" type="audio/ogg">
+        <source src="./fzydyzdy.mp3" type="audio/mpeg">
+    </audio>
+
+
+<script>
+    // 全局交互激活背景音乐机制
+    document.onclick = function(){
+        var audio = document.getElementById('p-music');
+        if (audio) {
+            audio.play().catch(function(err) {
+                console.log("播放被拦截或尚未加载完成:", err);
+            });
+            audio.muted = false;
+        }
+        document.onclick = null;
+    }
+</script>
+
+    <script src="lake.js"></script>
+
+</body>
+</html>
