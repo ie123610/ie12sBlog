@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8"> <title>秘密花园女神</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-image: url('darkblue.jpg');
+            background-color: #000064;
+            color: #AAC7FF;
+            font-size: 24px;
+            font-weight: bold;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+        }
+
+        p {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .anfade-canvas {
+            width: 420px;
+            height: 295px;
+            display: block;
+
+        }
+    </style>
+</head>
+
+<body>
+
+
+        <canvas class="anfade-canvas" 
+                width="420" 
+                height="295"
+                data-image1="bvela.jpg"
+                data-image2="bvelb.jpg"
+                data-speed="8"
+                data-pause="1500"
+        ></canvas>
+
+    <script src="anfade.js"></script>
+
+    <audio id="p-music" autoplay="autoplay" loop="loop" style="display: none;">
+        <source src="./css.ogg" type="audio/ogg">
+        <source src="./css.mp3" type="audio/mpeg">
+    </audio>
+
+
+<script>
+    document.onclick = function(){
+        var audio = document.getElementById('p-music');
+        if (audio) {
+            audio.play().catch(function(err) {
+                console.log("播放被拦截或尚未加载完成:", err);
+            });
+            audio.muted = false;
+        }
+        document.onclick = null;
+    }
+</script>
+
+</body>
+</html>

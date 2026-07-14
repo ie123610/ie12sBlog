@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>冬季的河流</title>
+    
+    <script src="./alcsnow.js"></script>
+
+<style>
+    html, body {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        background-color: #E6E8FA;
+        background-image: url("./b-157b.jpg");
+        background-repeat: repeat;
+    }
+
+    .alc-snow-canvas {
+        display: block;
+        width: 550px;
+        height: 460px;
+        margin: 0;
+        padding: 0;
+    }
+    
+</style>
+</head>
+<body>
+
+    <canvas class="alc-snow-canvas" 
+            data-bg="./winter.jpg"
+            data-snows="500" 
+            data-threadsleep="50">
+    </canvas>
+
+    <audio id="p-music" autoplay="autoplay" loop="loop" style="display: none;">
+        <source src="./lsy.ogg" type="audio/ogg">
+        <source src="./lsy.mp3" type="audio/mpeg">
+    </audio>
+
+<script>
+    // 全局交互激活背景音乐机制
+    document.onclick = function(){
+        var audio = document.getElementById('p-music');
+        if (audio) {
+            audio.play().catch(function(err) {
+                console.log("播放被拦截或尚未加载完成:", err);
+            });
+            audio.muted = false;
+        }
+        document.onclick = null;
+    }
+</script>
+
+</body>
+</html>
