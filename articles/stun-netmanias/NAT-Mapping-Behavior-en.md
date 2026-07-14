@@ -98,18 +98,18 @@ Home APs and Wi-Fi hotspot APs use one public IP address to perform NAPT (Networ
 
 #### Arbitrary
 
-NATs use different External IP addresses even for packets sent by one Internal Endpoint (i.e. those with the same source IP addresses), if their sessions (tuple of {source IP, source port, destination IP, destination port}) are different.  
+NATs use different External IP addresses even for packets sent by one Internal Endpoint (i.e. those with the same source IP addresses), if their sessions (tuple of \{source IP, source port, destination IP, destination port\}) are different.  
 
 As seen in the figure below, the NAT allocates two different External IP addresses (5.5.5.1 and 5.5.5.2) for two different sessions that the Internal Endpoint 10.1.1.1 (Host A) has established to the External Endpoint 1.1.1.1 (Host B).   
 
-+   Session 1: {10.1.1.1:5000 to 1.1.1.1:80} -> {5.5.5.1:1000 to 1.1.1.1:80}
-+   Session 2: {10.1.1.1:5001 to 1.1.1.1:8080} -> {5.5.5.2:1001 to 1.1.1.1:8080}
++   Session 1: \{10.1.1.1:5000 to 1.1.1.1:80\} -> \{5.5.5.1:1000 to 1.1.1.1:80\}
++   Session 2: \{10.1.1.1:5001 to 1.1.1.1:8080\} -> \{5.5.5.2:1001 to 1.1.1.1:8080\}
 
 <img loading="lazy" src="../../images/NAT-Mapping-Behavior-en/NAT%20Behavioral%20Requirements%207.gif" />
 
 #### Paired
 
-NATs use the same External IP address for packets sent by one Internal Endpoint (i.e. those with the same source IP addresses) even when their sessions (tuple of {source IP, source port, destination IP, destination port}) are different.   
+NATs use the same External IP address for packets sent by one Internal Endpoint (i.e. those with the same source IP addresses) even when their sessions (tuple of \{source IP, source port, destination IP, destination port\}) are different.   
 
 As seen in the figure below, the NAT allocates the same External IP addresses (5.5.5.1) for two different sessions that the Internal Endpoint 10.1.1.1 (Host A) has established to the External Endpoint 1.1.1.1 (Host B).  
 
