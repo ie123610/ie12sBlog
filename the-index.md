@@ -139,7 +139,7 @@
 * [Cloudflare Pages 不显示 .html 和 末尾斜杠问题](articles/research-logs/cf-pages-feature.md)
 * [Cloudflare 在指定域名下禁用SSL/TSL](articles/research-logs/cloudflare-disable-ssl.md)
 * [解决showLastUpdateTime总是显示相同日期问题](articles/research-logs/Docusaurus-showLastUpdateTime.md)
-* [神秘花园 Java applet 特效复刻](./articles/research-logs/smhy-java.md)
+* [秘密花园 Java applet 特效复刻](articles/research-logs/smhy-java.md)
 
 ## 网络
 

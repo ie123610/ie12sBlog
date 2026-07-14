@@ -17,6 +17,8 @@ STUN 在 RFC 3489 和 RFC 5389/5780 中的区别
   <a href="/html/STUN-RFC-3489-5389-5780/en/index.html">链接</a>
 </p>
 
+[测试](./stun-netmanias/STUN-RFC-3489-5389-5780-zh.md)
+
 <p>
   汉化版（html）：
   <a href="/html/STUN-RFC-3489-5389-5780/zh/index.html">链接</a>
