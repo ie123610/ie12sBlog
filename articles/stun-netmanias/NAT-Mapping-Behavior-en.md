@@ -4,7 +4,7 @@ September 12, 2013 | By Netmanias (tech@netmanias.com)
 
 ---
 
-+   NAT Behavioral Requirements, as Defined by the IETF (RFC 4787)
+NAT Behavioral Requirements, as Defined by the IETF (RFC 4787)  
 +   **[Part 1. Mapping Behavior](#)**
 +   [Part 2. Filtering Behavior](#)
 +   [Part 3. Deterministic Properties](#)
@@ -191,7 +191,7 @@ As opposed to that, the NAT binding entry in the figure below is deleted after
 > c) A default value of five minutes or more for the NAT UDP mapping timer is RECOMMENDED  
 
   
-### 1.6 Mapping Refresh Behavior**
+### 1.6 Mapping Refresh Behavior
 
 **NAT Outbound refresh behavior of "True"**  
 
