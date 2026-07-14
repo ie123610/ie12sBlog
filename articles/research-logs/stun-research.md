@@ -8,10 +8,10 @@ STUN 在 RFC 3489 和 RFC 5389/5780 中的区别
 
 原文地址：[链接](https://netmanias.com/en/post/techdocs/6065/nat-network-protocol/stun-rfc-3489-vs-stun-rfc-5389-5780)  
   
-原版存档（PDF）：<a href="/script/pdfjs-legacy/web/viewer.html?file=/html/STUN-RFC-3489-5389-5780/en/2013.10.21-STUN%20(RFC%203489)%20vs.%20STUN%20(RFC%205780).pdf">在线预览</a> | <a href="/html/STUN-RFC-3489-5389-5780/en/2013.10.21-STUN%20(RFC%203489)%20vs.%20STUN%20(RFC%205780).pdf" download>下载</a>  
-原版存档（MD）：[链接](./stun-netmanias/STUN-RFC-3489-5389-5780-en.md)
+原版存档（PDF）：<a href="/script/pdfjs-legacy/web/viewer.html?file=/images/STUN-RFC-3489-5389-5780-en/2013.10.21-STUN%20(RFC%203489)%20vs.%20STUN%20(RFC%205780).pdf">在线预览</a> | <a href="/images/STUN-RFC-3489-5389-5780-en/2013.10.21-STUN%20(RFC%203489)%20vs.%20STUN%20(RFC%205780).pdf" download>下载</a>  
+原版存档（MD）：[链接](../stun-netmanias/STUN-RFC-3489-5389-5780-en.md)
   
-汉化版：[链接](./stun-netmanias/STUN-RFC-3489-5389-5780-zh.md)  
+汉化版：[链接](../stun-netmanias/STUN-RFC-3489-5389-5780-zh.md)  
 
 ---
 
