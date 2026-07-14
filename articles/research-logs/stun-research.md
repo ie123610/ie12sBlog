@@ -15,22 +15,20 @@ STUN 在 RFC 3489 和 RFC 5389/5780 中的区别
 
 ---
 
-## NAT Behavioral Requirements, as Defined by the IETF (RFC 4787) - Part 1. Mapping Behavior
+## NAT Behavioral Requirements, as Defined by the IETF (RFC 4787)
+IETF 定义的 NAT 行为要求 (RFC 4787)  
+
+
+### Part 1. Mapping Behavior（第一部分：映射行为）
 
 原文地址：[链接](https://www.netmanias.com/en/post/techdocs/6058/nat-network-protocol/nat-behavioral-requirements-as-defined-by-the-ietf-rfc-4787-part-1-mapping-behavior)  
+  
+原版存档（PDF）：<a href="/script/pdfjs-legacy/web/viewer.html?file=/images/NAT-Mapping-Behavior-en/2013.09.12-NAT%20Behavioral%20Requirements,%20as%20Defined%20by%20the%20IETF%20(RFC%204787)%20-%20Part%201.%20Mapping%20Behavior.pdf">在线预览</a>  |  <a href="/images/NAT-Mapping-Behavior-en/2013.09.12-NAT%20Behavioral%20Requirements,%20as%20Defined%20by%20the%20IETF%20(RFC%204787)%20-%20Part%201.%20Mapping%20Behavior.pdf" download>下载</a>  
+原版存档（MD）：[链接](../stun-netmanias/NAT-Mapping-Behavior-en.md)
+  
+汉化版：[链接](../stun-netmanias/NAT-Mapping-Behavior-zh.md)  
 
-<p>
-  原版存档（PDF）：
-  <a href="/script/pdfjs-legacy/web/viewer.html?file=/html/NAT-Mapping-Behavior/en/2013.09.12-NAT%20Behavioral%20Requirements,%20as%20Defined%20by%20the%20IETF%20(RFC%204787)%20-%20Part%201.%20Mapping%20Behavior.pdf">在线预览</a> 
-  | 
-  <a href="/html/NAT-Mapping-Behavior/en/2013.09.12-NAT%20Behavioral%20Requirements,%20as%20Defined%20by%20the%20IETF%20(RFC%204787)%20-%20Part%201.%20Mapping%20Behavior.pdf" download>下载</a> <br />
-    原版存档（html）：
-  <a href="/html/NAT-Mapping-Behavior/en/index.html">链接</a>
-</p>
-
----
-
-## NAT Behavioral Requirements, as Defined by the IETF (RFC 4787) - Part 2. Filtering Behavior
+### Part 2. Filtering Behavior
 
 原文地址：[链接](https://www.netmanias.com/en/post/techdocs/6058/nat-network-protocol/nat-behavioral-requirements-as-defined-by-the-ietf-rfc-4787-part-1-mapping-behavior)  
 
@@ -43,9 +41,8 @@ STUN 在 RFC 3489 和 RFC 5389/5780 中的区别
   <a href="/html/NAT-Filtering-Behavior/en/index.html">链接</a>
 </p>
 
----
 
-## NAT Behavioral Requirements, as Defined by the IETF (RFC 4787) - Part 3. Deterministic Properties
+### Part 3. Deterministic Properties
 
 原文地址：[链接](https://www.netmanias.com/en/post/techdocs/6063/nat-network-protocol/nat-behavioral-requirements-as-defined-by-the-ietf-rfc-4787-part-3-deterministic-properties)  
 

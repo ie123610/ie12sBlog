@@ -117,7 +117,6 @@
 * [「权宜之计」使用Windows防火墙拦截浏览器IPv6请求迫使其使用IPv4](articles/ipv6-transition/win-firewall-block-IPv6.md)
 * [使用Windows自带的端口转发功能让不支持IPv6的程序间接的用上IPv6](articles/ipv6-transition/win-port-forwarding.md)
 * [使用Cloudflare代理为纯IPv6站点添加IPv4访问](articles/ipv6-transition/cf-IPv6-dual-stack-proxy.md)
-* [「转」Cloudflare Workers & Pages 优选IP](articles/ipv6-transition/cf-workers-pages-optimized-ip.md)
 
 ---
 
@@ -139,7 +138,10 @@
 * [Cloudflare Pages 不显示 .html 和 末尾斜杠问题](articles/research-logs/cf-pages-feature.md)
 * [Cloudflare 在指定域名下禁用SSL/TSL](articles/research-logs/cloudflare-disable-ssl.md)
 * [解决showLastUpdateTime总是显示相同日期问题](articles/research-logs/Docusaurus-showLastUpdateTime.md)
+* [「转」Cloudflare Workers & Pages 优选IP](articles/ipv6-transition/cf-workers-pages-optimized-ip.md)
 * [秘密花园 Java applet 特效复刻](articles/research-logs/smhy-java.md)
+
+---
 
 ## 网络
 
@@ -148,6 +150,7 @@
 * [「转」基于爱奇艺HCDN视频分发网络的开放缓存](articles/research-logs/爱奇艺HCDN.md)
 * [STUN 研究](articles/research-logs/stun-research.md)
 
+---
 
 ## HTTPS与SVCB记录
 
@@ -155,6 +158,7 @@
 * [SVCB/HTTPS记录与免费FRP穿透配合使用](articles/research-logs/svcb-frp.md)
 * [cURL SVCB/HTTPS 记录测试](articles/research-logs/curl-test.md)
 
+---
 
 ## P2P 下载
 
@@ -162,12 +166,14 @@
 * [已知bittorrent客户端生存调查](articles/research-logs/已知bittorrent客户端生存调查/已知客户端调查-说明.md)
 * [eMule设置IP绑定](articles/research-logs/emule-ip-binding.md)
 
+---
 
 ## Windows
 
 * [Windows 无法启用休眠问题](articles/research-logs/win-sleep-mode-issue.md)
 * [Windows 传输动画提取](articles/research-logs/win-animation.md)
 
+---
 
 ## 游戏
 
