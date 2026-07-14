@@ -86,7 +86,7 @@ In the figure below, different External Port Mapping values (translated port = 
 
 <img loading="lazy" src="../../images/NAT-Mapping-Behavior-en/NAT%20Behavioral%20Requirements%206.gif" />
 
-<br>
+<br />
 
 > **RFC 4787 Recommendation (REQ-1):** A NAT MUST have an "Endpoint-Independent Mapping" behavior  
 
@@ -115,7 +115,7 @@ As seen in the figure below, the NAT allocates the same External IP addresses (
 
 <img loading="lazy" src="../../images/NAT-Mapping-Behavior-en/NAT%20Behavioral%20Requirements%208.gif" />
 
-<br>
+<br />
 
 > **RFC 4787 Recommendation (REQ-2):** It is RECOMMENDED that a NAT have an "IP address pooling" behavior of "Paired"
 
@@ -149,7 +149,7 @@ In the event of port collisions, NATs do not use port preservation, and instead�
 
 <img loading="lazy" src="../../images/NAT-Mapping-Behavior-en/NAT%20Behavioral%20Requirements%2012.gif" />
 
-<br>
+<br />
 
 > **RFC 4787 Recommendation (REQ-3):** A NAT MUST NOT have a "Port assignment" behavior of "Port overloading"
 
@@ -180,7 +180,7 @@ As opposed to that, the NAT binding entry in the figure below is deleted after
 
 <img loading="lazy" src="../../images/NAT-Mapping-Behavior-en/NAT%20Behavioral%20Requirements%2014.gif" />
 
-<br>
+<br />
 
 > **RFC 4787 Recommendation (REQ-5):** A NAT UDP mapping timer MUST NOT expire in less than two minutes, unless REQ-5a applies  
 >  
