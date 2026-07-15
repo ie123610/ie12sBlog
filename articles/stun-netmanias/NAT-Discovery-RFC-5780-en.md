@@ -53,6 +53,8 @@ The algorithms for discovering a NAT's mapping behavior are defined in RFC 5780 
 
 <img loading="lazy" src="../../images/NAT-Discovery-RFC-5780-en/Netmanias.STUN_No_NAT.gif" />
 
+<br />
+
 **Test I**  
 
 +   The client sends a Binding Request message to the server (at Primary IP:Primary Port (1.1.1.1:3478)), and receives a Binding Response message back from the server. 
@@ -65,7 +67,8 @@ The algorithms for discovering a NAT's mapping behavior are defined in RFC 5780 
 
 <img loading="lazy" src="../../images/NAT-Discovery-RFC-5780-en/Netmanias.STUN_EIM_NAT.gif" />
 
-   
+<br />
+
 **Test I**  
 
 +   The client sends a Binding Request message to the server (at Primary IP:Primary Port (1.1.1.1:3478)), and receives a Binding Response message back from the server. 
@@ -85,7 +88,8 @@ The algorithms for discovering a NAT's mapping behavior are defined in RFC 5780 
 
 <img loading="lazy" src="../../images/NAT-Discovery-RFC-5780-en/Netmanias.STUN_ADM_NAT.gif" /> 
 
-  
+<br />
+
 **Test I**  
 
 +   Same as in the test for an EIM-NAT 
@@ -110,7 +114,8 @@ The algorithms for discovering a NAT's mapping behavior are defined in RFC 5780 
 
 <img loading="lazy" src="../../images/NAT-Discovery-RFC-5780-en/Netmanias.STUN_APDM_NAT.gif" /> 
 
-  
+<br />
+
 **Test I**  
 
 +   Same as in the test for an ADM-NAT 
@@ -151,7 +156,8 @@ The algorithms for discovering a NAT's filtering behavior are defined in RFC 578
 
 <img loading="lazy" src="../../images/NAT-Discovery-RFC-5780-en/Netmanias.STUN_EIF_NAT.gif" />
 
-   
+<br />
+
 **Test I**  
 
 +   The client sends a Binding Request message to the server (at Primary IP:Primary Port (1.1.1.1:3478)). At this time, both Change IP and Change Port flags in the CHANGE-REQUEST attribute field are set as 0. Of course, the client receives a Binding Response message back from the server. 
@@ -168,7 +174,8 @@ The algorithms for discovering a NAT's filtering behavior are defined in RFC 578
 
 <img loading="lazy" src="../../images/NAT-Discovery-RFC-5780-en/Netmanias.ADF_NAT.gif" />
 
-   
+<br />
+
 **Test I**  
 
 +   Same as in the test for an EIF-NAT
@@ -190,7 +197,8 @@ The algorithms for discovering a NAT's filtering behavior are defined in RFC 578
 
 <img loading="lazy" src="../../images/NAT-Discovery-RFC-5780-en/Netmanias.STUN_APDF_NAT.gif" />
 
-   
+<br />
+
 **Test I**  
 
 +   Same as in the test for an ADF-NAT 
