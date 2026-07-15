@@ -17,11 +17,10 @@ For information about the terms used below (Internal Endpoint, External Endpoint
 
 <img loading="lazy" src="../../images/NAT-Filtering-Behavior-en/Netmanias.2012.07.19-Filtering_Behavior725.gif" />
 
-  
 ## 2\. Filtering Behavior
-   
+
 If the previous post was about mapping outbound packets, this one is about filtering inbound packets. That is, last time we discussed how a NAT maps/translates the external port of an outbound packet based on the destination IP and destination port values of the packet. This time, we focus on how a NAT, when receiving an inbound packet, filters the packet based on the Source IP and Source Port values (in the blue-lined box above) of the packet and determines whether to PASS it on to the Internal Endpoint or to DROP it.  
-   
+
 ### Endpoint-Independent Filtering
    
 In "Endpoint-Independent Filtering", the Endpoint refers to an External Endpoint.  
@@ -29,7 +28,7 @@ In "Endpoint-Independent Filtering", the Endpoint refers to an External Endpoint
    
 In the figure below, the following binding and filtering entries are generated when a packet is sent by Host A to Host B:  
 
-+   Binding Entry: \{Internal IP : Internal Port\} <-> \{External IP : External Port\} = \{10.1.1.1:5000\} <-> \{5.5.5.1 : 1000\}
++   Binding Entry: \{Internal IP : Internal Port\} &lt;-&gt; \{External IP : External Port\} = \{10.1.1.1:5000\} &lt;-&gt; \{5.5.5.1 : 1000\}
 +   Filtering Entry: Allow if Inbound Packet \{**Any IP : Any Port**\} to \{5.5.5.1 : 1000\}
 
 The NAT passes any inbound packets sent by Host B or Host C to Host A as long as their destination IP and destination Port are 5.5.5.1 and 1000, regardless of their source IP (1.1.1.1 or 2.2.2.2) or source Port (80 or 8080).  
@@ -44,7 +43,7 @@ In "Address-Dependent Filtering", the Address refers to the source IP address of
 
 In the figure below, the following binding and filtering entries are generated when a packet is sent by Host A to Host B: 
 
-+   Binding Entry: \{Internal IP : Internal Port\} <-> \{External IP : External Port\} = \{10.1.1.1:5000\} <-> \{5.5.5.1 : 1000\}
++   Binding Entry: \{Internal IP : Internal Port\} &lt;-&gt; \{External IP : External Port\} = \{10.1.1.1:5000\} &lt;-&gt; \{5.5.5.1 : 1000\}
 +   Filtering Entry: Allow if Inbound Packet \{**1.1.1.1 : Any Port**\} to \{5.5.5.1 : 1000\}
 
 The NAT passes the inbound packet (i.e. the one with destination IP/destination port = 5.5.5.1/1000) sent by Host B (source IP = 1.1.1.1), and drops the one sent by Host C (source IP = 2.2.2.2). At this time, the source port values are not considered.  
@@ -59,7 +58,7 @@ In "Address and Port-Dependent Filtering", the Address and Port refer to the add
 "Address and Port-Dependent Filtering" checks the i) **destination IP**, ii) **destination port**, iii) **source IP** and iv) **source port** of an inbound packet sent by an External Endpoint to decide whether to pass the packet or not. Only those sent as a response to the outbound packet that an Internal Endpoint previously sent (i.e. ones with all four matching values) are passed.  
 In the figure below, the following binding and filtering entries are generated when a packet is sent by Host A to Host B: 
 
-+   Binding Entry: \{Internal IP : Internal Port\} <-> \{External IP : External Port\} = \{10.1.1.1:5000\} <-> \{5.5.5.1 : 1000\}
++   Binding Entry: \{Internal IP : Internal Port\} &lt;-&gt; \{External IP : External Port\} = \{10.1.1.1:5000\} &lt;-&gt; \{5.5.5.1 : 1000\}
 +   Filtering Entry: Allow if Inbound Packet \{**1.1.1.1 : 80**\} to \{5.5.5.1 : 1000\}
 
 The NAT passes only the packet sent as a response \{i.e. 1.1.1.1:80 to 5.5.5.1:1000\} to the outbound packet that Host A sent to Host B earlier \{i.e. 5.5.5.1:1000 to 1.1.1.1:80\}, and drops all other packets.  
