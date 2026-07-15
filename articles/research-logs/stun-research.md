@@ -42,14 +42,8 @@ IETF 定义的 NAT 行为要求 (RFC 4787)
 
 原文地址：[链接](https://www.netmanias.com/en/post/techdocs/6063/nat-network-protocol/nat-behavioral-requirements-as-defined-by-the-ietf-rfc-4787-part-3-deterministic-properties)  
 
-<p>
-  原版存档（PDF）：
-  <a href="/script/pdfjs-legacy/web/viewer.html?file=/html/NAT-Deterministic-Properties/en/2013.10.10-NAT%20Behavioral%20Requirements,%20as%20Defined%20by%20the%20IETF%20(RFC%204787)%20-%20Part%203.%20Deterministic%20Properties.pdf">在线预览</a> 
-  | 
-  <a href="/html/NAT-Deterministic-Properties/en/2013.10.10-NAT%20Behavioral%20Requirements,%20as%20Defined%20by%20the%20IETF%20(RFC%204787)%20-%20Part%203.%20Deterministic%20Properties.pdf" download>下载</a> <br />
-    原版存档（html）：
-  <a href="/html/NAT-Deterministic-Properties/en/index.html">链接</a>
-</p>
+原版存档（PDF）：<a href="/script/pdfjs-legacy/web/viewer.html?file=/images/NAT-Deterministic-Properties-en/2013.10.10-NAT%20Behavioral%20Requirements,%20as%20Defined%20by%20the%20IETF%20(RFC%204787)%20-%20Part%203.%20Deterministic%20Properties.pdf">在线预览</a> | <a href="/images/NAT-Deterministic-Properties-en/2013.10.10-NAT%20Behavioral%20Requirements,%20as%20Defined%20by%20the%20IETF%20(RFC%204787)%20-%20Part%203.%20Deterministic%20Properties.pdf" download>下载</a>  
+原版存档（MD）：[链接](../stun-netmanias/NAT-Deterministic-Properties-en.md)  
 
 ---
 
