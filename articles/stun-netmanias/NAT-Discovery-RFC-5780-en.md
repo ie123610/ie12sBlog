@@ -17,11 +17,11 @@ STUN is a simple protocol that allows a client (a STUN client) to send a server 
 In order for a server to discover NAT types (Mapping & Filtering Behavior), the server must have two public IP addresses and two source ports (usually 3478 and 3479). One set of the information is called Primary IP/Port (e.g. 1.1.1.1:3478), and the other is called Alternate IP/Port (e.g. 2.2.2.2:3479).  
 The two messages between the client and server include the following attributes:
 
-**\[Client -> Server\] Binding Request message's Attribute**  
+**\[Client -&gt; Server\] Binding Request message's Attribute**  
 
   +   **CHANGE-REQUEST**: It is used to discover filtering behaviors of a NAT, and consists of "Change IP" and "Change Port" flags. If a client sends a server a Binding Request message with these flags set as 0, the server uses the Destination IP/Port of the message as the Source IP/Port (e.g. 1.1.1.1:3478) of the Binding Response it sends. However, if these flags are set as 1, the server responds by using its alternate IP/Port (e.g. 2.2.2.2:3479).  
 
-**\[Client <- Server\] Binding Response message's Attribute**  
+**\[Client &lt;- Server\] Binding Response message's Attribute**  
 
   +   **MAPPED-ADDRESS**: The Source IP/Port values of the Binding Request message that a server received are used in this attribute field. If there is no NAT, this field will have the same values as the Source IP/Port of the client. But, if there is a NAT, this field will have other values mapped by the NAT.   
 
