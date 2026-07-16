@@ -1,4 +1,4 @@
-# 在 WinXP 虚拟机上录制 midi 背景音乐 （视频）
+# 在 WinXP 虚拟机上录制 midi 背景音乐（视频）
 
 2026.7.7  
 
@@ -42,20 +42,30 @@ FSCapture 在 XP 虚拟机上不会显示录制系统声音的选项
 
 <img loading="lazy" src="../../images/vm-xp-midi/dls-sf2.png" width="60%" />
 
+<br />
+
 <img loading="lazy" src="../../images/vm-xp-midi/midi-player-1.png" width="60%" />
+
+<br />
 
 设置为系统默认 midi 播放器  
 
 <img loading="lazy" src="../../images/vm-xp-midi/midi-player-2.png" width="60%" />
 
+<br />
+
 将声音输出到 Voicemeeter 的虚拟输出设备  
 
 <img loading="lazy" src="../../images/vm-xp-midi/midi-player-3.png" width="60%" />
+
+<br />
 
 打开 FSCapture 的麦克风设置 选择 VoiceMeeter vaio 同时播放 midi 音乐  
 观察音量指示器 有显示则说明设置均正确 可以准备进行录制  
 
 <img loading="lazy" src="../../images/vm-xp-midi/midi-player-4.png" width="60%" />
+
+<br />
 
 注意在录制过程中 需要保持 Voicemeeter 和 VirtualMIDISynth 处于运行状态  
 

@@ -170,7 +170,7 @@
 
 ## Windows
 
-* [在 WinXP 虚拟机上录制 midi 背景音乐 （视频）](articles/research-logs/vm-xp-midi.md)
+* [在 WinXP 虚拟机上录制 midi 背景音乐（视频）](articles/research-logs/vm-xp-midi.md)
 * [Windows 无法启用休眠问题](articles/research-logs/win-sleep-mode-issue.md)
 * [Windows 传输动画提取](articles/research-logs/win-animation.md)
 
