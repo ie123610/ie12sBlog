@@ -133,13 +133,13 @@
 
 ## 站点建设
 
+* [「转」Cloudflare Workers & Pages 优选IP](articles/ipv6-transition/cf-workers-pages-optimized-ip.md)
 * [使用简单方法在 Markdown 中展示 PDF 文件](articles/research-logs/markdown-pdf.md)
 * [XSLT 被移除后的RSS美化方案](articles/research-logs/xml-xslt.md)
 * [Cloudflare Pages 不显示 .html 和 末尾斜杠问题](articles/research-logs/cf-pages-feature.md)
 * [Cloudflare 在指定域名下禁用SSL/TSL](articles/research-logs/cloudflare-disable-ssl.md)
 * [解决showLastUpdateTime总是显示相同日期问题](articles/research-logs/Docusaurus-showLastUpdateTime.md)
-* [「转」Cloudflare Workers & Pages 优选IP](articles/ipv6-transition/cf-workers-pages-optimized-ip.md)
-* [秘密花园 Java applet 特效复刻](articles/research-logs/smhy-java.md)
+* [Java applet 研究](articles/research-logs/smhy-java.md)
 
 ---
 
@@ -170,6 +170,7 @@
 
 ## Windows
 
+* [在 WinXP 虚拟机上录制 midi 背景音乐（视频）](articles/research-logs/vm-xp-midi.md)
 * [Windows 无法启用休眠问题](articles/research-logs/win-sleep-mode-issue.md)
 * [Windows 传输动画提取](articles/research-logs/win-animation.md)
 
