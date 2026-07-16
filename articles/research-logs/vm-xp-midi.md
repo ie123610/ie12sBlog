@@ -13,6 +13,13 @@ FSCapture 在 XP 虚拟机上不会显示录制系统声音的选项
 
 前置教程：`https://www.zhihu.com/question/28556054`  
 
+<details>
+<summary>图片存档</summary>
+
+<img loading="lazy" src="../../images/vm-xp-midi/backup.png" width="60%" />
+
+</details>
+
 软件下载：  
 * VB Audio-cable：[链接](https://vb-audio.com/Cable/index.htm)  
  建议下载 Old package （2015）  
