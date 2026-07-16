@@ -78,4 +78,4 @@ IETF 定义的 NAT 行为要求 (RFC 4787)
 原文地址：[链接](https://netmanias.com/en/post/oneshot/6038/nat-network-protocol/network-address-translation-nat-overview-rfc-3022-2663)  
 
 原版存档（PDF）：<a href="/script/pdfjs-legacy/web/viewer.html?file=/images/NAT-Overview-RFC-3022-2663-en/Netmanias.2013.09.03.NAT Overview (en)-img.pdf">在线预览</a> | <a href="/images/NAT-Overview-RFC-3022-2663-en/Netmanias.2013.09.03.NAT Overview (en)-img.pdf" download>下载</a>  
-原版存档（MD）：[链接](../../images/NAT-Overview-RFC-3022-2663-en/Netmanias.2013.09.03.NAT%20Overview%20(en)-img.pdf)  
+原版存档（PNG）：[链接](../../images/NAT-Overview-RFC-3022-2663-en/NAT%20Overview-img.png)  
