@@ -16,7 +16,7 @@ FSCapture 在 XP 虚拟机上不会显示录制系统声音的选项
 <details>
 <summary>图片存档</summary>
 
-<img loading="lazy" src="../../images/vm-xp-midi/backup.png" width="60%" />
+<img loading="lazy" src="../../images/vm-xp-midi/backup.png"  />
 
 </details>
 
