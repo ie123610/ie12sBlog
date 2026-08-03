@@ -28,14 +28,14 @@ IETF 定义的 NAT 行为要求 (RFC 4787)
   
 汉化版：[链接](../stun-netmanias/NAT-Mapping-Behavior-zh.md)  
 
-### Part 2. Filtering Behavior
+### Part 2. Filtering Behavior（第二部分：过滤行为）
 
 原文地址：[链接](https://www.netmanias.com/en/post/techdocs/6058/nat-network-protocol/nat-behavioral-requirements-as-defined-by-the-ietf-rfc-4787-part-1-mapping-behavior)  
 
 原版存档（PDF）：<a href="/script/pdfjs-legacy/web/viewer.html?file=/images/NAT-Filtering-Behavior-en/2013.09.23-NAT%20Behavioral%20Requirements,%20as%20Defined%20by%20the%20IETF%20(RFC%204787)%20-%20Part%202.%20Filtering%20Behavior.pdf">在线预览</a> | <a href="/images/NAT-Filtering-Behavior-en/2013.09.23-NAT%20Behavioral%20Requirements,%20as%20Defined%20by%20the%20IETF%20(RFC%204787)%20-%20Part%202.%20Filtering%20Behavior.pdf" download>下载</a>  
 原版存档（MD）：[链接](../stun-netmanias/NAT-Filtering-Behavior-en.md)  
 
-
+汉化版：[链接](../stun-netmanias/NAT-Filtering-Behavior-zh.md)  
 
 ### Part 3. Deterministic Properties
 
@@ -78,4 +78,5 @@ IETF 定义的 NAT 行为要求 (RFC 4787)
 原文地址：[链接](https://netmanias.com/en/post/oneshot/6038/nat-network-protocol/network-address-translation-nat-overview-rfc-3022-2663)  
 
 原版存档（PDF）：<a href="/script/pdfjs-legacy/web/viewer.html?file=/images/NAT-Overview-RFC-3022-2663-en/Netmanias.2013.09.03.NAT Overview (en)-img.pdf">在线预览</a> | <a href="/images/NAT-Overview-RFC-3022-2663-en/Netmanias.2013.09.03.NAT Overview (en)-img.pdf" download>下载</a>  
-原版存档（PNG）：[链接](../../images/NAT-Overview-RFC-3022-2663-en/NAT%20Overview-img.png)  
+原版存档（PNG）：<a href="../../images/NAT-Overview-RFC-3022-2663-en/NAT%20Overview-img.png" >链接</a>  
+
