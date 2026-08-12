@@ -88,7 +88,7 @@
 * [有关比特彗星若干历史遗留问题的整理](articles/bitcomet-FAQ/BC-historical-issues.md)
 * [有关比特彗星的奇谈怪论](articles/bitcomet-FAQ/BC-rumor.md)
 * [「补档」 像素帝的比特彗星教程](articles/bitcomet-FAQ/reupload-xiang-su-di-bc-tutorial.md)
-
+* [比特彗星旧版 WebUI 研究](articles/bitcomet-FAQ/bc-webui-old.md)
 
 ---
 
