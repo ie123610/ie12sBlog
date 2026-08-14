@@ -8,9 +8,15 @@
 * [Win .cpl](./win-cpl.md)
 * [批处理乱码问题](./cmd-utf8.md)
 
+
 ---
 
 * [L2TP特性研究](./L2TP特性研究.md)
 * [废弃方案-使用lucky端口转发固定STUN穿透端口](废弃方案-使用lucky端口转发固定STUN穿透端口.md)
 * [小米路由支持更多IPv6获取方式](./小米路由更多IPv6获取方式.md)
+* [在 Windows 上阻止发往公网地址的 UDP 53 DNS 查询](./win-block-UDP-53.md)
+* [Route64 IPv6 隧道](./route64.md)
+
+---
+
 * [B站专栏文本复制问题](./B站专栏文本复制问题.md)
