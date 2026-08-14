@@ -128,6 +128,7 @@
 * [使用Gost替换Frp实现内网穿透为BT下载开放端口](articles/virtual-private-network/gost-bt-NAT-Penetration.md)
 * [使用Gost将SoftEther转换为socks5代理](articles/research-logs/gost-softether-vpn-to-proxy.md)
 * [Xray allowInsecure 参数移除过渡](articles/research-logs/xray-allowInsecure.md)
+* [L2TP特性研究](articles/notes/L2TP特性研究.md)
 
 ---
 
@@ -174,6 +175,7 @@
 * [Windows 无法启用休眠问题](articles/research-logs/win-sleep-mode-issue.md)
 * [Windows 传输动画提取](articles/research-logs/win-animation.md)
 * [在 VMware 上安装 win98 SE](articles/notes/vm-win98se.md)
+* [在 Windows 上阻止发往公网地址的 UDP 53 DNS 查询](articles/notes/win-block-UDP-53.md)
 
 ---
 
