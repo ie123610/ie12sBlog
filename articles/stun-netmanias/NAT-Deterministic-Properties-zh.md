@@ -38,7 +38,7 @@
 
 &emsp;因此，主机 C 发往主机 Y 的数据包 [5] 的外部端口（7000）必然无法再与内部端口（6000）保持一致（即放弃了端口保持！）。进而，主机 C 后续发往主机 X 的数据包 [6]，其外部端口（7002）也必然会与发往主机 Y 的端口（7000）不同（即切换为了地址与端口相关映射）。  
 
-<img loading="lazy" src="../../images/NAT-Deterministic-Properties-en/Fig1.%20NAT.Part%203.gif" />
+<img loading="lazy" src="../../images/NAT-Deterministic-Properties-zh/Fig1.%20NAT.Part%203-zh.png" />
 
 ### 确定型 NAT (Deterministic NAT)
 
@@ -52,7 +52,7 @@
 
 &emsp;因此，NAT 必须能够根据 IP 头部的 MF（More Fragment，更多分片）标志和分片偏移（Fragment Offset）字段来识别分片包。对于没有 UDP 头部的第二个分片，NAT 应当依据 IP 头部的标识字段（0x1234）来关联会话，并将数据包的内部地址（10.1.1.1）替换为外部地址（5.5.5.1）。如果 NAT 无法处理这些，通信将无法正常进行（显然，这些机制过于基础，以至于 IETF 甚至未将其列入 RFC 4787 中）。  
 
-<img loading="lazy" src="../../images/NAT-Deterministic-Properties-en/Fig2.%20NAT.Part%203.gif" />
+<img loading="lazy" src="../../images/NAT-Deterministic-Properties-zh/Fig2.%20NAT.Part%203-zh.png" />
 
 &emsp;数据包分片不仅会发生在主机（终端设备或服务器）上，也会发生在通用路由器和 NAT 上（因为 NAT 的数据包转发同样基于目的 IP 地址，所以它也可以被看作是一种路由器）。  
 
@@ -65,7 +65,7 @@
 
 &emsp;数据包分片既可由上述内部端点触发，也可由外部主机（如下图中的主机 B）引发。在外部主机引发分片的情况下，第 6 节中的相关要求同样适用。对于不带 UDP 头部的分片，NAT 应能够依据 IP 头部的标识字段来识别其所属的会话，并将其外部地址转换为内部地址。  
 
-<img loading="lazy" src="../../images/NAT-Deterministic-Properties-en/Fig3.%20NAT.Part%203.gif" />
+<img loading="lazy" src="../../images/NAT-Deterministic-Properties-zh/Fig3.%20NAT.Part%203-zh.png" />
 
 &emsp;针对这种情况，RFC 4787 中提到了以下两种类型的 NAT 行为：  
 

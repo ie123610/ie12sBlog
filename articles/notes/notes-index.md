@@ -7,7 +7,7 @@
 
 * [Win .cpl](./win-cpl.md)
 * [批处理乱码问题](./cmd-utf8.md)
-
+* [原生 Win32 控件窗口文本获取工具](./sysexp.md)
 
 ---
 
