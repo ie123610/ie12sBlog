@@ -54,7 +54,7 @@
 
 <img loading="lazy" src="../../images/NAT-Deterministic-Properties-zh/Fig2.%20NAT.Part%203-zh.png" />
 
-&emsp;&emsp;数据包分片不仅会发生在主机（终端设备或服务器）上，也会发生在通用路由器和 NAT 上（因为 NAT 的数据包转发同样基于目的 IP 地址，所以它也可以被看作是一种路由器）。  
+&emsp;&emsp;数据包分片不仅会发生在主机（终端设备或服务器）上，也会发生在通用路由器和 NAT 上（因为 NAT 的数据包转发同样基于目标 IP 地址，所以它也可以被看作是一种路由器）。  
 
 &emsp;&emsp;如今，几乎所有链路层采用的都是以太网，且 Wi-Fi 网络的 MTU 大小通常也是 1,500 字节（在 Windows 系统中），因此 NAT 实际上很少进行数据包分片。尽管如此，RFC 4787 仍建议 NAT 在必要时按如下方式发送 ICMP 消息：  
 
