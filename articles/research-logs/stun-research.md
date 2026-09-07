@@ -74,6 +74,7 @@ IETF 定义的 NAT 行为要求 (RFC 4787)
 原版存档（PDF）：<a href="/script/pdfjs-legacy/web/viewer.html?file=/images/NAT-Overview-RFC-3022-2663-en/Netmanais.2013.09.03.NAT%20overview%20(en).pdf">在线预览</a> | <a href="/images/NAT-Overview-RFC-3022-2663-en/Netmanais.2013.09.03.NAT%20overview%20(en).pdf" download>下载</a>  
 原版存档（MD）：[链接](../stun-netmanias/NAT-Overview-RFC-3022-2663-en.md)  
 
+汉化版：[链接](../stun-netmanias/NAT-Overview-RFC-3022-2663-zh.md)  
 
 **NAT and NAPT Cpncet （图）**  
 

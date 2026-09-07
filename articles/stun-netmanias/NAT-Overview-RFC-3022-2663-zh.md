@@ -1,8 +1,3 @@
----
-draft: true
----
-
-
 # 网络地址转换（NAT）概述（RFC 3022/2663）
 
 2013 年 9 月 3 日 | 作者：Netmanias (tech@netmanias.com) | 汉化：ie12  
@@ -29,13 +24,13 @@ draft: true
 
 &emsp;&emsp;TCP 和 UDP 报头都包含源端口和目标端口字段。这些端口被统称为“TU 端口”或“传输标识符（Transport Identifiers）”。当设备（客户端）使用 TCP 或 UDP 与服务器通信时，根据 RFC 1700 的规定，TU 目标端口通常使用 0 ～ 1,023 （由 IANA 定义的知名端口）或 1,024 ～ 49,191 （由 IANA 定义的注册端口）。例如 HTTP 的 TCP 目标端口是 80。而对于 TU 源端口，各操作系统则会在其自定的动态范围（大约 30,000 ~ 60,000）内随机选择。此类端口被称为“临时端口（ephemeral port）”（更多信息请参阅 [维基百科](https://en.wikipedia.org/wiki/Ephemeral_port)）。  
 
-### 2. 公网/全局/外部网络（Public/Global/External Network）
+### 2. 公网/全球网络/外网（Public/Global/External Network）
 
 &emsp;&emsp;指拥有由互联网数字分配机构（IANA）分配的全局唯一 IP 地址的网络。此类网络能够在全球运营商之间进行路由与通信。通常被称为“公网 IP 网络”。  
 
 ### 3. 私网/本地网络（Private/Local Network）
 
-&emsp;&emsp;指使用非 IANA 直接分配的 IP 地址的网络。这类网络无法直接在互联网上进行路由与通信，通常被称为“私网 IP 网络”。  
+&emsp;&emsp;指使用非 IANA 直接分配的 IP 地址的网络。这类网络无法直接在互联网上进行路由与通信，通常被称为“私有 IP 网络”。  
 
 &emsp;&emsp;IANA 为此保留了以下三个地址块：  
 
@@ -45,7 +40,7 @@ draft: true
 
 ### 4. 会话（Session）
 
-&emsp;&emsp;会话被定义为作为转换单位加以管理的一组流量????。每个 TCP/UDP 会话都由源 IP 地址、源 TU 端口、目标 IP 地址和目的 TU 端口 组成唯一标识（即四元组）。  
+&emsp;&emsp;会话是指在地址转换时被作为一个整体进行跟踪与管理的流量集合。每个 TCP/UDP 会话均由源 IP 地址、源 TU 端口、目标 IP 地址及目的 TU 端口唯一标识（即“四元组”）。  
 
 ### 5. 应用层网关（ALG, Application Level Gateway）
 
@@ -56,20 +51,20 @@ draft: true
 
 &emsp;&emsp;网络地址转换（NAT，Network Address Translation）是指在私网 IP 地址与公网 IP 地址之间相互转换的过程，旨在允许私网设备与互联网（公网）进行通信。  
 
-> 在大多数情况下，**传统 NAT** 允许私网内部的主机透明地访问外部网络中的主机。其会话是单向的，即从私网发起向外。仅在特殊情况下，通过为特定主机配置静态地址映射，来发起反向会话。（RFC 3022）
+> 在大多数情况下，**传统 NAT** 允许私网内部的主机透明地访问外网中的主机。其会话是单向的，即从私网向外发起。仅在特殊情况下，通过为特定主机配置静态地址映射，来发起反向会话。（RFC 3022）
 > 传统意义上，**NAT 设备**设备用于连接两个不同的地址域，一端是采用未注册私网地址的隔离内网，另一端则是采用全局唯一注册地址的公网。（RFC 2663）
 
 
 ## NAT 的类型
 
-&emsp;&emsp;RFC 3022/2663 中定义了两种类型的 NAT：基础 NA（Basic NAT）和网络地址端口转换（NAPT）。虽然旨在“节省 IPv4 地址”的 NAPT 是如今最常见的 NAT 类型，但它们都被统称为“传统 NAT（Traditional NAT）”。因此，当我们提及 NAT 时，绝大多数情况下指的都是 NAPT。如今所有 AP 都支持 NAPT 。  
+&emsp;&emsp;RFC 3022/2663 中定义了两种类型的 NAT：基础 NAT（Basic NAT）和网络地址端口转换（NAPT）。虽然旨在“节省 IPv4 地址”的 NAPT 是如今最常见的 NAT 类型，但它们都被统称为“传统 NAT（Traditional NAT）”。因此，当我们提及 NAT 时，绝大多数情况下指的都是 NAPT。如今所有 AP 都支持 NAPT 。  
 
 > 基础网络地址转换（**Basic NAT**）是一种在两组 IP 地址之间进行一对一映射的机制，该过程对终端用户完全透明。网络地址端口转换（**NAPT**）则是将多个网络地址及其 TCP/UDP 端口改写并映射到单个网络地址及其 TCP/UDP 端口的技术。
-> 这**两种操作**统称为**传统 NAT**，它们提供了一种将使用私网地址的内部域与使用全局唯一注册地址的外部域连接起来的机制。（RFC 3022）
+> 这**两种操作**统称为**传统 NAT**，它们提供了一种将使用私网地址的内部域与使用全局唯一注册地址的外部域相连接起来的机制。（RFC 3022）
 
 ### 1. 基础 NAT（Basic NAT）
 
-<img loading="lazy" src="../../images/NAT-Overview-RFC-3022-2663-en/Fig1.Network%20Address%20Translation%20(NAT)%20Overview.gif" />
+<img loading="lazy" src="../../images/NAT-Overview-RFC-3022-2663-zh/Fig1.Network%20Address%20Translation%20(NAT)%20Overview-zh.png" />
 
 **定义与目的**  
 
@@ -102,7 +97,7 @@ draft: true
 2. **地址查找与转换（Address Lookup and Translation）**
 
 * 出站方向：当 NAT 收到出站数据包（由用户设备发往 NAT）时，通过检索绑定表，将数据包中的私网源 IP 地址转换为公网源 IP 地址，并转发至互联网。
-* 入站方向：当 NAT 收到入站数据包（由互联网发往 NAT）时，同样检索绑定表，将数据包中的公网目的 IP 地址转换为用户设备的私网目的 IP 地址，并转发至目标用户设备。
+* 入站方向：当 NAT 收到入站数据包（由互联网发往 NAT）时，同样检索绑定表，将数据包中的公网目标 IP 地址转换为用户设备的私网目标 IP 地址，并转发至目标用户设备。
 
 3. **地址解绑（Address Unbinding）**
 
@@ -115,7 +110,7 @@ draft: true
 
 ### 2. NAPT（网络地址端口转换）
 
-<img loading="lazy" src="../../images/NAT-Overview-RFC-3022-2663-en/Fig2.Network Address Translation (NAT) Overview.gif" />
+<img loading="lazy" src="../../images/NAT-Overview-RFC-3022-2663-zh/Fig2.Network Address Translation (NAT) Overview-zh.png" />
 
 **定义与目的**
 
@@ -149,7 +144,7 @@ draft: true
 
 * 出站方向：当 NAPT 收到出站数据包（由用户设备发往 NAT）时，通过检索绑定表，将数据包中的私网源 IP 地址和本地 TU 源端口，转换为公网源 IP 地址和注册 TU 源端口，并转发至互联网。（注：注册端口指由 NAT 动态分配的公网端口。本地 TU 源端口亦称“内部端口”，注册 TU 源端口亦称“外部端口”。）
     
-* 入站方向：当 NAPT 收到入站数据包（由互联网发往 NAT）时，同样检索绑定表，将数据包中的公网目的 IP 地址和注册 TU 目的端口，转换为用户设备的私网目的 IP 地址和本地 TU 目的端口，并转发至目标用户设备。
+* 入站方向：当 NAPT 收到入站数据包（由互联网发往 NAT）时，同样检索绑定表，将数据包中的公网目标 IP 地址和注册 TU 目标端口，转换为用户设备的私网目标 IP 地址和本地 TU 目标端口，并转发至目标用户设备。
 
 3. **地址解绑（Address Unbinding）**  
 
