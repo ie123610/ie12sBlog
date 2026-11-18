@@ -1,6 +1,8 @@
 # 笔记索引
 
 * [BC改进建议](./BC改进建议.md)
+* [BC Link Format](./BC_Link_Format.md)
+* [使用 cURL 测试代理服务器](./curl_proxy_test.md)
 * [博客园文章索引](./cnblog-index.md)
 
 ---
